@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Welcome to Jekyll!</title>
-  <meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...">
+  <title>Create A Personal Webpage/Blog, Part I: Use GitHub Pages to Make a Webpage</title>
+  <meta name="description" content="Thanks for checking out my blog – this is actually my very first post! This entry is a beginner’s guide to setting up a basic webpage using GitHub pages. Not...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://yourdomain.com/jekyll/update/2018/07/15/welcome-to-jekyll.html">
-  <link rel="alternate" type="application/rss+xml" title="Tim Johnston's Personal Page" href="http://yourdomain.com/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Tim Johnston's Portfolio and Blog" href="http://yourdomain.com/feed.xml">
 </head>
 
 
@@ -21,7 +21,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/">Tim Johnston's Personal Page</a>
+    <a class="site-title" href="/">Tim Johnston's Portfolio and Blog</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -57,24 +57,78 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Welcome to Jekyll!</h1>
+    <h1 class="post-title" itemprop="name headline">Create A Personal Webpage/Blog, Part I: Use GitHub Pages to Make a Webpage</h1>
     <p class="post-meta"><time datetime="2018-07-15T15:45:42-04:00" itemprop="datePublished">Jul 15, 2018</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+    <p>Thanks for checking out my blog – this is actually my very first post! This entry is a beginner’s guide to setting up a basic webpage using GitHub pages. Note: I am a beginner, and I just set up a basic webpage using GitHub Pages. You can too!</p>
 
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p>GitHub pages is a service that allows you to host web pages directly out of a GitHub repository. User’s can create pages specifically for some project, or they can create a personal page to be used as a portfolio, blog, etc. In part II of this post, coming next weekend, we’ll utilize Jekyll with GitHub pages to create a lightweight and customizable blog.</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<p>Lets build our webpage. We’ll begin by making a new GitHub repository (you’ll need an existing GitHub account – <a href="https://github.com/join">Join GitHub</a>). Click the “+” symbol on the top right of your home page and select new repository. Since you’re making your personal page, name your repository <yourUsername>.github.io. Give it a short description if you’d like. I chose to initialize my repository with a README file – you don’t have to do this. When finished, click the green Create repository button.</yourUsername></p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<p><img src="/assets/makeNewRepository.png" alt="Make new repository" /></p>
 
-<p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<p>Next, clone your newly-created repository to your local machine. Click the green Clone or download button on the right side of the page, and then click the clipboard icon to the right of the URL in the dropdown.</p>
+
+<p><img src="/assets/cloneRepository.png" alt="Clone repository" /></p>
+
+<p>Now the real fun begins! Lets head to the terminal. Enter the command git clone &lt; the URL you just copied&gt;.</p>
+
+<p><img src="/assets/enterCloneCommand.png" alt="Enter clone command" /></p>
+
+<p>You’ll see some terminal output before you’re prompted to enter another command. Go ahead and cd itno the the directory that was created and enter the command git remote -v to confirm your remote repository was established as expected. You should see two lines of output that look something like this:</p>
+
+<p><img src="/assets/verifyRemote.png" alt="Verify remote" /></p>
+
+<p>Your repository is all set up! Now, lets put some content on your page. Fire up a new file named index.html in your text editor of choice and add some HTML. You can start as simple as typing “Hello world!”, or you can follow my basic example using this HTML and CSS:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"myPage.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello world!<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Welcome to my page!<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;span&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Enjoy this comic:<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://imgs.xkcd.com/comics/cat_proximity.png"</span> <span class="na">alt=</span><span class="s">"xkcd comic"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/body&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#4286f4</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h2</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#f42929</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">span</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span><span class="n">inline-block</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">p</span> <span class="p">{</span>
+    <span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Now that you’ve got some content put together, push it to GitHub. Enter the following commands:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- git add -A
+- git commit -m “added index.html”
+- git push -u origin master
+</code></pre></div></div>
+
+<p>Navigate to https://&lt; yourUsername&gt;.github.io. You’ll see that your changes are live. Congrats, you now have your own webpage! If you used the code snippets above, it will look like this:</p>
+
+<p><img src="/assets/webpageExample.png" alt="Example page" /></p>
+
+<p>While the xkcd comic used in our example is funny (and scientifically accurate - I speak from experience), you’re ready to customize your page and add in some of your own awesome content. New to web development and nervous about HTML and CSS? There aren’t many better places to start than <a href="https://www.freecodecamp.org/">freeCodeCamp</a>. Good luck, and, most importantly, have fun!</p>
+
+<p>Check back soon for Part II: Use Jekyll &amp; GitHub Pages to Make a Blog</p>
 
 
   </div>
@@ -88,12 +142,12 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Tim Johnston's Personal Page</h2>
+    <h2 class="footer-heading">Tim Johnston's Portfolio and Blog</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>Tim Johnston's Personal Page</li>
+          <li>Tim Johnston's Portfolio and Blog</li>
           <li><a href="mailto:tedwardj11@gmail.com">tedwardj11@gmail.com</a></li>
         </ul>
       </div>
@@ -110,8 +164,8 @@
 
           
           <li>
-            <a href="https://twitter.com/tjohnston_11"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
-</span><span class="username">tjohnston_11</span></a>
+            <a href="https://twitter.com/TimJohnston_11"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">TimJohnston_11</span></a>
 
           </li>
           
