@@ -4,7 +4,7 @@ title:  "Create A Personal Webpage/Blog, Part I: Use GitHub Pages to Make a Webp
 date:   2018-07-15 15:45:42 -0400
 categories: jekyll update
 ---
-Thanks for checking out my blog – this is actually my very first post! This entry is a beginner’s guide to setting up a basic webpage using GitHub pages. Note: I am a beginner, and I just set up a basic webpage using GitHub Pages. You can too!
+Thanks for checking out my blog – this is actually my very first post! This entry is a beginner’s guide to setting up a basic webpage using GitHub pages. You can too!
 
 GitHub pages is a service that allows you to host web pages directly out of a GitHub repository. User’s can create pages specifically for some project, or they can create a personal page to be used as a portfolio, blog, etc. In part II of this post, coming next weekend, we’ll utilize Jekyll with GitHub pages to create a lightweight and customizable blog.
 
