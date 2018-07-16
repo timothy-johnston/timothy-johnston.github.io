@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My Portfolio"
+title:  "My Projects"
 date:   2018-06-15 15:45:42 -0400
 categories: jekyll update
 ---

@@ -5,8 +5,8 @@
     <description>My personal page.</description>
     <link>https://timothy-johnston.github.io//</link>
     <atom:link href="https://timothy-johnston.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 15 Jul 2018 22:50:17 -0400</pubDate>
-    <lastBuildDate>Sun, 15 Jul 2018 22:50:17 -0400</lastBuildDate>
+    <pubDate>Sun, 15 Jul 2018 22:51:29 -0400</pubDate>
+    <lastBuildDate>Sun, 15 Jul 2018 22:51:29 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -92,7 +92,7 @@
       </item>
     
       <item>
-        <title>My Portfolio</title>
+        <title>My Projects</title>
         <description>&lt;p&gt;This page is a work in progress.&lt;/p&gt;
 
 &lt;p&gt;This will contain descriptions, screenshots, etc. of my projects. It currently just links to each project’s GitHub repository.&lt;/p&gt;
