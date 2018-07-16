@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carte Noire in Action</title>
+<title>Create A Personal Webpage/Blog, Part I: Use GitHub Pages to Make a Webpage</title>
 <meta name="description" content="My personal page.">
 
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -39,9 +39,6 @@
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-513c6fa83da6ec67"></script>
 
 
-
-<!-- MathJax for LaTeX -->
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 </head>
@@ -86,24 +83,20 @@
 
     <div itemscope itemtype="http://schema.org/Article" class="col-md-12 article">
       
-      <div class="thumb">
-        <i class="fa fa-cogs fa-4x"></i>
-      </div>
-      
 
-      <h1 class="header" itemprop="name">Carte Noire in Action</h1>
+      <h1 class="header" itemprop="name">Create A Personal Webpage/Blog, Part I: Use GitHub Pages to Make a Webpage</h1>
 
       <div class="author">
         <small><i>
           
-          on <span itemprop="datePublished" content="2014-08-28">June 10, 2014</span>
+          on <span itemprop="datePublished" content="2014-08-28">July 15, 2018</span>
            under jekyll
         </i></small>
       </div>
 
       <div class="read-time">
         <small>
-          2 minute read
+          3 minute read
         </small>
       </div>
 
@@ -111,93 +104,73 @@
 
         
 
-        <span itemprop="articleBody"><p><strong>Note</strong> - This article is a derivative of <a href="http://pixyll.com/jekyll/pixyll/2014/06/10/see-pixyll-in-action/">“See pixyll in action”</a>, taken from the lovely jekyll theme <a href="http://pixyll.com/">pixyll</a>.</p>
+        <span itemprop="articleBody"><p>Thanks for checking out my blog – this is actually my very first post! This entry is a beginner’s guide to setting up a basic webpage using GitHub pages.</p>
 
-<p>All links are easy to <a href="#">locate and discern</a>, yet don’t detract from the harmony
-of a paragraph. The <em>same</em> goes for italics and <strong>bold</strong> elements. Even the the strikeout
-works if <del>for some reason you need to update your post</del>. For consistency’s sake,
-<ins>The same goes for insertions</ins>, of course.</p>
+<p>GitHub pages is a service that allows you to host web pages directly out of a GitHub repository. User’s can create pages specifically for some project, or they can create a personal page to be used as a portfolio, blog, etc. In part II of this post, coming next weekend, we’ll utilize Jekyll with GitHub pages to create a lightweight and customizable blog.</p>
 
-<h3 id="code-with-syntax-highlighting">Code, with syntax highlighting</h3>
+<p>Lets build our webpage. We’ll begin by making a new GitHub repository (you’ll need an existing GitHub account – <a href="https://github.com/join">Join GitHub</a>). Click the “+” symbol on the top right of your home page and select new repository. Since you’re making your personal page, name your repository <yourUsername>.github.io. Give it a short description if you’d like. I chose to initialize my repository with a README file – you don’t have to do this. When finished, click the green Create repository button.</yourUsername></p>
 
-<p>Code blocks use the <a href="https://noahfrederick.com/log/lion-terminal-theme-peppermint/">peppermint</a> theme.</p>
+<p><img src="/assets/makeNewRepository.png" alt="Make new repository" /></p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Awesome</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-  <span class="kp">include</span> <span class="no">EvenMoreAwesome</span>
+<p>Next, clone your newly-created repository to your local machine. Click the green Clone or download button on the right side of the page, and then click the clipboard icon to the right of the URL in the dropdown.</p>
 
-  <span class="n">validates_presence_of</span> <span class="ss">:something</span>
-  <span class="n">validates</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">email_format: </span><span class="kp">true</span>
+<p><img src="/assets/cloneRepository.png" alt="Clone repository" /></p>
 
-  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="nb">name</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">)</span>
-    <span class="nb">self</span><span class="p">.</span><span class="nf">email</span> <span class="o">=</span> <span class="n">email</span>
-    <span class="nb">self</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span> <span class="nb">name</span>
-  <span class="k">end</span>
-<span class="k">end</span></code></pre></figure>
+<p>Now the real fun begins! Lets head to the terminal. Enter the command git clone &lt; the URL you just copied&gt;.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;title&gt;</span>Title<span class="nt">&lt;/title&gt;</span>
+<p><img src="/assets/enterCloneCommand.png" alt="Enter clone command" /></p>
 
-<span class="nt">&lt;style&gt;body</span> <span class="p">{</span><span class="nl">width</span><span class="p">:</span> <span class="m">500px</span><span class="p">;}</span><span class="nt">&lt;/style&gt;</span>
+<p>You’ll see some terminal output before you’re prompted to enter another command. Go ahead and cd itno the the directory that was created and enter the command git remote -v to confirm your remote repository was established as expected. You should see two lines of output that look something like this:</p>
 
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"application/javascript"</span><span class="nt">&gt;</span>
-  <span class="kd">function</span> <span class="nx">$init</span><span class="p">()</span> <span class="p">{</span><span class="k">return</span> <span class="kc">true</span><span class="p">;}</span>
-<span class="nt">&lt;/script&gt;</span>
+<p><img src="/assets/verifyRemote.png" alt="Verify remote" /></p>
+
+<p>Your repository is all set up! Now, lets put some content on your page. Fire up a new file named index.html in your text editor of choice and add some HTML. You can start as simple as typing “Hello world!”, or you can follow my basic example using this HTML and CSS:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"myPage.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
 
 <span class="nt">&lt;body&gt;</span>
-  <span class="nt">&lt;p</span> <span class="na">checked</span> <span class="na">class=</span><span class="s">"title"</span> <span class="na">id=</span><span class="s">'title'</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/p&gt;</span>
-  <span class="c">&lt;!-- here goes the rest of the page --&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello world!<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Welcome to my page!<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;span&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Enjoy this comic:<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://imgs.xkcd.com/comics/cat_proximity.png"</span> <span class="na">alt=</span><span class="s">"xkcd comic"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/body&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#4286f4</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h2</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#f42929</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">span</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span><span class="n">inline-block</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">p</span> <span class="p">{</span>
+    <span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Now that you’ve got some content put together, push it to GitHub. Enter the following commands:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- git add -A
+- git commit -m “added index.html”
+- git push -u origin master
 </code></pre></div></div>
 
-<h1 id="headings">Headings!</h1>
+<p>Navigate to https://&lt; yourUsername&gt;.github.io. You’ll see that your changes are live. Congrats, you now have your own webpage! If you used the code snippets above, it will look like this:</p>
 
-<p>They’re responsive, and well-proportioned (in <code class="highlighter-rouge">padding</code>, <code class="highlighter-rouge">line-height</code>, <code class="highlighter-rouge">margin</code>, and <code class="highlighter-rouge">font-size</code>).</p>
+<p><img src="/assets/webpageExample.png" alt="Example page" /></p>
 
-<h5 id="they-draw-the-perfect-amount-of-attention">They draw the perfect amount of attention</h5>
+<p>While the xkcd comic used in our example is funny (and scientifically accurate - I speak from experience), you’re ready to customize your page and add in some of your own awesome content. New to web development and nervous about HTML and CSS? There aren’t many better places to start than <a href="https://www.freecodecamp.org/">freeCodeCamp</a>. Good luck, and, most importantly, have fun!</p>
 
-<p>This allows your content to have the proper informational and contextual hierarchy. Yay.</p>
-
-<h3 id="there-are-lists-too">There are lists, too</h3>
-
-<ul>
-  <li>Apples</li>
-  <li>Oranges</li>
-  <li>Potatoes</li>
-  <li>Milk</li>
-</ul>
-
-<ol>
-  <li>Mow the lawn</li>
-  <li>Feed the dog</li>
-  <li>Dance</li>
-</ol>
-
-<h3 id="images-look-great-too">Images look great, too</h3>
-
-<p><img src="https://i.imgur.com/DMCHDqF.jpg" alt="Thumper" /></p>
-
-<h3 id="stylish-blockquotes-included">Stylish blockquotes included</h3>
-
-<p>You can use the markdown quote syntax, <code class="highlighter-rouge">&gt;</code> for simple quotes.</p>
-
-<blockquote>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis porta mauris.</p>
-</blockquote>
-
-<h3 id="latex-support">LaTeX support</h3>
-
-<p>The default math delimiters are $$. Hence <code class="highlighter-rouge">$$ E = m \cdot c^2 $$</code> yields <script type="math/tex">E = m \cdot c^2</script></p>
-
-<p>And here’s something more fancy:</p>
-
-<script type="math/tex; mode=display">\zeta(s) = \frac{1}{\Gamma(s)} \int \limits_0^\infty x^{s-1} \sum_{n=1}^\infty e^{-nx} \mathrm{d}x = \frac{1}{\Gamma(s)} \int \limits_0^\infty \frac{x^{s-1}}{e^x - 1} \mathrm{d}x</script>
-
-<h3 id="theres-more-being-added-all-the-time">There’s more being added all the time</h3>
-
-<p>Checkout the <a href="https://github.com/jacobtomlinson/carte-noire">Github repository</a> to request,
-or add, features.</p>
-
-<p>Happy writing.</p>
+<p>Check back soon for Part II: Use Jekyll &amp; GitHub Pages to Make a Blog</p>
 
 </span>
 
@@ -210,13 +183,6 @@ or add, features.</p>
         </div>
         
 
-        
-        <div class="tags">
-          <small>
-          <i class="fa fa-tags"></i>
-            demo, action, carte, noire
-          </small>
-        </div>
         
 
       </div>

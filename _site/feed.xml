@@ -2,12 +2,119 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tim Johnston</title>
-    <description>A dark blog theme for Jekyll.</description>
-    <link>http://carte-noire.jacobtomlinson.co.uk//</link>
-    <atom:link href="http://carte-noire.jacobtomlinson.co.uk//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 15 Jul 2018 20:19:14 -0400</pubDate>
-    <lastBuildDate>Sun, 15 Jul 2018 20:19:14 -0400</lastBuildDate>
+    <description>My personal page.</description>
+    <link>https://timothy-johnston.github.io//</link>
+    <atom:link href="https://timothy-johnston.github.io//feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 15 Jul 2018 22:18:22 -0400</pubDate>
+    <lastBuildDate>Sun, 15 Jul 2018 22:18:22 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Create A Personal Webpage/Blog, Part I: Use GitHub Pages to Make a Webpage</title>
+        <description>&lt;p&gt;Thanks for checking out my blog – this is actually my very first post! This entry is a beginner’s guide to setting up a basic webpage using GitHub pages.&lt;/p&gt;
+
+&lt;p&gt;GitHub pages is a service that allows you to host web pages directly out of a GitHub repository. User’s can create pages specifically for some project, or they can create a personal page to be used as a portfolio, blog, etc. In part II of this post, coming next weekend, we’ll utilize Jekyll with GitHub pages to create a lightweight and customizable blog.&lt;/p&gt;
+
+&lt;p&gt;Lets build our webpage. We’ll begin by making a new GitHub repository (you’ll need an existing GitHub account – &lt;a href=&quot;https://github.com/join&quot;&gt;Join GitHub&lt;/a&gt;). Click the “+” symbol on the top right of your home page and select new repository. Since you’re making your personal page, name your repository &lt;yourUsername&gt;.github.io. Give it a short description if you’d like. I chose to initialize my repository with a README file – you don’t have to do this. When finished, click the green Create repository button.&lt;/yourUsername&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/makeNewRepository.png&quot; alt=&quot;Make new repository&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, clone your newly-created repository to your local machine. Click the green Clone or download button on the right side of the page, and then click the clipboard icon to the right of the URL in the dropdown.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cloneRepository.png&quot; alt=&quot;Clone repository&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now the real fun begins! Lets head to the terminal. Enter the command git clone &amp;lt; the URL you just copied&amp;gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/enterCloneCommand.png&quot; alt=&quot;Enter clone command&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You’ll see some terminal output before you’re prompted to enter another command. Go ahead and cd itno the the directory that was created and enter the command git remote -v to confirm your remote repository was established as expected. You should see two lines of output that look something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/verifyRemote.png&quot; alt=&quot;Verify remote&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Your repository is all set up! Now, lets put some content on your page. Fire up a new file named index.html in your text editor of choice and add some HTML. You can start as simple as typing “Hello world!”, or you can follow my basic example using this HTML and CSS:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;myPage.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Hello world!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;Welcome to my page!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Enjoy this comic:&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://imgs.xkcd.com/comics/cat_proximity.png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;xkcd comic&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#4286f4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#f42929&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inline-block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now that you’ve got some content put together, push it to GitHub. Enter the following commands:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- git add -A
+- git commit -m “added index.html”
+- git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Navigate to https://&amp;lt; yourUsername&amp;gt;.github.io. You’ll see that your changes are live. Congrats, you now have your own webpage! If you used the code snippets above, it will look like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/webpageExample.png&quot; alt=&quot;Example page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;While the xkcd comic used in our example is funny (and scientifically accurate - I speak from experience), you’re ready to customize your page and add in some of your own awesome content. New to web development and nervous about HTML and CSS? There aren’t many better places to start than &lt;a href=&quot;https://www.freecodecamp.org/&quot;&gt;freeCodeCamp&lt;/a&gt;. Good luck, and, most importantly, have fun!&lt;/p&gt;
+
+&lt;p&gt;Check back soon for Part II: Use Jekyll &amp;amp; GitHub Pages to Make a Blog&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 15 Jul 2018 15:45:42 -0400</pubDate>
+        <link>https://timothy-johnston.github.io//jekyll/update/2018/07/15/create-a-personal-webpage-part-i/</link>
+        <guid isPermaLink="true">https://timothy-johnston.github.io//jekyll/update/2018/07/15/create-a-personal-webpage-part-i/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>My Portfolio</title>
+        <description>&lt;p&gt;This will contain links to and descriptions of my projects.&lt;/p&gt;
+
+&lt;p&gt;//ThirstyCat Twitter Bot&lt;/p&gt;
+
+&lt;p&gt;//VirtualInterview Command Line App&lt;/p&gt;
+
+&lt;p&gt;//Burrels Ford CodePen Page&lt;/p&gt;
+
+&lt;p&gt;//Vending Machine Command Line App&lt;/p&gt;
+
+&lt;p&gt;//National Park Reservation System Command Line App&lt;/p&gt;
+</description>
+        <pubDate>Fri, 15 Jun 2018 15:45:42 -0400</pubDate>
+        <link>https://timothy-johnston.github.io//jekyll/update/2018/06/15/my-portfolio/</link>
+        <guid isPermaLink="true">https://timothy-johnston.github.io//jekyll/update/2018/06/15/my-portfolio/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>Welcome to Carte Noire</title>
@@ -25,8 +132,8 @@ but with the hosting and maintenance simplicity of Jekyll.&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 23 Mar 2015 11:31:19 -0400</pubDate>
-        <link>http://carte-noire.jacobtomlinson.co.uk//jekyll/2015/03/23/welcome-to-carte-noir/</link>
-        <guid isPermaLink="true">http://carte-noire.jacobtomlinson.co.uk//jekyll/2015/03/23/welcome-to-carte-noir/</guid>
+        <link>https://timothy-johnston.github.io//jekyll/2015/03/23/welcome-to-carte-noir/</link>
+        <guid isPermaLink="true">https://timothy-johnston.github.io//jekyll/2015/03/23/welcome-to-carte-noir/</guid>
         
         <category>welcome</category>
         
@@ -133,8 +240,8 @@ or add, features.&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 10 Jun 2014 08:31:19 -0400</pubDate>
-        <link>http://carte-noire.jacobtomlinson.co.uk//jekyll/2014/06/10/carte-noire-in-action/</link>
-        <guid isPermaLink="true">http://carte-noire.jacobtomlinson.co.uk//jekyll/2014/06/10/carte-noire-in-action/</guid>
+        <link>https://timothy-johnston.github.io//jekyll/2014/06/10/carte-noire-in-action/</link>
+        <guid isPermaLink="true">https://timothy-johnston.github.io//jekyll/2014/06/10/carte-noire-in-action/</guid>
         
         <category>demo</category>
         
@@ -162,8 +269,8 @@ and &lt;a href=&quot;http://en.wikipedia.org/wiki/Textile_(markup_language)&quot
 &lt;p&gt;Learn more about Jekyll on their &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;website&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Mon, 09 Jun 2014 08:32:18 -0400</pubDate>
-        <link>http://carte-noire.jacobtomlinson.co.uk//jekyll/2014/06/09/so-what-is-jekyll/</link>
-        <guid isPermaLink="true">http://carte-noire.jacobtomlinson.co.uk//jekyll/2014/06/09/so-what-is-jekyll/</guid>
+        <link>https://timothy-johnston.github.io//jekyll/2014/06/09/so-what-is-jekyll/</link>
+        <guid isPermaLink="true">https://timothy-johnston.github.io//jekyll/2014/06/09/so-what-is-jekyll/</guid>
         
         <category>about</category>
         
@@ -217,8 +324,8 @@ the android thumbnail.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 08 Jun 2014 08:32:18 -0400</pubDate>
-        <link>http://carte-noire.jacobtomlinson.co.uk//jekyll/2014/06/08/using-thumbnails/</link>
-        <guid isPermaLink="true">http://carte-noire.jacobtomlinson.co.uk//jekyll/2014/06/08/using-thumbnails/</guid>
+        <link>https://timothy-johnston.github.io//jekyll/2014/06/08/using-thumbnails/</link>
+        <guid isPermaLink="true">https://timothy-johnston.github.io//jekyll/2014/06/08/using-thumbnails/</guid>
         
         <category>thumbnails</category>
         
