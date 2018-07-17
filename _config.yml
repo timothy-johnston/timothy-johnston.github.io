@@ -4,7 +4,7 @@ email: tedwardj11@gmail.com
 description: "My personal page."
 baseurl: ""
 url: "https://timothy-johnston.github.io/"
-title_description: "Software developer<br>Logic, creativity, structure<br><a href=\"/assets/resumeLong.pdf\">Resume</a> | <a href=\"https://timothy-johnston.github.io/jekyll/update/2018/06/15/my-portfolio/\">Projects</a> | <a href=\"https://github.com/timothy-johnston\">GitHub</a> | <a href=\"https://www.linkedin.com/in/timothyejohnston/\">LinkedIn</a> | <a href=\"https://twitter.com/TimJohnston_11\">Twitter</a>"
+title_description: "Logic, creativity, structure<br>Software development student<br><a href=\"/assets/resumeLong.pdf\">Resume</a> | <a href=\"https://timothy-johnston.github.io/jekyll/update/2018/06/15/my-portfolio/\">Projects</a> | <a href=\"https://github.com/timothy-johnston\">GitHub</a> | <a href=\"https://www.linkedin.com/in/timothyejohnston/\">LinkedIn</a> | <a href=\"https://twitter.com/TimJohnston_11\">Twitter</a>"
 title_image: "/assets/weddingCrop2.png"
 google_analytics: "UA-20365477-4"
 disqus_account: cartenoire
