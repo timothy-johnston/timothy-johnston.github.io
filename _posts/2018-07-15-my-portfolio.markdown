@@ -8,7 +8,7 @@ categories: jekyll update
 This page is a work in progress. It contains links to and descriptions of my main personal and school projects. I hope to update it soon with interesting code snippets and screenshots of my applications in action.
 
 ### [ThirstyCat Twitter Bot][thirsty-cat-github]
-* [twitter.com/TheThirstyCat]
+* [Link to Twitter bot][tc-twitter]
 * Automated detector that senses when cat approaches water bowl, captures a picture, and tweets photo using Raspberry Pi, force-sensitive resistor, Python, and Tweepy
 * Wrote technical “How-to” guide to document build process and instruct others how to recreate the project  
 <br /> 
