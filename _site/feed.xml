@@ -5,13 +5,13 @@
     <description>My personal page.</description>
     <link>https://timothy-johnston.github.io//</link>
     <atom:link href="https://timothy-johnston.github.io//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 20 Jul 2018 00:21:07 -0400</pubDate>
-    <lastBuildDate>Fri, 20 Jul 2018 00:21:07 -0400</lastBuildDate>
+    <pubDate>Fri, 20 Jul 2018 01:12:27 -0400</pubDate>
+    <lastBuildDate>Fri, 20 Jul 2018 01:12:27 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>How I Built a Cat-Detecting Twitter Bot</title>
-        <description>&lt;p&gt;Recently, I built a cat-detecting, picture-taking, and tweet-tweeting Raspberry Pi / Twitter bot called [ThirstyCat][thirsty-cat]. This is a Twitter bot that automatically takes a photo of my sweet cat Shasta and posts it to Twitter each time she takes a drink from her water bowl. I had been wanting to put together a project utilizing not only programming but also hardware/electronics for a while, and I also had been wanting to share pictures of my cat with random people on the Internet for a while. Thus, ThirstyCat was born. This post covers how I built this project - feel free to use this as a guide to build your own, or use it as inspiration to build something different!&lt;/p&gt;
+        <description>&lt;p&gt;Recently, I built a cat-detecting, picture-taking, and tweet-tweeting Raspberry Pi / Twitter bot called &lt;a href=&quot;https://twitter.com/TheThirstyCat&quot;&gt;ThirstyCat&lt;/a&gt;. This is a Twitter bot that automatically takes a photo of my sweet cat Shasta and posts it to Twitter each time she takes a drink from her water bowl. I had been wanting to put together a project utilizing not only programming but also hardware/electronics for a while, and I also had been wanting to share pictures of my cat with random people on the Internet for a while. Thus, ThirstyCat was born. This post covers how I built this project - feel free to use this as a guide to build your own, or use it as inspiration to build something different!&lt;/p&gt;
 
 &lt;h2 id=&quot;description&quot;&gt;Description&lt;/h2&gt;
 &lt;p&gt;ThirstyCat uses a force-senstive resistor (FSR) and Raspberry Pi B+ to detect when Shasta approaches her water bowl. Since the FSR itsself is very small, I placed it underneath a larger platform (okay, a cheap cutting board) set in front of the water bowl. This way, any time the cat walks towards the bowl a force is applied to the FSR, even if its not being directly stepped on. A Pi Cam connected to the Pi is then triggered to take a picture.&lt;/p&gt;
@@ -39,80 +39,42 @@
 
 &lt;p&gt;In terms of software, I used Python 2.7.3, Tweepy, and the Adafruit_MCP3008 library.&lt;/p&gt;
 
-&lt;h2 id=&quot;lets-build-it&quot;&gt;Lets Build It!&lt;/h2&gt;
+&lt;h2 id=&quot;lets-build-it&quot;&gt;Lets Build It&lt;/h2&gt;
 &lt;p&gt;The process is pretty straight-forward. I’ll try to make it more straight-forward with lots of pictures.&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Plug the analog to digital converter and Pi Cobbler into the breadboard.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;Plug the analog to digital converter and Pi Cobbler into the breadboard.
+&lt;img src=&quot;/assets/build TC 1.JPG&quot; alt=&quot;Converter and Cobbler&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Thanks for checking out my blog – this is actually my very first post! This entry is a beginner’s guide to setting up a basic webpage using GitHub pages.&lt;/p&gt;
+&lt;p&gt;Refer to the wiring diagrams provided by Adafruit (&lt;a href=&quot;https://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi/connecting-the-cobbler-to-a-mcp3008&quot;&gt;more info here)&lt;/a&gt;. Don’t worry that the cobbler and converter are in different locations than the picture of my own setup - what’s important here is to connect the MCP3008’s pins to the correct Cobbler pins according to the following:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;MCP3008 Pin -&amp;gt; Cobbler Pin&lt;/li&gt;
+  &lt;li&gt;MCP3008 VDD -&amp;gt; 3.3V&lt;/li&gt;
+  &lt;li&gt;MCP3008 VREF -&amp;gt; 3.3V&lt;/li&gt;
+  &lt;li&gt;MCP3008 AGND -&amp;gt; GND&lt;/li&gt;
+  &lt;li&gt;MCP3008 CLK -&amp;gt; #18&lt;/li&gt;
+  &lt;li&gt;MCP3008 DOUT -&amp;gt; #23&lt;/li&gt;
+  &lt;li&gt;MCP3008 DIN -&amp;gt; #24&lt;/li&gt;
+  &lt;li&gt;MCP3008 CS -&amp;gt; #25&lt;/li&gt;
+  &lt;li&gt;MCP3008 DGND -&amp;gt; GND&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;GitHub pages is a service that allows you to host web pages directly out of a GitHub repository. User’s can create pages specifically for some project, or they can create a personal page to be used as a portfolio, blog, etc. In part II of this post, coming next weekend, we’ll utilize Jekyll with GitHub pages to create a lightweight and customizable blog.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/build TC 2.JPG&quot; alt=&quot;Connect pins&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Lets build our webpage. We’ll begin by making a new GitHub repository (you’ll need an existing GitHub account – &lt;a href=&quot;https://github.com/join&quot;&gt;Join GitHub&lt;/a&gt;). Click the “+” symbol on the top right of your home page and select new repository. Since you’re making your personal page, name your repository &lt;yourUsername&gt;.github.io. Give it a short description if you’d like. I chose to initialize my repository with a README file – you don’t have to do this. When finished, click the green Create repository button.&lt;/yourUsername&gt;&lt;/p&gt;
+&lt;p&gt;Here is the only tricky part. Connect the FSR and the 10k Ohm resistor to the breadboard. See the picture below:  The FSR goes in a free location on the breadboard. Use a jumper wire to connect one of the FSR leads to Channel 0 on the MCP3008. Then use the 10k Ohm resistor to connect that same location to the ground on the opposite side of the breadboard. Finally, use a jumper wire to connect the 2nd FSR lead to the power rail on the FSR’s side of the breadboard.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/makeNewRepository.png&quot; alt=&quot;Make new repository&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/build TC 6.JPG&quot; alt=&quot;Connect FSR&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Next, clone your newly-created repository to your local machine. Click the green Clone or download button on the right side of the page, and then click the clipboard icon to the right of the URL in the dropdown.&lt;/p&gt;
+&lt;p&gt;Smooth sailing from here on out. Connect the breadboard to the Pi using the ribbon cable.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/cloneRepository.png&quot; alt=&quot;Clone repository&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/build TC 3.JPG&quot; alt=&quot;Connect FSR&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Now the real fun begins! Lets head to the terminal. Enter the command git clone &amp;lt; the URL you just copied&amp;gt;.&lt;/p&gt;
+&lt;p&gt;Finally, connect the Pi Cam to the Pi. I didn’t take a picture of this part, but a quick Google search will give you lots of guides on that.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/enterCloneCommand.png&quot; alt=&quot;Enter clone command&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;lets-use-it&quot;&gt;Lets Use It&lt;/h2&gt;
+&lt;p&gt;At this point, if you’ve been building your own, you’ve got a working force sensor. What you do with it now is up to you! Head to the &lt;a href=&quot;https://github.com/timothy-johnston/ThirstyCat/blob/master/scratchinCat.py&quot;&gt;project on GitHub&lt;/a&gt; to check out my source code to read in values from the FSR, implement logic based on those readings, and interface with Twitter. Feel free to fork, offer suggestions, and/or do your own thing with it.&lt;/p&gt;
 
-&lt;p&gt;You’ll see some terminal output before you’re prompted to enter another command. Go ahead and cd itno the the directory that was created and enter the command git remote -v to confirm your remote repository was established as expected. You should see two lines of output that look something like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/verifyRemote.png&quot; alt=&quot;Verify remote&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Your repository is all set up! Now, lets put some content on your page. Fire up a new file named index.html in your text editor of choice and add some HTML. You can start as simple as typing “Hello world!”, or you can follow my basic example using this HTML and CSS:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;myPage.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Hello world!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;Welcome to my page!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Enjoy this comic:&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://imgs.xkcd.com/comics/cat_proximity.png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;xkcd comic&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#4286f4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;h2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#f42929&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inline-block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now that you’ve got some content put together, push it to GitHub. Enter the following commands:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- git add -A
-- git commit -m “added index.html”
-- git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Navigate to https://&amp;lt; yourUsername&amp;gt;.github.io. You’ll see that your changes are live. Congrats, you now have your own webpage! If you used the code snippets above, it will look like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/webpageExample.png&quot; alt=&quot;Example page&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;While the xkcd comic used in our example is funny (and scientifically accurate - I speak from experience), you’re ready to customize your page and add in some of your own awesome content. New to web development and nervous about HTML and CSS? There aren’t many better places to start than &lt;a href=&quot;https://www.freecodecamp.org/&quot;&gt;freeCodeCamp&lt;/a&gt;. Good luck, and, most importantly, have fun!&lt;/p&gt;
-
-&lt;p&gt;Check back soon for Part II: Use Jekyll &amp;amp; GitHub Pages to Make a Blog&lt;/p&gt;
+&lt;p&gt;Thanks for reading!
+&lt;img src=&quot;/assets/build TC 0.JPG&quot; alt=&quot;Me with cat&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 17 Jul 2018 20:45:42 -0400</pubDate>

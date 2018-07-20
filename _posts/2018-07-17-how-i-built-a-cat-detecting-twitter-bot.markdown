@@ -31,105 +31,43 @@ Before getting in to the details, I want to give a major shoutout to Andrew Cair
 
 In terms of software, I used Python 2.7.3, Tweepy, and the Adafruit_MCP3008 library. 
 
-## Lets Build It!
+## Lets Build It
 The process is pretty straight-forward. I'll try to make it more straight-forward with lots of pictures.
 
-1. Plug the analog to digital converter and Pi Cobbler into the breadboard.
+Plug the analog to digital converter and Pi Cobbler into the breadboard.
+![Converter and Cobbler]({{ "/assets/build TC 1.JPG" | absolute_url }})
+
+Refer to the wiring diagrams provided by Adafruit ([more info here)][adafruit-page]. Don't worry that the cobbler and converter are in different locations than the picture of my own setup - what's important here is to connect the MCP3008's pins to the correct Cobbler pins according to the following:
+* MCP3008 Pin -> Cobbler Pin
+* MCP3008 VDD -> 3.3V 
+* MCP3008 VREF -> 3.3V 
+* MCP3008 AGND -> GND 
+* MCP3008 CLK -> #18 
+* MCP3008 DOUT -> #23 
+* MCP3008 DIN -> #24 
+* MCP3008 CS -> #25 
+* MCP3008 DGND -> GND 
+
+![Connect pins]({{ "/assets/build TC 2.JPG" | absolute_url }})
+
+Here is the only tricky part. Connect the FSR and the 10k Ohm resistor to the breadboard. See the picture below:  The FSR goes in a free location on the breadboard. Use a jumper wire to connect one of the FSR leads to Channel 0 on the MCP3008. Then use the 10k Ohm resistor to connect that same location to the ground on the opposite side of the breadboard. Finally, use a jumper wire to connect the 2nd FSR lead to the power rail on the FSR's side of the breadboard.
+
+![Connect FSR]({{ "/assets/build TC 6.JPG" | absolute_url }})
+
+Smooth sailing from here on out. Connect the breadboard to the Pi using the ribbon cable. 
+
+![Connect FSR]({{ "/assets/build TC 3.JPG" | absolute_url }})
+
+Finally, connect the Pi Cam to the Pi. I didn't take a picture of this part, but a quick Google search will give you lots of guides on that.
 
 
+## Lets Use It
+At this point, if you've been building your own, you've got a working force sensor. What you do with it now is up to you! Head to the [project on GitHub][github-page] to check out my source code to read in values from the FSR, implement logic based on those readings, and interface with Twitter. Feel free to fork, offer suggestions, and/or do your own thing with it. 
 
+Thanks for reading!
+![Me with cat]({{ "/assets/build TC 0.JPG" | absolute_url }})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Thanks for checking out my blog – this is actually my very first post! This entry is a beginner’s guide to setting up a basic webpage using GitHub pages.
-
-GitHub pages is a service that allows you to host web pages directly out of a GitHub repository. User’s can create pages specifically for some project, or they can create a personal page to be used as a portfolio, blog, etc. In part II of this post, coming next weekend, we’ll utilize Jekyll with GitHub pages to create a lightweight and customizable blog.
-
-Lets build our webpage. We’ll begin by making a new GitHub repository (you’ll need an existing GitHub account – [Join GitHub][join-github]). Click the “+” symbol on the top right of your home page and select new repository. Since you’re making your personal page, name your repository <yourUsername>.github.io. Give it a short description if you’d like. I chose to initialize my repository with a README file – you don’t have to do this. When finished, click the green Create repository button.
-
-![Make new repository]({{ "/assets/makeNewRepository.png" | absolute_url }})
-
-Next, clone your newly-created repository to your local machine. Click the green Clone or download button on the right side of the page, and then click the clipboard icon to the right of the URL in the dropdown.
-
-![Clone repository]({{ "/assets/cloneRepository.png" | absolute_url }})
-
-Now the real fun begins! Lets head to the terminal. Enter the command git clone {{"<"}} the URL you just copied>. 
-
-![Enter clone command]({{ "/assets/enterCloneCommand.png" | abosolute_url }})
-
-You’ll see some terminal output before you’re prompted to enter another command. Go ahead and cd itno the the directory that was created and enter the command git remote -v to confirm your remote repository was established as expected. You should see two lines of output that look something like this:
-
-![Verify remote]({{ "/assets/verifyRemote.png" | absolute_url }})
-
-Your repository is all set up! Now, lets put some content on your page. Fire up a new file named index.html in your text editor of choice and add some HTML. You can start as simple as typing “Hello world!”, or you can follow my basic example using this HTML and CSS: 
-
-{% highlight html %}
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="myPage.css">
-</head>
-
-<body>
-    <h1>Hello world!</h1>
-    <h2>Welcome to my page!</h2>
-    <span>
-        <p>Enjoy this comic:</p>
-        <img src="https://imgs.xkcd.com/comics/cat_proximity.png" alt="xkcd comic">
-    </span>
-</body>
-{% endhighlight %}
-
-{% highlight css %}
-h1 {
-    color: #4286f4;
-}
-
-h2 {
-    color: #f42929;
-}
-
-span {
-    display:inline-block;
-}
-
-p {
-    text-align:center;
-}
-{% endhighlight %}
-
-Now that you’ve got some content put together, push it to GitHub. Enter the following commands:
-
-    - git add -A
-    - git commit -m “added index.html”
-    - git push -u origin master
-
-Navigate to https://{{"<"}} yourUsername>.github.io. You’ll see that your changes are live. Congrats, you now have your own webpage! If you used the code snippets above, it will look like this: 
-
-![Example page]({{ "/assets/webpageExample.png" | absolute_url }})
-
-While the xkcd comic used in our example is funny (and scientifically accurate - I speak from experience), you're ready to customize your page and add in some of your own awesome content. New to web development and nervous about HTML and CSS? There aren't many better places to start than [freeCodeCamp][freecodecamp]. Good luck, and, most importantly, have fun!
-
-Check back soon for Part II: Use Jekyll & GitHub Pages to Make a Blog
-
-
-[join-github]: https://github.com/join
-[freecodecamp]: https://www.freecodecamp.org/
+[thirsty-cat]: https://twitter.com/TheThirstyCat
 [fsr-guide]: https://acaird.github.io/computers/2015/01/07/raspberry-pi-fsr
+[adafruit-page]: https://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi/connecting-the-cobbler-to-a-mcp3008
+[github-page]: https://github.com/timothy-johnston/ThirstyCat/blob/master/scratchinCat.py
