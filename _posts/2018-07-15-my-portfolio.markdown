@@ -8,6 +8,7 @@ categories: jekyll update
 This page is a work in progress. It contains links to and descriptions of my main personal and school projects. I hope to update it soon with interesting code snippets and screenshots of my applications in action.
 
 ### [ThirstyCat Twitter Bot][thirsty-cat-github]
+* [Link to Twitter bot][tc-twitter]
 * Automated detector that senses when cat approaches water bowl, captures a picture, and tweets photo using Raspberry Pi, force-sensitive resistor, Python, and Tweepy
 * Wrote technical “How-to” guide to document build process and instruct others how to recreate the project  
 <br /> 
@@ -32,7 +33,7 @@ Note: This is a module capstone project for Tech Elevator - I'll be able to push
 * Object oriented design that responds to user input and reads/writes text files to log transactions
 * Collaboratively designed and implemented with pair programming
 
-[tc-twitter]:twitter.com/TheThirstyCat
+[tc-twitter]:https://twitter.com/TheThirstyCat
 [thirsty-cat-github]:https://github.com/timothy-johnston/ThirstyCat
 [virtual-interview-github]:https://github.com/timothy-johnston/VirtualInterview
 [burrells-ford]:https://codepen.io/tedwardj11/full/ELNoYK/
