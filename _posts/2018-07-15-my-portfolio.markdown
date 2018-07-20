@@ -10,7 +10,7 @@ This page is a work in progress. It contains links to and descriptions of my mai
 ### [ThirstyCat Twitter Bot][thirsty-cat-github]
 * [twitter.com/TheThirstyCat][tc-twitter]
 * Automated detector that senses when cat approaches water bowl, captures a picture, and tweets photo using Raspberry Pi, force-sensitive resistor, Python, and Tweepy
-* Wrote technical “How-to” guide to document build process and instruct others how to recreate the project 
+* Wrote technical “How-to” guide to document build process and instruct others how to recreate the project  
 <br /> 
 
 ### [VirtualInterview Command Line App][virtual-interview-github]
