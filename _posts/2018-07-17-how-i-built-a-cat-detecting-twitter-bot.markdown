@@ -48,6 +48,9 @@ Refer to the wiring diagrams provided by Adafruit ([more info here)][adafruit-pa
 * MCP3008 CS -> #25 
 * MCP3008 DGND -> GND 
 
+![MCP3008 Pin Diagram]({{ "/assets/build TC 8.gif" | absolute_url }})
+![Wiring Diagram Zoomed Out]({{ "/assets/build TC 5.pnc" | absolute_url }})
+![Wiring Diagram Zoomed In]({{ "/assets/build TC 4.pnc" | absolute_url }})
 ![Connect pins]({{ "/assets/build TC 2.JPG" | absolute_url }})
 
 Here is the only tricky part. Connect the FSR and the 10k Ohm resistor to the breadboard. See the picture below:  The FSR goes in a free location on the breadboard. Use a jumper wire to connect one of the FSR leads to Channel 0 on the MCP3008. Then use the 10k Ohm resistor to connect that same location to the ground on the opposite side of the breadboard. Finally, use a jumper wire to connect the 2nd FSR lead to the power rail on the FSR's side of the breadboard.
