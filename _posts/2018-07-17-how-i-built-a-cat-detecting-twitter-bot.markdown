@@ -8,7 +8,7 @@ categories: jekyll update
 Recently, I built a cat-detecting, picture-taking, and tweet-tweeting Raspberry Pi / Twitter bot called [ThirstyCat][thirsty-cat]. This is a Twitter bot that automatically takes a photo of my sweet cat Shasta and posts it to Twitter each time she takes a drink from her water bowl. I had been wanting to put together a project utilizing not only programming but also hardware/electronics for a while, and I also had been wanting to share pictures of my cat with random people on the Internet for a while. Thus, ThirstyCat was born. This post covers how I built this project - feel free to use this as a guide to build your own, or use it as inspiration to build something different!
 
 ## Description
-ThirstyCat uses a force-senstive resistor (FSR) and Raspberry Pi B+ to detect when Shasta approaches her water bowl. Since the FSR itsself is very small, I placed it underneath a larger platform (okay, a cheap cutting board) set in front of the water bowl. This way, any time the cat walks towards the bowl a force is applied to the FSR, even if its not being directly stepped on. A Pi Cam connected to the Pi is then triggered to take a picture.
+ThirstyCat uses a force-senstive resistor (FSR) and Raspberry Pi B+ to detect when Shasta approaches her water bowl. Since the FSR itself is very small, I placed it underneath a larger platform (okay, a cheap cutting board) set in front of the water bowl. This way, any time the cat walks towards the bowl a force is applied to the FSR, even if its not being directly stepped on. A Pi Cam connected to the Pi is then triggered to take a picture.
 
 The system is controlled with a script written in Python, and it uses the Tweepy library to communicate with the Twitter API. Within the Python script is a force threshold value - whenever the platform is stepped on, the values coming back from the FSR increase and exceed the threshold. This triggers the Pi Cam to take a picture, and then that picture is automatically tweeted. Here's an example Tweet!
 
@@ -52,7 +52,7 @@ Refer to the wiring diagrams provided by Adafruit ([more info here)][adafruit-pa
 
 Here is the only tricky part. Connect the FSR and the 10k Ohm resistor to the breadboard. See the picture below:  The FSR goes in a free location on the breadboard. Use a jumper wire to connect one of the FSR leads to Channel 0 on the MCP3008. Then use the 10k Ohm resistor to connect that same location to the ground on the opposite side of the breadboard. Finally, use a jumper wire to connect the 2nd FSR lead to the power rail on the FSR's side of the breadboard.
 
-![Connect FSR]({{ "/assets/build TC 6.JPG" | absolute_url }})
+![Connect FSR]({{ "/assets/build TC 7.png" | absolute_url }})
 
 Smooth sailing from here on out. Connect the breadboard to the Pi using the ribbon cable. 
 
