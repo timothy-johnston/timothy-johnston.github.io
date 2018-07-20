@@ -10,11 +10,13 @@ This page is a work in progress. It contains links to and descriptions of my mai
 1. [ThirstyCat Twitter Bot][thirsty-cat-github]
 * [twitter.com/TheThirstyCat][tc-twitter]
 * Automated detector that senses when cat approaches water bowl, captures a picture, and tweets photo using Raspberry Pi, force-sensitive resistor, Python, and Tweepy
-* Wrote technical “How-to” guide to document build process and instruct others how to recreate the project 
+* Wrote technical “How-to” guide to document build process and instruct others how to recreate the project   
 
+<br />
 
 2. [VirtualInterview Command Line App][virtual-interview-github]
-
+* Interactive mock-interview command line application built with Java and OOP design principles
+* Uses file I/O to read and print sample questions, times user’s response, and allows user to 	add/modify/delete questions
 
 
 3. [Burrels Ford Tribute Page][burrells-ford]
