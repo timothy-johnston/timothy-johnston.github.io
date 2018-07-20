@@ -1,6 +1,14 @@
 [
   
   {
+    "title"    : "How I Built a Cat-Detecting Twitter Bot",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/jekyll/update/2018/07/17/how-i-built-a-cat-detecting-twitter-bot/",
+    "date"     : "2018-07-17 20:45:42 -0400"
+    } ,
+    
+  {
     "title"    : "Create A Personal Webpage/Blog, Part I: Use GitHub Pages to Make a Webpage",
     "category" : "",
     "tags"     : "",
@@ -14,6 +22,14 @@
     "tags"     : "",
     "url"      : "/jekyll/update/2018/06/15/my-portfolio/",
     "date"     : "2018-06-15 15:45:42 -0400"
+    } ,
+    
+  {
+    "title"    : "Carte Noire in Action",
+    "category" : "",
+    "tags"     : "demo, action, carte, noire",
+    "url"      : "/jekyll/2014/06/10/carte-noire-in-action/",
+    "date"     : "2014-06-10 08:31:19 -0400"
     } 
     
   ]

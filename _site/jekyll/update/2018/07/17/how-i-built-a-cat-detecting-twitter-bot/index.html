@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How I Built a Cat-Detecting Twitter Bot</title>
+<meta name="description" content="My personal page.">
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/jquery.mmenu.all.css" />
+<link rel="stylesheet" href="/css/highlightjs.piperita.css">
+
+<!-- Favicons generated at http://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/favicons/manifest.json">
+<link rel="shortcut icon" href="/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-513c6fa83da6ec67"></script>
+
+
+
+
+</head>
+
+
+    <body>
+
+    <nav id="my-menu">
+  <div>
+    <p>Tim Johnston</p>
+
+    <ul class="pages">
+      <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="/posts/"><i class="fa fa-archive"></i> All Posts</a></li>
+      <li><a href="/search/"><i class="fa fa-search"></i> Search</a></li>
+    </ul>
+
+    <p class="links">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a href="/feed.xml" target="_new"><i class="fa fa-rss"></i></a>
+</p>
+
+  </div>
+</nav>
+<div class="menu-button" href="#menu"><i class="fa fa-bars"></i></div>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      
+
+<div class="container-fluid single">
+  <div class="row">
+
+    <div itemscope itemtype="http://schema.org/Article" class="col-md-12 article">
+      
+
+      <h1 class="header" itemprop="name">How I Built a Cat-Detecting Twitter Bot</h1>
+
+      <div class="author">
+        <small><i>
+          
+          on <span itemprop="datePublished" content="2014-08-28">July 17, 2018</span>
+           under jekyll
+        </i></small>
+      </div>
+
+      <div class="read-time">
+        <small>
+          5 minute read
+        </small>
+      </div>
+
+      <div class="content-panel content">
+
+        
+
+        <span itemprop="articleBody"><p>Recently, I built a cat-detecting, picture-taking, and tweet-tweeting Raspberry Pi / Twitter bot called [ThirstyCat][thirsty-cat]. This is a Twitter bot that automatically takes a photo of my sweet cat Shasta and posts it to Twitter each time she takes a drink from her water bowl. I had been wanting to put together a project utilizing not only programming but also hardware/electronics for a while, and I also had been wanting to share pictures of my cat with random people on the Internet for a while. Thus, ThirstyCat was born. This post covers how I built this project - feel free to use this as a guide to build your own, or use it as inspiration to build something different!</p>
+
+<h2 id="description">Description</h2>
+<p>ThirstyCat uses a force-senstive resistor (FSR) and Raspberry Pi B+ to detect when Shasta approaches her water bowl. Since the FSR itsself is very small, I placed it underneath a larger platform (okay, a cheap cutting board) set in front of the water bowl. This way, any time the cat walks towards the bowl a force is applied to the FSR, even if its not being directly stepped on. A Pi Cam connected to the Pi is then triggered to take a picture.</p>
+
+<p>The system is controlled with a script written in Python, and it uses the Tweepy library to communicate with the Twitter API. Within the Python script is a force threshold value - whenever the platform is stepped on, the values coming back from the FSR increase and exceed the threshold. This triggers the Pi Cam to take a picture, and then that picture is automatically tweeted. Here’s an example Tweet!</p>
+
+<div style="display:flex; justify-content:center;">
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Alert, cat detected! Shasta just took a drink.<br />Time:  2018-07-14 14:30:45.368819<br />Number of drinks today:  2 <a href="https://t.co/hwkccpVNuR">pic.twitter.com/hwkccpVNuR</a></p>&mdash; ThirstyCat (@TheThirstyCat) <a href="https://twitter.com/TheThirstyCat/status/1018201202738257920?ref_src=twsrc%5Etfw">July 14, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<p>Before getting in to the details, I want to give a major shoutout to Andrew Caird. His guide on how to <a href="https://acaird.github.io/computers/2015/01/07/raspberry-pi-fsr">use a force sensitive resistor with a Raspberry Pi</a> was tremendously helpful to me.</p>
+
+<h2 id="materials">Materials</h2>
+<ul>
+  <li>Raspberry Pi B+</li>
+  <li>Force-sensitive resistor</li>
+  <li>Breadboard</li>
+  <li>Pi Cobbler</li>
+  <li>MCP3008 analog to digital converter</li>
+  <li>Ribbon cable</li>
+  <li>10k Ohm resistor</li>
+  <li>Male/male jumper wires</li>
+</ul>
+
+<p>In terms of software, I used Python 2.7.3, Tweepy, and the Adafruit_MCP3008 library.</p>
+
+<h2 id="lets-build-it">Lets Build It!</h2>
+<p>The process is pretty straight-forward. I’ll try to make it more straight-forward with lots of pictures.</p>
+
+<ol>
+  <li>Plug the analog to digital converter and Pi Cobbler into the breadboard.</li>
+</ol>
+
+<p>Thanks for checking out my blog – this is actually my very first post! This entry is a beginner’s guide to setting up a basic webpage using GitHub pages.</p>
+
+<p>GitHub pages is a service that allows you to host web pages directly out of a GitHub repository. User’s can create pages specifically for some project, or they can create a personal page to be used as a portfolio, blog, etc. In part II of this post, coming next weekend, we’ll utilize Jekyll with GitHub pages to create a lightweight and customizable blog.</p>
+
+<p>Lets build our webpage. We’ll begin by making a new GitHub repository (you’ll need an existing GitHub account – <a href="https://github.com/join">Join GitHub</a>). Click the “+” symbol on the top right of your home page and select new repository. Since you’re making your personal page, name your repository <yourUsername>.github.io. Give it a short description if you’d like. I chose to initialize my repository with a README file – you don’t have to do this. When finished, click the green Create repository button.</yourUsername></p>
+
+<p><img src="/assets/makeNewRepository.png" alt="Make new repository" /></p>
+
+<p>Next, clone your newly-created repository to your local machine. Click the green Clone or download button on the right side of the page, and then click the clipboard icon to the right of the URL in the dropdown.</p>
+
+<p><img src="/assets/cloneRepository.png" alt="Clone repository" /></p>
+
+<p>Now the real fun begins! Lets head to the terminal. Enter the command git clone &lt; the URL you just copied&gt;.</p>
+
+<p><img src="/assets/enterCloneCommand.png" alt="Enter clone command" /></p>
+
+<p>You’ll see some terminal output before you’re prompted to enter another command. Go ahead and cd itno the the directory that was created and enter the command git remote -v to confirm your remote repository was established as expected. You should see two lines of output that look something like this:</p>
+
+<p><img src="/assets/verifyRemote.png" alt="Verify remote" /></p>
+
+<p>Your repository is all set up! Now, lets put some content on your page. Fire up a new file named index.html in your text editor of choice and add some HTML. You can start as simple as typing “Hello world!”, or you can follow my basic example using this HTML and CSS:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"myPage.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello world!<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Welcome to my page!<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;span&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Enjoy this comic:<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://imgs.xkcd.com/comics/cat_proximity.png"</span> <span class="na">alt=</span><span class="s">"xkcd comic"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/body&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#4286f4</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h2</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#f42929</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">span</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span><span class="n">inline-block</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">p</span> <span class="p">{</span>
+    <span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Now that you’ve got some content put together, push it to GitHub. Enter the following commands:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- git add -A
+- git commit -m “added index.html”
+- git push -u origin master
+</code></pre></div></div>
+
+<p>Navigate to https://&lt; yourUsername&gt;.github.io. You’ll see that your changes are live. Congrats, you now have your own webpage! If you used the code snippets above, it will look like this:</p>
+
+<p><img src="/assets/webpageExample.png" alt="Example page" /></p>
+
+<p>While the xkcd comic used in our example is funny (and scientifically accurate - I speak from experience), you’re ready to customize your page and add in some of your own awesome content. New to web development and nervous about HTML and CSS? There aren’t many better places to start than <a href="https://www.freecodecamp.org/">freeCodeCamp</a>. Good luck, and, most importantly, have fun!</p>
+
+<p>Check back soon for Part II: Use Jekyll &amp; GitHub Pages to Make a Blog</p>
+
+</span>
+
+        
+
+        
+        <div class="share">
+          <!-- Go to www.addthis.com/dashboard to customize your tools -->
+          <div class="addthis_sharing_toolbox"></div>
+        </div>
+        
+
+        
+
+      </div>
+
+      
+      <div class="content-panel feedback">
+        I <i class="fa fa-heart"></i> feedback.<br />
+        Let me know what you think of this article in the comment section below!
+      </div>
+      
+
+      
+      <div class="content-panel comments">
+        <div id="disqus_thread">
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+      </div>
+      
+
+      
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+function disqus_config() { this.experiment.enable_scroll_container = true; }
+var disqus_shortname = "cartenoire"; // required: replace example with your forum shortname
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+
+      </div>
+    </div>
+
+    <div class="footer clearfix">
+  <div class="col-md-6">
+    Theme is Carte-Noir, <a href="https://twitter.com/_JacobTomlinson">Jacob Tomlinson</a>
+  </div>
+  <div class="col-md-6">
+    &lt;/&gt; on <a href="https://github.com/jacobtomlinson/carte-noire">Github</a> &nbsp;<i class="fa fa-github-alt"></i>
+  </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="/js/jquery.mmenu.min.all.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      $("#my-menu").mmenu().on( "closed.mm", function() {
+            $(".menu-button").show();
+         });
+      $(".menu-button").click(function() {
+        $(".menu-button").hide();
+        $("#my-menu").trigger("open.mm");
+      });
+   });
+</script>
+
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20365477-4']);
+          _gaq.push(['_trackPageview']);
+  (function () {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+    </body>
+</html>
