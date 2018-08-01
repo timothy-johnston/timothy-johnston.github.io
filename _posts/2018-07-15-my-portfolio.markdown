@@ -22,6 +22,13 @@ This page is a work in progress. It contains links to and descriptions of my mai
 My first forray into HTML & CSS. This is over all a pretty simple page, but I implemented a couple of fun features like a photo slideshow and an embedded Google Map using the Google Maps API and a bit of Javascript.  
 <br />
 
+### National Parks Weather Update
+Note: This is a module capstone project for Tech Elevator - I'll be able to push the source code to my personal GitHub later.
+* Java Spring MVC web application using PostgreSQL database to show forecasts and save user input
+* Webpages designed and styled with JSP, CSS, and Bootstrap
+* Automated testing with Selenium used to test individual page functionality and navigation through website
+<br />
+
 ### National Park Reservation System Command Line App
 Note: This is a module capstone project for Tech Elevator - I'll be able to push the source code to my personal GitHub later.
 * Queries PostgresSQL database to display and reserve available camps based on user’s search parameters
