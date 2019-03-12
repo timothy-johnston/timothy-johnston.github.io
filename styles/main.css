@@ -2,14 +2,34 @@ body {
     text-align: center;
 }
 
-body { background: #eee }
-img { width: 100%; }
-.container-fluid { max-width: 1200px; }
+img { 
+    width: 100%; 
+}
+.container-fluid { 
+    max-width: 1200px; 
+}
 
 header {
 	background: #563d7c;
 	padding: 2em 1em;
 	color: #fff;
 	margin-bottom: 2em;
+}
+
+.card {
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+[class*="row"] {
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+[class*="col-"] {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    width: 100%
 }
 
