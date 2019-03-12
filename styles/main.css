@@ -1,4 +1,15 @@
 body {
     text-align: center;
-    background-color: red;
 }
+
+body { background: #eee }
+img { width: 100%; }
+.container-fluid { max-width: 1200px; }
+
+header {
+	background: #563d7c;
+	padding: 2em 1em;
+	color: #fff;
+	margin-bottom: 2em;
+}
+
