@@ -33,3 +33,53 @@ header {
     width: 100%
 }
 
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+    
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+
+  }
+
+.modal-dialog {
+    
+    width:75%;
+}
+
+  /* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 75%;
+    border: 5px solid red;
+  }
+
+  /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 900px){
+    .modal-content {
+      width: 100%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
