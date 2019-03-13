@@ -1,5 +1,18 @@
 body {
     text-align: center;
+    background-image: url(../media/wallpaper1.jpg);
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top right; 
+  background-size: cover;
+}
+
+.navbar {
+  background:transparent;
+}
+
+div {
+  background-color:transparent;
 }
 
 img { 
@@ -18,6 +31,7 @@ header {
 
 .card {
     box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    background-color:transparent;
 }
 
 [class*="row"] {
