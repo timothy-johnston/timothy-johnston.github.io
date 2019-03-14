@@ -2,9 +2,9 @@ body {
     text-align: center;
     background-image: url(../media/wallpaper1.jpg);
     background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: top right; 
-  background-size: cover;
+    background-attachment: fixed;
+    background-position: top right; 
+    background-size: cover;
 }
 
 .navbar {
@@ -15,11 +15,17 @@ div {
   background-color:transparent;
 }
 
-img { 
-    width: 100%; 
+div .row div {
+  background-color:transparent;
 }
-.container-fluid { 
-    max-width: 1200px; 
+
+div .jumbotron-fluid {
+  background-color:blue;
+  height:500px;
+}
+
+img { 
+    width: auto; 
 }
 
 header {
