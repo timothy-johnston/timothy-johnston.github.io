@@ -12,7 +12,8 @@ body {
 }
 
 .navbar {
-  background:transparent;
+  background-color:red;
+  border:5px solid red;
 }
 
 div {
