@@ -4,16 +4,11 @@
 
 body {
     text-align: center;
-    background-image: url(../media/wallpaper1.jpg);
+    background-image: url(../media/wallpaper3.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: top right; 
     background-size: cover;
-}
-
-.navbar {
-  background-color:red;
-  border:5px solid red;
 }
 
 div {
@@ -22,6 +17,10 @@ div {
 
 div .row div {
   background-color:transparent;
+}
+
+.nav-item{
+  text-align: right;
 }
 
 section {
@@ -106,20 +105,7 @@ header {
     .modal-content {
       width: 100%;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
 
 
 
