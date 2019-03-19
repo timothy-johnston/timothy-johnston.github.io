@@ -41,7 +41,13 @@ section {
   justify-content: center;
 }
 
+#i-am-a {
+  border:2px solid red;
+}
 
+#what-i-am {
+  border:2px solid blue;
+}
 
 img { 
     width: auto; 
