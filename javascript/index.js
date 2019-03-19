@@ -1,3 +1,6 @@
+var descriptors = getDescriptors();
+$('#description-variable-1').text(descriptors[0]);
+
 $( document ).ready(function() {
 
     document.getElementById('date').innerHTML = new Date().toDateString();
@@ -17,10 +20,53 @@ $( document ).ready(function() {
         }
     });
 
+    //Change the text
+    var slideDescriptionInterval = window.setInterval(slideDescriptionIn, 5000);
+
+    
+    var descriptorCounter = 1;
+
+    function slideDescriptionIn() {
+
+            
+
+            if ($('#description-variable-1').hasClass("slideLeftIn")) {
+                $('#description-variable-1').removeClass("slideLeftIn");
+                $('#description-variable-1').addClass("slideLeftOut");
+
+                
+
+            } else {
+                $('#description-variable-1').removeClass("slideLeftOut");
+                $('#description-variable-1').addClass("slideLeftIn");
+
+            }
+
+            $('#description-variable-1').toggle();
+            $('#description-variable-1').toggle();
+                
+                setTimeout(function() {
+                    $('#description-variable-1').toggle();
+                    $('#description-variable-1').removeClass("slideLeftOut");
+                    $('#description-variable-1').addClass("slideLeftIn");
+
+                    $('#description-variable-1').text(descriptors[descriptorCounter]);
+                    descriptorCounter++;
+                    
+
+                    $('#description-variable-1').toggle();
+                }, 1000);
+
+    }
+
+
+
 });
 
 
-
+function getDescriptors() {
+    return ["Builder", "Learner", "Collaborator", "Risk Taker", "Innovator"];
+}
 
 
 
