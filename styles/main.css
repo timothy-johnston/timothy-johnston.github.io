@@ -79,10 +79,23 @@ header {
 }
 
 
-#about-container {
+#about-container-outer {
   display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */  /*Use flex-wrap for space-around, flex-direction for smushed together*/
   justify-content: center;
+  border: 3px solid red;
+  
+  align-content: space-around;
 }
+
+/* #about-container {
+  
+}
+
+#modal-launcher-container {
+  
+} */
 
 /* The Modal (background) */
 .modal {
