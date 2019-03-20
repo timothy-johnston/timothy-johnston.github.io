@@ -45,17 +45,21 @@ $( document ).ready(function() {
             $('#description-variable-1').toggle();
             $('#description-variable-1').toggle();
                 
-                setTimeout(function() {
-                    $('#description-variable-1').toggle();
-                    $('#description-variable-1').removeClass("slideLeftOut");
-                    $('#description-variable-1').addClass("slideLeftIn");
+            setTimeout(function() {
+                $('#description-variable-1').toggle();
+                $('#description-variable-1').removeClass("slideLeftOut");
+                $('#description-variable-1').addClass("slideLeftIn");
 
-                    $('#description-variable-1').text(descriptors[descriptorCounter]);
-                    descriptorCounter++;
-                    
+                $('#description-variable-1').text(descriptors[descriptorCounter]);
+                descriptorCounter++;
+                
 
-                    $('#description-variable-1').toggle();
-                }, 1000);
+                $('#description-variable-1').toggle();
+            }, 1000);
+
+            if (descriptorCounter == descriptors.length) {
+                descriptorCounter = 0;
+            }
 
     }
 
@@ -65,7 +69,7 @@ $( document ).ready(function() {
 
 
 function getDescriptors() {
-    return ["Builder", "Learner", "Collaborator", "Risk Taker", "Innovator"];
+    return ["Builder", "Learner", "Collaborator", "Risk Taker", "Innovator", "Friend"];
 }
 
 
