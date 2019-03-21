@@ -11,7 +11,21 @@ https://bnymellon.udemy.com/bootstrap-4-bootcamp/
 Css Hover Effect Library:
         http://ianlunn.github.io/Hover/
 
+Css Reflection Effect:
+https://www.hongkiat.com/blog/css-reflection/
+
 Flip Card How-To
         https://www.w3schools.com/howto/howto_css_flip_card.asp
         Note: For "on-click" effect, use "active" in place of "hover"
                 Some more info: https://stackoverflow.com/questions/13630229/can-i-have-an-onclick-effect-in-css/32721572
+
+Additional Flip tutorials (straightforward - try these ones first)
+https://www.webnots.com/bootstrap-4-flip-card-widget/
+https://www.tutorialrepublic.com/faq/how-to-create-3d-flipping-effect-on-mouse-hover-using-css.php
+
+	Use in tandem with this, how to simulate a hover event:
+	https://stackoverflow.com/questions/11038638/simulate-hover-in-jquery
+
+	So, instead of having to hover over something continously to keep it flipped, can click a button, on the click
+	of that button can then simulate a hover over the element to flip, then when another button is clicked the 
+	hover simulation ends so the element is flipped back to its normal position
