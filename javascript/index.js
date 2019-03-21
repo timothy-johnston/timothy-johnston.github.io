@@ -3,8 +3,6 @@ $('#description-variable-1').text(descriptors[0]);
 
 $( document ).ready(function() {
 
-    document.getElementById('date').innerHTML = new Date().toDateString();
-
     console.log("hi!");
 
     //Enable/disable navbar dark background based on scroll location
@@ -21,24 +19,20 @@ $( document ).ready(function() {
     });
 
     //Change the text
-    var slideDescriptionInterval = window.setInterval(slideDescriptionIn, 5000);
+    var slideDescriptionInterval = window.setInterval(descriptionAnimateControl, 5000);
 
     
     var descriptorCounter = 1;
 
-    function slideDescriptionIn() {
+    function descriptionAnimateControl() {
 
-            
-
-            if ($('#description-variable-1').hasClass("slideLeftIn")) {
-                $('#description-variable-1').removeClass("slideLeftIn");
-                $('#description-variable-1').addClass("slideLeftOut");
-
-                
+            if ($('#description-variable-1').hasClass("fadeIn")) {
+                $('#description-variable-1').removeClass("fadeIn");
+                $('#description-variable-1').addClass("fadeOut");
 
             } else {
-                $('#description-variable-1').removeClass("slideLeftOut");
-                $('#description-variable-1').addClass("slideLeftIn");
+                $('#description-variable-1').removeClass("fadeOut");
+                $('#description-variable-1').addClass("fadeIn");
 
             }
 
@@ -47,8 +41,8 @@ $( document ).ready(function() {
                 
             setTimeout(function() {
                 $('#description-variable-1').toggle();
-                $('#description-variable-1').removeClass("slideLeftOut");
-                $('#description-variable-1').addClass("slideLeftIn");
+                $('#description-variable-1').removeClass("fadeOut");
+                $('#description-variable-1').addClass("fadeIn");
 
                 $('#description-variable-1').text(descriptors[descriptorCounter]);
                 descriptorCounter++;
@@ -60,13 +54,10 @@ $( document ).ready(function() {
             if (descriptorCounter == descriptors.length) {
                 descriptorCounter = 0;
             }
-
     }
 
 
-
 });
-
 
 function getDescriptors() {
     return ["Builder", "Learner", "Collaborator", "Risk Taker", "Innovator", "Friend"];

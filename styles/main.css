@@ -27,7 +27,11 @@ section {
   height:100vh;
 }
 
-#cover-page {
+.section-div {
+  height: 100vh;
+}
+
+#about-content-row {
   height:100vh;
 }
 
@@ -60,7 +64,7 @@ header {
 	margin-bottom: 2em;
 }
 
-.card {
+/* .card {
     box-shadow:0 3px 10px rgba(0,0,0,0.1);
     background-color:transparent;
 }
@@ -76,7 +80,9 @@ header {
     padding-top: .75rem;
     padding-bottom: .75rem;
     width: 100%
-}
+} */
+
+
 
 
 #about-container-outer {
@@ -84,8 +90,7 @@ header {
   flex-wrap: wrap;
   /* flex-direction: column; */  /*Use flex-wrap for space-around, flex-direction for smushed together*/
   justify-content: center;
-  border: 3px solid red;
-  
+  border: transparent;
   align-content: space-around;
 }
 
@@ -130,8 +135,197 @@ header {
   }
 
 
+
+
+
+
+/* for demo purposes */
+.card {
+  margin: 10px 10px;
+}
+
+ .card-title {
+  text-align: left;
+}
+
+/* Flip Cards CSS */
+.card-container {
+  display: grid;
+  perspective: 700px;
+}
+
+.card-flip {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  grid-template-areas: "frontAndBack";
+  transform-style: preserve-3d;
+  transition: all 0.7s ease;
+}
+
+.card-flip div {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.card-front {
+  grid-area: frontAndBack;
+}
+
+.card-back {
+  grid-area: frontAndBack;
+  transform: rotateY(-180deg);
+}
+
+.card-container:hover .card-flip {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  border: 5px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Misc classes */
+
+
   /* Animations! Great example code here: http://www.justinaguilar.com/animations/# */
+  
+  .fadeIn{
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;	
+  
+    animation-duration: 1.5s;	
+    -webkit-animation-duration: 1.5s;
+  
+    animation-timing-function: ease-in-out;	
+    -webkit-animation-timing-function: ease-in-out;		
+  
+    visibility: visible !important;	
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      transform: scale(0);
+      opacity: 0.0;		
+    }
+    60% {
+      transform: scale(1.1);	
+    }
+    80% {
+      transform: scale(0.9);
+      opacity: 1;	
+    }	
+    100% {
+      transform: scale(1);
+      opacity: 1;	
+    }		
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      -webkit-transform: scale(0);
+      opacity: 0.0;		
+    }
+    60% {
+      -webkit-transform: scale(1.1);
+    }
+    80% {
+      -webkit-transform: scale(0.9);
+      opacity: 1;	
+    }	
+    100% {
+      -webkit-transform: scale(1);
+      opacity: 1;	
+    }		
+  }
+
+  .fadeOut{
+    animation-name: fadeOut;
+    -webkit-animation-name: fadeOut;	
+  
+    animation-duration: 1.5s;	
+    -webkit-animation-duration: 1.5s;
+  
+    animation-timing-function: ease-in-out;	
+    -webkit-animation-timing-function: ease-in-out;		
+  
+    visibility: visible !important;	
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      transform: scale(1);
+      opacity: 1.0;		
+    }
+    20% {
+      transform: scale(0.9);
+      opacity: 1.0;	
+    }
+    40% {
+      transform: scale(1.1);	
+    }	
+    100% {
+      transform: scale(0);
+      opacity: 0;	
+    }		
+  }
+  
+  @-webkit-keyframes fadeOut {
+    0% {
+      -webkit-transform: scale(1);
+      opacity: 1;		
+    }
+    20% {
+      -webkit-transform: scale(0.9);
+      opacity: 1;
+    }
+    40% {
+      -webkit-transform: scale(1.1);
+    }	
+    100% {
+      -webkit-transform: scale(0);
+      opacity: 0;	
+    }		
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   .slideLeftIn{
     animation-name: slideLeftIn;
     -webkit-animation-name: slideLeftIn;	
@@ -207,16 +401,16 @@ header {
     0% {
       transform: translateX(0%);
     }
-    50%{
+    5%{
       transform: translateX(-10%);
     }
-    65%{
+    20%{
       transform: translateX(-25%);
     }
-    80%{
+    35%{
       transform: translateX(-60%);
     }
-    95%{
+    50%{
       transform: translateX(-100%);
     }			
     100% {
@@ -228,16 +422,16 @@ header {
     0% {
       -webkit-transform: translateX(0%);
     }
-    50%{
+    5%{
       -webkit-transform: translateX(-10%);
     }
-    65%{
+    20%{
       -webkit-transform: translateX(-25%);
     }
-    80%{
+    35%{
       -webkit-transform: translateX(-60%);
     }
-    95%{
+    50%{
       -webkit-transform: translateX(-100%);
     }			
     100% {
