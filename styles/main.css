@@ -184,6 +184,11 @@ header {
   border: 5px solid red;
 }
 
+.card-img-top {
+  max-height: 100%;
+  max-width: 100%;
+}
+
 
 
 
