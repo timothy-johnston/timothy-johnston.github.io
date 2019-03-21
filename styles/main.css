@@ -11,14 +11,6 @@ body {
     background-size: cover;
 }
 
-div {
-  background-color:transparent;
-}
-
-div .row div {
-  background-color:transparent;
-}
-
 .nav-item{
   text-align: right;
 }
@@ -136,10 +128,7 @@ header {
 
 
 
-
-
-
-/* for demo purposes */
+/* PORTFOLIO Section */
 .card {
   margin: 10px 10px;
 }
@@ -148,46 +137,24 @@ header {
   text-align: left;
 }
 
-/* Flip Cards CSS */
-.card-container {
-  display: grid;
-  perspective: 700px;
+#test {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card-flip {
-  display: grid;
-  grid-template: 1fr / 1fr;
-  grid-template-areas: "frontAndBack";
-  transform-style: preserve-3d;
-  transition: all 0.7s ease;
+#github-icon {
+  max-width: 20%;
 }
 
-.card-flip div {
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
 
-.card-front {
-  grid-area: frontAndBack;
-}
 
-.card-back {
-  grid-area: frontAndBack;
-  transform: rotateY(-180deg);
-}
 
-.card-container:hover .card-flip {
-  transform: rotateY(180deg);
-}
 
-.card-front, .card-back {
-  border: 5px solid red;
-}
 
-.card-img-top {
-  max-height: 100%;
-  max-width: 100%;
-}
+
+
 
 
 
