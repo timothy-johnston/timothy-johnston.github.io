@@ -1,2 +1,17 @@
+Web Dev Udemy Course:
+https://bnymellon.udemy.com/the-complete-web-developer-zero-to-mastery/
+https://bnymellon.udemy.com/the-complete-web-development-bootcamp/
+Bootstrap Udemy Course:
+https://bnymellon.udemy.com/bootstrap-4-from-scratch-with-5-projects/
+https://bnymellon.udemy.com/bootstrap-4-bootcamp/
+
 <!-- Great rotating card overview: https://nicolaskadis.info/projects/pure-css-flip-cards-using-bootstrap-4-and-css-grid-no-js for an explanation -->
         Good Bootstrap card grid CodePen for reference: https://codepen.io/starise/pen/Gpgbyq
+
+Css Hover Effect Library:
+        http://ianlunn.github.io/Hover/
+
+Flip Card How-To
+        https://www.w3schools.com/howto/howto_css_flip_card.asp
+        Note: For "on-click" effect, use "active" in place of "hover"
+                Some more info: https://stackoverflow.com/questions/13630229/can-i-have-an-onclick-effect-in-css/32721572
