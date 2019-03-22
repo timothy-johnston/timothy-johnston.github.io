@@ -129,6 +129,22 @@ header {
 
 
 /* PORTFOLIO Section */
+#portfolio-header {
+  padding: 0% 5% 0 5%;
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0.7710843373493976) 82%, rgba(0,0,0,0) 100%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.row {
+  border:5px solid red;
+}
+.card-container-portfolio {
+  margin: 7% 0% 7% 0%;
+  
+}
+
 .card {
   margin: 10px 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -157,14 +173,16 @@ header {
 
 .card:hover {
   transform: scale(1.03);
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
 }
 
-
+.dropdown-toggle:focus {
+  box-shadow: none;
+}
 
 /* Template from: http://ianlunn.github.io/Hover/ */
 
-.hvr-sweep-to-top {
+/* .hvr-sweep-to-top {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -177,7 +195,7 @@ header {
   transition-duration: 0.3s;
 }
 .hvr-sweep-to-top:before {
-  content: "";
+  content: "hello its me";
   position: absolute;
   z-index: 99;
   top: 0;
@@ -202,12 +220,12 @@ header {
 .hvr-sweep-to-top:hover:before, .hvr-sweep-to-top:focus:before, .hvr-sweep-to-top:active:before {
   -webkit-transform: scaleY(10);
   transform: scaleY(10);
-}
+} */
 
 
 
-
-
+ 
+ 
 
 
 

@@ -86,30 +86,7 @@
                             gravida id nisl quis, malesuada condimentum diam. In hac habitasse platea dictumst gravida id nisl quis, malesuada condimentum diam. In hac habitasse platea dictumst  gravida id nisl quis, malesuada condimentum diam. In hac habitasse platea dictumst  
                         </div>
                         <!-- Button trigger modal -->
-                        <div id="modal-launcher-container">
-                            <button class="btn btn-primary btn-lg" id="modal-launcher" data-toggle="modal" data-target="#myModal">
-                                    Launch demo modal
-                            </button>
-                        </div>
-                        <!-- Modal -->
-                        <!-- Great modal tutorial: https://www.w3schools.com/howto/howto_css_modal_images.asp -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                            <div class="modal-dialog"></div>
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4> 
-                                </div>
-                                <div class="modal-body">
-                                    <div style="text-align: center;">
-                                            <embed src="media/test.pdf#scrollbar=0" type="application/pdf" width="100%" height="600px" />
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                     <div class="col-md carousel-container center-vertical">
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -148,11 +125,15 @@
         Good Bootstrap card grid CodePen for reference: https://codepen.io/starise/pen/Gpgbyq
         -->
         <section>
-            <h1>PORTFOLIO</h1>
+            <div id="portfolio-header">
+                <h1>PORTFOLIO</h1>
+                <button class="btn">RESUME</button>
+            </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 card-container">
-                        <div class="card">
+                    <div class="col-lg-4 col-md-6 card-container-portfolio">
+                        <div class="card h-100">
+                            
                             <img class="card-img-top" src="media/pic-me-1.jpg" alt="Bologna">
                             <div class="card-body">
                                 <div id ="test">
@@ -168,13 +149,25 @@
                                 <a href="#" class="card-link text-danger">Read More</a>
                                 <a href="#" class="card-link text-warning">Book a Trip</a>
                             </div>
-                            <div class="card-footer hvr-sweep-to-top">
-                                <small class="text-muted">Learn More</small>
+                            <div class="card-footer">
+                                <div class="btn-group dropup">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <small class="text-muted">Learn More</small>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        this is a paragraph
+                                        <br>
+                                        so is this
+                                        <br>
+                                        hi
+                                    </div>
+                                </div>     
                             </div>
+                            
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 card-container">
-                        <div class="card">
+                    <div class="col-lg-4 col-md-6 card-container-portfolio">
+                        <div class="card h-100">
                             <img class="card-img-top" src="media/pic-me-1.jpg" alt="Bologna">
                             <div class="card-body">
                                 <div id ="test">
@@ -191,11 +184,55 @@
                                 <a href="#" class="card-link text-warning">Book a Trip</a>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted">Learn More</small>
+                                <div class="btn-group dropup">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <small class="text-muted">Learn More</small>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        this is a paragraph
+                                        <br>
+                                        so is this
+                                        <br>
+                                        hi
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 card-container">
+                    <div class="col-lg-4 col-md-6 card-container-portfolio">
+                        <div class="card">
+                            <img class="card-img-top" src="media/pic-me-1.jpg" alt="Bologna">
+                            <div class="card-body">
+                                <div id ="test">
+                                    <span id="card-title-container">
+                                        <h4 class="card-title">Bologna</h4>
+                                    </span>
+                                    <span id="icon-container">
+                                        <img class="img-fluid" id="github-icon" align="right" src="media/github-icon.png" alt="Bologna">
+                                    </span>
+                                </div>
+                                <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
+                                <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
+                                <a href="#" class="card-link text-danger">Read More</a>
+                                <a href="#" class="card-link text-warning">Book a Trip</a>
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn-group dropup">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <small class="text-muted">Learn More</small>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        this is a paragraph
+                                        <br>
+                                        so is this
+                                        <br>
+                                        hi
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 card-container-portfolio">
                         <div class="card">
                             <img class="card-img-top" src="media/pic-me-1.jpg" alt="Bologna">
                             <div class="card-body">
@@ -217,7 +254,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 card-container">
+                    <div class="col-lg-4 col-md-6 card-container-portfolio">
                         <div class="card">
                             <img class="card-img-top" src="media/pic-me-1.jpg" alt="Bologna">
                             <div class="card-body">
@@ -239,7 +276,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 card-container">
+                    <div class="col-lg-4 col-md-6 card-container-portfolio">
                         <div class="card">
                             <img class="card-img-top" src="media/pic-me-1.jpg" alt="Bologna">
                             <div class="card-body">
@@ -261,60 +298,88 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 card-container">
-                        <div class="card">
-                            <img class="card-img-top" src="media/pic-me-1.jpg" alt="Bologna">
-                            <div class="card-body">
-                                <div id ="test">
-                                    <span id="card-title-container">
-                                        <h4 class="card-title">Bologna</h4>
-                                    </span>
-                                    <span id="icon-container">
-                                        <img class="img-fluid" id="github-icon" align="right" src="media/github-icon.png" alt="Bologna">
-                                    </span>
-                                </div>
-                                <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
-                                <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
-                                <a href="#" class="card-link text-danger">Read More</a>
-                                <a href="#" class="card-link text-warning">Book a Trip</a>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">Learn More</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 card-container">
-                        <div class="card">
-                            <img class="card-img-top" src="media/pic-me-1.jpg" alt="Bologna">
-                            <div class="card-body">
-                                <div id ="test">
-                                    <span id="card-title-container">
-                                        <h4 class="card-title">Bologna</h4>
-                                    </span>
-                                    <span id="icon-container">
-                                        <img class="img-fluid" id="github-icon" align="right" src="media/github-icon.png" alt="Bologna">
-                                    </span>
-                                </div>
-                                <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
-                                <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
-                                <a href="#" class="card-link text-danger">Read More</a>
-                                <a href="#" class="card-link text-warning">Book a Trip</a>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">Learn More</small>
-                            </div>
-                        </div>
+                    <div class="col-lg-4 col-md-6 card-container-portfolio">
+
+
+
+                           
+
+
+        
+      
+      
+      
+
+                            
+
+
+
+
                     </div>
                 </div>
             </div>
         </section>
  
       
+
+        
+
+
+
+
+
+
+        <div id="modal-launcher-container">
+                <button class="btn btn-primary btn-lg" id="modal-launcher" data-toggle="modal" data-target="#myModal">
+                        Launch demo modal
+                </button>
+            </div>
+            <!-- Modal -->
+            <!-- Great modal tutorial: https://www.w3schools.com/howto/howto_css_modal_images.asp -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog"></div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4> 
+                    </div>
+                    <div class="modal-body">
+                        <div style="text-align: center;">
+                                <embed src="media/test.pdf#scrollbar=0" type="application/pdf" width="100%" height="600px" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- Javascript, Jquery, Bootstrap -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script async src="./javascript/index.js"></script>
+
+
+
+        
+
+
+
 
     </body>
 </html>
