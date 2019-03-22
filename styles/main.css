@@ -489,3 +489,24 @@ header {
 
 
 
+  #real {
+    font-size: 40px;
+    color: white;
+    margin: 0;
+  }
+  #refl {
+    font-size:40px;
+    color: white;margin: 0;
+    -moz-transform: scaleY(-1);
+         -o-transform: scaleY(-1);
+         -webkit-transform: scaleY(-1);
+         transform: scaleY(-1);
+    -webkit-mask-image: -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(20%, transparent), to(rgba(0, 0, 0, 0.4)));
+    mask-image: gradient(linear, right top, right bottom, from(transparent), color-stop(20%, transparent), to(rgba(0, 0, 0, 0.4)));
+  }
+  #para_div {
+    display:inline-block;
+    background-color: black;
+    padding: 20px 40px;
+    border-radius:10px;
+  }
