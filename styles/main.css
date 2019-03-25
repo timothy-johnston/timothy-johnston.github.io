@@ -133,9 +133,6 @@ header {
   justify-content: space-between;
 }
 
-.row {
-  border:5px solid red;
-}
 .card-container-portfolio {
   margin: 7% 0% 7% 0%;
   
