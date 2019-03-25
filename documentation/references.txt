@@ -1,14 +1,9 @@
-
-Flexbox Guide:
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-
 Web Dev Udemy Course:
 https://bnymellon.udemy.com/the-complete-web-developer-zero-to-mastery/
 https://bnymellon.udemy.com/the-complete-web-development-bootcamp/
 Bootstrap Udemy Course:
 https://bnymellon.udemy.com/bootstrap-4-from-scratch-with-5-projects/
 https://bnymellon.udemy.com/bootstrap-4-bootcamp/
-
 
 <!-- Great rotating card overview: https://nicolaskadis.info/projects/pure-css-flip-cards-using-bootstrap-4-and-css-grid-no-js for an explanation -->
         Good Bootstrap card grid CodePen for reference: https://codepen.io/starise/pen/Gpgbyq
