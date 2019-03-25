@@ -45,10 +45,6 @@ section {
   display: inline-block;
 }
 
-img { 
-    width: auto; 
-}
-
 header {
 	background: #563d7c;
 	padding: 2em 1em;
@@ -489,14 +485,12 @@ header {
 
 
 
-  #real {
+  .real {
     font-size: 40px;
     color: white;
     margin: 0;
   }
-  #refl {
-    font-size:40px;
-    color: white;margin: 0;
+  .refl {
     -moz-transform: scaleY(-1);
          -o-transform: scaleY(-1);
          -webkit-transform: scaleY(-1);
