@@ -1,7 +1,3 @@
-#date {
-  margin-top:500px;
-}
-
 body {
     text-align: center;
     /* background-image: url(../media/wallpaper1.jpg); */
@@ -15,26 +11,20 @@ body {
   text-align: right;
 }
 
-section {
-  height:100vh;
+#about-page {
+  border: 5px solid orange;
 }
 
-.section-div {
-  height: 100vh;
-}
-
-#about-content-row {
-  height:100vh;
-}
-
-#cover-content-row {
-  height:100vh;
-}
-
-.center-vertical {
+.center-all {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #description-setup {
@@ -45,50 +35,71 @@ section {
   display: inline-block;
 }
 
-header {
-	background: #563d7c;
-	padding: 2em 1em;
-	color: #fff;
-	margin-bottom: 2em;
+/* Remove all this stuff */
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-/* .card {
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
-    background-color:transparent;
+/* ------------------- Carousel Styling ------------------- */
+
+.carousel-inner {
+  border-radius: 15px;
 }
 
-[class*="row"] {
-    margin-bottom: 1rem;
-    justify-content: center;
+.carousel-caption {
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 0 0 10px 25px;
+  color: #fff;
+  text-align: left;
 }
 
-[class*="col-"] {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    width: 100%
-} */
-
-
-
-
-#about-container-outer {
-  display: flex;
-  flex-wrap: wrap;
-  /* flex-direction: column; */  /*Use flex-wrap for space-around, flex-direction for smushed together*/
-  justify-content: center;
-  border: transparent;
-  align-content: space-around;
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  margin: 0;
+  padding: 0 25px 25px 0;
+  text-align: right;
 }
 
-/* #about-container {
-  
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
 }
 
-#modal-launcher-container {
-  
-} */
+
+.real img, .refl img {
+  border: 3px solid blue;
+  width: auto;
+  height: auto;
+}
+
+/* stop removing here */
+
+.refl {
+  position: relative;
+  margin-top: 5px;
+  -moz-transform: scaleY(-1);
+       -o-transform: scaleY(-1);
+       -webkit-transform: scaleY(-1);
+       transform: scaleY(-1);
+  -webkit-mask-image: -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(60%, transparent), to(rgba(0, 0, 0, 0.4)));
+  mask-image: gradient(linear, right top, right bottom, from(transparent), color-stop(60%, transparent), to(rgba(0, 0, 0, 0.8)));
+}
 
 /* The Modal (background) */
 .modal {
@@ -482,22 +493,3 @@ header {
 
 
 
-  .real {
-    font-size: 40px;
-    color: white;
-    margin: 0;
-  }
-  .refl {
-    -moz-transform: scaleY(-1);
-         -o-transform: scaleY(-1);
-         -webkit-transform: scaleY(-1);
-         transform: scaleY(-1);
-    -webkit-mask-image: -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(20%, transparent), to(rgba(0, 0, 0, 0.4)));
-    mask-image: gradient(linear, right top, right bottom, from(transparent), color-stop(20%, transparent), to(rgba(0, 0, 0, 0.4)));
-  }
-  #para_div {
-    display:inline-block;
-    background-color: black;
-    padding: 20px 40px;
-    border-radius:10px;
-  }
