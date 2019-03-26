@@ -1,18 +1,18 @@
 body {
     text-align: center;
-    /* background-image: url(../media/wallpaper1.jpg); */
+    background-image: url(../media/wallpaper5.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: top right; 
+    background-position: bottom right; 
     background-size: cover;
+}
+
+section {
+  min-height: 100vh;
 }
 
 .nav-item{
   text-align: right;
-}
-
-#about-page {
-  border: 5px solid orange;
 }
 
 .center-all {
@@ -35,33 +35,53 @@ body {
   display: inline-block;
 }
 
-/* Remove all this stuff */
-.img-responsive,
-.thumbnail > img,
-.thumbnail a > img,
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  display: block;
-  width: 100%;
-  height: auto;
+#about-container {
+  display: flex;
+  flex-direction: column;
 }
 
-/* ------------------- Carousel Styling ------------------- */
+.about-paragraph {
+  margin:25px 0 25px 0;
+}
+
+#about-para1 {
+  text-align: left;
+  width: 75%;
+}
+
+#about-para2 {
+  text-align: right;
+  width: 75%;
+  align-self: flex-end;
+}
+
+#talent-container {
+  width: 80%;
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+#skill-box, #tech-box {
+  width: 75%;
+  margin: 0px 15px 0px 15px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  background-color: lightblue;
+  margin: 5px;
+}
+
+.skill-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+}
 
 .carousel-inner {
   border-radius: 15px;
-}
-
-.carousel-caption {
-  background-color: rgba(0,0,0,.5);
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
-  padding: 0 0 10px 25px;
-  color: #fff;
-  text-align: left;
 }
 
 .carousel-indicators {
@@ -87,8 +107,6 @@ body {
   width: auto;
   height: auto;
 }
-
-/* stop removing here */
 
 .refl {
   position: relative;
@@ -184,7 +202,39 @@ body {
   box-shadow: none;
 }
 
-/* Template from: http://ianlunn.github.io/Hover/ */
+/* Template and unmodified classes from: http://ianlunn.github.io/Hover/ */
+
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #2098D1;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+
 
 /* .hvr-sweep-to-top {
   display: inline-block;
