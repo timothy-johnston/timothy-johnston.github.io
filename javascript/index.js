@@ -56,6 +56,26 @@ $( document ).ready(function() {
             }
     }
 
+    //Modal
+    var modal = $('#myModal')[0];
+    var modalOpenBtn = $('#myBtn')[0];
+    var modalCloeBtn= $('.close')[0];
+
+    //Open modal 
+    modalOpenBtn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    //Close modal (when x is clicked or outside the window is clicked)
+    modalCloseBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
 
 });
 
