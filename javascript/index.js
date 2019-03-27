@@ -14,7 +14,7 @@ $( document ).ready(function() {
         } else {
             $('.navbar').removeClass('bg-transparent');
             // $('.navbar').addClass('bg-dark');
-            var bgOpacity = scrollPos / 800;
+            var bgOpacity = scrollPos / 500;
             var bgStyle = "rgba(0,0,0," + bgOpacity;
             $('.navbar').css({"background":bgStyle});
         }
