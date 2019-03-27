@@ -5,6 +5,9 @@ Bootstrap Udemy Course:
 https://bnymellon.udemy.com/bootstrap-4-from-scratch-with-5-projects/
 https://bnymellon.udemy.com/bootstrap-4-bootcamp/
 
+General Bootstrap Overview / Examples / Features
+	https://bootswatch.com/superhero/
+
 <!-- Great rotating card overview: https://nicolaskadis.info/projects/pure-css-flip-cards-using-bootstrap-4-and-css-grid-no-js for an explanation -->
         Good Bootstrap card grid CodePen for reference: https://codepen.io/starise/pen/Gpgbyq
 
@@ -34,4 +37,7 @@ https://www.tutorialrepublic.com/faq/how-to-create-3d-flipping-effect-on-mouse-h
 
 Reflection Effect Tutorial:
         https://1stwebdesigner.com/reflection-effect-css/
+
+Good Carousel Tutorial  
+        https://mdbootstrap.com/docs/jquery/javascript/carousel/
         
