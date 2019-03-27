@@ -1,10 +1,15 @@
-body {
-    text-align: center;
-    background-image: url(../media/wallpaper5.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: bottom right; 
-    background-size: cover;
+#welcome-section {
+
+  /* Nice background styling example css at: http://themesindustry.com/html/wexim-2019/index-personal-portfolio.html */
+  background-image: url(../media/wallpaper6.jpg);
+  background-attachment: scroll;
+  background-origin: padding-box;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+
+  display: flex;
+  align-items: center;
 }
 
 section {
@@ -25,6 +30,14 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#cover-content-row {
+  border: 5px solid red;
+}
+
+#cover-name-container {
+  border:7px solid blue;
 }
 
 #description-setup {
