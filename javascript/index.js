@@ -5,16 +5,18 @@ $( document ).ready(function() {
 
     console.log("hi!");
 
-    //Enable/disable navbar dark background based on scroll location
-    //Code example: https://stackoverflow.com/questions/46503011/how-to-make-navbar-background-appear-when-scrolling-down-but-disappear-when-scr
+    //Navbar fade effect:
+    //Set background opacity based on scroll position
     $(window).on("scroll", function() {
         var scrollPos = $(window).scrollTop();
         if (scrollPos <= 0) {
             $('.navbar').addClass('bg-transparent');
-            $('.navbar').removeClass('bg-dark');
         } else {
             $('.navbar').removeClass('bg-transparent');
-            $('.navbar').addClass('bg-dark');
+            // $('.navbar').addClass('bg-dark');
+            var bgOpacity = scrollPos / 800;
+            var bgStyle = "rgba(0,0,0," + bgOpacity;
+            $('.navbar').css({"background":bgStyle});
         }
     });
 
