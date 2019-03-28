@@ -170,7 +170,7 @@ section {
 }
 
 .card-container-portfolio {
-  margin: 7% 0% 7% 0%;
+  margin: 3% 0% 3% 0%;
 }
 
 .card {
@@ -184,16 +184,16 @@ section {
   padding-bottom: 0;
 }
 
-#card-title-container {
+.card-title-container {
   display: flex;
 
 }
 
-#card-title-inner {
+.card-title-inner {
   width:85%;
 }
 
-#icon-container {
+.icon-container {
   width: 15%;
   display: flex;
   align-content: center;
@@ -201,9 +201,11 @@ section {
 
 .github-href {
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
-#github-icon {
+.github-icon {
   max-width: 75%;
 }
 
@@ -220,7 +222,7 @@ section {
   justify-content: space-between;
 }
 
-#myBtn {
+.btn-learn-more {
   margin-left: auto;
   margin-right: auto;
 }
@@ -613,9 +615,9 @@ section {
 /* Modal sandbox */
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  
+  position: fixed;
+  z-index: 1;
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -628,12 +630,15 @@ section {
 
 /* Modal Content */
 .modal-content {
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #fefefe;
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 80%;
+  width: calc(100% - 80%);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
@@ -644,12 +649,12 @@ section {
 /* Add Animation */
 @-webkit-keyframes animatetop {
   from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
+  to {top:50%; opacity:1}
 }
 
 @keyframes animatetop {
   from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
+  to {top:50%; opacity:1}
 }
 
 /* The Close Button */

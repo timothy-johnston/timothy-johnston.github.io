@@ -58,17 +58,29 @@ $( document ).ready(function() {
             }
     }
 
-    //Modal
-    var modal = $('#myModal')[0];
-    var modalOpenBtn = $('#myBtn')[0];
-    var modalCloeBtn= $('.close')[0];
+    
+    //MODAL CONTROL--------------------------------------------------------------------
+    var modal = $('#modal')[0];
+    var modalOpenBtn = $('.btn-learn-more')[0];
+    var modalCloseBtn= $('.close')[0];
 
-    //Open modal 
+    //Open
     modalOpenBtn.onclick = function() {
+
+        //Get width of portfolio card deck.
+        var deckWidth = $('#portfolio-deck').css('width');
+
+        //Potential improvement for dynamic sizing:
+        //Take deckWidth / cardWidth
+        //If > 3 (so, 3 cards per row, wide screen)  --> set modal width = 50%
+        //If between 2 & 3 (so, 2 cards per row, medium screen) --> set modal width = 70%
+        //Else (narrow screen, like mobile) --> set modal width = 97%
+        
         modal.style.display = "block";
+        $('.modal-content').css({"width":deckWidth});
     }
 
-    //Close modal (when x is clicked or outside the window is clicked)
+    //Close
     modalCloseBtn.onclick = function() {
         modal.style.display = "none";
     }
