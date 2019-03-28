@@ -171,7 +171,6 @@ section {
 
 .card-container-portfolio {
   margin: 7% 0% 7% 0%;
-  
 }
 
 .card {
@@ -185,6 +184,29 @@ section {
   padding-bottom: 0;
 }
 
+#card-title-container {
+  display: flex;
+
+}
+
+#card-title-inner {
+  width:85%;
+}
+
+#icon-container {
+  width: 15%;
+  display: flex;
+  align-content: center;
+}
+
+.github-href {
+  margin: auto;
+}
+
+#github-icon {
+  max-width: 75%;
+}
+
 .card-title {
   text-align: left;
 }
@@ -193,8 +215,18 @@ section {
   text-align: left;
 }
 
-#github-icon {
-  max-width: 15%;
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#myBtn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#modal-button-container {
+  width: 50%;
 }
 
 .card:hover {
