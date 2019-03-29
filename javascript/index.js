@@ -59,44 +59,11 @@ $( document ).ready(function() {
     }
 
     
-    //MODAL CONTROL--------------------------------------------------------------------
-    var modal = $('#modal')[0];
-    var modalOpenBtn = $('.btn-learn-more')[0];
-    var modalCloseBtn= $('.btn-close')[0];
+    //MODAL CONTROL-----start---------------------------------------------------------------
 
-    //Open
-    // $('.btn-learn-more').click(function() {
+    //Events
 
-    //     //Blur background content
-    //     $('#blur-me').addClass("blur");
-
-    //     //Get width of portfolio card deck.
-    //     var deckWidth = $('#portfolio-deck').css('width');
-
-    //     //Potential improvement for dynamic sizing:
-    //     //Take deckWidth / cardWidth
-    //     //If > 3 (so, 3 cards per row, wide screen)  --> set modal width = 50%
-    //     //If between 2 & 3 (so, 2 cards per row, medium screen) --> set modal width = 70%
-    //     //Else (narrow screen, like mobile) --> set modal width = 97%
-        
-    //     modal.style.display = "block";
-    //     $('.modal-content').css({"width":deckWidth});
-    // });
-
-    //Close
-    modalCloseBtn.onclick = function() {
-        console.log("we here");
-        $('.modal')[0].style.display = "none";
-        $('#blur-me').removeClass("blur");
-    }
-    window.onclick = function(event) {
-        if (event.target == $('.modal')[0]) {
-            $('.modal')[0].style.display = "none";
-            $('#blur-me').removeClass("blur");
-        }
-    }
-
-
+    //Open on button click
     $('.btn-learn-more').click(function() {
         
         var modalBtnId = $(this).attr('id');
@@ -107,6 +74,22 @@ $( document ).ready(function() {
 
     });
 
+    //Close on click outside the modal
+    $('.modal').click(function(click) {
+        if ($(click.target).hasClass('modal')) {
+            closeModal();
+        }
+    })
+
+    //Close on close-button click
+    $('.btn-close').click(function() {
+        closeModal();
+    })
+
+
+    //Helper methods
+
+    //Open modal
     function openModal(modalId) {
 
         //Blur background content
@@ -131,6 +114,15 @@ $( document ).ready(function() {
 
     }
 
+    //Close modal and unblur background
+    function closeModal() {
+        $('#blur-me').removeClass("blur");
+        $('.modal').each(function() {
+            $(this).css("display","none");
+        })
+    }
+
+    //MODAL CONTROL-----end---------------------------------------------------------------
 
 
 });
