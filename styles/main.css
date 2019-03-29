@@ -128,37 +128,7 @@ section {
   mask-image: gradient(linear, right top, right bottom, from(transparent), color-stop(60%, transparent), to(rgba(0, 0, 0, 0.8)));
 }
 
-/* The Modal (background) */
-.modal {
-    
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 
-  }
-
-  #modal-launcher {
-    align-self: flex-start;
-  }
-
-.modal-dialog {
-    
-    width:75%;
-}
-
-  /* Modal Content (Image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 75%;
-    border: 5px solid red;
-  }
-
-  /* 100% Image Width on Smaller Screens */
-    @media only screen and (max-width: 900px){
-    .modal-content {
-      width: 100%;
-    }
-  }
 
 /* PORTFOLIO Section */
 #portfolio-header {
@@ -612,7 +582,12 @@ section {
 
 
 
-/* Modal sandbox */
+/* Modal */
+
+
+
+
+
 
 .modal {
   
@@ -636,8 +611,6 @@ section {
   transform: translate(-50%, -50%);
   background-color: #fefefe;
   margin: auto;
-  padding: 0;
-  border: 1px solid #888;
   width: calc(100% - 80%);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatetop;
@@ -658,30 +631,21 @@ section {
 }
 
 /* The Close Button */
-.close {
-  color: white;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 .modal-header {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid silver;
 }
-
-.modal-body {padding: 2px 16px;}
 
 .modal-footer {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
+  border-top: 1px solid silver;
+  height: 10%;
 }
+
+.close:hover {
+  color: #000;
+  text-decoration: none;
+}
+

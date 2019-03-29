@@ -62,7 +62,7 @@ $( document ).ready(function() {
     //MODAL CONTROL--------------------------------------------------------------------
     var modal = $('#modal')[0];
     var modalOpenBtn = $('.btn-learn-more')[0];
-    var modalCloseBtn= $('.close')[0];
+    var modalCloseBtn= $('.btn-close')[0];
 
     //Open
     modalOpenBtn.onclick = function() {
