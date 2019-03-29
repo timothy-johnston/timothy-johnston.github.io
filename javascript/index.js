@@ -85,6 +85,7 @@ $( document ).ready(function() {
 
     //Close
     modalCloseBtn.onclick = function() {
+        console.log("we here");
         $('.modal')[0].style.display = "none";
         $('#blur-me').removeClass("blur");
     }
