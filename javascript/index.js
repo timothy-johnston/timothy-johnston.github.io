@@ -65,13 +65,59 @@ $( document ).ready(function() {
     var modalCloseBtn= $('.btn-close')[0];
 
     //Open
-    modalOpenBtn.onclick = function() {
+    // $('.btn-learn-more').click(function() {
+
+    //     //Blur background content
+    //     $('#blur-me').addClass("blur");
+
+    //     //Get width of portfolio card deck.
+    //     var deckWidth = $('#portfolio-deck').css('width');
+
+    //     //Potential improvement for dynamic sizing:
+    //     //Take deckWidth / cardWidth
+    //     //If > 3 (so, 3 cards per row, wide screen)  --> set modal width = 50%
+    //     //If between 2 & 3 (so, 2 cards per row, medium screen) --> set modal width = 70%
+    //     //Else (narrow screen, like mobile) --> set modal width = 97%
+        
+    //     modal.style.display = "block";
+    //     $('.modal-content').css({"width":deckWidth});
+    // });
+
+    //Close
+    modalCloseBtn.onclick = function() {
+        $('.modal')[0].style.display = "none";
+        $('#blur-me').removeClass("blur");
+    }
+    window.onclick = function(event) {
+        if (event.target == $('.modal')[0]) {
+            $('.modal')[0].style.display = "none";
+            $('#blur-me').removeClass("blur");
+        }
+    }
+
+
+    $('.btn-learn-more').click(function() {
+        
+        var modalBtnId = $(this).attr('id');
+        var modalId = "modal" + modalBtnId.substring(3);
+        console.log(modalId);
+
+        openModal(modalId);
+
+    });
+
+    function openModal(modalId) {
 
         //Blur background content
         $('#blur-me').addClass("blur");
 
         //Get width of portfolio card deck.
         var deckWidth = $('#portfolio-deck').css('width');
+
+        //Get correct modal based on ID
+        var modal = $('#' + modalId)[0];
+        console.log("In openModal function now")
+
 
         //Potential improvement for dynamic sizing:
         //Take deckWidth / cardWidth
@@ -81,19 +127,9 @@ $( document ).ready(function() {
         
         modal.style.display = "block";
         $('.modal-content').css({"width":deckWidth});
+
     }
 
-    //Close
-    modalCloseBtn.onclick = function() {
-        modal.style.display = "none";
-        $('#blur-me').removeClass("blur");
-    }
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-            $('#blur-me').removeClass("blur");
-        }
-    }
 
 
 });
