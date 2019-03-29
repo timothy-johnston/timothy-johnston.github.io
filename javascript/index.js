@@ -67,6 +67,9 @@ $( document ).ready(function() {
     //Open
     modalOpenBtn.onclick = function() {
 
+        //Blur background content
+        $('#blur-me').addClass("blur");
+
         //Get width of portfolio card deck.
         var deckWidth = $('#portfolio-deck').css('width');
 
@@ -83,10 +86,12 @@ $( document ).ready(function() {
     //Close
     modalCloseBtn.onclick = function() {
         modal.style.display = "none";
+        $('#blur-me').removeClass("blur");
     }
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
+            $('#blur-me').removeClass("blur");
         }
     }
 
