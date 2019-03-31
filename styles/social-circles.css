@@ -80,18 +80,19 @@
 
 /* socialbuttons */
 a.social-button{
-	font-size:24px;
+	font-size:48px;
 	text-decoration: none;
-	display:inline-block;
-    width: 2em;
-    height:2em;
+	/* display:inline-block; */
+    width: 1.3em;
+    height:1.3em;
 }
 
 a.social-button.color {
     display: inline-block;
-    border: 1px solid #4b4b4b;
-    border-radius: 50%;
-    padding: .5em;
+    /* border: 1px solid #4b4b4b; */
+    /* border-radius: 50%; */
+    padding-top: .080em;
+    padding-left: .125em;
 }
 
 a.social-button.color:hover {
