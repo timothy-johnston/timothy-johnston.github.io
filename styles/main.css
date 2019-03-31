@@ -212,6 +212,17 @@ section {
   box-shadow: none;
 }
 
+#footer-section {
+  background: silver;
+  height: 25vh;
+  margin-top: 25px;
+  
+}
+
+#footer-container {
+  
+}
+
 /* Template and unmodified classes from: http://ianlunn.github.io/Hover/ */
 
 .hvr-underline-from-center {
