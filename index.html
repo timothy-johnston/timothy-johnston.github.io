@@ -10,9 +10,12 @@
         <!-- Bootstrap stylesheet goes before any other stylesheets -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="styles/social-circles.min.css">
     </head>
 
     <body>
+
+        
 
         <div id="blur-me">
 
@@ -351,20 +354,39 @@
         <!-- FOOTER -->
         <div id="footer-section"> <!--Should change to section element, will require css changes to other section elements (min-height:100vh)-->
             <div id="footer-container" class="container">
-                <h1>Contact Me!</h1>
                 <!-- Contact form from formspree: https://formspree.io/ -->
-                <form method="POST" action="https://formspree.io/tedwardj11@gmail.com">
-                    <input type="email" name="email" placeholder="Your email">
-                    <textarea name="message" placeholder="Test Message"></textarea>
-                    <button type="submit">Send Test</button>
-                  </form>
+                <div id="contact-form-container">
+                    <h2>Email Me</h2>
+                    <form class="form-group" id="contact-form" method="POST" action="https://formspree.io/tedwardj11@gmail.com">
+                        <label for="email-input">Email Address</label>
+                        <input class="form-control" type="email" id="email-input" name="email" placeholder="Your email">
+                        <label for="text-input">Your Message</label>
+                        <textarea class="form-control" id="text-input" name="message" placeholder="Test Message"></textarea>
+                        <button class="btn" type="submit">Send Test</button>
+                    </form>
+                </div>
+                <div id="contact-social-container">
+                    <h2>Follow Me</h2>
+                    <div>
+                        <ol>
+                            <li>
+                                <a class="icon-twitter social-button color" href="http://twitter.com/username"></a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
             </div>
         </div>
 
         </div>
- 
+
+        <ol>
+            <li>
+                <a class="icon-twitter social-button color" href="http://twitter.com/username"></a>
+            </li>
+        </ol>
       
-        
+        <!-- MODAL -->
         <div id="modal-TC-hard" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
