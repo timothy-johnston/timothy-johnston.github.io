@@ -87,6 +87,14 @@ a.social-button{
     height:1.3em;
 }
 
+a.social-button-nav{
+	font-size:48px;
+	text-decoration: none;
+	/* display:inline-block; */
+    /* width: 1.3em;
+    height:1.3em; */
+}
+
 a.social-button.color {
     display: inline-block;
     /* border: 1px solid #4b4b4b; */
@@ -206,7 +214,7 @@ a.social-button.grey.static:hover, .static a.social-button.grey:hover {
      -moz-transform: none;
 }
 
-a.social-button {
+a.social-button, a.social-button-nav {
 	transition-timing-function: cubic-bezier(0.25,.46,.45,.94);
     transition-property: background-color, transform;
     transition-duration: .3s;
@@ -235,13 +243,22 @@ a.social-button.no-animation, .no-animation a.social-button {
 a.social-button.borderless {
     color:#4b4b4b;
 }
+a.social-button-nav.borderless {
+    color:#4b4b4b;
+}
 a.social-button.borderless.static:hover, .static a.social-button.borderless:hover {
     color: #4b4b4b;
 }
 a.social-button.borderless.icon-facebook:hover {
     color:#3b5998;
 }
+a.social-button-nav.borderless.icon-facebook:hover {
+    color:#3b5998;
+}
 a.social-button.borderless.icon-twitter:hover {
+    color:#4dc8f1;
+}
+a.social-button-nav.borderless.icon-twitter:hover {
     color:#4dc8f1;
 }
 a.social-button.borderless.icon-instagram:hover {
@@ -271,10 +288,16 @@ a.social-button.borderless.icon-tumblr:hover {
 a.social-button.borderless.icon-linkedin:hover {
     color:#0275b5;
 }
+a.social-button-nav.borderless.icon-linkedin:hover {
+    color:#0275b5;
+}
 a.social-button.borderless.icon-skype:hover {
     color:#03aceb;
 }
 a.social-button.borderless.icon-github:hover {
+    color:#4183C4;
+}
+a.social-button-nav.borderless.icon-github:hover {
     color:#4183C4;
 }
 a.social-button.borderless.icon-dribbble:hover {

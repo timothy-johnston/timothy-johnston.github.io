@@ -20,6 +20,18 @@ section {
   text-align: right;
 }
 
+#dropdown-content-container {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-item.social-button-nav {
+  margin: 0px 5px 0px 5px;
+  padding:0px;
+  font-size: 20px;
+  text-align: center;
+}
+
 .center-all {
   display: flex;
   align-items: center;
