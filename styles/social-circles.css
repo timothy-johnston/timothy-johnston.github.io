@@ -243,9 +243,25 @@ a.social-button.no-animation, .no-animation a.social-button {
 a.social-button.borderless {
     color:#4b4b4b;
 }
-a.social-button-nav.borderless {
+/* a.social-button-nav.borderless {
     color:#4b4b4b;
+} */
+
+a.social-button-nav.borderless.icon-twitter {
+    color:#4dc8f1;
+    background: transparent;
 }
+
+a.social-button-nav.borderless.icon-linkedin {
+    color:#0275b5;
+    background: transparent;
+}
+
+a.social-button-nav.borderless.icon-github {
+    color:#4183C4;
+    background: transparent;
+}
+
 a.social-button.borderless.static:hover, .static a.social-button.borderless:hover {
     color: #4b4b4b;
 }
