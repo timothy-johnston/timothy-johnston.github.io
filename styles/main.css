@@ -20,6 +20,10 @@ section {
   text-align: right;
 }
 
+#collapse-button {
+  background: white;
+}
+
 #dropdown-content-container {
   display: flex;
   justify-content: center;
