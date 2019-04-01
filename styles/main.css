@@ -20,6 +20,18 @@ section {
   text-align: right;
 }
 
+#dropdown-content-container {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-item.social-button-nav {
+  margin: 0px 5px 0px 5px;
+  padding:0px;
+  font-size: 32px;
+  text-align: center;
+}
+
 .center-all {
   display: flex;
   align-items: center;
@@ -32,12 +44,12 @@ section {
   align-items: center;
 }
 
-#description-setup {
-  display: inline-block;
+#description-variable-1 {
+  display:inline-block;
 }
 
-#description-variable {
-  display: inline-block;
+#about-page {
+  margin-top: 30px;
 }
 
 #about-header {
@@ -87,6 +99,12 @@ section {
 .skill-item:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+}
+
+#about-carousel {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .carousel-inner {
@@ -209,6 +227,32 @@ section {
 .dropdown-toggle:focus {
   box-shadow: none;
 }
+
+#footer-section {
+  background: silver;
+  min-height: 35vh;
+  padding-top: 25px;
+}
+
+#footer-container {
+  display: flex;
+  justify-content: stretch;
+}
+
+#contact-form-container {
+  width: 50%;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#contact-social-container {
+  width: 50%;
+}
+
 
 /* Template and unmodified classes from: http://ianlunn.github.io/Hover/ */
 
@@ -344,7 +388,7 @@ section {
 }
 
   /* Animations! Great example code here: http://www.justinaguilar.com/animations/# */
-  
+
   .fadeIn{
     animation-name: fadeIn;
     -webkit-animation-name: fadeIn;	

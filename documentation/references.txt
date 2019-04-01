@@ -9,6 +9,10 @@ https://bnymellon.udemy.com/bootstrap-4-bootcamp/
 General Bootstrap Overview / Examples / Features       
 	https://bootswatch.com/superhero/
 
+Social Profile Icons Library    
+        https://github.com/janhuenermann/social-circles
+
+
 Awesome Resource for Webdev/Design Tutorials, Inspiration, Etc:
         https://freefrontend.com/
 
