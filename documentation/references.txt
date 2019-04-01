@@ -12,6 +12,9 @@ General Bootstrap Overview / Examples / Features
 Awesome Resource for Webdev/Design Tutorials, Inspiration, Etc:
         https://freefrontend.com/
 
+Another good resource for a couple modern css effects / styling:
+	https://stripe.com/blog/connect-front-end-experience
+
 <!-- Great rotating card overview: https://nicolaskadis.info/projects/pure-css-flip-cards-using-bootstrap-4-and-css-grid-no-js for an explanation -->
         Good Bootstrap card grid CodePen for reference: https://codepen.io/starise/pen/Gpgbyq
 
