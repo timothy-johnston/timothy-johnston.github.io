@@ -146,10 +146,6 @@ section {
   margin-right: auto;
 }
 
-.carousel-inner {
-  border-radius: 15px;
-}
-
 .carousel-indicators {
   position: absolute;
   bottom: 0;
@@ -162,10 +158,28 @@ section {
   text-align: right;
 }
 
-.carousel-control.left,
-.carousel-control.right {
-  background-image: none;
+.carousel-control-next,
+.carousel-control-prev {
+  /* background-image: none; */
+  /* background: black; */
+  /* opacity: .99; */
+  width: 45px;
+  /* background: -moz-linear-gradient(top, rgba(0,0,0,1), rgba(125,185,232,0)); FF3.6-15 */
+  /* background: -webkit-linear-gradient(top, rgba(0,0,0,1),rgba(125,185,232,0)); Chrome10-25,Safari5.1-6 */
+  /* background: linear-gradient(to bottom, rgba(0,0,0,1),rgba(125,185,232,0)); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=0 ); IE6-9 */
 }
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  border: 1px solid silver;
+  border-radius: 50%;
+  background: black;
+  width: 35px;
+  height: 35px;
+}
+
+
 
 
 .real img, .refl img {
