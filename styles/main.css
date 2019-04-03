@@ -78,9 +78,6 @@ section {
 }
 
 .about-container {
-  /* display: flex;
-  flex-direction: column; */
-  border: 2px solid black;
   margin-top: 35px;
   margin-bottom: 20px;
   margin-left: auto;
