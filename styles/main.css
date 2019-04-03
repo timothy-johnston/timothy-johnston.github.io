@@ -1,3 +1,7 @@
+.GOODBYE {
+  min-height: 1000px;
+}
+
 #welcome-section {
 
   /* Nice background styling example css at: http://themesindustry.com/html/wexim-2019/index-personal-portfolio.html */
@@ -73,9 +77,14 @@ section {
   align-self: flex-start;
 }
 
-#about-container {
-  display: flex;
-  flex-direction: column;
+.about-container {
+  /* display: flex;
+  flex-direction: column; */
+  border: 2px solid black;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-paragraph {
