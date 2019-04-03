@@ -179,24 +179,6 @@ section {
 
 
 
-.real img, .refl img {
-  border: 3px solid blue;
-  width: auto;
-  height: auto;
-}
-
-.refl {
-  position: relative;
-  margin-top: 5px;
-  -moz-transform: scaleY(-1);
-       -o-transform: scaleY(-1);
-       -webkit-transform: scaleY(-1);
-       transform: scaleY(-1);
-  -webkit-mask-image: -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(60%, transparent), to(rgba(0, 0, 0, 0.4)));
-  mask-image: gradient(linear, right top, right bottom, from(transparent), color-stop(60%, transparent), to(rgba(0, 0, 0, 0.8)));
-}
-
-
 
 /* PORTFOLIO Section */
 #portfolio-header {

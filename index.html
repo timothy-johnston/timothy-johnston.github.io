@@ -198,141 +198,175 @@
             <div id="portfolio-header">
                 <h1>PORTFOLIO</h1>
             </div>
-            <div class="container">
-                <div class="row" id="portfolio-deck">
-                    <div class="col-xl-4 col-md-6 card-container-portfolio">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="media/pic-me-1_cropped.jpg" alt="Bologna">
-                            <div class="card-body">
-                                <div class="card-title-container">
-                                    <span class="card-title-inner">
-                                        <h4 class="card-title">ThirstyCat: Hardware</h4>
-                                        <h6 class="card-subtitle mb-2">Raspberry Pi, Python</h6>
-                                        <a href="https://twitter.com/TheThirstyCat" target="_blank">twitter.com/TheThirstyCat</a>
-                                    </span>
-                                    <span class="icon-container">
-                                        <a class="github-href" href="https://github.com/timothy-johnston/ThirstyCat" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
-                                    </span>
+            <div id="accordion">
+                <div class="container">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Recent Projects
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="container"> <!-- Portfolio card deck starts here-->
+                        <div class="row" id="portfolio-deck">
+                            <div class="col-xl-4 col-md-6 card-container-portfolio">
+                                <div class="card h-100">
+                                    <img class="card-img-top" src="media/pic-me-1_cropped.jpg" alt="Bologna">
+                                    <div class="card-body">
+                                        <div class="card-title-container">
+                                            <span class="card-title-inner">
+                                                <h4 class="card-title">ThirstyCat: Hardware</h4>
+                                                <h6 class="card-subtitle mb-2">Raspberry Pi, Python</h6>
+                                                <a href="https://twitter.com/TheThirstyCat" target="_blank">twitter.com/TheThirstyCat</a>
+                                            </span>
+                                            <span class="icon-container">
+                                                <a class="github-href" href="https://github.com/timothy-johnston/ThirstyCat" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
+                                            </span>
+                                        </div>
+                                        <hr>
+                                        <p class="card-text">Pressure-activated camera & Twitter bot that detects when my cat gets a drink, captures a photo, and automatically tweets the photo using the Twitter API.</p>
+                                    </div>
+                                    <div class="card-footer">           
+                                        <button class="btn btn-learn-more" id="btn-TC-hard">Learn More</button>     
+                                    </div>
                                 </div>
-                                <hr>
-                                <p class="card-text">Pressure-activated camera & Twitter bot that detects when my cat gets a drink, captures a photo, and automatically tweets the photo using the Twitter API.</p>
                             </div>
-                            <div class="card-footer">           
-                                <button class="btn btn-learn-more" id="btn-TC-hard">Learn More</button>     
+                            <div class="col-xl-4 col-md-6 card-container-portfolio">
+                                <div class="card h-100">
+                                    <img class="card-img-top" src="media/pic-me-1_cropped.jpg" alt="Bologna">
+                                    <div class="card-body">
+                                        <div class="card-title-container">
+                                            <span class="card-title-inner">
+                                                <h4 class="card-title">ThirstyCat: Software</h4>
+                                                <h6 class="card-subtitle mb-2">Java & Spring Boot</h6>
+                                            </span>
+                                            <span class="icon-container">
+                                                <a class="github-href" href="https://github.com/timothy-johnston/ThirstyCat" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
+                                            </span>
+                                        </div>
+                                        <hr>
+                                        <p class="card-text">Full-stack web app allowing users to view ThirstyCat photos and statistics. Users can create an account to receive automated email updates, favorite pictures, and submit photos of their own.</p>
+                                    </div>
+                                    <div class="card-footer">           
+                                        <button class="btn btn-learn-more" id="btn-TC-soft">Learn More</button>     
+                                    </div>
+                                </div>
                             </div>
+                            <div class="col-xl-4 col-md-6 card-container-portfolio">
+                                    <div class="card h-100">
+                                        <img class="card-img-top" src="media/pic-me-1_cropped.jpg" alt="Bologna">
+                                        <div class="card-body">
+                                            <div class="card-title-container">
+                                                <span class="card-title-inner">
+                                                    <h4 class="card-title">Personal Portfolio Page</h4>
+                                                    <h6 class="card-subtitle mb-2">HTML, CSS, Javascript</h6>
+                                                </span>
+                                                <span class="icon-container">
+                                                    <a class="github-href" href="https://github.com/timothy-johnston/ThirstyCat" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
+                                                </span>
+                                            </div>
+                                            <hr>
+                                            <p class="card-text">Static website built to serve as my online portfolio and blog. Features modern styling, a contact form, and a responsive layout.</p>
+                                        </div>
+                                        <div class="card-footer">           
+                                            <button class="btn btn-learn-more" id="btn-portfolio-tj">Learn More</button>     
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6 card-container-portfolio">
+                                    <div class="card h-100">
+                                        <img class="card-img-top" src="media/pic-me-1_cropped.jpg" alt="Bologna">
+                                        <div class="card-body">
+                                            <div class="card-title-container">
+                                                <span class="card-title-inner">
+                                                    <h4 class="card-title">Virtual Interview</h4>
+                                                    <h6 class="card-subtitle mb-2">Java</h6>
+                                                </span>
+                                                <span class="icon-container">
+                                                    <a class="github-href" href="https://github.com/timothy-johnston/ThirstyCat" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
+                                                </span>
+                                            </div>
+                                            <hr>
+                                            <p class="card-text">Command line application that simulates a mock interview by asking users a series of behavioral interview questions. Users may add, modify, or delete questions to tailor the interview practice to their needs.</p>
+                                        </div>
+                                        <div class="card-footer">           
+                                            <button class="btn btn-learn-more" id="btn-VI">Learn More</button>     
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6 card-container-portfolio">
+                                    <div class="card h-100">
+                                        <img class="card-img-top" src="media/pic-me-1_cropped.jpg" alt="Bologna">
+                                        <div class="card-body">
+                                            <div class="card-title-container">
+                                                <span class="card-title-inner">
+                                                    <h4 class="card-title">WeatherViz</h4>
+                                                    <h6 class="card-subtitle mb-2">Java, Spring MVC</h6>
+                                                </span>
+                                                <span class="icon-container">
+                                                    <a class="github-href" href="https://github.com/timothy-johnston/ThirstyCat" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
+                                                </span>
+                                            </div>
+                                            <hr>
+                                            <p class="card-text">Collaboratively built forecast app developed with the agile methodology. Users may view visualizations of current and historic weather conditions across the US or create an account to receive personalized forecasts. </p>
+                                        </div>
+                                        <div class="card-footer">           
+                                            <button class="btn btn-learn-more" id="btn-WV">Learn More</button>     
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6 card-container-portfolio">
+                                    <div class="card h-100">
+                                        <img class="card-img-top" src="media/pic-me-1_cropped.jpg" alt="Bologna">
+                                        <div class="card-body">
+                                            <div class="card-title-container">
+                                                <span class="card-title-inner">
+                                                    <h4 class="card-title">Nat'l Parks Reservation</h4>
+                                                    <h6 class="card-subtitle mb-2">Java, PostgreSQL</h6>
+                                                </span>
+                                                <span class="icon-container">
+                                                    <a class="github-href" href="https://github.com/timothy-johnston/ThirstyCat" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
+                                                </span>
+                                            </div>
+                                            <hr>
+                                            <p class="card-text">Simulated reservation system that allows users so search, read about, and reserve campsites at a variety of US National Parks. </p>
+                                        </div>
+                                        <div class="card-footer">           
+                                            <button class="btn btn-learn-more" id="btn-NPR">Learn More</button>     
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 card-container-portfolio">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="media/pic-me-1_cropped.jpg" alt="Bologna">
-                            <div class="card-body">
-                                <div class="card-title-container">
-                                    <span class="card-title-inner">
-                                        <h4 class="card-title">ThirstyCat: Software</h4>
-                                        <h6 class="card-subtitle mb-2">Java & Spring Boot</h6>
-                                    </span>
-                                    <span class="icon-container">
-                                        <a class="github-href" href="https://github.com/timothy-johnston/ThirstyCat" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
-                                    </span>
-                                </div>
-                                <hr>
-                                <p class="card-text">Full-stack web app allowing users to view ThirstyCat photos and statistics. Users can create an account to receive automated email updates, favorite pictures, and submit photos of their own.</p>
-                            </div>
-                            <div class="card-footer">           
-                                <button class="btn btn-learn-more" id="btn-TC-soft">Learn More</button>     
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 card-container-portfolio">
-                            <div class="card h-100">
-                                <img class="card-img-top" src="media/pic-me-1_cropped.jpg" alt="Bologna">
-                                <div class="card-body">
-                                    <div class="card-title-container">
-                                        <span class="card-title-inner">
-                                            <h4 class="card-title">Personal Portfolio Page</h4>
-                                            <h6 class="card-subtitle mb-2">HTML, CSS, Javascript</h6>
-                                        </span>
-                                        <span class="icon-container">
-                                            <a class="github-href" href="https://github.com/timothy-johnston/ThirstyCat" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
-                                        </span>
-                                    </div>
-                                    <hr>
-                                    <p class="card-text">Static website built to serve as my online portfolio and blog. Features modern styling, a contact form, and a responsive layout.</p>
-                                </div>
-                                <div class="card-footer">           
-                                    <button class="btn btn-learn-more" id="btn-portfolio-tj">Learn More</button>     
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6 card-container-portfolio">
-                            <div class="card h-100">
-                                <img class="card-img-top" src="media/pic-me-1_cropped.jpg" alt="Bologna">
-                                <div class="card-body">
-                                    <div class="card-title-container">
-                                        <span class="card-title-inner">
-                                            <h4 class="card-title">Virtual Interview</h4>
-                                            <h6 class="card-subtitle mb-2">Java</h6>
-                                        </span>
-                                        <span class="icon-container">
-                                            <a class="github-href" href="https://github.com/timothy-johnston/ThirstyCat" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
-                                        </span>
-                                    </div>
-                                    <hr>
-                                    <p class="card-text">Command line application that simulates a mock interview by asking users a series of behavioral interview questions. Users may add, modify, or delete questions to tailor the interview practice to their needs.</p>
-                                </div>
-                                <div class="card-footer">           
-                                    <button class="btn btn-learn-more" id="btn-VI">Learn More</button>     
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6 card-container-portfolio">
-                            <div class="card h-100">
-                                <img class="card-img-top" src="media/pic-me-1_cropped.jpg" alt="Bologna">
-                                <div class="card-body">
-                                    <div class="card-title-container">
-                                        <span class="card-title-inner">
-                                            <h4 class="card-title">WeatherViz</h4>
-                                            <h6 class="card-subtitle mb-2">Java, Spring MVC</h6>
-                                        </span>
-                                        <span class="icon-container">
-                                            <a class="github-href" href="https://github.com/timothy-johnston/ThirstyCat" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
-                                        </span>
-                                    </div>
-                                    <hr>
-                                    <p class="card-text">Collaboratively built forecast app developed with the agile methodology. Users may view visualizations of current and historic weather conditions across the US or create an account to receive personalized forecasts. </p>
-                                </div>
-                                <div class="card-footer">           
-                                    <button class="btn btn-learn-more" id="btn-WV">Learn More</button>     
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6 card-container-portfolio">
-                            <div class="card h-100">
-                                <img class="card-img-top" src="media/pic-me-1_cropped.jpg" alt="Bologna">
-                                <div class="card-body">
-                                    <div class="card-title-container">
-                                        <span class="card-title-inner">
-                                            <h4 class="card-title">Nat'l Parks Reservation</h4>
-                                            <h6 class="card-subtitle mb-2">Java, PostgreSQL</h6>
-                                        </span>
-                                        <span class="icon-container">
-                                            <a class="github-href" href="https://github.com/timothy-johnston/ThirstyCat" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
-                                        </span>
-                                    </div>
-                                    <hr>
-                                    <p class="card-text">Simulated reservation system that allows users so search, read about, and reserve campsites at a variety of US National Parks. </p>
-                                </div>
-                                <div class="card-footer">           
-                                    <button class="btn btn-learn-more" id="btn-NPR">Learn More</button>     
-                                </div>
-                            </div>
-                        </div>
-
-                    
-                    
+                  </div>
                 </div>
-            </div>
+                <div class="container">
+                  <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Professional Experience
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
         </section>
+
+
+
+        
+
+
+
+
+
 
         <!-- FOOTER -->
         <div id="footer-section"> <!--Should change to section element, will require css changes to other section elements (min-height:100vh)-->
