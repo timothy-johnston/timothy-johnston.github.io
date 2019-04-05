@@ -63,6 +63,15 @@ $( document ).ready(function() {
             }
     }
 
+    //HIDE/SHOW PORTFOLIO & RESUME CONTENTS-----start--------------------------------------
+    $('#btn-portfolio').click(function() {
+        console.log("hello friend");
+        $('#fade-preview-portfolio').toggle();
+    })
+
+
+    //HIDE/SHOW PORTFOLIO & RESUME CONTENTS-----start--------------------------------------
+
     
     //MODAL CONTROL-----start---------------------------------------------------------------
 
