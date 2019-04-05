@@ -352,6 +352,7 @@ section {
 #footer-section {
   background: silver;
   min-height: 35vh;
+  margin-top: 75px;
   padding-top: 25px;
 }
 
