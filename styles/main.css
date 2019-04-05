@@ -189,10 +189,15 @@ section {
   justify-content: space-around;
 }
 
-#contents-portfolio-container {
+#btn-portfolio, #btn-experience {
+  width: 100%
+}
+
+.expandable-container {
   position:relative;
 }
-#contents-portfolio {
+
+.expandable-container-content {
   background:rgb(204, 202, 202);
 }
 
@@ -291,6 +296,11 @@ section {
 
 .dropdown-toggle:focus {
   box-shadow: none;
+}
+
+.test-hard-gradient {
+  background-image: -webkit-linear-gradient(bottom, #fbff00 0%, #fbff00 20%, #ffae00 20%, #ffae00 40%, #ff0000 40%, #ff0000 60%, #9900ff 60%, #9900ff 80%, #0e1efc 80%);
+  height: 250px;
 }
 
 #footer-section {

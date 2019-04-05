@@ -69,6 +69,10 @@ $( document ).ready(function() {
         $('#fade-preview-portfolio').toggle();
     })
 
+    $('#btn-experience').click(function() {
+        console.log("hello friend");
+        $('#fade-preview-experience').toggle();
+    })
 
     //HIDE/SHOW PORTFOLIO & RESUME CONTENTS-----start--------------------------------------
 
