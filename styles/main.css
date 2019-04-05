@@ -181,16 +181,62 @@ section {
 
 
 /* PORTFOLIO Section */
-#portfolio-header {
-  padding: 0% 5% 0 5%;
+.section-header {
   /* background: rgb(0,0,0);
   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0.7710843373493976) 82%, rgba(0,0,0,0) 100%); */
-  display: flex;
-  justify-content: space-around;
 }
 
 #btn-portfolio, #btn-experience {
-  width: 100%
+  width: 100%;
+  margin: 30px 0px 0px 0px;
+}
+
+.rotate-ccw-180 {
+  -webkit-transform: rotate(-180deg);  /* Chrome, Safari 3.1+ */
+  -moz-transform: rotate(-180deg);  /* Firefox 3.5-15 */
+  -ms-transform: rotate(-180deg);  /* IE 9 */
+  -o-transform: rotate(-180deg);  /* Opera 10.50-12.00 */
+  transform: rotate(-180deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+
+  -webkit-transition-duration: 2s; /* Safari */
+  -moz-transition-duration: 2s;
+  transition-duration: 2s;
+}
+
+.rotate-cw-180 {
+  -webkit-transform: rotate(180deg);  /* Chrome, Safari 3.1+ */
+  -moz-transform: rotate(180deg);  /* Firefox 3.5-15 */
+  -ms-transform: rotate(180deg);  /* IE 9 */
+  -o-transform: rotate(180deg);  /* Opera 10.50-12.00 */
+  transform: rotate(180deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+
+  -webkit-transition-duration: 2s; /* Safari */
+  -moz-transition-duration: 2s;
+  transition-duration: 2s;
+}
+
+.rotate-cw-0 {
+  -webkit-transform: rotate(0deg);  /* Chrome, Safari 3.1+ */
+  -moz-transform: rotate(0deg);  /* Firefox 3.5-15 */
+  -ms-transform: rotate(0deg);  /* IE 9 */
+  -o-transform: rotate(0deg);  /* Opera 10.50-12.00 */
+  transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+
+  -webkit-transition-duration: 2s; /* Safari */
+  -moz-transition-duration: 2s;
+  transition-duration: 2s;
+}
+
+.rotate-ccw-0 {
+  -webkit-transform: rotate(-0deg);  /* Chrome, Safari 3.1+ */
+  -moz-transform: rotate(-0deg);  /* Firefox 3.5-15 */
+  -ms-transform: rotate(-0deg);  /* IE 9 */
+  -o-transform: rotate(-0deg);  /* Opera 10.50-12.00 */
+  transform: rotate(-0deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+
+  -webkit-transition-duration: 2s; /* Safari */
+  -moz-transition-duration: 2s;
+  transition-duration: 2s;
 }
 
 .expandable-container {
@@ -300,7 +346,7 @@ section {
 
 .test-hard-gradient {
   background-image: -webkit-linear-gradient(bottom, #fbff00 0%, #fbff00 20%, #ffae00 20%, #ffae00 40%, #ff0000 40%, #ff0000 60%, #9900ff 60%, #9900ff 80%, #0e1efc 80%);
-  height: 250px;
+  height: 15px;
 }
 
 #footer-section {

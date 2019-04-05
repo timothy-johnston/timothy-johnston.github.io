@@ -67,11 +67,61 @@ $( document ).ready(function() {
     $('#btn-portfolio').click(function() {
         console.log("hello friend");
         $('#fade-preview-portfolio').toggle();
+
+        var iconRight = $('.rotating-icon-portfolio-right');
+        var iconLeft = $('.rotating-icon-portfolio-left');
+
+        if (iconRight.hasClass("rotate-ccw-180")) {
+
+            iconRight.addClass("rotate-cw-0");
+            iconRight.removeClass("rotate-ccw-180");
+
+            iconLeft.addClass("rotate-ccw-0");
+            iconLeft.removeClass("rotate-cw-180");
+
+        } else if (iconRight.hasClass("rotate-cw-0")) {
+
+            iconRight.addClass("rotate-ccw-180");
+            iconRight.removeClass("rotate-cw-0");
+
+            iconLeft.addClass("rotate-cw-180");
+            iconLeft.removeClass("rotate-ccw-0");
+
+        } else {
+            iconRight.addClass("rotate-ccw-180");
+            iconLeft.addClass("rotate-cw-180");
+        }
+
     })
 
     $('#btn-experience').click(function() {
         console.log("hello friend");
         $('#fade-preview-experience').toggle();
+
+
+        var iconRight = $('.rotating-icon-experience-right');
+        var iconLeft = $('.rotating-icon-experience-left');
+
+        if (iconRight.hasClass("rotate-ccw-180")) {
+
+            iconRight.addClass("rotate-cw-0");
+            iconRight.removeClass("rotate-ccw-180");
+
+            iconLeft.addClass("rotate-ccw-0");
+            iconLeft.removeClass("rotate-cw-180");
+
+        } else if (iconRight.hasClass("rotate-cw-0")) {
+
+            iconRight.addClass("rotate-ccw-180");
+            iconRight.removeClass("rotate-cw-0");
+
+            iconLeft.addClass("rotate-cw-180");
+            iconLeft.removeClass("rotate-ccw-0");
+
+        } else {
+            iconRight.addClass("rotate-ccw-180");
+            iconLeft.addClass("rotate-cw-180");
+        }
     })
 
     //HIDE/SHOW PORTFOLIO & RESUME CONTENTS-----start--------------------------------------

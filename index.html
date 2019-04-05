@@ -82,8 +82,11 @@
 
         <!-- Section: About-->
         <section>
-            <div id="about-page">
-                <div class="container about-container" id="about-work-container">
+            <div class="container" id="about-page">
+                <div class="section-header">
+                    <h1>About Tim</h1>
+                </div>
+                <div class="about-container" id="about-work-container">
                     <h5>Work</h5>
                     <hr>
                     <div class="row" id="about-work-organizer">
@@ -135,7 +138,7 @@
                         </div>
                     </div> 
                 </div>
-                <div class="container about-container" id="about-play-container">
+                <div class="about-container" id="about-play-container">
                     <h5>Play</h5>
                     <hr>
                     <p class="about-paragraph" id="about-para2">
@@ -183,13 +186,16 @@
         Good Bootstrap card grid CodePen for reference: https://codepen.io/starise/pen/Gpgbyq
         -->
         <section>
-            <div id="portfolio-header">
-                <h1>PORTFOLIO</h1>
-            </div>
             <div class="container">
+                <div class="section-header">
+                    <h1>PORTFOLIO</h1>
+                </div>
                 <button class="btn btn-primary" id="btn-portfolio" type="button" data-toggle="collapse" data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">
-                    Toggle first element
-                    <i class="fas fa-angle-double-right"></i>
+                    <h6>
+                        <i class="fas fa-angle-double-down rotating-icon-portfolio-left"></i>
+                        Recent Projects 
+                        <i class="fas fa-angle-double-down rotating-icon-portfolio-right"></i>
+                    </h6>
                 </button>
                 <div class="collapse container-fade" id="multiCollapseExample1">
                     <div class="expandable-container">
@@ -330,8 +336,11 @@
                     </div>
                 </div>
                 <button class="btn btn-primary" id="btn-experience" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
-                    Toggle second element
-                    <i class="fas fa-angle-double-right"></i>
+                    <h6>
+                        <i class="fas fa-angle-double-down rotating-icon-experience-left"></i>
+                        Work Experience
+                        <i class="fas fa-angle-double-down rotating-icon-experience-right"></i>
+                    </h6>
                 </button>
                 <div class="collapse container-fade" id="multiCollapseExample2">
                     <div class="expandable-container">
