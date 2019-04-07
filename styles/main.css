@@ -2,6 +2,9 @@
   min-height: 1000px;
 }
 
+body {
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);}
+
 #welcome-section {
 
   /* Nice background styling example css at: http://themesindustry.com/html/wexim-2019/index-personal-portfolio.html */
@@ -69,20 +72,24 @@ section {
   display:inline-block;
 }
 
-#about-page {
-  margin-top: 30px;
-}
-
-#about-header {
-  align-self: flex-start;
+#about-section-header {
+  background: black;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background: #B24592;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #B24592, #F15F79);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,#B24592, #F15F79); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-left: 55px;
 }
 
 .about-container {
-  margin-top: 35px;
+  margin-top: 15px;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   padding: 25px 15px;
+  background: white;
 }
 
 #about-work-organizer {
@@ -267,7 +274,7 @@ section {
   height: 30%;
 }
 
-.collapse:not(.show) {
+.container-fade:not(.show) {
   display: block;
   max-height: 350px;
   overflow: hidden;
