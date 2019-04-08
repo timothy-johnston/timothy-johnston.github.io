@@ -2,9 +2,6 @@
   min-height: 1000px;
 }
 
-body {
-  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);}
-
 #welcome-section {
 
   /* Nice background styling example css at: http://themesindustry.com/html/wexim-2019/index-personal-portfolio.html */
@@ -73,14 +70,15 @@ section {
 }
 
 #about-section-header {
-  background: black;
+  background: #4c4c4c;
   height: 70px;
   display: flex;
   align-items: center;
-  background: #B24592;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #B24592, #F15F79);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right,#B24592, #F15F79); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  padding-left: 55px;
+  padding: 55px;
+}
+
+#about-section {
+  background: #d1d1d1;
 }
 
 .about-container {
@@ -89,7 +87,7 @@ section {
   margin-left: auto;
   margin-right: auto;
   padding: 25px 15px;
-  background: white;
+  background: transparent;
 }
 
 #about-work-organizer {
@@ -132,6 +130,7 @@ section {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  background: white;
 }
 
 .skill-item {

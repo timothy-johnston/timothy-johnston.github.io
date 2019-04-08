@@ -18,7 +18,6 @@ $( document ).ready(function() {
             $('.navbar').addClass('bg-transparent');
         } else {
             $('.navbar').removeClass('bg-transparent');
-            // $('.navbar').addClass('bg-dark');
             bgOpacity = scrollPos / 500;
             bgStyle = "rgba(0,0,0," + bgOpacity;
             $('.navbar').css({"background":bgStyle});
