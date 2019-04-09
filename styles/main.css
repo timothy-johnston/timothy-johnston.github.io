@@ -22,8 +22,10 @@ Cacti: https://coolors.co/fb5d00-a4c61f-dd557b-efce02-f99303
   /* background-position-x: 50%;
   background-position-y: 50%; */
   background-position: center bottom;
-  display: flex;
-  align-items: center;
+}
+
+#cover-page {
+  padding-top: 37vh;
 }
 
 #cover-content-container {
@@ -32,12 +34,28 @@ Cacti: https://coolors.co/fb5d00-a4c61f-dd557b-efce02-f99303
   align-items: flex-end;
   flex-wrap: wrap;
   width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
   /* border-bottom: 2px solid black; */
   border: 3px solid pink;
   border-image: linear-gradient( 45deg, rgb(221, 85, 123) 25%, rgb(239, 206, 2) 100%) 10;
   border-top: none;
   border-right: none;
   border-left: none;
+}
+
+#header-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 0px;
+  line-height: 80%;
+}
+
+#header-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 0px;
+  line-height: 80%;
 }
 
 section {
