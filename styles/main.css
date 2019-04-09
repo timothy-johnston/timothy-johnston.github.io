@@ -1,6 +1,7 @@
 /* Color scheme:  https://coolors.co/b24592-f15f79-26547c-ffffff-ff6b35 
 Another good one: https://coolors.co/ef32d9-89fffd-dcedff-223843-083d77 
 Space: https://coolors.co/1c171e-fb8d1e-957186-266dd3-f6e8ea
+Cacti: https://coolors.co/fb5d00-a4c61f-dd557b-efce02-f99303
 */
 
 .GOODBYE {
@@ -23,6 +24,20 @@ Space: https://coolors.co/1c171e-fb8d1e-957186-266dd3-f6e8ea
   background-position: center bottom;
   display: flex;
   align-items: center;
+}
+
+#cover-content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  /* border-bottom: 2px solid black; */
+  border: 3px solid pink;
+  border-image: linear-gradient( 45deg, rgb(221, 85, 123) 25%, rgb(239, 206, 2) 100%) 10;
+  border-top: none;
+  border-right: none;
+  border-left: none;
 }
 
 section {
