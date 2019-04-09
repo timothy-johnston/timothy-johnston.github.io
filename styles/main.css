@@ -1,4 +1,5 @@
-/* Color scheme:  https://coolors.co/b24592-f15f79-26547c-ffffff-ff6b35 */
+/* Color scheme:  https://coolors.co/b24592-f15f79-26547c-ffffff-ff6b35 
+Another good one: https://coolors.co/ef32d9-89fffd-dcedff-223843-083d77 */
 
 .GOODBYE {
   min-height: 1000px;
@@ -94,11 +95,11 @@ section {
   background: #B24592;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #b24592 5%, #F15F79 40%);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right,#B24592 5%, #F15F79 40%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 50px;
+  height: 80px;
   display: flex;
   align-items: center;
   /* margin-top: 35px; */
-  padding-left: 10px;
+  padding-left: 20px;
   color: white;
 }
 
@@ -137,15 +138,14 @@ section {
   /* flex-wrap: wrap; */
 }
 
-.about-paragraph {
-  margin:25px 0 25px 0;
-}
-
 #about-para1 {
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  /* text-align: center; */
   width: 75%;
+  border: 1px solid black;
+  height: 100%;
+  min-width: 350px;
 }
 
 #about-para2 {
@@ -155,15 +155,10 @@ section {
   width: 75%;
 }
 
-#about-paragraph-container {
-  border: 2px solid black;
-}
-
 #talent-container {
   margin-left: auto;
   margin-right: auto;
   align-self: center;
-  border: 2px solid black;
 }
 
 /* #skill-box, #tech-box, #about-para1 {
@@ -188,10 +183,17 @@ section {
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
-  max-width: 90%;
+  height: 100%;
+  max-width: 350px;
+  min-width: 240px;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid blue;
+}
+
+.skill-box-header {
+  align-self: flex-start;
+  width: 100%;
+  background: orangered;
 }
 
 .skill-item {
