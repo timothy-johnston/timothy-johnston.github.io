@@ -14,12 +14,13 @@ Space: https://coolors.co/1c171e-fb8d1e-957186-266dd3-f6e8ea
 #welcome-section {
 
   /* Nice background styling example css at: http://themesindustry.com/html/wexim-2019/index-personal-portfolio.html */
-  background-image: url(../media/wallpaper8.jpg);
+  background-image: url(../media/wallpaper11.jpg);
   background-attachment: scroll;
   background-origin: padding-box;
   background-size: cover;
-  background-position-x: 50%;
-  background-position-y: 50%;
+  /* background-position-x: 50%;
+  background-position-y: 50%; */
+  background-position: center bottom;
   display: flex;
   align-items: center;
 }
