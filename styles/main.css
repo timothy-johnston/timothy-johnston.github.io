@@ -130,6 +130,9 @@ section {
 #about-work-organizer {
   display: flex;
   justify-content: space-around;
+  width: 97%;
+  margin-left: auto;
+  margin-right: auto;
   /* border: 1px solid #26547c; */
   /* flex-wrap: wrap; */
 }
@@ -152,15 +155,18 @@ section {
   width: 75%;
 }
 
-
+#about-paragraph-container {
+  border: 2px solid black;
+}
 
 #talent-container {
   margin-left: auto;
   margin-right: auto;
   align-self: center;
+  border: 2px solid black;
 }
 
-#skill-box, #tech-box, #about-para1 {
+/* #skill-box, #tech-box, #about-para1 {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
@@ -169,6 +175,23 @@ section {
   justify-content: space-around;
   flex-wrap: wrap;
   background: white; 
+} */
+
+#tech-box-container {
+  display: flex;
+  align-items: center;
+}
+
+#skill-box, #tech-box {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid blue;
 }
 
 .skill-item {
