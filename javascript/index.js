@@ -6,7 +6,7 @@ $( document ).ready(function() {
     //Set navbar opacity based on scroll position on page load
     var scrollPos = $(window).scrollTop();
     var bgOpacity = scrollPos / 500;
-    var bgStyle = "rgba(255, 255, 255," + bgOpacity;
+    var bgStyle = "rgba(0, 0, 0," + bgOpacity;
     $('.navbar').css({"background":bgStyle});
 
     //Control navbar fade effect:
@@ -19,7 +19,7 @@ $( document ).ready(function() {
         } else {
             $('.navbar').removeClass('bg-transparent');
             bgOpacity = scrollPos / 500;
-            bgStyle = "rgba(255, 255, 255," + bgOpacity;
+            bgStyle = "rgba(0, 0, 0," + bgOpacity;
             $('.navbar').css({"background":bgStyle});
         }
     });
