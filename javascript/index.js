@@ -6,7 +6,7 @@ $( document ).ready(function() {
     //Set navbar opacity based on scroll position on page load
     var scrollPos = $(window).scrollTop();
     var bgOpacity = scrollPos / 500;
-    var bgStyle = "rgba(192, 192, 192," + bgOpacity;
+    var bgStyle = "rgba(255, 255, 255," + bgOpacity;
     $('.navbar').css({"background":bgStyle});
 
     //Control navbar fade effect:
@@ -19,10 +19,39 @@ $( document ).ready(function() {
         } else {
             $('.navbar').removeClass('bg-transparent');
             bgOpacity = scrollPos / 500;
-            bgStyle = "rgba(192, 192, 192," + bgOpacity;
+            bgStyle = "rgba(255, 255, 255," + bgOpacity;
             $('.navbar').css({"background":bgStyle});
         }
     });
+
+    //Set navbar border width based on scroll position on page load
+    var aspectRatio = $(window).width / $(window).height;
+    console.log(aspectRatio);
+
+    //Control navbar border width
+    //Set border width based on scroll position
+    
+
+    $(window).on("scroll", function() {
+        scrollPos = $(window).scrollTop();
+        var aspectRatio = $(window).width() / $(window).height();
+        var borderWidth = aspectRatio * scrollPos;
+        var marginLeft = ($(window).width() - borderWidth) / 2
+        console.log("Screen width is: " + $(window).width());
+        console.log("Border width is: " + borderWidth);
+        $('#nav-border-div').width(borderWidth);
+        $('#nav-border-div').css({"margin-left":marginLeft});
+
+        // if (scrollPos <= 0) {
+        //     $('.navbar').addClass('bg-transparent');
+        // } else {
+        //     $('.navbar').removeClass('bg-transparent');
+        //     bgOpacity = scrollPos / 500;
+        //     bgStyle = "rgba(255, 255, 255," + bgOpacity;
+        //     $('.navbar').css({"background":bgStyle});
+        // }
+    });
+
 
     //Change the text
     var slideDescriptionInterval = window.setInterval(descriptionAnimateControl, 5000);

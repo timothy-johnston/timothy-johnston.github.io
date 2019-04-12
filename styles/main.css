@@ -13,9 +13,39 @@ Cacti: https://coolors.co/fb5d00-a4c61f-dd557b-efce02-f99303
 } */
 
 #navbar {
-  border-bottom: 2px solid black;
+  /* border-bottom: 2px solid black;
+  border-image: linear-gradient( 45deg, rgb(221, 85, 123) 25%, rgb(239, 206, 2) 100%) 10; */
+  flex-wrap: wrap;
+  padding-left: 0px;
+  padding-right: 0px;
+  z-index: 999;
+}
+
+/* nav hr {
+  width: 100%;
+  border-top: 4px solid red;
+  border-image: linear-gradient( 45deg, rgb(221, 85, 123) 25%, rgb(239, 206, 2) 100%) 10;
+  
+} */
+
+#nav-border-div {
+  z-index: 1000;
+  height: 76px;
+  width: 100vw;
+  /* background: red; */
+  position: fixed;
+  border-bottom: 5px solid black;
   border-image: linear-gradient( 45deg, rgb(221, 85, 123) 25%, rgb(239, 206, 2) 100%) 10;
 }
+
+/* #navbar:after {
+  content: ""; 
+  display: block; 
+  margin: 0 auto; 
+  width: 50%; 
+  padding-top: 20px; 
+  border-bottom: 4px solid black; 
+} */
 
 #navbar-ul {
   margin-left: auto;
