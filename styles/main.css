@@ -18,7 +18,7 @@ Cacti: https://coolors.co/fb5d00-a4c61f-dd557b-efce02-f99303
   flex-wrap: wrap;
   padding-left: 0px;
   padding-right: 0px;
-  z-index: 999;
+  z-index: 998;
 }
 
 /* nav hr {
@@ -29,12 +29,12 @@ Cacti: https://coolors.co/fb5d00-a4c61f-dd557b-efce02-f99303
 } */
 
 #nav-border-div {
-  z-index: 1000;
-  height: 76px;
-  width: 100vw;
-  /* background: red; */
+  z-index: 999;
+  height: 75px;
+  top: 68px;
+  width: 0px;
   position: fixed;
-  border-bottom: 5px solid black;
+  border-top: 7px solid black;
   border-image: linear-gradient( 45deg, rgb(221, 85, 123) 25%, rgb(239, 206, 2) 100%) 10;
 }
 
@@ -55,6 +55,8 @@ Cacti: https://coolors.co/fb5d00-a4c61f-dd557b-efce02-f99303
 .nav-item a {
   color: black !important;
   font-size: 1.4rem;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 #welcome-section {
@@ -70,35 +72,42 @@ Cacti: https://coolors.co/fb5d00-a4c61f-dd557b-efce02-f99303
 }
 
 #cover-page {
-  padding-top: 37vh;
+  padding-top: 31vh;
 }
 
-#cover-content-container {
+#cover-name-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-end;
   flex-wrap: wrap;
   width: 100%;
   padding-left: 0px;
   padding-right: 0px;
-  /* border-bottom: 2px solid black; */
-  border: 3px solid black;
+  border-bottom: 3px solid black;
+  /* border: 3px solid black; */
   /* border-image: linear-gradient( 45deg, rgb(221, 85, 123) 25%, rgb(239, 206, 2) 100%) 10; */
-  border-top: none;
+  /* border-top: none;
   border-right: none;
-  border-left: none;
+  border-left: none; */
 }
 
 #header-name {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 3.5rem;
-  margin-bottom: 0px;
+  font-size: 5.5rem;
+  margin-bottom: 7px;
   line-height: 80%;
 }
 
+#cover-title-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
 #header-title {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.3rem;
+  /* font-family: 'Josefin Sans', sans-serif; */
+  font-size: 1.5rem;
   margin-bottom: 0px;
   line-height: 80%;
 }

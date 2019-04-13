@@ -25,31 +25,21 @@ $( document ).ready(function() {
     });
 
     //Set navbar border width based on scroll position on page load
-    var aspectRatio = $(window).width / $(window).height;
-    console.log(aspectRatio);
+    var aspectRatio = $(window).width() / $(window).height();
+    var borderWidth = aspectRatio * scrollPos;
+    var marginLeft = ($(window).width() - borderWidth) / 2
+    $('#nav-border-div').width(borderWidth);
+    $('#nav-border-div').css({"margin-left":marginLeft});
 
     //Control navbar border width
     //Set border width based on scroll position
-    
-
     $(window).on("scroll", function() {
         scrollPos = $(window).scrollTop();
         var aspectRatio = $(window).width() / $(window).height();
         var borderWidth = aspectRatio * scrollPos;
         var marginLeft = ($(window).width() - borderWidth) / 2
-        console.log("Screen width is: " + $(window).width());
-        console.log("Border width is: " + borderWidth);
         $('#nav-border-div').width(borderWidth);
         $('#nav-border-div').css({"margin-left":marginLeft});
-
-        // if (scrollPos <= 0) {
-        //     $('.navbar').addClass('bg-transparent');
-        // } else {
-        //     $('.navbar').removeClass('bg-transparent');
-        //     bgOpacity = scrollPos / 500;
-        //     bgStyle = "rgba(255, 255, 255," + bgOpacity;
-        //     $('.navbar').css({"background":bgStyle});
-        // }
     });
 
 
