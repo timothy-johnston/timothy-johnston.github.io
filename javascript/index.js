@@ -8,19 +8,13 @@ $( document ).ready(function() {
     var bgOpacity = scrollPos / 500;
     var bgStyle = "rgba(0, 0, 0," + bgOpacity;
     var textColorRGB_initial = [41, 16, 23];
-    var textColorRGB_delta = [221, 85, 123];
+    var textColorRGB_delta = [180, 69, 100];
     var scrollPosToHeightRatio = (scrollPos / $(window).height());
-    var rgbDeltaFactor = (scrollPosToHeightRatio >=1) ? scrollPosToHeightRatio : 1;
-    var textColorRgbToSet = [(scrollPosToHeightRatio * textColorRGB_delta[0]) + textColorRGB_initial[0], (scrollPosToHeightRatio * textColorRGB_delta[1]) + textColorRGB_initial[1], (scrollPosToHeightRatio * textColorRGB_delta[2]) + textColorRGB_initial[2]]
+    var rgbDeltaFactor = (scrollPosToHeightRatio <=1) ? scrollPosToHeightRatio : 1;
+    var textColorRgbToSet = [(rgbDeltaFactor * textColorRGB_delta[0]) + textColorRGB_initial[0], (rgbDeltaFactor * textColorRGB_delta[1]) + textColorRGB_initial[1], (rgbDeltaFactor * textColorRGB_delta[2]) + textColorRGB_initial[2]]
     var textColorRgbCss = "rgba(" + textColorRgbToSet[0] + ", " + textColorRgbToSet[1] + ", " + textColorRgbToSet[2] + ")";
     $('.navbar').css({"background":bgStyle});
-
-
-    console.log("ratio: " + scrollPosToHeightRatio);
-    console.log("delta factor: " + rgbDeltaFactor);
-    console.log("rgb to set: " + textColorRgbToSet);
-    console.log("rgb css: " + textColorRgbCss);
-
+    $('.color-transition').css({'color':textColorRgbCss});
 
     //Control navbar fade effect:
     //Set opacity and text color based on scroll position
@@ -35,6 +29,13 @@ $( document ).ready(function() {
             bgStyle = "rgba(0, 0, 0," + bgOpacity;
             $('.navbar').css({"background":bgStyle});
         }
+
+        var scrollPosToHeightRatio = (scrollPos / $(window).height());
+        var rgbDeltaFactor = (scrollPosToHeightRatio <=1) ? scrollPosToHeightRatio : 1;
+        var textColorRgbToSet = [(rgbDeltaFactor * textColorRGB_delta[0]) + textColorRGB_initial[0], (rgbDeltaFactor * textColorRGB_delta[1]) + textColorRGB_initial[1], (rgbDeltaFactor * textColorRGB_delta[2]) + textColorRGB_initial[2]]
+        var textColorRgbCss = "rgba(" + textColorRgbToSet[0] + ", " + textColorRgbToSet[1] + ", " + textColorRgbToSet[2] + ")";
+        $('.color-transition').css({'color':textColorRgbCss});
+
     });
 
     //Set navbar border width based on scroll position on page load
