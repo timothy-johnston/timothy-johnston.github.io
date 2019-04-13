@@ -7,7 +7,20 @@ $( document ).ready(function() {
     var scrollPos = $(window).scrollTop();
     var bgOpacity = scrollPos / 500;
     var bgStyle = "rgba(0, 0, 0," + bgOpacity;
+    var textColorRGB_initial = [41, 16, 23];
+    var textColorRGB_delta = [221, 85, 123];
+    var scrollPosToHeightRatio = (scrollPos / $(window).height());
+    var rgbDeltaFactor = (scrollPosToHeightRatio >=1) ? scrollPosToHeightRatio : 1;
+    var textColorRgbToSet = [(scrollPosToHeightRatio * textColorRGB_delta[0]) + textColorRGB_initial[0], (scrollPosToHeightRatio * textColorRGB_delta[1]) + textColorRGB_initial[1], (scrollPosToHeightRatio * textColorRGB_delta[2]) + textColorRGB_initial[2]]
+    var textColorRgbCss = "rgba(" + textColorRgbToSet[0] + ", " + textColorRgbToSet[1] + ", " + textColorRgbToSet[2] + ")";
     $('.navbar').css({"background":bgStyle});
+
+
+    console.log("ratio: " + scrollPosToHeightRatio);
+    console.log("delta factor: " + rgbDeltaFactor);
+    console.log("rgb to set: " + textColorRgbToSet);
+    console.log("rgb css: " + textColorRgbCss);
+
 
     //Control navbar fade effect:
     //Set opacity and text color based on scroll position
