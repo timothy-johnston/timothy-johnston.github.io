@@ -24,6 +24,10 @@ Cacti: https://coolors.co/fb5d00-a4c61f-dd557b-efce02-f99303
 
 }
 
+#collapse-button {
+  background: silver;
+}
+
 /* nav hr {
   width: 100%;
   border-top: 4px solid red;
