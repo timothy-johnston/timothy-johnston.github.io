@@ -56,44 +56,11 @@ $( document ).ready(function() {
         $('#nav-border-div').css({"margin-left":marginLeft});
     });
 
-
-    //Change the text
-    var slideDescriptionInterval = window.setInterval(descriptionAnimateControl, 5000);
-
-    
-    var descriptorCounter = 1;
-
-    function descriptionAnimateControl() {
-
-            if ($('#description-variable-1').hasClass("fadeIn")) {
-                $('#description-variable-1').removeClass("fadeIn");
-                $('#description-variable-1').addClass("fadeOut");
-
-            } else {
-                $('#description-variable-1').removeClass("fadeOut");
-                $('#description-variable-1').addClass("fadeIn");
-
-            }
-
-            $('#description-variable-1').toggle();
-            $('#description-variable-1').toggle();
-                
-            setTimeout(function() {
-                $('#description-variable-1').toggle();
-                $('#description-variable-1').removeClass("fadeOut");
-                $('#description-variable-1').addClass("fadeIn");
-
-                $('#description-variable-1').text(descriptors[descriptorCounter]);
-                descriptorCounter++;
-                
-
-                $('#description-variable-1').toggle();
-            }, 1000);
-
-            if (descriptorCounter == descriptors.length) {
-                descriptorCounter = 0;
-            }
-    }
+    //HIDE NAVBAR BORDER DIV WHEN COLLAPSE BUTTON IS OPENED
+    $('#collapse-button').click(function() {
+        console.log("target acquired");
+        $('#nav-border-div').toggle('slow');
+    })
 
     //HIDE/SHOW PORTFOLIO & RESUME CONTENTS-----start--------------------------------------
     $('#btn-portfolio').click(function() {
@@ -155,8 +122,7 @@ $( document ).ready(function() {
             iconLeft.addClass("rotate-cw-180");
         }
     })
-
-    //HIDE/SHOW PORTFOLIO & RESUME CONTENTS-----start--------------------------------------
+    //HIDE/SHOW PORTFOLIO & RESUME CONTENTS-----end--------------------------------------
 
     
     //MODAL CONTROL-----start---------------------------------------------------------------
@@ -230,6 +196,54 @@ $( document ).ready(function() {
 function getDescriptors() {
     return ["Builder", "Learner", "Collaborator", "Risk Taker", "Innovator", "Friend"];
 }
+
+
+
+
+
+
+
+
+//Not using yet/anymore
+
+
+// //Change the text
+// var slideDescriptionInterval = window.setInterval(descriptionAnimateControl, 5000);
+
+    
+// var descriptorCounter = 1;
+
+// function descriptionAnimateControl() {
+
+//         if ($('#description-variable-1').hasClass("fadeIn")) {
+//             $('#description-variable-1').removeClass("fadeIn");
+//             $('#description-variable-1').addClass("fadeOut");
+
+//         } else {
+//             $('#description-variable-1').removeClass("fadeOut");
+//             $('#description-variable-1').addClass("fadeIn");
+
+//         }
+
+//         $('#description-variable-1').toggle();
+//         $('#description-variable-1').toggle();
+            
+//         setTimeout(function() {
+//             $('#description-variable-1').toggle();
+//             $('#description-variable-1').removeClass("fadeOut");
+//             $('#description-variable-1').addClass("fadeIn");
+
+//             $('#description-variable-1').text(descriptors[descriptorCounter]);
+//             descriptorCounter++;
+            
+
+//             $('#description-variable-1').toggle();
+//         }, 1000);
+
+//         if (descriptorCounter == descriptors.length) {
+//             descriptorCounter = 0;
+//         }
+// }
 
 
 
