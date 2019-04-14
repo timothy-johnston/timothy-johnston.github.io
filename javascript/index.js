@@ -1,6 +1,13 @@
 var descriptors = getDescriptors();
 $('#description-variable-1').text(descriptors[0]);
 
+//Collapse menu background
+console.log($('#collapse-button').css('display'));
+if ($('#collapse-button').css('display') == 'none') {
+    $('#collapse-menu').css({"background":"transparent"});
+    $('#collapse-menu').css({"border":"none"});
+}
+
 $( document ).ready(function() {
 
     //Set navbar opacity and nav-item color based on scroll position on page load
@@ -59,7 +66,7 @@ $( document ).ready(function() {
     //HIDE NAVBAR BORDER DIV WHEN COLLAPSE BUTTON IS OPENED
     $('#collapse-button').click(function() {
         console.log("target acquired");
-        $('#nav-border-div').toggle('slow');
+        $('#nav-border-div').toggle();
     })
 
     //HIDE/SHOW PORTFOLIO & RESUME CONTENTS-----start--------------------------------------
