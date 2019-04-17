@@ -54,6 +54,9 @@ $( document ).ready(function() {
     $('#nav-border-div').width(borderWidth);
     $('#nav-border-div').css({"margin-left":marginLeft});
 
+    $('#nav-background-div').width(borderWidth);
+    $('#nav-background-div').css({"margin-left":marginLeft});
+
     //Control navbar border width
     //Set border width based on scroll position
     $(window).on("scroll", function() {
@@ -63,6 +66,9 @@ $( document ).ready(function() {
         var marginLeft = ($(window).width() - borderWidth) / 2
         $('#nav-border-div').width(borderWidth);
         $('#nav-border-div').css({"margin-left":marginLeft});
+
+        $('#nav-background-div').width(borderWidth);
+        $('#nav-background-div').css({"margin-left":marginLeft});
     });
 
     //Modify apperance of navbar related elements when nav collapse button is clicked or screen resized
