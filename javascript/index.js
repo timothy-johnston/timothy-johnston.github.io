@@ -20,8 +20,9 @@ $( document ).ready(function() {
     var rgbDeltaFactor = (scrollPosToHeightRatio <=1) ? scrollPosToHeightRatio : 1;
     var textColorRgbToSet = [(rgbDeltaFactor * textColorRGB_delta[0]) + textColorRGB_initial[0], (rgbDeltaFactor * textColorRGB_delta[1]) + textColorRGB_initial[1], (rgbDeltaFactor * textColorRGB_delta[2]) + textColorRGB_initial[2]]
     var textColorRgbCss = "rgba(" + textColorRgbToSet[0] + ", " + textColorRgbToSet[1] + ", " + textColorRgbToSet[2] + ")";
-    $('.navbar').css({"background":bgStyle});
+    // $('.navbar').css({"background":"transparent"});
     $('.color-transition').css({'color':textColorRgbCss});
+    $('#nav-background-div').css({"opacity":bgOpacity});
 
     //Control navbar fade effect:
     //Set opacity and text color based on scroll position
@@ -29,19 +30,20 @@ $( document ).ready(function() {
         scrollPos = $(window).scrollTop();
         console.log("Scroll position is: " + scrollPos);
         if (scrollPos <= 0) {
-            $('.navbar').addClass('bg-transparent');
+            // $('.navbar').addClass('bg-transparent');
         } else {
-            $('.navbar').removeClass('bg-transparent');
+            // $('.navbar').removeClass('bg-transparent');
             bgOpacity = scrollPos / 500;
             bgStyle = "rgba(0, 0, 0," + bgOpacity;
-            $('.navbar').css({"background":bgStyle});
+            // $('.navbar').css({"background":bgStyle});
+            $('#nav-background-div').css({"opacity":bgOpacity});
         }
 
         var scrollPosToHeightRatio = (scrollPos / $(window).height());
         var rgbDeltaFactor = (scrollPosToHeightRatio <=1) ? scrollPosToHeightRatio : 1;
         var textColorRgbToSet = [(rgbDeltaFactor * textColorRGB_delta[0]) + textColorRGB_initial[0], (rgbDeltaFactor * textColorRGB_delta[1]) + textColorRGB_initial[1], (rgbDeltaFactor * textColorRGB_delta[2]) + textColorRGB_initial[2]]
         var textColorRgbCss = "rgba(" + textColorRgbToSet[0] + ", " + textColorRgbToSet[1] + ", " + textColorRgbToSet[2] + ")";
-        $('.color-transition').css({'color':textColorRgbCss});
+        // $('.color-transition').css({'color':textColorRgbCss});
 
     });
 
@@ -63,10 +65,21 @@ $( document ).ready(function() {
         $('#nav-border-div').css({"margin-left":marginLeft});
     });
 
-    //HIDE NAVBAR BORDER DIV WHEN COLLAPSE BUTTON IS OPENED
+    //Modify apperance of navbar related elements when nav collapse button is clicked or screen resized
+
+    //Collapse button click (repeat this for screen resize)
     $('#collapse-button').click(function() {
         console.log("target acquired");
         $('#nav-border-div').toggle();
+
+        if ($('#collapse-button').css('display') == 'none') {
+            $('#collapse-menu').css({"background":"transparent"});
+            $('#collapse-menu').css({"border-width":"40px"});
+        } else {
+            $('#collapse-menu').css({"background":"black"});
+            $('#collapse-menu').css({"border-width":"5px"});
+        }
+
     })
 
     //HIDE/SHOW PORTFOLIO & RESUME CONTENTS-----start--------------------------------------
