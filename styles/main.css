@@ -58,7 +58,8 @@ body {
   /* top: 0px; */
   position: fixed;
   /* background-image: linear-gradient( 45deg, rgb(221, 85, 123) 25%, rgb(239, 206, 2) 100%); */
-  background-image: linear-gradient( -45deg, #ADF5FE 70%, #0095FF 100%);
+  background-image: linear-gradient( -45deg, #ADF5FE 70%, #0095FF 100%);    /*Dark to light blue fade*/
+  background-image: linear-gradient( -45deg, #EBC205 66%, #DB3C6D 100%);    /*pink to yellow fade*/
   
 }
 
