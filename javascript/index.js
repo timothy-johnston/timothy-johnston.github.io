@@ -11,7 +11,7 @@ if ($('#collapse-button').css('display') == 'none') {
 $( document ).ready(function() {
 
     //Set navbar opacity and nav-item color based on scroll position on page load
-    var minOpacity = .275;
+    var minOpacity = .475;
     var scrollPos = $(window).scrollTop();
     var bgOpacity = scrollPos / 500;
     bgOpacity = (bgOpacity > minOpacity) ? bgOpacity : minOpacity;
