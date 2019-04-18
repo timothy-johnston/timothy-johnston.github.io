@@ -11,8 +11,10 @@ if ($('#collapse-button').css('display') == 'none') {
 $( document ).ready(function() {
 
     //Set navbar opacity and nav-item color based on scroll position on page load
+    var minOpacity = .275;
     var scrollPos = $(window).scrollTop();
     var bgOpacity = scrollPos / 500;
+    bgOpacity = (bgOpacity > minOpacity) ? bgOpacity : minOpacity;
     var bgStyle = "rgba(0, 0, 0," + bgOpacity;
     var textColorRGB_initial = [41, 16, 23];
     var textColorRGB_delta = [180, 69, 100];
@@ -34,6 +36,7 @@ $( document ).ready(function() {
         } else {
             // $('.navbar').removeClass('bg-transparent');
             bgOpacity = scrollPos / 500;
+            bgOpacity = (bgOpacity > minOpacity) ? bgOpacity : minOpacity;
             bgStyle = "rgba(0, 0, 0," + bgOpacity;
             // $('.navbar').css({"background":bgStyle});
             $('#nav-background-div').css({"opacity":bgOpacity});
@@ -54,8 +57,8 @@ $( document ).ready(function() {
     $('#nav-border-div').width(borderWidth);
     $('#nav-border-div').css({"margin-left":marginLeft});
 
-    $('#nav-background-div').width(borderWidth);
-    $('#nav-background-div').css({"margin-left":marginLeft});
+    // $('#nav-background-div').width(borderWidth);
+    // $('#nav-background-div').css({"margin-left":marginLeft});
 
     //Control navbar border width
     //Set border width based on scroll position
@@ -67,8 +70,8 @@ $( document ).ready(function() {
         $('#nav-border-div').width(borderWidth);
         $('#nav-border-div').css({"margin-left":marginLeft});
 
-        $('#nav-background-div').width(borderWidth);
-        $('#nav-background-div').css({"margin-left":marginLeft});
+        // $('#nav-background-div').width(borderWidth);
+        // $('#nav-background-div').css({"margin-left":marginLeft});
     });
 
     //Modify apperance of navbar related elements when nav collapse button is clicked or screen resized

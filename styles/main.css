@@ -43,7 +43,8 @@ Cacti: https://coolors.co/fb5d00-a4c61f-dd557b-efce02-f99303
 
 #nav-background-div {
   height: 58px;
-  width: 0px;
+  width: 100%;
+  opacity: .275;
   /* top: 0px; */
   position: fixed;
   background-image: linear-gradient( 45deg, rgb(221, 85, 123) 25%, rgb(239, 206, 2) 100%);
@@ -52,10 +53,10 @@ Cacti: https://coolors.co/fb5d00-a4c61f-dd557b-efce02-f99303
 #nav-border-div {
   z-index: 999;
   height: 50px;
-  top: 54px;
+  top: 56px;
   width: 0px;
   position: fixed;
-  border-top: 4px solid black;
+  border-top: 2px solid lime;
   /* border-image: linear-gradient( 45deg, rgb(221, 85, 123) 25%, rgb(239, 206, 2) 100%) 10; */
 }
 
