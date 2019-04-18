@@ -66,10 +66,10 @@ body {
 #nav-border-div {
   z-index: 999;
   height: 50px;
-  top: 56px;
+  top: 57px;
   width: 0px;
   position: fixed;
-  border-top: 2px solid black;
+  border-top: 1px solid black;
   /* border-image: linear-gradient( 45deg, rgb(221, 85, 123) 25%, rgb(239, 206, 2) 100%) 10; */
 }
 
