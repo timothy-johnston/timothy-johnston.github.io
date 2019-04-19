@@ -78,15 +78,15 @@ $( document ).ready(function() {
 
     //Collapse button click (repeat this for screen resize)
     $('#collapse-button').click(function() {
-        console.log("target acquired");
-        $('#nav-border-div').toggle();
+        // console.log("target acquired");
+        // $('#nav-border-div').toggle();
 
         if ($('#collapse-button').css('display') == 'none') {
-            $('#collapse-menu').css({"background":"transparent"});
-            $('#collapse-menu').css({"border-width":"40px"});
+            // $('#collapse-menu').css({"background":"transparent"});
+            // $('#collapse-menu').css({"border-width":"40px"});
         } else {
-            $('#collapse-menu').css({"background":"black"});
-            $('#collapse-menu').css({"border-width":"5px"});
+            // $('#collapse-menu').css({"background":"black"});
+            // $('#collapse-menu').css({"border-width":"5px"});
         }
 
     })

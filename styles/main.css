@@ -41,9 +41,9 @@ body {
 }
 
 #collapse-menu {
-  background: black;
-  border-bottom: 4px solid black;
-  border-image: linear-gradient( 45deg, rgb(221, 85, 123) 25%, rgb(239, 206, 2) 100%) 10;
+  background-image: linear-gradient( -45deg, #EBC205 66%, #DB3C6D 100%);    /*pink to yellow fade*/
+  /* margin-top: 18px;
+  border-top: 1px solid black; */
 }
 
 /* nav hr {
@@ -87,6 +87,7 @@ body {
 #navbar-ul {
   margin-left: auto;
   margin-right: auto;
+  align-items: flex-end;
 }
 
 .nav-item {
@@ -94,30 +95,15 @@ body {
   text-align: center;
 }
 
-/* 
-#nav-item-1 {
-  background: red;
-  border-right: 1px solid black;
+/* .show #navbar-ul {
+  margin-top: 18px;
+  margin-left: 0px;
+  background: pink;
+  width: 130px;
 }
 
-#nav-item-2 {
-  background: red;
-  border-right: 1px solid black;
-}
-
-#nav-item-3 {
-  background: red;
-  border-right: 1px solid black;
-}
-
-#nav-item-4 {
-  background: red;
-  border-right: 1px solid black;
-}
-
-#nav-item-5 {
-  background: red;
-  border-right: none;
+.show #navbar-ul .nav-item {
+  text-align: left;
 } */
 
 .color-transition {
@@ -200,11 +186,9 @@ section {
 }
 
 .dropdown-menu {
-  background: #B24592;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #b24592, #F15F79);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right,#B24592, #F15F79); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding: .5rem .5rem;
   min-width: 0px;
+  box-shadow: 0px 10px 4px -5px black;
 }
 
 .test {
