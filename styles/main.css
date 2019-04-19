@@ -89,11 +89,12 @@ body {
   margin-right: auto;
 }
 
-/* .nav-item {
-  background: red;
-  border-right: 1px solid black;
+.nav-item {
+  width: 120px;
+  text-align: center;
 }
 
+/* 
 #nav-item-1 {
   background: red;
   border-right: 1px solid black;
@@ -735,6 +736,10 @@ section {
 /* Blurring background for modal, good example at https://codepen.io/lachama/pen/JWarNV */
 .blur {
   filter:blur(4px);
+}
+
+.box-shadow-solid-black {
+  box-shadow: 5px 10px black;
 }
 
 .depth-element {
