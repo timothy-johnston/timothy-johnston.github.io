@@ -235,6 +235,24 @@ section {
   padding-right: 0px;
 }
 
+#about-section {
+  background-image: linear-gradient( -55deg, #f5efed 15%, #5eafbc 90%);
+  margin-bottom: 15px;
+}
+
+#about-bio-container {
+  display: flex;
+  border: 2px solid black;
+}
+
+#about-pic-container {
+  width: 50%;
+}
+
+#about-text-container {
+  width: 50%;
+}
+
 #about-section-header {
   background: #B24592;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #b24592 5%, #F15F79 40%);  /* Chrome 10-25, Safari 5.1-6 */
