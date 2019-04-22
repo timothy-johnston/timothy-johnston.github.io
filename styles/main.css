@@ -248,6 +248,8 @@ section {
   margin-top: 25px;
   padding-left: 0px;
   padding-right: 0px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 #about-pic-container {
