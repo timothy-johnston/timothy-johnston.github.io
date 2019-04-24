@@ -244,6 +244,7 @@ section {
 
 #about-bio-container {
   display: flex;
+  flex-wrap: wrap;
   background: white;
   margin-top: 25px;
   margin-bottom: 50px;
@@ -262,14 +263,22 @@ section {
   padding: 75px;
 }
 
+#skills-header-container {
+  margin-top: 100px;
+}
+
 #about-skills-container {
   display: flex;
   flex-wrap: wrap;
   background: white;
-  margin-top: 25px;
   padding: 25px;
   border-radius: 10px;
   overflow: hidden;
+}
+
+#about-skills-container .skill-item p {
+  margin: 5px;
+  padding: 5px;
 }
 
 #about-section-header {
