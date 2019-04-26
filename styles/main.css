@@ -408,6 +408,7 @@ section {
 .skill-item:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  color: white;
 }
 
 #about-carousel {
