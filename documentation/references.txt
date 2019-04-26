@@ -49,6 +49,13 @@ https://www.tutorialrepublic.com/faq/how-to-create-3d-flipping-effect-on-mouse-h
 Reflection Effect Tutorial:
         https://1stwebdesigner.com/reflection-effect-css/
 
+Notes to add to accomplishments
+        Something I learned / improved on
+                Focus on one thing wholly
+                        on this project, things came together once i decided to simplify and complete a whole section before moving on to the next
+                        at work, thigns came together when i made a todo list and worked though it logically
+                                ex: nexen resiliency jira
+
 <<<<<<< HEAD
 Good Carousel Tutorial  
         https://mdbootstrap.com/docs/jquery/javascript/carousel/
@@ -60,4 +67,11 @@ Simple Modal Tutorial
 
 
 >>>>>>> 4f476917dd54f72e571deafdaa8e9b9a3782193c
+
+
+Blog Post Idea
+        strategies for web design for people without an eye for design
+                1.) use the inspector
+                2.) look for inspiration everywhere. Me: sunset and cstricks color scheme
+                3.) simplify
         
