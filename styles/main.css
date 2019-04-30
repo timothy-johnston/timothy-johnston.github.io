@@ -263,15 +263,8 @@ section {
   padding: 75px;
 }
 
-#skills-subsection {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
 #skills-header-container {
   margin-top: 100px;
-  width: 45%;
 }
 
 .border-wrapper {
@@ -279,7 +272,6 @@ section {
   background-image: linear-gradient( -45deg, #EBC205 0%, #DB3C6D 100%);
   padding: 3px;
   border-radius: 10px;
-  width: 45%;
 }
 
 #about-skills-container {
