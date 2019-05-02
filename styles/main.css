@@ -197,6 +197,8 @@ section {
 
 .dropdown-menu.show {
   display: inline-block;
+  background-image: linear-gradient( -45deg, #FFDA3B 0%, #DB3C6D 100%);
+  border: none;
 }
 
 #dropdown-content-container {
