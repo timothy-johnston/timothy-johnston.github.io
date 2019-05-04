@@ -262,12 +262,13 @@ section {
 
 #about-pic-container {
   /* width: 50%; */
+  height: 55vh;
 }
 
 #bio-pic-div {
   background-image: url("../media/glacier_bay_boat_square.jpg");
   background-size: cover !important;
-  border: 5px solid blue;
+  background-position: center center !important;
   width: 100%;
   height: 100%;
 }
