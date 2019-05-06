@@ -30,7 +30,7 @@ body {
   flex-wrap: wrap;
   padding-left: 0px;
   padding-right: 0px;
-  z-index: 998;
+  /* z-index: 998; */
   height: 60px;
   padding: 0px;
 
@@ -66,7 +66,7 @@ body {
 }
 
 #nav-border-div {
-  z-index: 999;
+  /* z-index: 999; */
   height: 50px;
   top: 57px;
   width: 0px;
@@ -240,7 +240,7 @@ section {
 #about-section {
   background: #f6f7fa;
   /* background-image: linear-gradient( -55deg, #f5efed 15%, #5eafbc 90%); */
-  margin-bottom: 15px;
+  padding-bottom: 100px;
   padding-top: 100px;
 }
 
@@ -337,6 +337,37 @@ section {
   font-size: 1.0rem;
   font-weight: 200;
 }
+
+#portfolio-section {
+  margin-top: 100px;
+}
+
+.card-footer {
+  background-image: linear-gradient( -45deg, #FFDA3B 0%, #DB3C6D 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #about-section-header {
   background: #B24592;  /* fallback for old browsers */
@@ -461,7 +492,7 @@ section {
   right: 0;
   left: 0;
   width: 100%;
-  z-index: 15;
+  /* z-index: 15; */
   margin: 0;
   padding: 0 25px 25px 0;
   text-align: right;
@@ -561,7 +592,7 @@ section {
 
 .fade-preview {
   position:absolute;
-  z-index:2;
+  /* z-index:2; */
   right:0; bottom:0; left:0;
   height: 100%;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
@@ -702,7 +733,7 @@ section {
 .hvr-underline-from-center:before {
   content: "";
   position: absolute;
-  z-index: -1;
+  /* z-index: -1; */
   left: 51%;
   right: 51%;
   bottom: 0;
@@ -1085,7 +1116,7 @@ section {
     pointer-events: none;
     position: absolute;
     margin: 0px 4px 0px 4px;
-    z-index: -1;
+    /* z-index: -1; */
     content: '';
     top: 100%;
     left: 5%;
