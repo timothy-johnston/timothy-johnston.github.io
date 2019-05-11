@@ -67,9 +67,9 @@ body {
 }
 
 #nav-border-div {
-  /* z-index: 999; */
+  z-index: 999;
   height: 50px;
-  top: 57px;
+  top: 60px;
   width: 0px;
   position: fixed;
   border-top: 1px solid black;
