@@ -51,7 +51,7 @@ $( document ).ready(function() {
     });
 
     //Set navbar border width based on scroll position on page load
-    var aspectRatio = $(window).width() / $(window).height();
+    var aspectRatio = $(window).width() / ($(window).height() - $("#navbar").height());
     var borderWidth = aspectRatio * scrollPos;
     var marginLeft = ($(window).width() - borderWidth) / 2
     $('#nav-border-div').width(borderWidth);
@@ -64,7 +64,7 @@ $( document ).ready(function() {
     //Set border width based on scroll position
     $(window).on("scroll", function() {
         scrollPos = $(window).scrollTop();
-        var aspectRatio = $(window).width() / $(window).height();
+        var aspectRatio = $(window).width() / ($(window).height() - $("#navbar").height());
         var borderWidth = aspectRatio * scrollPos;
         var marginLeft = ($(window).width() - borderWidth) / 2
         $('#nav-border-div').width(borderWidth);
