@@ -288,25 +288,27 @@
         </section>
 
         <!-- FOOTER -->
-        <div id="footer-section"> <!--Should change to section element, will require css changes to other section elements (min-height:100vh)-->
-            <div id="footer-container" class="container">
-                <!-- Contact form from formspree: https://formspree.io/ -->
-                <div id="contact-form-container">
-                    <h2>Email Me</h2>
-                    <form class="form-group" id="contact-form" method="POST" action="https://formspree.io/tedwardj11@gmail.com">
-                        <label for="email-input">Email Address</label>
-                        <input class="form-control" type="email" id="email-input" name="email" placeholder="Your email">
-                        <label for="text-input">Your Message</label>
-                        <textarea class="form-control" id="text-input" name="message" placeholder="Test Message"></textarea>
-                        <button class="btn btn-primary" type="submit">Send!</button>
-                    </form>
-                </div>
-                <div id="contact-social-container">
-                    <h2>Follow Me</h2>
-                    <div>
-                        <a class="icon-linkedin social-button borderless" target="_blank" href="https://www.linkedin.com/in/timothyejohnston/"></a>
-                        <a class="icon-twitter social-button borderless" target="_blank" href="https://twitter.com/TimJohnston_11"></a>
-                        <a class="icon-github social-button borderless" target="_blank" href="https://github.com/timothy-johnston"></a>
+        <div id="footer-section-border">
+            <div id="footer-section"> <!--Should change to section element, will require css changes to other section elements (min-height:100vh)-->
+                <div class="container">
+                    <div id="footer-container" class="row">
+                        <!-- Contact form from formspree: https://formspree.io/ -->
+                        <div id="contact-form-container" class="col-md-6 col-sm-12">
+                            <p class="footer-section-text">Email Me</p>
+                            <form class="form-group" id="contact-form" method="POST" action="https://formspree.io/tedwardj11@gmail.com">
+                                <input class="form-control" type="email" id="email-input" name="email" placeholder="Your email">
+                                <textarea class="form-control" id="text-input" name="message" placeholder="Test Message"></textarea>
+                                <button class="btn btn-primary" type="submit">Send!</button>
+                            </form>
+                        </div>
+                        <div id="social-container" class="col-md-6 col-sm-12">
+                            <p class="footer-section-text">Follow Me</p>
+                            <div id="social-icon-container">
+                                <a class="icon-linkedin social-button borderless" target="_blank" href="https://www.linkedin.com/in/timothyejohnston/"></a>
+                                <a class="icon-twitter social-button borderless" target="_blank" href="https://twitter.com/TimJohnston_11"></a>
+                                <a class="icon-github social-button borderless" target="_blank" href="https://github.com/timothy-johnston"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

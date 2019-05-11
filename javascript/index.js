@@ -4,51 +4,51 @@ $('#description-variable-1').text(descriptors[0]);
 //Collapse menu background
 console.log($('#collapse-button').css('display'));
 if ($('#collapse-button').css('display') == 'none') {
-    $('#collapse-menu').css({"background":"transparent"});
-    $('#collapse-menu').css({"border":"none"});
+    // $('#collapse-menu').css({"background":"transparent"});
+    // $('#collapse-menu').css({"border":"none"});
 }
 
 $( document ).ready(function() {
 
     //Set navbar opacity and nav-item color based on scroll position on page load
-    var minOpacity = .999;
+    // var minOpacity = .999;
     var scrollPos = $(window).scrollTop();
-    var bgOpacity = scrollPos / 500;
-    bgOpacity = (bgOpacity > minOpacity) ? bgOpacity : minOpacity;
-    var bgStyle = "rgba(0, 0, 0," + bgOpacity;
-    var textColorRGB_initial = [41, 16, 23];
-    var textColorRGB_delta = [180, 69, 100];
-    var scrollPosToHeightRatio = (scrollPos / $(window).height());
-    var rgbDeltaFactor = (scrollPosToHeightRatio <=1) ? scrollPosToHeightRatio : 1;
-    var textColorRgbToSet = [(rgbDeltaFactor * textColorRGB_delta[0]) + textColorRGB_initial[0], (rgbDeltaFactor * textColorRGB_delta[1]) + textColorRGB_initial[1], (rgbDeltaFactor * textColorRGB_delta[2]) + textColorRGB_initial[2]]
-    var textColorRgbCss = "rgba(" + textColorRgbToSet[0] + ", " + textColorRgbToSet[1] + ", " + textColorRgbToSet[2] + ")";
-    // $('.navbar').css({"background":"transparent"});
-    $('.color-transition').css({'color':textColorRgbCss});
-    $('#nav-background-div').css({"opacity":bgOpacity});
+    // var bgOpacity = scrollPos / 500;
+    // bgOpacity = (bgOpacity > minOpacity) ? bgOpacity : minOpacity;
+    // var bgStyle = "rgba(0, 0, 0," + bgOpacity;
+    // var textColorRGB_initial = [41, 16, 23];
+    // var textColorRGB_delta = [180, 69, 100];
+    // var scrollPosToHeightRatio = (scrollPos / $(window).height());
+    // var rgbDeltaFactor = (scrollPosToHeightRatio <=1) ? scrollPosToHeightRatio : 1;
+    // var textColorRgbToSet = [(rgbDeltaFactor * textColorRGB_delta[0]) + textColorRGB_initial[0], (rgbDeltaFactor * textColorRGB_delta[1]) + textColorRGB_initial[1], (rgbDeltaFactor * textColorRGB_delta[2]) + textColorRGB_initial[2]]
+    // var textColorRgbCss = "rgba(" + textColorRgbToSet[0] + ", " + textColorRgbToSet[1] + ", " + textColorRgbToSet[2] + ")";
+    // // $('.navbar').css({"background":"transparent"});
+    // $('.color-transition').css({'color':textColorRgbCss});
+    // $('#nav-background-div').css({"opacity":bgOpacity});
 
-    //Control navbar fade effect:
-    //Set opacity and text color based on scroll position
-    $(window).on("scroll", function() {
-        scrollPos = $(window).scrollTop();
-        console.log("Scroll position is: " + scrollPos);
-        if (scrollPos <= 0) {
-            // $('.navbar').addClass('bg-transparent');
-        } else {
-            // $('.navbar').removeClass('bg-transparent');
-            bgOpacity = scrollPos / 500;
-            bgOpacity = (bgOpacity > minOpacity) ? bgOpacity : minOpacity;
-            bgStyle = "rgba(0, 0, 0," + bgOpacity;
-            // $('.navbar').css({"background":bgStyle});
-            $('#nav-background-div').css({"opacity":bgOpacity});
-        }
+    // //Control navbar fade effect:
+    // //Set opacity and text color based on scroll position
+    // $(window).on("scroll", function() {
+    //     scrollPos = $(window).scrollTop();
+    //     console.log("Scroll position is: " + scrollPos);
+    //     if (scrollPos <= 0) {
+    //         // $('.navbar').addClass('bg-transparent');
+    //     } else {
+    //         // $('.navbar').removeClass('bg-transparent');
+    //         bgOpacity = scrollPos / 500;
+    //         bgOpacity = (bgOpacity > minOpacity) ? bgOpacity : minOpacity;
+    //         bgStyle = "rgba(0, 0, 0," + bgOpacity;
+    //         // $('.navbar').css({"background":bgStyle});
+    //         $('#nav-background-div').css({"opacity":bgOpacity});
+    //     }
 
-        var scrollPosToHeightRatio = (scrollPos / $(window).height());
-        var rgbDeltaFactor = (scrollPosToHeightRatio <=1) ? scrollPosToHeightRatio : 1;
-        var textColorRgbToSet = [(rgbDeltaFactor * textColorRGB_delta[0]) + textColorRGB_initial[0], (rgbDeltaFactor * textColorRGB_delta[1]) + textColorRGB_initial[1], (rgbDeltaFactor * textColorRGB_delta[2]) + textColorRGB_initial[2]]
-        var textColorRgbCss = "rgba(" + textColorRgbToSet[0] + ", " + textColorRgbToSet[1] + ", " + textColorRgbToSet[2] + ")";
-        // $('.color-transition').css({'color':textColorRgbCss});
+    //     var scrollPosToHeightRatio = (scrollPos / $(window).height());
+    //     var rgbDeltaFactor = (scrollPosToHeightRatio <=1) ? scrollPosToHeightRatio : 1;
+    //     var textColorRgbToSet = [(rgbDeltaFactor * textColorRGB_delta[0]) + textColorRGB_initial[0], (rgbDeltaFactor * textColorRGB_delta[1]) + textColorRGB_initial[1], (rgbDeltaFactor * textColorRGB_delta[2]) + textColorRGB_initial[2]]
+    //     var textColorRgbCss = "rgba(" + textColorRgbToSet[0] + ", " + textColorRgbToSet[1] + ", " + textColorRgbToSet[2] + ")";
+    //     // $('.color-transition').css({'color':textColorRgbCss});
 
-    });
+    // });
 
     //Set navbar border width based on scroll position on page load
     var aspectRatio = $(window).width() / ($(window).height() - $("#navbar").height());
