@@ -39,10 +39,11 @@ body {
 
 #collapse-button {
   background: silver;
+  height: 60px;
 }
 
 #collapse-menu {
-  background-image: linear-gradient( -45deg, #EBC205 66%, #DB3C6D 100%);    /*pink to yellow fade*/
+  background-image: linear-gradient( -90deg, #EBC205 16%, #DB3C6D4D 50%);
   /* margin-top: 18px;
   border-top: 1px solid black; */
 }
