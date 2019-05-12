@@ -94,6 +94,9 @@ body {
 .nav-item {
   width: 120px;
   text-align: center;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-link {
@@ -205,6 +208,9 @@ section {
   display: inline-block;
   background-image: linear-gradient( -45deg, #FFDA3B 0%, #DB3C6D 100%);
   border: none;
+  margin-top: 10px;
+  width: 150%;
+  height: 60px;
 }
 
 #dropdown-content-container {
@@ -215,7 +221,7 @@ section {
 .dropdown-item.social-button-nav {
   margin: 0px 4px 0px 4px;
   padding:0px;
-  font-size: 32px;
+  font-size: 2.0rem;
   text-align: center;
   /* border:1px solid black; */
 }
