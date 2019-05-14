@@ -358,13 +358,33 @@ section {
   /* background-image: linear-gradient( -45deg, white 15%, #5eafbc 40%); */
 }
 
-.skill-item, .project-item {
+.skill-item {
   border: 1px solid white;
   background: rgb(0, 0, 0, 0.15);
   margin: 10px;
   color: white;
   font-size: 1.0rem;
   font-weight: 200;
+}
+
+.project-item {
+  border: 1px solid white;
+  border-radius: 10px;
+  background: rgb(0, 0, 0, 0.75);
+  margin: 10px;
+  margin-right: 20px;
+  margin-left: 0px;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+#related-projects-container {
+  margin-top: 45px;
+}
+
+#related-projects-container p {
+  font-size: 2.2rem;
 }
 
 #portfolio-section {
