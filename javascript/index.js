@@ -1,5 +1,10 @@
 var descriptors = getDescriptors();
 $('#description-variable-1').text(descriptors[0]);
+$('#related-projects-p').hide();
+$('.project-item').hide();
+
+//Projects
+
 
 $( document ).ready(function() {
 
@@ -31,13 +36,84 @@ $( document ).ready(function() {
 
     //Show related projects when skill item is clicked -----start---------------------------
     $('.skill-item').click(function() {
-        var skill = this.text();
-        console.log("hi");
-        console.log(skill);
-        updateRelatedProjects();
-    })
 
-    function updateRelatedProjects(skill)
+        //Hide the click prompt + no projects message and show the project info
+        $('#skill-click-prompt').hide();
+        $('#no-projects-p').hide();
+        $('#related-projects-p').show();
+
+        var skill = $(this).text();
+        updateRelatedProjects(skill);
+    });
+
+    //This function determines the related projects and updates the UI
+    function updateRelatedProjects(skill) {
+        
+        //Hide/reset existing projects
+        $('.project-item').hide();
+
+        //Check if the related projects section is showing. If not, show it.
+        if (!$('#related-projects-p').is(":visible")) {
+            $('#related-projects-p').toggle();
+        }
+
+        //Loop through all projects. If project uses skill, add project to list
+        var projects = getAllProjects();
+        var matches = 0;
+
+        for (let project of projects) {
+            if (project.skills.includes(skill)) {
+
+                $('#project-btn-' + (matches + 1)).show();
+                $('#project-btn-' + (matches + 1)).text(project.project);
+
+                matches++;
+
+            }
+
+        }
+
+        //If skill not used in any projects, prompt to pick another
+        if (matches == 0) {
+            $('#no-projects-p').show();
+            $('#no-projects-p').text("Oops, looks like I haven't used " + skill + " in any public projects. Try another!");
+        }
+
+
+    }
+
+    function getAllProjects() {
+
+        var projectArray = [
+            {
+                project: "ThirstyCat: Hardware",
+                skills: ["Raspberry Pi", "Python", "Server-Side Development"]
+            },
+            {
+                project: "ThirstyCat: Software",
+                skills: ["Java", "Spring Boot", "JSP", "Server-Side Development", "PostgreSQL", "Front-End Development", "Web Design", "RESTful API Design", "Object Oriented Programming", "Data Analysis", "Javascript", "HTML", "CSS", "Bootstrap", "jQuery", "JUnit"]
+            },
+            {
+                project: "Personal Portfolio Page",
+                skills: ["HTML", "CSS", "Javascript", "Front-End Development", "Web Design", "jQuery", "Bootstrap", "Git"]
+            },
+            {
+                project: "Virtual Interview",
+                skills: ["Java", "Object Oriented Programming", "Git"]
+            },
+            {
+                project: "WeatherViz",
+                skills: ["Java", "Spring MVC", "JSP", "Object Oriented Programming", "Agile", "Git", "Server-Side Development", "Front-End Development", "HTML", "CSS", "Javascript", "PostgreSQL"]
+            },
+            {
+                project: "Nat'l Parks Reservation",
+                skills: ["Java", "Object Oriented Programming", "Server-Side Development", "PostgreSQL", "Git"]
+            }
+        ];
+
+        return projectArray;
+
+    }
 
     //-----end show related projects--------------------------------------------------------
     
