@@ -694,11 +694,7 @@ section {
   width:85%;
 }
 
-.icon-container {
-  width: 15%;
-  display: flex;
-  align-content: center;
-}
+
 
 .github-href {
   margin: auto;
@@ -707,7 +703,7 @@ section {
 }
 
 .github-icon {
-  max-width: 75%;
+  max-width: 80%;
 }
 
 .card-title {
@@ -720,12 +716,29 @@ section {
 
 .card-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 0px;
+}
+
+.icon-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  display: flex;
+  align-content: center;
 }
 
 .btn-learn-more {
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 75%;
+  border-right: 1px solid black;
+  border-radius: 0px;
+  /* padding: 15px; */
+  font-size: 1.2rem;
+  font-weight: 200;
 }
 
 #modal-button-container {
