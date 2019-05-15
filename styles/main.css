@@ -5,6 +5,9 @@ Cacti: https://coolors.co/fb5d00-a4c61f-dd557b-efce02-f99303
 Cacti Pink and Yellow Only: https://coolors.co/db3c6d-ebc205-0f0a0a-f5efed-2292a4
 */
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Quicksand', sans-serif;
