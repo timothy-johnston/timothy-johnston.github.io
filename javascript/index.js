@@ -114,11 +114,10 @@ $( document ).ready(function() {
         return projectArray;
 
     }
-
     //-----end show related projects--------------------------------------------------------
     
     //MODAL CONTROL-----start---------------------------------------------------------------
-    //Open on button click
+    //Open on click of portfolio "learn more" button
     $('.btn-learn-more').click(function() {
         
         var modalBtnId = $(this).attr('id');
@@ -127,6 +126,16 @@ $( document ).ready(function() {
 
         openModal(modalId);
 
+    });
+
+    //Open on click of related project button
+    $('.project-item').click(function() {
+        var project = $(this).text();
+
+        //Get correct modal id based on project button clicked
+        var modalID = getModalID(project);
+
+        openModal(modalID);
     });
 
     //Close on click outside the modal
@@ -172,6 +181,39 @@ $( document ).ready(function() {
         $('.modal').each(function() {
             $(this).css("display","none");
         })
+    }
+
+    function getModalID(project) {
+
+        //For now just hardcoding the possible cases
+        //Should look to improve this though
+
+        projects = getAllProjects();
+        var modalID;
+
+        switch(project) {
+            case projects[0].project:
+                modalID = "modal-TC-hard";
+                break;
+            case projects[1].project:
+                modalID = "modal-TC-soft";
+                break;
+            case projects[2].project:
+                modalID = "modal-portfolio-tj";
+                break;
+            case projects[3].project:
+                modalID = "modal-VI";
+                break;
+            case projects[4].project:
+                modalID = "modal-WV";
+                break;
+            case projects[5].project:
+                modalID = "modal-NPR";
+                break;     
+        }
+
+        return modalID;
+
     }
     //MODAL CONTROL-----end---------------------------------------------------------------
 
