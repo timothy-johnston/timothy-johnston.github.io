@@ -370,7 +370,7 @@ section {
   font-weight: 200;
 }
 
-.project-item {
+.project-item, .skill-item-modal {
   border: 1px solid black;
   border-radius: 10px;
   background: transparent;
@@ -380,12 +380,31 @@ section {
   color: black;
   font-size: 1.2rem;
   font-weight: 200;
+  z-index: 100;
+  /* transition: background 5s ease; */
 }
 
-.project-item:hover {
-  /* color: white; */
-  background-image: linear-gradient( -45deg, #FFDA3B 0%, #DB3C6D 100%);;
-  border: rgb(0, 0, 0, 0.55);
+.project-item::before {
+  border-radius: inherit;
+  background: linear-gradient( -45deg, #FFDA3B 0%, #DB3C6D 100%);
+  content:'';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0; 
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: -100;
+  transition: opacity .3s ease;
+}
+
+.project-item:hover, .skill-item-modal:hover {
+  border: 1px solid rgb(0, 0, 0, 0.35);
+}
+
+.project-item:hover::before {
+  opacity: 1;
 }
 
 #related-projects-container {
@@ -850,14 +869,14 @@ section {
 
 @-webkit-keyframes hvr-pop {
   50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
   }
 }
 @keyframes hvr-pop {
   50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
   }
 }
 .hvr-pop {
