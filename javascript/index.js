@@ -87,7 +87,7 @@ $( document ).ready(function() {
         var projectArray = [
             {
                 project: "ThirstyCat: Hardware",
-                skills: ["Raspberry Pi", "Python", "Server-Side Development"]
+                skills: ["Raspberry Pi", "Python"]
             },
             {
                 project: "ThirstyCat: Software",
