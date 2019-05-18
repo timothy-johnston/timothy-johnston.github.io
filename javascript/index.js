@@ -90,7 +90,7 @@ $( document ).ready(function() {
                 skills: ["Raspberry Pi", "Python"]
             },
             {
-                project: "ThirstyCat: Software",
+                project: "ThirstyCat: Web App",
                 skills: ["Java", "Spring Boot", "JSP", "Server-Side Development", "PostgreSQL", "Front-End Development", "Web Design", "RESTful API Design", "Object Oriented Programming", "Data Analysis", "Javascript", "HTML", "CSS", "Bootstrap", "jQuery", "JUnit"]
             },
             {
@@ -106,8 +106,8 @@ $( document ).ready(function() {
                 skills: ["Java", "Spring MVC", "JSP", "Object Oriented Programming", "Agile", "Git", "Server-Side Development", "Front-End Development", "HTML", "CSS", "Javascript", "PostgreSQL"]
             },
             {
-                project: "Nat'l Parks Reservation",
-                skills: ["Java", "Object Oriented Programming", "Server-Side Development", "PostgreSQL", "Git"]
+                project: "Nat'l Parks Weather Update",
+                skills: ["Java", "Object Oriented Programming", "Server-Side Development", "PostgreSQL", "Automated Testing", "Git"]
             }
         ];
 

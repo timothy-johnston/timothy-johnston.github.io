@@ -74,4 +74,9 @@ Blog Post Idea
                 1.) use the inspector
                 2.) look for inspiration everywhere. Me: sunset and cstricks color scheme
                 3.) simplify
+
+
+
+To embed github contribution graph, use:
+        https://ghchart.rshah.org/timothy-johnston
         
