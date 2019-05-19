@@ -706,6 +706,10 @@ section {
   border: none;
 }
 
+.card-img-top {
+  border-bottom: 1px solid gray;
+}
+
 .card-body {
   padding-bottom: 0;
 }
