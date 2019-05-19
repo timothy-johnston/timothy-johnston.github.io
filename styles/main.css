@@ -149,7 +149,6 @@ body {
 #welcome-section {
 
   /* Nice background styling example css at: http://themesindustry.com/html/wexim-2019/index-personal-portfolio.html */
-  background: red;
   background-image: url(../media/wallpaper3.jpg);
   background-attachment: scroll;
   background-origin: padding-box;
