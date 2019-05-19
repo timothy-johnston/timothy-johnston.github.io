@@ -146,11 +146,19 @@ body {
   color: black !important;
 }
 
+html {
+  height:100%;
+  min-height:100%;
+}
+
+#body {
+   min-height:100%;
+}
+
 #welcome-section {
 
   /* Nice background styling example css at: http://themesindustry.com/html/wexim-2019/index-personal-portfolio.html */
   background-image: url(../media/wallpaper3.jpg);
-  background-attachment: scroll;
   background-origin: padding-box;
   background-size: cover;
   /* background-position-x: 50%;
