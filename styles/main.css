@@ -146,10 +146,16 @@ body {
   color: black !important;
 }
 
+#welcome-section-wrapper {
+  border: 5px solid red;
+  height: 100vh;
+}
+
 #welcome-section {
 
+  border: 3px solid blue;
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   min-height: 100%;
   overflow: hidden;
 
