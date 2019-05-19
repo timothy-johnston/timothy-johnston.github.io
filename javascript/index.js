@@ -8,6 +8,34 @@ $('.project-item').hide();
 
 $( document ).ready(function() {
 
+    /**
+     * Detects Internet Explorer. Alerts user that page doesn't yet work in IE.
+     * Adapted from Mario's answer here: https://stackoverflow.com/questions/19999388/check-if-user-is-using-ie
+     * 
+     */
+    detectIE();
+    function detectIE() {
+        var ua = window.navigator.userAgent;
+
+        var msie = ua.indexOf('MSIE ');
+        if (msie > 0) {
+            // IE 10 or older
+            alert("Sorry, this page doesn't work in Internet Explorer yet! Try Chrome or Firefox.");
+        }
+
+        var trident = ua.indexOf('Trident/');
+        if (trident > 0) {
+            // IE 11
+            alert("Sorry, this page doesn't work in Internet Explorer yet! Try Chrome or Firefox.");
+        }
+
+        // var edge = ua.indexOf('Edge/');
+        // if (edge > 0) {
+        //     alert("You're using Edge.");
+        // }
+    }
+
+
     var scrollPos = $(window).scrollTop();
 
     //Set navbar border width based on scroll position on page load
@@ -61,7 +89,9 @@ $( document ).ready(function() {
         var projects = getAllProjects();
         var matches = 0;
 
-        for (let project of projects) {
+        // for (let project of projects) {
+        for (var i = 0; i < projects.length; i++) {
+            var project = projects[i];
             if (project.skills.includes(skill)) {
 
                 $('#project-btn-' + (matches + 1)).show();
@@ -71,7 +101,7 @@ $( document ).ready(function() {
 
             }
 
-        }
+        };
 
         //If skill not used in any projects, prompt to pick another
         if (matches == 0) {
