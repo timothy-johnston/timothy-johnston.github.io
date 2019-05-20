@@ -13,12 +13,17 @@ Cacti Pink and Yellow Only: https://coolors.co/db3c6d-ebc205-0f0a0a-f5efed-2292a
 @media (min-width: 320px) and (max-width: 767px) {
   
   #welcome-section {
-    /* margin-top: -60px;
-    height: 100vh; */
-    background-image: url(../media/wallpaper12_x2.jpg) !important;
-    /* background-position: center bottom;
-    background-attachment: fixed;
-    background-size: cover; */
+    background-image: url(../media/wallpaper13.jpg) !important;
+  }
+
+  #header-name {
+    font-size: 3rem;
+    line-height: 90%;
+  }
+
+  #header-title {
+    font-size: 1.3rem important;
+    line-height: 90% !important;
   }
   
 }
@@ -166,15 +171,13 @@ body {
 
 #welcome-section {
 
+  height: calc(var(--vh, 1vh) * 100); /*this + the related javascript prevent URL bar, etc. on mobile from influencing the height
+  see: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/*/
+
   /* Nice background styling example css at: http://themesindustry.com/html/wexim-2019/index-personal-portfolio.html */
-  height: calc(var(--vh, 1vh) * 100); /*this + the related javascript prevent URL bar, etc. on mobile from influencing the height*/
   background-image: url(../media/wallpaper11.jpg);
-  /* background-origin: padding-box; */
-  /* background-position-x: 50%;
-  background-position-y: 50%; */
   background-position: center bottom;
   background-attachment: fixed;
-
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -223,6 +226,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 0px;
   line-height: 80%;
+  text-align: right;
 }
 
 section {
