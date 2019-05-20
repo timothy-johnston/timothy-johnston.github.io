@@ -177,7 +177,7 @@ body {
   /* Nice background styling example css at: http://themesindustry.com/html/wexim-2019/index-personal-portfolio.html */
   background-image: url(../media/wallpaper11.jpg);
   background-position: center bottom;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
