@@ -17,12 +17,12 @@ Cacti Pink and Yellow Only: https://coolors.co/db3c6d-ebc205-0f0a0a-f5efed-2292a
   }
 
   #header-name {
-    font-size: 3rem;
-    line-height: 90%;
+    font-size: 3rem !important;
+    line-height: 90% !important;
   }
 
   #header-title {
-    font-size: 1.3rem important;
+    font-size: 1.3rem !important;
     line-height: 90% !important;
   }
   
@@ -189,6 +189,13 @@ body {
   padding-top: 31vh;
 }
 
+#cover-details-container {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border: 1px solid #0000001f;
+  background: rgba(255, 255, 255, 0.57);
+}
+
 #cover-name-container {
   display: flex;
   justify-content: flex-start;
@@ -199,12 +206,7 @@ body {
   padding-right: 0px;
   padding-bottom: 15px;
   margin-bottom: 23px;
-  border-bottom: 3px solid black;
-  /* border: 3px solid black; */
-  /* border-image: linear-gradient( 45deg, rgb(221, 85, 123) 25%, rgb(239, 206, 2) 100%) 10; */
-  /* border-top: none;
-  border-right: none;
-  border-left: none; */
+  border-bottom: 1px solid #cdcdcd
 }
 
 #header-name {
