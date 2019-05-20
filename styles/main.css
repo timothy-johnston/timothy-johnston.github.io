@@ -5,6 +5,25 @@ Cacti: https://coolors.co/fb5d00-a4c61f-dd557b-efce02-f99303
 Cacti Pink and Yellow Only: https://coolors.co/db3c6d-ebc205-0f0a0a-f5efed-2292a4
 */
 
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 767px) {
+  
+  #welcome-section {
+    border: 3px solid yellow;
+    margin-top: -60px;
+    height: 100vh;
+    background-image: url(../media/wallpaper12_x2.jpg);
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+}
+
 html {
   scroll-behavior: smooth;
 }
