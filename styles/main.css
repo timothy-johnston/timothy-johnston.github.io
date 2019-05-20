@@ -154,11 +154,12 @@ body {
 #welcome-section {
 
   border: 3px solid blue;
-  height: 100%;
+  margin-top: -60px;
+  height: 100vh;
   overflow: hidden;
 
   /* Nice background styling example css at: http://themesindustry.com/html/wexim-2019/index-personal-portfolio.html */
-  background-image: url(../media/wallpaper3.jpg) no-repeat center center fixed;
+  background-image: url(../media/wallpaper3.jpg);
   /* background-origin: padding-box; */
   /* background-position-x: 50%;
   background-position-y: 50%; */
