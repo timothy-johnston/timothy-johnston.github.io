@@ -13,10 +13,9 @@ Cacti Pink and Yellow Only: https://coolors.co/db3c6d-ebc205-0f0a0a-f5efed-2292a
 @media (min-width: 320px) and (max-width: 767px) {
   
   #welcome-section {
-    border: 3px solid yellow;
     margin-top: -60px;
     height: 100vh;
-    background-image: url(../media/wallpaper12_x2.jpg);
+    background-image: url(../media/wallpaper12_x2.jpg) !important;
     background-position: center bottom;
     background-attachment: fixed;
     background-size: cover;
@@ -165,14 +164,9 @@ body {
   color: black !important;
 }
 
-#welcome-section-wrapper {
-  border: 5px solid red;
-  height: 100vh;
-}
-
 #welcome-section {
 
-  border: 3px solid blue;
+  border: 3px solid green;
   margin-top: -60px;
   height: 100%;
   width: 100%;
