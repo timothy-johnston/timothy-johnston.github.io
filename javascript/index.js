@@ -37,7 +37,7 @@ $( document ).ready(function() {
 
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
+    // Then we set the value in the --vh custom property to the root of the document
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
@@ -205,8 +205,10 @@ $( document ).ready(function() {
         //If between 2 & 3 (so, 2 cards per row, medium screen) --> set modal width = 70%
         //Else (narrow screen, like mobile) --> set modal width = 97%
         
+        
         modal.style.display = "block";
-        $('.modal-content').css({"width":deckWidth});
+        //This js is causing issues on mobile (android)
+        // $('.modal-content').css({"width":deckWidth});
 
     }
 
