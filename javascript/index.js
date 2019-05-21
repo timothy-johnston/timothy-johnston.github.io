@@ -208,7 +208,7 @@ $( document ).ready(function() {
         
         modal.style.display = "block";
         //This js is causing issues on mobile (android)
-        // $('.modal-content').css({"width":deckWidth});
+        $('.modal-content').css({"width":deckWidth});
 
     }
 
