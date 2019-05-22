@@ -210,6 +210,11 @@ $( document ).ready(function() {
         //This js is causing issues on mobile (android)
         $('.modal-content').css({"width":deckWidth});
 
+        document.documentElement.style.setProperty('--modal-width-mobile', `300px`);
+        document.documentElement.style.setProperty('--modal-height-mobile', `300px`);
+
+
+
     }
 
     //Close modal and unblur background
