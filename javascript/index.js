@@ -210,7 +210,7 @@ $( document ).ready(function() {
         //This js is causing issues on mobile (android)
         // $('.modal-content').css({"width":deckWidth});
 
-        var scrollPos = $(window).scrollTop() + 10;
+        var scrollPos = $(window).scrollTop() + 30;
         var siteHeight = $(document).height();
 
         document.documentElement.style.setProperty('--modal-content-width-desktop', deckWidth);
