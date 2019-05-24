@@ -215,7 +215,7 @@ $( document ).ready(function() {
 
         document.documentElement.style.setProperty('--modal-content-width-desktop', deckWidth);
         document.documentElement.style.setProperty('--modal-content-top-mobile', scrollPos + 'px');
-        document.documentElement.style.setProperty('--modal-height-mobile', siteHeight + 'px');
+        document.documentElement.style.setProperty('--modal-height-mobile', siteHeight + 'px'); 
 
         
 
