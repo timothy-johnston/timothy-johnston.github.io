@@ -213,11 +213,9 @@ $( document ).ready(function() {
         var scrollPos = $(window).scrollTop() + 10;
         var siteHeight = $(document).height();
 
-        document.documentElement.style.setProperty('--modal-width-mobile', `300px`);
         document.documentElement.style.setProperty('--modal-content-width-desktop', deckWidth);
-        document.documentElement.style.setProperty('--modal-height-mobile', `300px`);
-        document.documentElement.style.setProperty('--modal-content-top-mobile', scrollPos);
-        document.documentElement.style.setProperty('--modal-height-mobile', siteHeight);
+        document.documentElement.style.setProperty('--modal-content-top-mobile', scrollPos + 'px');
+        document.documentElement.style.setProperty('--modal-height-mobile', siteHeight + 'px');
 
         
 

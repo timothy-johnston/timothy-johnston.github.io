@@ -28,10 +28,12 @@ Cacti Pink and Yellow Only: https://coolors.co/db3c6d-ebc205-0f0a0a-f5efed-2292a
 
   .modal-content {
     width: var(--modal-width-mobile) !important;
-    height: var(--modal-height-mobile) !important;
+    max-height: 90vh !important;
     top: var(--modal-content-top-mobile) !important;
     margin-left: auto !important;
     margin-right: auto !important;
+
+    overflow: scroll !important;
 
     position: relative !important;
     /* transform: translate(-50%, 50%) !important; */
@@ -50,7 +52,7 @@ Cacti Pink and Yellow Only: https://coolors.co/db3c6d-ebc205-0f0a0a-f5efed-2292a
   }
 
   .modal {
-    position: absolute;
+    position: absolute !important;
     width: 100vw !important;
     height: var(--modal-height-mobile) !important;
     /* comment out right, padding-top, left, top, overflow: auto;
