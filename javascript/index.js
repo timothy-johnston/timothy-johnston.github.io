@@ -210,8 +210,16 @@ $( document ).ready(function() {
         //This js is causing issues on mobile (android)
         $('.modal-content').css({"width":deckWidth});
 
+        var scrollPos = $(window).scrollTop() + 10;
+        var siteHeight = $(document).height();
+
         document.documentElement.style.setProperty('--modal-width-mobile', `300px`);
         document.documentElement.style.setProperty('--modal-height-mobile', `300px`);
+        document.documentElement.style.setProperty('--modal-content-top-mobile', scrollPos);
+        document.documentElement.style.setProperty('--modal-height-mobile', siteHeight);
+
+        
+
 
 
 

@@ -26,31 +26,36 @@ Cacti Pink and Yellow Only: https://coolors.co/db3c6d-ebc205-0f0a0a-f5efed-2292a
     line-height: 90% !important;
   }
 
-  /* .modal-content {
-    width: var(--modal-width-mobile);
-    height: var(--modal-height-mobile);
+  .modal-content {
+    width: var(--modal-width-mobile) !important;
+    height: var(--modal-height-mobile) !important;
+    top: var(--modal-content-top-mobile) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 
-    position: abosolute;
-    transform: translate(-50%, 50%) !important;
-    top: 10px (window position in px when modal is open) !important;
-    overflow-y: scroll;
+    position: relative !important;
+    /* transform: translate(-50%, 50%) !important; */
+
+    /* overflow-y: scroll;
     height: 300px (for debugging)
-    width: 300px (for debugging)
+    width: 300px (for debugging) */
 
-    remove text-outline: 50%;remove magin: auto;
+    /* remove text-outline: 50%;remove magin: auto;
     remove width: calc;
     remove javascript that formats the width
-      (or keep but make in to var that is only used on fullscreen)
+      (or keep but make in to var that is only used on fullscreen) */
     
 
 
-  } */
+  }
 
-  /* .modal {
+  .modal {
     position: absolute;
-    comment out right, padding-top, left, top, overflow: auto;
-    comment out bottom, right
-  } */
+    width: 100vw !important;
+    height: var(--modal-height-mobile) !important;
+    /* comment out right, padding-top, left, top, overflow: auto;
+    comment out bottom, right */
+  }
   
 }
 
