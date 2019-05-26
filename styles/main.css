@@ -418,6 +418,10 @@ section {
   font-weight: 200;
 }
 
+.skill-item-modal:hover {
+  cursor: default;
+}
+
 .project-item, .skill-item-modal {
   border: 1px solid black;
   border-radius: 10px;
@@ -426,7 +430,7 @@ section {
   margin-right: 20px;
   margin-left: 0px;
   color: black;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   font-weight: 200;
   z-index: 100;
   /* transition: background 5s ease; */
