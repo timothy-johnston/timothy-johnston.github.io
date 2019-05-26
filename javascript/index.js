@@ -8,6 +8,12 @@ $('.project-item').hide();
 
 $( document ).ready(function() {
 
+    //Makes sure only the correct project description will be shown
+        //This is a bit hacky.. should improve
+        $('.project-description').each(function() {
+            $(this).css("display","none");
+        })
+
     /**
      * Detects Internet Explorer. Alerts user that page doesn't yet work in IE.
      * Adapted from Mario's answer here: https://stackoverflow.com/questions/19999388/check-if-user-is-using-ie
@@ -159,9 +165,9 @@ $( document ).ready(function() {
         var modalId = "modal" + modalBtnId.substring(3);
         console.log(modalId);
 
-        $('#project-description-container-2').toggle();
+        $('#project-description-container-2').append($('.project-descriptions'));
 
-        // openModal(modalId);
+        openModal(modalId);
 
     });
 
@@ -172,9 +178,9 @@ $( document ).ready(function() {
         //Get correct modal id based on project button clicked
         var modalID = getModalID(project);
 
-        $('#project-description-container-2').toggle();
+        $('#project-description-container-1').append($('.project-descriptions'));
 
-        // openModal(modalID);
+        openModal(modalID);
     });
 
     //Close on click outside the modal
@@ -192,15 +198,21 @@ $( document ).ready(function() {
     //Open modal
     function openModal(modalId) {
 
+        //Makes sure only the correct project description will be shown
+        //This is a bit hacky.. should improve
+        $('.project-description').each(function() {
+            $(this).css("display","none");
+        })
+
         //Blur background content
-        $('#blur-me').addClass("blur");
+        // $('#blur-me').addClass("blur");
 
         //Get width of portfolio card deck.
         var deckWidth = $('#portfolio-deck').css('width');
 
         //Get correct modal based on ID
         var modal = $('#' + modalId)[0];
-        console.log("In openModal function now")
+        console.log("In openModal function now. Modal ID: " + modalId);
 
 
         //Potential improvement for dynamic sizing:
@@ -230,8 +242,8 @@ $( document ).ready(function() {
 
     //Close modal and unblur background
     function closeModal() {
-        $('#blur-me').removeClass("blur");
-        $('.modal').each(function() {
+        // $('#blur-me').removeClass("blur");
+        $('.project-description').each(function() {
             $(this).css("display","none");
         })
     }
