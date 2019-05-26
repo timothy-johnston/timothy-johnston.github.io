@@ -39,43 +39,6 @@ Cacti Pink and Yellow Only: https://coolors.co/db3c6d-ebc205-0f0a0a-f5efed-2292a
     margin: 6px !important;
   }
 
-  .modal-content {
-    width: var(--modal-width-mobile) !important;
-    max-height: 80vh !important;
-    width: 80vw !important;
-    top: var(--modal-content-top-mobile) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    left: 0 !important;
-    transform: none !important;
-
-    overflow: scroll !important;
-
-    position: relative !important;
-    /* transform: translate(-50%, 50%) !important; */
-
-    /* overflow-y: scroll;
-    height: 300px (for debugging)
-    width: 300px (for debugging) */
-
-    /* remove text-outline: 50%;remove magin: auto;
-    remove width: calc;
-    remove javascript that formats the width
-      (or keep but make in to var that is only used on fullscreen) */
-    
-
-
-  }
-
-  .modal {
-    position: absolute !important;
-    width: 100vw !important;
-    height: var(--modal-height-mobile) !important;
-    padding-top: 0 !important;
-    /* comment out right, padding-top, left, top, overflow: auto;
-    comment out bottom, right */
-  }
-  
 }
 
 html {
@@ -91,9 +54,8 @@ body {
   font-weight: 500;
  }
 
-.GOODBYE {
-  min-height: 1000px;
-  background-image: linear-gradient( -55deg, #f5efed 15%, #5eafbc 90%)
+.btn:focus {
+  box-shadow: none;
 }
 
 /* body {
