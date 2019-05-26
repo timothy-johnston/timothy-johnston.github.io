@@ -159,6 +159,9 @@
                 <button id="project-btn-5" type="button" class="project-item btn hvr-pop"></button>
                 <button id="project-btn-6" type="button" class="project-item btn hvr-pop"></button>
             </div>
+            <div class="project-description-container" id="project-description-container-1">
+                <p>test description container 1</p>
+            </div>
         </section>
         
         
@@ -298,6 +301,37 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="project-description-container" id="project-description-container-2">
+                    <div class="container">
+                            <div class="modal-header">
+                                <span>
+                                    <h2>ThirstyCat: Hardware</h2>
+                                </span>
+                                <span>
+                                    <btn class="btn btn-outline-dark btn-close">Hide</btn>
+                                </span>
+                            </div>
+                            <div class="modal-body">
+                                <h4>Overview:</h4>
+                                <ul>
+                                    <li>Pressure-activated camera & Twitter bot that detects when my cat gets a drink, captures a photo, and automatically tweets the photo using the Twitter API.</li>
+                                </ul>
+                                <h4>Tech Stack:</h4>
+                                <button type="button" class="skill-item-modal btn hvr-pop">Raspberry Pi</button>
+                                <button type="button" class="skill-item-modal btn hvr-pop">Python</button>
+                                <button type="button" class="skill-item-modal btn hvr-pop">REST API Consumption</button>
+                                <h4>Details:</h4>
+                                <ul>
+                                    <li>Built a weight-sensitive platform with a Raspberry Pi and force sensing resistor; placed platform in front of my cat's water bowl</li>
+                                    <li>Wrote a Python script to read weight values and trigger a camera to take a photo when values exceed some threshold</li>
+                                    <li>Picture is automatically tweeted using the Twitter API</li>
+                                    <li>Python script consumes REST API (See ThirstyCat: Web App) to persist image and other data to a database</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </div>
             </div>
         </section>
 

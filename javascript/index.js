@@ -159,7 +159,9 @@ $( document ).ready(function() {
         var modalId = "modal" + modalBtnId.substring(3);
         console.log(modalId);
 
-        openModal(modalId);
+        $('#project-description-container-2').toggle();
+
+        // openModal(modalId);
 
     });
 
@@ -170,7 +172,9 @@ $( document ).ready(function() {
         //Get correct modal id based on project button clicked
         var modalID = getModalID(project);
 
-        openModal(modalID);
+        $('#project-description-container-2').toggle();
+
+        // openModal(modalID);
     });
 
     //Close on click outside the modal
