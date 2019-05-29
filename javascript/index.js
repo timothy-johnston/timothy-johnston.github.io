@@ -76,10 +76,15 @@ $( document ).ready(function() {
     //Show related projects when skill item is clicked -----start---------------------------
     $('.skill-item').click(function() {
 
-        //Hide the click prompt + no projects message and show the project info
+        //Populate related projects descriptor with the skill name
+        $('#related-projects-p').text('Projects using ' + $(this).text() + ':');
+
+        //Hide the click prompt + no projects message + project description and show the project info
         $('#skill-click-prompt').hide();
         $('#no-projects-p').hide();
         $('#related-projects-p').show();
+        $('.project-description').hide();
+        formatProjectButtonsBackground(null);
 
         var skill = $(this).text();
         updateRelatedProjects(skill);
@@ -116,6 +121,7 @@ $( document ).ready(function() {
 
         //If skill not used in any projects, prompt to pick another
         if (matches == 0) {
+            $('#related-projects-p').hide();
             $('#no-projects-p').show();
             $('#no-projects-p').text("Oops, looks like I haven't used " + skill + " in any public projects. Try another!");
         }
@@ -203,7 +209,10 @@ $( document ).ready(function() {
         $('.project-item').each(function() {
             $(this).css("background","transparent");
         })
-        clickedButton.css("background", "linear-gradient( -45deg, #FFDA3B 0%, #DB3C6D 100%)");
+
+        if (clickedButton != null) {
+            clickedButton.css("background", "linear-gradient( -45deg, #FFDA3B 0%, #DB3C6D 100%)");
+        }
     }
 
     //Open modal
