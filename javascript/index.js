@@ -171,6 +171,8 @@ $( document ).ready(function() {
         var modalId = "modal" + modalBtnId.substring(3);
         console.log(modalId);
 
+        formatProjectButtonsBackground(null);
+
         $('#project-description-container-2').append($('.project-descriptions'));
 
         openModal(modalId);
