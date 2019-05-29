@@ -16,6 +16,10 @@ Cacti Pink and Yellow Only: https://coolors.co/db3c6d-ebc205-0f0a0a-f5efed-2292a
     background-image: url(../media/wallpaper13.jpg) !important;
   }
 
+  #cover-page {
+    padding-top: 24vh;
+  }
+
   #header-name {
     font-size: 3rem !important;
     line-height: 90% !important;
