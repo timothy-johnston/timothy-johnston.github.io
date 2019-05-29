@@ -43,13 +43,18 @@ Cacti Pink and Yellow Only: https://coolors.co/db3c6d-ebc205-0f0a0a-f5efed-2292a
   }
 
   #about-text-container {
-    padding: 35px !important;
+    padding: 15px 20px !important;
   }
 
-  .skill-item {
+  #about-skills-container {
+    padding: 10px 5px !important;
+  }
+
+  .skill-item, .project-item {
     font-size: .8rem !important;
     margin: 6px !important;
   }
+
 
 }
 
