@@ -17,7 +17,7 @@ Cacti Pink and Yellow Only: https://coolors.co/db3c6d-ebc205-0f0a0a-f5efed-2292a
   }
 
   #cover-page {
-    padding-top: 24vh;
+    padding-top: 24vh !important;
   }
 
   #header-name {
@@ -30,7 +30,15 @@ Cacti Pink and Yellow Only: https://coolors.co/db3c6d-ebc205-0f0a0a-f5efed-2292a
     line-height: 90% !important;
   }
 
-  .about-container {
+  #quote-pt1 {
+    font-size: 1.8rem !important;
+  }
+
+  #quote-pt2 {
+    font-size: 2.3rem !important;
+  }
+
+  .about-container, #skills-header-container, #related-projects-container {
     width: 90vw !important;
   }
 
