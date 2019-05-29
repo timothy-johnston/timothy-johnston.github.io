@@ -175,6 +175,9 @@ $( document ).ready(function() {
     $('.project-item').click(function() {
         var project = $(this).text();
 
+        //Apply color background to button when clicked
+        formatProjectButtonsBackground($(this));
+
         //Get correct modal id based on project button clicked
         var modalID = getModalID(project);
 
@@ -194,6 +197,14 @@ $( document ).ready(function() {
     $('.btn-close').click(function() {
         closeModal();
     })
+
+    //Modify project button background based on click
+    function formatProjectButtonsBackground(clickedButton) {
+        $('.project-item').each(function() {
+            $(this).css("background","transparent");
+        })
+        clickedButton.css("background", "linear-gradient( -45deg, #FFDA3B 0%, #DB3C6D 100%)");
+    }
 
     //Open modal
     function openModal(modalId) {
@@ -246,6 +257,7 @@ $( document ).ready(function() {
         $('.project-description').each(function() {
             $(this).css("display","none");
         })
+        formatProjectButtonsBackground(null);
     }
 
     function getModalID(project) {
