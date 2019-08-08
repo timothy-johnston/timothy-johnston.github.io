@@ -1,0 +1,55 @@
+https://www.callicoder.com/spring-boot-file-upload-download-jpa-hibernate-mysql-database-example/
+
+Project Design
+
+Controller
+	1. DrinkController
+		a. Methods
+			i. persistDrink ("/newDrink") 
+			ii. getLastDrink ("/lastDrink")
+			iii. getAllDrinks ("/allDrinks")
+			iv. getDrink ("/drink/{id}")
+	2. ImageController
+		a. Methods
+			i. persistImage("/newImage") 
+			ii. getLastImage ("/lastImage")
+			iii. getAllImages ("/allImages")
+			iv. getImage ("/image/{id}")
+			v. favoriteImage ("/favoriteImage/{id}")
+		
+Model
+	1. Drink
+		a. Properties
+			i. Long drinkId
+			ii. Date startTime
+			iii. Date endTime
+		b. Methods
+			i. Getters
+			ii. Setters
+	2. Image
+		a. Properties
+			i. Long imageId
+			ii. Long drinkId
+			iii. Byte[] image
+		b. Methods
+			i. Getters
+			ii. Setters
+
+Service
+	1. DrinkService
+	2. ImageService
+
+Repository
+	1. DrinkRepository [can extend JpaRepository to inherit most of the below methods]
+		a. Methods
+			i. addDrink
+			ii. getLastDrink
+			iii. getAllDrinks
+			iv. getDrink(id)
+	2. ImageRepository
+		a. Methods
+			i. addImage
+			ii. getLastImage
+			iii. getAllImages
+			iv. getImage(id)
+			v. favoriteImage(id)
