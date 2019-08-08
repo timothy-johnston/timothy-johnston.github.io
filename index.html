@@ -11,7 +11,7 @@
 
         <!-- Import fonts -->
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans" rel="stylesheet">  
 
         <!-- Bootstrap stylesheet goes before any other stylesheets -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -26,7 +26,7 @@
 
         <div id="blur-me">
 
-        <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-transparent" id="navbar">
+        <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-transparent" id="navbar">
             <button class="navbar-toggler ml-auto" id="collapse-button" type="button" data-toggle="collapse" data-target="#collapse-menu" aria-controls="collapse-menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -129,11 +129,8 @@
                     <button type="button" class="skill-item btn hvr-pop">Java</button>
                     <button type="button" class="skill-item btn hvr-pop">Python</button>
                     <button type="button" class="skill-item btn hvr-pop">Javascript</button>
-                    <button type="button" class="skill-item btn hvr-pop">Ruby</button>
-                    <button type="button" class="skill-item btn hvr-pop">PL/SQL</button>
                     <button type="button" class="skill-item btn hvr-pop">MATLAB</button>
                     <button type="button" class="skill-item btn hvr-pop">IDL</button>
-                    <button type="button" class="skill-item btn hvr-pop">R</button>
                     <button type="button" class="skill-item btn hvr-pop">Spring Boot</button>
                     <button type="button" class="skill-item btn hvr-pop">Spring MVC</button>
                     <button type="button" class="skill-item btn hvr-pop">Django</button>
@@ -144,8 +141,11 @@
                     <button type="button" class="skill-item btn hvr-pop">CSS</button>
                     <button type="button" class="skill-item btn hvr-pop">Bootstrap</button>
                     <button type="button" class="skill-item btn hvr-pop">Git</button>
+                    <button type="button" class="skill-item btn hvr-pop">SQL</button>
+                    <button type="button" class="skill-item btn hvr-pop">Hibernate</button>
                     <button type="button" class="skill-item btn hvr-pop">PostgreSQL</button> 
-                    <button type="button" class="skill-item btn hvr-pop">Oracle DB</button>
+                    <button type="button" class="skill-item btn hvr-pop">MySQL</button>
+                    <button type="button" class="skill-item btn hvr-pop">Relational Databases</button>
                 </div>
             </div>
             <div id="related-projects-container" class="container">
@@ -203,6 +203,7 @@
                                     <span class="card-title-inner">
                                         <h4 class="card-title">ThirstyCat: Software</h4>
                                         <h6 class="card-subtitle mb-2">Java & Spring Boot</h6>
+                                        <a href="https://www.thethirstycat.net" target="_blank">thethirstycat.net</a>
                                     </span>
                                 </div>
                                 <hr>
@@ -218,7 +219,29 @@
                     </div>
                     <div class="col-xl-4 col-md-6 card-container-portfolio">
                         <div class="card portfolio-card h-100">
-                            <img class="card-img-top" src="media/project_pic_portfolio_edited.png" alt="Bologna">
+                            <img class="card-img-top" src="media/project_pic_GB.png" alt="Bologna">
+                            <div class="card-body">
+                                <div class="card-title-container">
+                                    <span class="card-title-inner">
+                                        <h4 class="card-title">GradientBox</h4>
+                                        <h6 class="card-subtitle mb-2">Python, Django, JavaScript</h6>
+                                        <a href="http://www.gradient-box.com" target="_blank">gradient-box.com</a>
+                                    </span>
+                                </div>
+                                <hr>
+                                <p class="card-text">Full stack web app where developers and designers are surprised with randomly selected CSS gradients created by other users. Users can also create and share their own gradients.</p>
+                            </div>
+                            <div class="card-footer">           
+                                <button class="btn btn-learn-more" id="btn-GB"><a class="project-description-link" href="#project-description-container-2">Learn More</a></button>
+                                <span class="icon-container">
+                                    <a class="github-href" href="https://github.com/timothy-johnston/GradientBox" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
+                                </span>      
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 card-container-portfolio">
+                        <div class="card portfolio-card h-100">
+                            <img class="card-img-top" src="media/project_pic_portfolio.png" alt="Bologna">
                             <div class="card-body">
                                 <div class="card-title-container">
                                     <span class="card-title-inner">
@@ -234,27 +257,6 @@
                                 <span class="icon-container">
                                     <a class="github-href" href="https://github.com/timothy-johnston/timothy-johnston.github.io" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
                                 </span>     
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 card-container-portfolio">
-                        <div class="card portfolio-card h-100">
-                            <img class="card-img-top" src="media/project_pic_VI_edited.png" alt="Bologna">
-                            <div class="card-body">
-                                <div class="card-title-container">
-                                    <span class="card-title-inner">
-                                        <h4 class="card-title">Virtual Interview</h4>
-                                        <h6 class="card-subtitle mb-2">Java</h6>
-                                    </span>
-                                </div>
-                                <hr>
-                                <p class="card-text">Command line application that simulates a mock interview by asking users a series of behavioral interview questions. Users may add, modify, or delete questions to tailor the interview practice to their needs.</p>
-                            </div>
-                            <div class="card-footer">           
-                                <button class="btn btn-learn-more" id="btn-VI"><a class="project-description-link" href="#project-description-container-2">Learn More</a></button>
-                                <span class="icon-container">
-                                    <a class="github-href" href="https://github.com/timothy-johnston/VirtualInterview" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
-                                </span>      
                             </div>
                         </div>
                     </div>
@@ -359,6 +361,7 @@
                     <button type="button" class="skill-item-modal btn hvr-pop">Raspberry Pi</button>
                     <button type="button" class="skill-item-modal btn hvr-pop">Python</button>
                     <button type="button" class="skill-item-modal btn hvr-pop">REST API Consumption</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">Git</button>
                     <h4>Details:</h4>
                     <ul>
                         <li>Built a weight-sensitive platform with a Raspberry Pi and force sensing resistor; placed platform in front of my cat's water bowl</li>
@@ -383,13 +386,14 @@
                 <div class="modal-body">
                     <h4>Overview:</h4>
                     <ul>
-                        <li>*WORK IN PROGRESS* Full-stack web app allowing users to view ThirstyCat photos and statistics. Users can create an account to receive automated email updates, favorite pictures, and submit photos of their own.</li>
+                        <li>Full stack cloud-based web application built with Java, Spring Boot, and MySQL and deployed on AWS; it includes a secured back end REST API, registration and log in, and a front end UI presenting ThirstyCat images and statistics.</li>
                     </ul>
                     <h4>Tech Stack:</h4>
                     <button type="button" class="skill-item-modal btn hvr-pop">Java</button>
                     <button type="button" class="skill-item-modal btn hvr-pop">Spring Boot</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">JSP</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">PostgreSQL</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">AWS</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">MySQL</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">Hibernate</button>
                     <button type="button" class="skill-item-modal btn hvr-pop">REST API</button>
                     <button type="button" class="skill-item-modal btn hvr-pop">HTML</button>
                     <button type="button" class="skill-item-modal btn hvr-pop">CSS</button>
@@ -397,12 +401,17 @@
                     <button type="button" class="skill-item-modal btn hvr-pop">jQuery</button>
                     <button type="button" class="skill-item-modal btn hvr-pop">Bootstrap</button>
                     <button type="button" class="skill-item-modal btn hvr-pop">JUnit</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">Git</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">Relational Databases</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">Test Driven Development</button>
                     <h4>Details:</h4>
                     <ul>
-                        <li>RESTful API built with Java and Spring Boot exposes endpoints allowing ThirstyCat images to be persisted and retrieved from PostGres database</li>
-                        <li>UI built with JSP, HTML, CSS, JavaScript, jQuery, and Bootstrap displays recent images, statistics, and allows favoriting of pictures</li>
-                        <li>Test Driven Development methodology with JUnit used to design and build API</li>
-                        <li>Security and authentication implemented with Spring Security allowing users to create accounts, log in, and change/retrieve forgotten passwords</li> 
+                        <li>RESTful back end API built with Java and Spring Boot exposes endpoints to persist and retrieve images and data</li>
+                        <li>API built with test driven development and secured with Spring Security JWT Bearer Authentication</li>
+                        <li>Data persistence in a MySQL database handled with Hibernate JPA</li>
+                        <li>UI designed and built with JSP, HTML, CSS, JavaScript, jQuery, and Bootstrap displays recent images and statistics</li>
+                        <li>UI security implemented with Spring Security allowing users to create accounts, log in, and save pictures to their library</li>
+                        <li>Deployed on AWS with ElasticBeanstalk</li>
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -429,6 +438,7 @@
                     <button type="button" class="skill-item-modal btn hvr-pop">JavaScript</button>
                     <button type="button" class="skill-item-modal btn hvr-pop">jQuery</button>
                     <button type="button" class="skill-item-modal btn hvr-pop">Bootstrap</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">Git</button>
                     <h4>Details:</h4>
                     <ul>
                         <li>Responsive and mobile-friendly design construced with a mix of Bootstrap elements and CSS Flexbox</li>
@@ -440,10 +450,10 @@
                 </div>
             </div>
 
-            <div id="modal-VI" class="container project-description">
+            <div id="modal-GB" class="container project-description">
                 <div class="modal-header">
                     <span>
-                        <h2 class="card-title project-description-title">VirtualInterview</h2>
+                        <h2 class="card-title project-description-title">GradientBox</h2>
                     </span>
                     <span>
                         <btn class="btn btn-outline-dark btn-close">Hide</btn>
@@ -452,15 +462,23 @@
                 <div class="modal-body">
                     <h4>Overview:</h4>
                     <ul>
-                        <li>Command line application that simulates a mock interview by asking users a series of behavioral interview questions. Users may add, modify, or delete questions to tailor the interview practice to their needs.</li>
+                        <li>Full stack Python and Django web app where developers and designers are surprised with randomly selected CSS gradients created by other users. Users can also create and share their own gradients.</li>
                     </ul>
                     <h4>Tech Stack:</h4>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Java</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">Python</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">Django</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">HTML</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">CSS</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">JavaScript</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">jQuery</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">Bootstrap</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">Git</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">Relational Databases</button>
                     <h4>Details:</h4>
                     <ul>
-                        <li>Interactive mock-interview command line application built with Java and object oriented design principles</li>
-                        <li>Reads and prints sample questions from file and times user's response</li>
-                        <li>Users may add/modify/delete questions</li>
+                        <li>RESTful API created with Python and Django exposes endpoints allowing users to persist and retrieve custom gradient data</li>
+                        <li>User interface with embedded color-picker lets users create custom gradients, generates CSS, and lets users load a randomly selected gradient created and shared by a previous user</li>
+                        <li>JavaScript and jQuery used to create an interactive, sleek user experience</li>
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -490,6 +508,8 @@
                     <button type="button" class="skill-item-modal btn hvr-pop">CSS</button>
                     <button type="button" class="skill-item-modal btn hvr-pop">JavaScript</button>
                     <button type="button" class="skill-item-modal btn hvr-pop">PostgreSQL</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">Relational Databases</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">Git</button>
                     <h4>Details:</h4>
                     <ul>
                         <li>Full stack web application built in a team of three developers and one product owner utilizing the agile methodology</li>
@@ -525,6 +545,8 @@
                     <button type="button" class="skill-item-modal btn hvr-pop">CSS</button>
                     <button type="button" class="skill-item-modal btn hvr-pop">Bootstrap</button>
                     <button type="button" class="skill-item-modal btn hvr-pop">Selenium</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">Relational Databases</button>
+                    <button type="button" class="skill-item-modal btn hvr-pop">Git</button>
                     <h4>Details:</h4>
                     <ul>
                         <li>Java and Spring MVC web application that displays mock forecasts and weather advisories for several national parks</li>
