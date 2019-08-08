@@ -134,27 +134,27 @@ $( document ).ready(function() {
         var projectArray = [
             {
                 project: "ThirstyCat: Hardware",
-                skills: ["Raspberry Pi", "Python"]
+                skills: ["Raspberry Pi", "Python", ""]
             },
             {
                 project: "ThirstyCat: Web App",
-                skills: ["Java", "Spring Boot", "JSP", "Server-Side Development", "PostgreSQL", "Front-End Development", "Web Design", "RESTful API Design", "Object Oriented Programming", "Data Analysis", "Javascript", "HTML", "CSS", "Bootstrap", "jQuery", "JUnit"]
+                skills: ["Java", "Spring Boot", "JSP", "Hibernate", "Server-Side Development", "MySQL", "Front-End Development", "Web Design", "RESTful API Design", "Object Oriented Programming", "Data Analysis", "Javascript", "HTML", "CSS", "Bootstrap", "jQuery", "JUnit", "Test Driven Development", "Git", "Relational Databases"]
             },
             {
                 project: "Personal Portfolio Page",
                 skills: ["HTML", "CSS", "Javascript", "Front-End Development", "Web Design", "jQuery", "Bootstrap", "Git"]
             },
             {
-                project: "Virtual Interview",
-                skills: ["Java", "Object Oriented Programming", "Git"]
+                project: "GradientBox",
+                skills: ["Python", "Object Oriented Programming", "Git", "Django", "Server-Side Development", "Front-End Development", "Web Design", "RESTful API Design", "Javascript", "HTML", "CSS", "Bootstrap", "jQuery", "Relational Databases"]
             },
             {
                 project: "WeatherViz",
-                skills: ["Java", "Spring MVC", "JSP", "Object Oriented Programming", "Agile", "Git", "Server-Side Development", "Front-End Development", "HTML", "CSS", "Javascript", "PostgreSQL"]
+                skills: ["Java", "Spring MVC", "JSP", "Object Oriented Programming", "Agile", "Git", "Server-Side Development", "Front-End Development", "HTML", "CSS", "Javascript", "PostgreSQL", "Relational Databases"]
             },
             {
                 project: "Nat'l Parks Weather Update",
-                skills: ["Java", "Object Oriented Programming", "Server-Side Development", "PostgreSQL", "Automated Testing", "Git"]
+                skills: ["Java", "Object Oriented Programming", "Server-Side Development", "PostgreSQL", "Automated Testing", "Git", "Relational Databases"]
             }
         ];
 
@@ -290,7 +290,7 @@ $( document ).ready(function() {
                 modalID = "modal-portfolio-tj";
                 break;
             case projects[3].project:
-                modalID = "modal-VI";
+                modalID = "modal-GB";
                 break;
             case projects[4].project:
                 modalID = "modal-WV";
