@@ -1,0 +1,51 @@
+/* STRUCTURES - MISC */
+body {
+    margin: 0px;
+}
+
+/* STRUCTURES - CONTAINERS */
+.section {
+
+}
+
+.section-content-wrapper {
+    height: 100%;
+    padding: 0% 8%;
+}
+
+/* STRUCTURES - BUTTONS */
+
+
+/* STRUCTURES - FORMS */
+
+/* TEXT */
+p, a, li, ul {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: var(--drac-gray1);
+}
+
+.title, .subtitle {
+    font-family: 'Fira Code', monospace;
+    font-size: 32px;
+}
+
+.subtitle {
+    font-size: 24px;
+}
+
+/* COLORS */
+.drac-lime {
+    color: var(--drac-lime1)
+}
+
+.drac-cyan {
+    color: var(--drac-cyan1)
+}
+
+.drac-gray {
+    color: var(--drac-gray1)
+}
+
+

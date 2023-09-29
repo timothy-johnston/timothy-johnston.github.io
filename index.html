@@ -8,9 +8,15 @@
         <meta name="viewport" content="width=device-width, initiatl=scale=1.0">
         <meta name="description" content="Tim Johnston's professional portfolio page.">
 
-        <!-- Import fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="static/styles/variables.css">
+        <link rel="stylesheet" type="text/css" href="static/styles/common.css">
+        <link rel="stylesheet" type="text/css" href="static/styles/index.css">
 
     </head>
 
@@ -23,30 +29,29 @@
             <div class="section-content-wrapper">
                 <div id="landing-copy-container">
                     <div id="landing-title-container">
-                        <p id="landing-title">
-                            TIM JOHNSTON
-                        </p>
-                        <p id="landing-subtitle">
-                            full stack software engineer
-                        </p>
+                        <p id="landing-title" class="title drac-lime">TIM JOHNSTON</p>
+                        <p id="landing-subtitle" class="subtitle drac-lime">full stack software engineer</p>
                     </div>
-                    <div id="landing-links-container">
-                        <a href="#section-bio" class="landing-links-component landing-link">
-                            bio
-                        </a>
-                        <p class="landing-links-component link-separator">/</p>
-                        <a href="#section-projects" class="landing-links-component landing-link">
-                            projects
-                        </a>
-                        <p class="landing-links-component link-separator">/</p>
-                        <a href="#section-skills" class="landing-links-component landing-link">
-                            technologies
-                        </a>
-                        <p class="landing-links-component link-separator">/</p>
-                        <a href="#section-contact" class="landing-links-component landing-link">
-                            contact
-                        </a>
+                    <div id="landing-links-container" class="subtitle drac-cyan">
+                        <div class="landing-link-container">
+                            <a href="#section-bio" class="landing-link-component landing-link">bio</a>
+                            <p class="landing-link-component link-separator">/</p>
+                        </div>
+                        <div class="landing-link-container">
+                            <a href="#section-projects" class="landing-link-component landing-link">projects</a>
+                            <p class="landing-link-component link-separator">/</p>
+                        </div>
+                        <div class="landing-link-container">
+                            <a href="#section-skills" class="landing-link-component landing-link">technologies</a>
+                            <p class="landing-link-component link-separator">/</p>
+                        </div>
+                        <div class="landing-link-container">
+                            <a href="#section-contact" class="landing-link-component landing-link">contact</a>
+                        </div>
                     </div>
+                    <!-- <div id="chatter-container"> -->
+                        <!-- Ideas: I believe in simplicity and specificity. I see you! Just kidding. Unless.... etc -->
+                    <!-- </div> -->
                 </div>
             </div>
         </section>

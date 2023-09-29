@@ -1,0 +1,44 @@
+#section-landing {
+    height: 100vh;
+    background: var(--drac-gray1)
+}
+
+#section-landing .section-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#landing-copy-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 107px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#landing-title-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
+    width: 100%;
+}
+
+#landing-links-container, .landing-link-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 20px;
+    row-gap: 26px;
+}
+
+.landing-link-container {
+    flex-wrap: nowrap;
+    width: fit-content;
+}
+
+.landing-link-container>.landing-link-component {
+    color: var(--drac-cyan1);
+}
