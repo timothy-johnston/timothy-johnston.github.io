@@ -1,12 +1,30 @@
 #section-landing {
     height: 100vh;
-    background: var(--drac-gray1)
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    /* background: var(--drac-gray1); */
+    /* background-image: url('../resources/videos/bg-space-1-1080.mp4') */
+}
+
+#landing-bg-video-container {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
 }
 
 #section-landing .section-content-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 1;
+    background: var(--drac-gray1);
+}
+
+#section-landing .section-content-wrapper.bg-fade {
+    background: hsla(231, 15%, 18%, 0.33);
 }
 
 #landing-copy-container {
@@ -16,8 +34,6 @@
     row-gap: 107px;
     justify-content: center;
     align-items: center;
-    
-}
 
 #landing-title-container {
     display: flex;
