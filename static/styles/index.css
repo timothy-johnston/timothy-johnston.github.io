@@ -59,7 +59,6 @@
 }
 
 .project-card {
-    width: 85%;
     max-width: 950px;
     display: flex;
     flex-direction: column;
@@ -69,48 +68,67 @@
 
 .card-topbar {
     min-height: 15px;
-    height: fit-content;
-    width: 100%;
+    padding: 5px 15px;
     background: gray;
 }
 
 .card-content {
     background: rgba(128, 128, 128, 0.68);
+    padding: 20px 15px;
+    padding-top: 25px;
 }
 
-.card-header {
+.card-header,
+.card-title-container,
+.card-title-copy,
+.card-links-container,
+.card-summary-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    row-gap: 15px;
 }
 
 .card-title-container {
-    display: flex;
-    flex-direction: row;
+    row-gap: 0px;
 }
 
-.card-img-container {
-    max-width: 200px;
-    max-height: 200px;
+.card-title {
+    margin-top: -5px; /*My only egregiously hacky bit in this project... I promise*/
 }
 
 .card-img {
     width: 100%;
-    height: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
-.card-title-copy {
-
+.card-links-container, .card-summary-container {
+    row-gap: 5px;
 }
 
-.card-summary-container {
+.card-link {
+    display: flex;
+    align-items: center;
+}
 
+.card-link i, .info-prompt i {
+    font-size: 24px;
+    margin-right: 7px;
 }
 
 .info-prompt {
+    border: 1px solid slategray;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px 15px;
 }
 
-.info-prompt .gh-icon-container {
-    margin-left: auto;
+.info-prompt-text {
+    font-size: 20px;
+}
+
+.card-content .collapse-hidden {
+    display: none;
 }

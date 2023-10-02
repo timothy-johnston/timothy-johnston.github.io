@@ -19,8 +19,9 @@ body {
 /* STRUCTURES - FORMS */
 
 /* TEXT */
-body {
+html {
     font-family: 'Karla', sans-serif;
+    font-size: 16px;
 }
 
 p, a, li, ul {
