@@ -8,9 +8,13 @@ body {
 
 }
 
+.section-drac-gray .section-content-wrapper {
+    background: var(--drac-gray1);
+}
+
 .section-content-wrapper {
     height: 100%;
-    padding: 0% 8%;
+    padding: 50px 8%;
 }
 
 /* STRUCTURES - BUTTONS */
@@ -51,6 +55,11 @@ p, a, li, ul {
 
 .drac-gray {
     color: var(--drac-gray1)
+}
+
+/* VISUAL COMPONENTS */
+.bg-gray {
+    background-color: var(--drac-gray1);
 }
 
 

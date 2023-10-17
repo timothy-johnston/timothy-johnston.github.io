@@ -1,3 +1,7 @@
+#section-nav {
+    position: absolute;
+}
+
 #section-landing {
     height: 100vh;
     position: relative;
@@ -18,7 +22,6 @@
     align-items: center;
     position: relative;
     z-index: 1;
-    background: var(--drac-gray1);
 }
 
 #section-landing .section-content-wrapper.bg-fade {
@@ -58,6 +61,11 @@
     color: var(--drac-cyan1);
 }
 
+#section-bio {
+    height: 700px;
+    border: 1px solid gray;
+}
+
 .project-card {
     max-width: 950px;
     display: flex;
@@ -69,51 +77,38 @@
 .card-topbar {
     min-height: 15px;
     padding: 5px 15px;
-    background: gray;
+    background: hsl(231 25% 10% / 1);
+}
+
+.card-topbar p {
+    font-family: 'Fira Code', monospace;
+    color: hsl(231 25% 90% / 1);
 }
 
 .card-content {
-    background: rgba(128, 128, 128, 0.68);
     padding: 20px 15px;
-    padding-top: 25px;
 }
 
-.card-header,
+.page-1,
 .card-title-container,
 .card-title-copy,
 .card-links-container,
 .card-summary-container {
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
+    row-gap: 20px;
 }
 
 .card-title-container {
-    row-gap: 0px;
+    row-gap: 15px;
 }
 
 .card-title {
-    margin-top: -5px; /*My only egregiously hacky bit in this project... I promise*/
+    font-size: 24px;
 }
 
 .card-img {
     width: 100%;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-.card-links-container, .card-summary-container {
-    row-gap: 5px;
-}
-
-.card-link {
-    display: flex;
-    align-items: center;
-}
-
-.card-link i, .info-prompt i {
-    font-size: 24px;
-    margin-right: 7px;
 }
 
 .info-prompt {
@@ -121,12 +116,21 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 10px;
     padding: 10px 15px;
 }
 
-.info-prompt-text {
-    font-size: 20px;
+.card-links-container {
+    row-gap: 10px;
+}
+
+.card-link {
+    display: flex;
+    align-items: center;
+}
+
+.card-link i {
+    font-size: 18px;
+    margin-right: 7px;
 }
 
 .card-content .collapse-hidden {
