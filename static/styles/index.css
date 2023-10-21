@@ -99,6 +99,7 @@
 }
 
 .page-1,
+.page-2 .details-container,
 .card-title-container,
 .card-title-copy,
 .card-links-container,
@@ -118,6 +119,8 @@
 
 .card-img {
     width: 100%;
+    box-shadow: 0px 5px 15px #80808063;
+    border-radius: 5px;
 }
 
 .info-prompt {
@@ -168,17 +171,37 @@
     }
 }
 
-.card-content .collapse-hidden {
+@keyframes supress-scrollbar-y {
+    from, to {
+        overflow: hidden;
+    }
+}
+
+.card-content .page-2.collapse-hidden {
     margin-top: -20px; /* override flexbox row gap when hidden */
     overflow: hidden;
-    transition: all 0s, max-height .5s, margin-top .5s;
+    transition: all 0s, max-height .7s, margin-top .7s;
     max-height: 0px;
     height: auto;
 }
 
-.card-content .collapse-unhidden {
+.card-content .page-2.collapse-unhidden {
     margin-top: 0px;
-    max-height: 500px;
-    animation: text-glow-and-fade 2s linear 1;
+    max-height: 1000px;
+    overflow: auto;
+    animation: text-glow-and-fade 2s linear 1, supress-scrollbar-y .7s backwards;
 }
 
+.detail-header {
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+    color: var(--drac-gray1);
+    box-shadow: inset 0px -10px var(--drac-lime1);
+    margin-bottom: 5px;
+}
+
+.detail-copy-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}

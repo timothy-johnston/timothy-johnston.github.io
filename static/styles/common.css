@@ -3,6 +3,17 @@ body {
     margin: 0px;
 }
 
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: hsl(231deg 15% 18% / 25%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(191deg 97% 65% / 75%);
+    border-radius: 5px;
+}
+
 /* STRUCTURES - CONTAINERS */
 .section {
 

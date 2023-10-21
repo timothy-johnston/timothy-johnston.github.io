@@ -25,10 +25,15 @@ function attachEventListeners() {
     })
 }
 
+/*
+Configure event listeners on any relevant elements ready by DOMContentLoaded
+params:
+    event: the triggering click event
+returns: none
+*/
 function handleEventClickInfoPrompt(event) {
 
     //Get collapsible content of card associated with this button
-    const btnLearnMore = event.target;
     const cardContainer = event.target.closest(".card-content");
     const page2 = cardContainer.querySelector(".page-2");
 
