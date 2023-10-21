@@ -32,7 +32,6 @@ p, a, li, ul {
     margin: 0px;
     padding: 0px;
     text-decoration: none;
-    color: var(--drac-gray1);
 }
 
 .title, .subtitle {
@@ -55,6 +54,10 @@ p, a, li, ul {
 
 .drac-gray {
     color: var(--drac-gray1)
+}
+
+.drac-gray-accent1 {
+    color: var(--drac-gray-accent1);
 }
 
 /* VISUAL COMPONENTS */

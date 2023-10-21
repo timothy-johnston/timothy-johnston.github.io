@@ -67,7 +67,7 @@
 }
 
 #section-projects>.section-content-wrapper {
-    background-color: hsl(231 25% 90% / 1);
+    background-color: var(--drac-gray-accent2);
 }
 
 .project-card {
@@ -89,11 +89,13 @@
 
 .card-topbar p {
     font-family: 'Fira Code', monospace;
-    color: hsl(231 25% 90% / 1);
+    color: var(--drac-gray-accent1);
 }
 
 .card-content {
     padding: 20px 15px;
+    color: var(--drac-gray1);
+    background-color: var(--drac-gray-accent1);
 }
 
 .page-1,
@@ -124,6 +126,17 @@
     flex-direction: row;
     justify-content: center;
     padding: 10px 15px;
+    /* background-color: var(--drac-gray-accent1); */
+    background: linear-gradient(123deg, var(--drac-gray1) 11%, var(--drac-cyan1) 12%, var(--drac-cyan1) 21%, var(--drac-lime1) 22%, var(--drac-lime1) 32%, var(--drac-gray-accent1) 33%);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px #80808063;
+}
+
+.info-prompt-text {
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+    padding: 4px;
 }
 
 .card-links-container {
