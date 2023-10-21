@@ -126,7 +126,6 @@
     flex-direction: row;
     justify-content: center;
     padding: 10px 15px;
-    /* background-color: var(--drac-gray-accent1); */
     background: linear-gradient(123deg, var(--drac-gray1) 11%, var(--drac-cyan1) 12%, var(--drac-cyan1) 21%, var(--drac-lime1) 22%, var(--drac-lime1) 32%, var(--drac-gray-accent1) 33%);
     border: none;
     border-radius: 10px;
@@ -136,7 +135,8 @@
 .info-prompt-text {
     font-family: 'Fira Code', monospace;
     font-weight: bold;
-    padding: 4px;
+    text-align: center;
+    padding: 4px 0px;
 }
 
 .card-links-container {
@@ -153,6 +153,35 @@
     margin-right: 7px;
 }
 
-.card-content .collapse-hidden {
-    display: none;
+@keyframes text-glow-and-fade {
+    0% {
+        text-shadow: none;
+    }
+    10% {
+        text-shadow: none;
+    }
+    15% {
+        text-shadow: 0px 0px 5px var(--drac-lime1);
+    }
+    70% {
+        text-shadow: 0px 0px 5px var(--drac-lime1);
+    }
+    100% {
+        text-shadow: none;
+    }
 }
+
+.card-content .collapse-hidden {
+    margin-top: -20px; /* override flexbox row gap when hidden */
+    overflow: hidden;
+    transition: all 0s, max-height .5s, margin-top .5s;
+    max-height: 0px;
+    height: auto;
+}
+
+.card-content .collapse-unhidden {
+    margin-top: 0px;
+    max-height: 500px;
+    animation: text-glow-and-fade 1.5s linear 1;
+}
+
