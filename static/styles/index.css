@@ -154,16 +154,13 @@
 }
 
 @keyframes text-glow-and-fade {
-    0% {
+    5% {
         text-shadow: none;
     }
-    10% {
-        text-shadow: none;
-    }
-    15% {
+    20% {
         text-shadow: 0px 0px 5px var(--drac-lime1);
     }
-    70% {
+    40% {
         text-shadow: 0px 0px 5px var(--drac-lime1);
     }
     100% {
@@ -182,6 +179,6 @@
 .card-content .collapse-unhidden {
     margin-top: 0px;
     max-height: 500px;
-    animation: text-glow-and-fade 1.5s linear 1;
+    animation: text-glow-and-fade 2s linear 1;
 }
 
