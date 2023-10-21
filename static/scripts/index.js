@@ -23,6 +23,7 @@ function attachEventListeners() {
             handleEventClickInfoPrompt(event);
         })
     })
+    
 }
 
 /*
