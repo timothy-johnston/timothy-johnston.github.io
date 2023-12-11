@@ -76,4 +76,9 @@ p, a, li, ul {
     background-color: var(--drac-gray1);
 }
 
+/* DISPLAY */
+.hidden {
+    display: none;
+}
+
 

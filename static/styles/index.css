@@ -71,7 +71,7 @@
 }
 
 .project-card {
-    max-width: 950px;
+    max-width: 515px;
     display: flex;
     flex-direction: column;
     margin-left: auto;
