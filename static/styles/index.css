@@ -84,11 +84,13 @@
 .card-topbar {
     min-height: 15px;
     padding: 5px 15px;
+    background: linear-gradient(163deg, #4fddfcb8 -30.63%, #52fa7c54 112.6%);
     background: hsl(231 25% 10% / 1);
 }
 
 .card-topbar p {
     font-family: 'Fira Code', monospace;
+    color: var(--drac-gray1);
     color: var(--drac-gray-accent1);
 }
 
@@ -129,10 +131,16 @@
     flex-direction: row;
     justify-content: center;
     padding: 10px 15px;
-    background: linear-gradient(123deg, var(--drac-gray1) 11%, var(--drac-cyan1) 12%, var(--drac-cyan1) 21%, var(--drac-lime1) 22%, var(--drac-lime1) 32%, var(--drac-gray-accent1) 33%);
+    background: linear-gradient(99deg, #4FDDFC -30.63%, #52FA7C);
+    background: linear-gradient(163deg, #4fddfcb8 -30.63%, #52fa7c54 112.6%);
+    /* background: linear-gradient(123deg, var(--drac-gray1) 11%, var(--drac-cyan1) 12%, var(--drac-cyan1) 21%, var(--drac-lime1) 22%, var(--drac-lime1) 32%, var(--drac-gray-accent1) 33%); */
     border: none;
     border-radius: 10px;
     box-shadow: 0px 5px 15px #80808063;
+    width: calc(100% - 30px);
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .info-prompt-text {
@@ -149,11 +157,28 @@
 .card-link {
     display: flex;
     align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.card-link i {
-    font-size: 18px;
-    margin-right: 7px;
+.card-link-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    width: 45px;
+    min-width: 45px;
+    background: linear-gradient(163deg, #4fddfcb8 -30.63%, #52fa7c54 112.6%);
+}
+
+.card-link-icon-container i {
+    font-size: 22px;
+}
+
+.card-link a {
+    width: 100%;
+    margin-left: 10px;
+    padding: 8px 0px;
 }
 
 @keyframes text-glow-and-fade {
@@ -192,16 +217,26 @@
     animation: text-glow-and-fade 2s linear 1, supress-scrollbar-y .7s backwards;
 }
 
+.details-container {
+    background: #ebeeffdb;
+    padding: 15px;
+    padding: 15px 10px;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 10px 0px #80808078;
+}
+
 .detail-header {
     font-family: 'Fira Code', monospace;
     font-weight: bold;
     color: var(--drac-gray1);
     box-shadow: inset 0px -10px var(--drac-lime1);
     margin-bottom: 5px;
+    padding-left: 5px;
 }
 
 .detail-copy-group {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    padding: 0px 10px;
 }
