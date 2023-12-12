@@ -54,6 +54,10 @@ p, a, li, ul {
     font-size: 24px;
 }
 
+.copy {
+    font-size: 18px;
+}
+
 /* COLORS */
 .drac-lime {
     color: var(--drac-lime1)
