@@ -34,16 +34,31 @@ returns: none
 */
 function handleEventClickInfoPrompt(event) {
 
-    //Get collapsible content of card associated with this button
-    const cardContainer = event.target.closest(".card-content");
-    const page2 = cardContainer.querySelector(".page-2");
+    //Get elements of card associated with this button
+    const card = event.target.closest(".project-card");
+    const back = card.querySelector(".card-back");
+    const btn = card.querySelector(".info-prompt");
 
-    //Flip the "collapse-unhidden" class to show or hide this content
-    page2.classList.toggle("collapse-unhidden");
+    //Ensure the width of the card back's content is set to the full width of the card
+    back.querySelector(".details-container").style.width = (card.offsetWidth - 1) + "px";
 
-    //Change the text of the learn more button
-    const newText = (page2.classList.contains("collapse-unhidden")) ? "Stop Learning More" : "Learn More";
-    const textElement = cardContainer.querySelector(".info-prompt-text");
-    textElement.textContent = newText;
+    //Attach/detach the keyframe animations
+    //Note: kf-decrease-width begins off since it triggers on page load, otherwise it stays on
+    if (back.classList.contains("kf-decrease-width")) {
+        back.classList.toggle("kf-increase-width");
+    } else {
+        back.classList.toggle("kf-increase-width");
+        back.classList.toggle("kf-decrease-width");
+    }
 
+    //Transform the info / nav button
+    btn.classList.toggle("info-prompt-nav-style");
+    btn.querySelectorAll(".card-nav").forEach(el => {
+        el.classList.toggle("hidden");
+        // el.classList.toggle("fa-solid");
+        // el.classList.toggle
+    })
+
+    
+    
 }
