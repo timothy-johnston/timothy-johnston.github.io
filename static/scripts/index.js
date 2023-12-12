@@ -27,7 +27,7 @@ function attachEventListeners() {
 }
 
 /*
-Configure event listeners on any relevant elements ready by DOMContentLoaded
+Implementation of project info/nav btn click event handler
 params:
     event: the triggering click event
 returns: none
@@ -55,8 +55,6 @@ function handleEventClickInfoPrompt(event) {
     btn.classList.toggle("info-prompt-nav-style");
     btn.querySelectorAll(".card-nav").forEach(el => {
         el.classList.toggle("hidden");
-        // el.classList.toggle("fa-solid");
-        // el.classList.toggle
     })
 
     
