@@ -5,5 +5,5 @@
     --drac-gray-accent1: hsl(231, 25%, 90%);
     --drac-gray-accent2: hsl(231, 30%, 82%);
 
-    --card-padding: 10px 15px;
+    --gutter-base-pct: 8%;
 }

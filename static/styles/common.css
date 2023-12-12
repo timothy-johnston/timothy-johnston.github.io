@@ -80,9 +80,14 @@ p, a, li, ul {
     background-color: var(--drac-gray1);
 }
 
-/* DISPLAY */
+/* DISPLAY AND LAYOUT */
 .hidden {
     display: none;
+}
+
+.guttered-base {
+    padding-left: var(--gutter-base-pct);
+    padding-right: var(--gutter-base-pct);
 }
 
 

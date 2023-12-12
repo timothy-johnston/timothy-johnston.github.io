@@ -66,16 +66,42 @@ body {
 }
 
 #section-bio {
-    height: 700px;
-    border: 1px solid gray;
+    height: 100vh;
+    min-height: 100vh;
+    background: hsl(231deg 33.65% 9.54%);
 }
 
-#section-projects .section-content-wrapper {
+#section-projects .section-content-wrapper, #section-bio .section-content-wrapper {
     min-height: 100vh;
     padding-top: 75px;
     padding-bottom: 75px;
     padding-left: 0px;
     padding-right: 0px;
+}
+
+#about-container-inner {
+    margin-top: 165px;
+}
+
+#about-quotes-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.value-container {
+    font-family: 'Fira Code', sans-serif;
+}
+
+.value-label {
+    font-size: 18px;
+    color: white;
+}
+
+.value {
+    font-weight: bold;
+    font-size: 28px;
+    color: var(--drac-cyan1);
 }
 
 #project-cards-container {
@@ -85,10 +111,9 @@ body {
     flex-wrap: wrap;
     column-gap: 75px;
     row-gap: 75px;
-    padding: 0px 8%;
 }
 
-#projects-header-container {
+.section-header-container {
     position: absolute;
     color: var(--drac-lime1);
     font-weight: bold;
