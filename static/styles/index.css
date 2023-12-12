@@ -83,16 +83,18 @@
 }
 
 .card-topbar {
-    min-height: 15px;
-    padding: 5px 15px;
-    background: linear-gradient(163deg, #4fdcfc -30.63%, #52fa7c 112.6%);
+    /* background: linear-gradient(163deg, #4fdcfc -30.63%, #52fa7c 112.6%); */
+    background: url("../resources/images/pi-hardware-1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 150px;
 }
 
-.card-topbar p {
+/* .card-topbar p {
+    padding: 5px 15px;
     font-family: 'Fira Code', monospace;
     color: var(--drac-gray1);
-    font-weight: bold;
-}
+} */
 
 .card-content {
     padding: 20px 15px;
@@ -119,9 +121,8 @@
 }
 
 .card-img {
-    width: 100%;
-    box-shadow: 0px 5px 15px #80808063;
-    border-radius: 5px;
+    height: 200px;
+    width: auto;
 }
 
 .summary-copy, .detail-copy {
