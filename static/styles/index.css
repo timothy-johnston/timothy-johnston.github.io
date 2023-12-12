@@ -88,6 +88,8 @@
     background-size: cover;
     background-position: center;
     height: 150px;
+    display: flex;
+    align-items: flex-end;
 }
 
 /* .card-topbar p {
@@ -113,7 +115,11 @@
 }
 
 .card-title-container {
-    row-gap: 15px;
+    background: hsl(231deg 15% 18% / 81%);
+    color: var(--drac-lime1);
+    padding: 10px 15px;
+    width: 100%;
+    font-weight: bold;;
 }
 
 .card-title {
@@ -230,4 +236,8 @@
     flex-direction: column;
     row-gap: 10px;
     padding: 0px 10px;
+}
+
+.detail-copy {
+    font-size: 16px;
 }
