@@ -66,8 +66,6 @@ body {
 }
 
 #section-bio {
-    height: 100vh;
-    min-height: 100vh;
     background: hsl(231deg 33.65% 9.54%);
 }
 
