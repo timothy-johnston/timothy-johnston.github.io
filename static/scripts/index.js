@@ -80,4 +80,7 @@ function launchRocket() {
     rocket.style.width = "25px";
     rocket.style.height = "25px";
 
+    let bg = document.getElementById("landing-section-content-wrapper");
+    bg.style.backgroundColor = "hsl(231deg 15% 18% / 38%)";
+
 }

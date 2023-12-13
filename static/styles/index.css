@@ -32,6 +32,10 @@ body {
     background: hsla(231, 15%, 18%, 0.33);
 }
 
+#landing-section-content-wrapper {
+    transition: 4s linear;
+}
+
 #landing-copy-container {
     height: 100%;
     display: flex;
