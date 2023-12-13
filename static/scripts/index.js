@@ -57,6 +57,7 @@ function handleEventClickInfoPrompt(event) {
         el.classList.toggle("hidden");
     })
 
-    
-    
 }
+
+//TODO: Use JS to retrieve and append svg icons rather than them hardcoded in html
+//  so, fetch /images/svg/rocket-1.svg and use to create svg html element

@@ -77,14 +77,113 @@ body {
     padding-right: 0px;
 }
 
+#about-header-container {
+    display: none;
+}
+
 #about-container-inner {
-    margin-top: 85px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 150px;
+}
+
+#about-container-inner .sk-spacer {
+    border-color: var(--drac-lime1);
+}
+
+#about-container-inner .sk-spacer svg {
+    background: hsl(229.41deg 34.69% 9.61%);
+    padding: 15px;
+}
+
+#intro-container {
+    row-gap: 75px;
+}
+
+#intro-title-container {
+    row-gap: 20px;
+    padding: 25px 15px;
+    border: 1px solid var(--drac-lime1);
+    border-radius: 5px;
+}
+
+#intro-title {
+    font-weight: bold;
+    font-size: 64px;
+    text-shadow: 4px 4px 0px var(--drac-cyan1);
+    color: hsl(229.41deg 34.69% 9.61%);
+    -webkit-text-stroke: 1px var(--drac-cyan1);
+    box-shadow: inset 0px 0px 0px 0px var(--drac-gray1);
+    /* border-left: 5px solid var(--drac-cyan1);
+    padding-left: 15px;
+    margin-bottom: 15px; */
+}
+
+.intro-subtitle {
+    color: var(--drac-lime1);
+}
+
+#intro-body-container {
+    row-gap: 50px;
+}
+
+.intro-copy {
+    font-size: 18px;
+    color: white;
+    border-left: 5px solid var(--drac-cyan1);
+    padding: 20px 25px;
+    background: var(--drac-gray1);
+    border-radius: 5px;
+}
+
+.intro-copy:nth-child(even) {
+    border-left: none;
+    border-right: 5px solid var(--drac-cyan1);
+    text-align: right;
+}
+
+#intro-footer-container {
+    column-gap: 25px;
+    background-color: var(--drac-gray1);
+    align-items: center;
+}
+
+#intro-img {
+    height: 100px;
+    width: 100px;
+    min-height: 100px;
+    min-width: 100px;
+    border: 3px solid var(--drac-cyan1);
+    border-radius: 9999px;
+    margin-right: 25px;
 }
 
 #about-quotes-container {
     display: flex;
     flex-direction: column;
     row-gap: 50px;
+}
+
+.quote-icon-container-outer {
+    column-gap: 25px;
+}
+
+.quote-icon-container {
+    
+}
+
+.quote-icon {
+    font-size: 144px;
+    color: hsl(229.41deg 34.69% 9.61%);
+    -webkit-text-stroke: 5px var(--drac-lime1);
+}
+
+#quote-icon-container-top .icon-quote {
+    transform: rotate(13deg);
+}
+
+.icon-ellipsis {
+    height: 65px;
 }
 
 .about-quote-container {

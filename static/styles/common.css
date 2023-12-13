@@ -91,3 +91,156 @@ p, a, li, ul {
 }
 
 
+
+
+
+
+
+/* ---------------------------- FOR SIDEKICK ----------------------------- */
+.sk-flex {
+    display: flex;
+}
+
+.sk-flex-cc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sk-flex-ct {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.sk-flex-cb {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.sk-flex-lc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sk-flex-lt {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sk-flex-lb {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.sk-flex-rc {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sk-flex-rt {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.sk-flex-rb {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.sk-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.sk-flex-row {
+    flex-direction: row;
+}
+
+.sk-flex-col {
+    flex-direction: column;
+}
+
+.sk-flex-even-X {
+    justify-content: space-evenly;
+}
+
+.sk-flex-between-X {
+    justify-content: space-between;
+}
+
+.sk-flex-around-X {
+    justify-content: space-around;
+}
+
+.sk-flex-even-Y {
+    align-items: space-evenly;
+}
+
+.sk-flex-between-Y {
+    align-items: space-between;
+}
+
+.sk-flex-around-Y {
+    align-items: space-around;
+}
+
+.sk-spacer {
+    height: 0px;
+    width: 100%;
+}
+
+.sk-spacer-25 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.sk-spacer-50 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.sk-spacer-75 {
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.sk-spacer-100 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.sk-spacer-line {
+    border: 2px solid rgb(157, 157, 157);
+}
+
+/* spacer with icon centered in the middle. see .sk-spacer-fa & .sk-spacer-svg for icon type-specific
+extras */
+.sk-spacer-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* spacer with FontAwesome icon centered in the middle */
+.sk-spacer-fa {
+
+}
+
+/* spacer with SVG icon centered in the middle */
+.sk-spacer-svg {
+
+}
+
+.sk-spacer-svg svg {
+    height: 50px;
+    width: auto;
+}
+
+
