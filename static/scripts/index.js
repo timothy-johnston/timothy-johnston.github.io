@@ -17,6 +17,11 @@ returns: none
 */
 function attachEventListeners() {
 
+    //Launch button
+    document.getElementById("btn-launch").addEventListener('click', function(event) {
+        launchRocket();
+    })
+
     //Project cards Learn More button, click
     document.querySelectorAll(".info-prompt").forEach(el => {
         el.addEventListener('click', function(event) {
@@ -61,3 +66,18 @@ function handleEventClickInfoPrompt(event) {
 
 //TODO: Use JS to retrieve and append svg icons rather than them hardcoded in html
 //  so, fetch /images/svg/rocket-1.svg and use to create svg html element
+
+
+
+
+
+//Move rocket
+function launchRocket() {
+    let rocketContainer = document.getElementById("rocket-animation");
+    rocketContainer.style.top = "-100px";
+
+    let rocket = document.getElementById("rocket");
+    rocket.style.width = "25px";
+    rocket.style.height = "25px";
+
+}
