@@ -80,32 +80,77 @@ body {
 }
 
 #about-container-inner {
-    margin-top: 165px;
+    margin-top: 85px;
 }
 
 #about-quotes-container {
     display: flex;
     flex-direction: column;
-    row-gap: 25px;
+    row-gap: 50px;
+}
+
+.about-quote-container {
+    display: flex;
+    flex-direction: column;
+    /* row-gap: 25px; */
+    padding: 25px;
+    padding-top: 0px;
+    border: 1px solid var(--drac-cyan1);
 }
 
 .value-container {
     font-family: 'Fira Code', sans-serif;
+    transform: translate(0px, -14px);
 }
 
 .value-label {
-    font-size: 18px;
+    font-size: 20px;
     color: white;
+    background: hsl(231.43deg 29.17% 9.41%);
+    width: fit-content;
+    padding-left: 25px;
+    padding-right: 27px;
+    
 }
 
 .value {
     font-weight: bold;
     font-size: 28px;
     color: var(--drac-cyan1);
+    margin-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.quote-container {
+    /* border: 1px solid var(--drac-lime1); */
+    padding: 15px 25px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.quote, .attribution {
+    font-size: 16px;
+    color: white;
+    background: var(--drac-gray1);
+    padding-top: 5px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.quote {
+
+}
+
+.attribution {
+    width: fit-content;
 }
 
 #project-cards-container {
-    margin-top: 165px;
+    margin-top: 85px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -114,20 +159,22 @@ body {
 }
 
 .section-header-container {
-    position: absolute;
+    /* position: absolute; */
     color: var(--drac-lime1);
     font-weight: bold;
     font-style: italic;
     font-family: 'Fira Code';
     font-size: 48px;
-    padding-left: 8%;
-    background: hsl(231deg 15% 18% / 67%);
-    width: 100%;
+    /* padding-left: 8%; */
+    /* background: hsl(231deg 15% 18% / 67%); */
+    /* width: 100%; */
     height: 100px;
     display: flex;
     align-items: center;
     border-top: 1px solid var(--drac-lime1);
     border-bottom: 1px solid var(--drac-lime1);
+    margin-left: 8%;
+    margin-right: 8%;
 }
 
 .project-card {
@@ -350,3 +397,25 @@ body {
 .detail-copy {
     font-size: 16px;
 }
+
+
+
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+  
+  .about-quote-container:hover {
+      animation: shake 2s;
+      animation-iteration-count: infinite;
+  }
