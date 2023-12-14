@@ -573,6 +573,25 @@ body {
     background: hsl(231deg 33.65% 9.54%);
 }
 
+#section-footer {
+    background: var(--drac-gray1);
+    border-top: 5px solid var(--drac-lime1);
+}
+
+.footer-component {
+    width: 100%;
+}
+
+#footer-component-contact {
+
+}
+
+#copyright-container>p {
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
 
 
 
