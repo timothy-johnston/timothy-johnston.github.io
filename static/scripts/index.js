@@ -68,19 +68,76 @@ function handleEventClickInfoPrompt(event) {
 //  so, fetch /images/svg/rocket-1.svg and use to create svg html element
 
 
-
-
-
-//Move rocket
+//Launch rocket
 function launchRocket() {
-    let rocketContainer = document.getElementById("rocket-animation");
-    rocketContainer.style.top = "-100px";
 
-    let rocket = document.getElementById("rocket");
-    rocket.style.width = "25px";
-    rocket.style.height = "25px";
+    engageThrusters();
+    setTimeout(function() {
+        liftoff();
+    }, 1000);
 
-    let bg = document.getElementById("landing-section-content-wrapper");
-    bg.style.backgroundColor = "hsl(231deg 15% 18% / 38%)";
 
 }
+
+function engageThrusters() {
+
+    //fade in glow for 1s
+    let glow = document.getElementById("glow");
+    glow.style.opacity = 1;
+    
+
+
+}
+
+function liftoff() {
+
+    moveRocketToCoord("-150px");
+    rotateRocket("45deg");
+    resizeRocket("25px", "25px");
+    fadeRocket("0.2");
+    fadeLanding();
+    setTimeout(function() {
+        fadeRocket("0.0");
+    }, 3000);
+
+}
+
+//Move rocket
+//sidekick abstraction: moveElementToCoord
+function moveRocketToCoord(top) {
+    let rocketAnimation = document.getElementById("rocket-animation");
+    rocketAnimation.style.top = top;
+    rocketAnimation.style.right = "10px";
+}
+
+//Rotate rocket
+function rotateRocket(rotation) {
+    let rocketContainer = document.getElementById("rocket-container");
+    rocketContainer.style.transform = "rotate(" + rotation + ")";
+}
+
+//Resize rocket
+//sidekick abstraction: resizeElement
+function resizeRocket(width, height) {
+    let rocket = document.getElementById("rocket");
+    rocket.style.width = width;
+    rocket.style.height = height;
+}
+
+//Fade rocket
+//sidekick abstraction: fadeUnfadeElement
+function fadeRocket(opacity) {
+    let rocketContainer = document.getElementById("rocket-container");
+    rocketContainer.style.opacity = opacity;
+}
+
+function fadeLanding() {
+    let bg = document.getElementById("landing-section-content-wrapper");
+    bg.style.backgroundColor = "hsl(231deg 15% 18% / 38%)";
+    // let bg = document.getElementById("landing-bg-initial");
+    // bg.style.height = "0px";
+    // bg.style.opacity = 0;
+    // bg.style.borderRadius = "50% 50% 0 0";
+}
+
+
