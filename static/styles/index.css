@@ -71,6 +71,7 @@ body {
 }
 
 #rocket-animation {
+    z-index: 1;
     position: absolute;
     top: calc(100vh - 150px);
     right: 50%;
@@ -328,11 +329,9 @@ body {
 
 #projects-header-container {
     font-family: 'Fira Code', monospace;
-    /* height: 100px; */
     padding: 15px;
     display: flex;
     align-items: center;
-    /* border-top: 1px solid var(--drac-lime1); */
     border-bottom: 5px solid var(--drac-lime1);
     background: hsl(231deg 15% 18% / 61%);
     border-radius: 10px;
@@ -349,7 +348,7 @@ body {
 }
 
 .project-card {
-    max-width: 515px;
+    max-width: 325px;
     display: flex;
     flex-direction: column;
     margin-left: auto;
