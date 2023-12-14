@@ -217,7 +217,7 @@ p, a, li, ul {
 }
 
 .sk-spacer-line {
-    border: 2px solid rgb(157, 157, 157);
+    border: 1px solid rgb(157, 157, 157);
 }
 
 /* spacer with icon centered in the middle. see .sk-spacer-fa & .sk-spacer-svg for icon type-specific

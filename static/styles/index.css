@@ -131,7 +131,7 @@ body {
     background: hsl(231deg 33.65% 9.54%);
 }
 
-#section-projects .section-content-wrapper, #section-bio .section-content-wrapper {
+#section-bio .section-content-wrapper {
     min-height: 100vh;
     padding-top: 75px;
     padding-bottom: 75px;
@@ -309,11 +309,54 @@ body {
 }
 
 #skills-container-outer {
-    /* height: 350px; */
-    padding: 15px 25px;
-    /* background: linear-gradient(99deg, #4FDDFC -30.63%, #52FA7C);
-    border-radius: 5px;
-    box-shadow: 0px 0px 75px 5px #ffffff4f; */
+    row-gap: 30px;
+}
+
+#skills-header {
+
+}
+
+#skills-title {
+    font-size: 64px;
+    font-family: 'Fira Code';
+    font-weight: bold;
+    text-shadow: 4px 4px 0px var(--drac-cyan1);
+    color: hsl(229.41deg 34.69% 9.61%);
+    -webkit-text-stroke: 1px var(--drac-cyan1);
+}
+
+#skills-container {
+    row-gap: 30px;
+}
+
+.category-container-outer {
+    row-gap: 15px;
+}
+
+.category-header {
+
+}
+
+.category-title {
+    color: var(--drac-lime1);
+    font-style: italic;
+    font-size: 20px;
+    font-family: 'Fira Code', monospace;
+}
+
+.category-container {
+    row-gap: 17px;
+    column-gap: 17px;
+}
+
+.category-item {
+    padding: 7px 10px;
+    background: var(--drac-gray1);
+    border: 1px solid var(--drac-cyan1);
+}
+
+.category-item p {
+    color: white
 }
 
 #project-cards-container {
@@ -327,21 +370,35 @@ body {
 
 .section-header-container {
     /* position: absolute; */
-    color: var(--drac-lime1);
+    /* color: var(--drac-lime1);
     font-weight: bold;
     font-style: italic;
     font-family: 'Fira Code';
-    font-size: 48px;
+    font-size: 48px; */
     /* padding-left: 8%; */
     /* background: hsl(231deg 15% 18% / 67%); */
     /* width: 100%; */
-    height: 100px;
+    font-family: 'Fira Code', monospace;
+    /* height: 100px; */
+    padding: 15px;
     display: flex;
     align-items: center;
     border-top: 1px solid var(--drac-lime1);
     border-bottom: 1px solid var(--drac-lime1);
-    margin-left: 8%;
-    margin-right: 8%;
+    /* margin-left: 8%;
+    margin-right: 8%; */
+}
+
+.section-title {
+    color: var(--drac-lime1);
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Fira Code', monospace;
+    font-size: 48px;
+}
+
+.section-subtitle {
+    font-size: 24px;
 }
 
 .project-card {
@@ -563,6 +620,11 @@ body {
 
 .detail-copy {
     font-size: 16px;
+}
+
+#section-skills {
+    position: relative;
+    background: hsl(231deg 33.65% 9.54%);
 }
 
 
