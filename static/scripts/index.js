@@ -17,6 +17,11 @@ returns: none
 */
 function attachEventListeners() {
 
+    //Scroll detection
+    document.addEventListener("scroll", function() {
+        handleScroll();
+    })
+
     //Launch button
     document.getElementById("btn-launch").addEventListener('click', function(event) {
         launchRocket();
@@ -30,6 +35,34 @@ function attachEventListeners() {
     })
     
 }
+
+function handleScroll() {
+    hideLandingCopy();
+}
+
+//If not hidden, it is visible when getting to Projects section
+function hideLandingCopy() {
+
+    const sectionAbout = document.getElementById("section-bio");
+    let sectionAboutTop = sectionAbout.getBoundingClientRect().top;
+
+    const toHide = [
+        "landing-title",
+        "landing-subtitle",
+        "landing-links-container"
+    ]
+    for (let targetId of toHide) {
+        const target = document.getElementById(targetId);
+        const targetTop = target.getBoundingClientRect().top;
+        if (sectionAboutTop < targetTop) {
+            target.style.opacity = 0;
+        } else {
+            target.style.opacity = 1;
+        }
+    }
+    
+}
+
 
 /*
 Implementation of project info/nav btn click event handler
