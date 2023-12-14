@@ -43,7 +43,7 @@ function handleScroll() {
 //If not hidden, it is visible when getting to Projects section
 function hideLandingCopy() {
 
-    const sectionAbout = document.getElementById("section-bio");
+    const sectionAbout = document.getElementById("section-intro");
     let sectionAboutTop = sectionAbout.getBoundingClientRect().top;
 
     const toHide = [
@@ -165,7 +165,7 @@ function fadeRocket(opacity) {
 }
 
 function fadeLanding() {
-    let bg = document.getElementById("landing-section-content-wrapper");
+    let bg = document.getElementById("chapter-landing");
     bg.style.backgroundColor = "hsl(231deg 15% 18% / 38%)";
     // let bg = document.getElementById("landing-bg-initial");
     // bg.style.height = "0px";

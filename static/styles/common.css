@@ -85,6 +85,15 @@ p, a, li, ul {
     display: none;
 }
 
+.section {
+
+}
+
+.chapter {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
 .guttered-base {
     padding-left: var(--gutter-base-pct);
     padding-right: var(--gutter-base-pct);
