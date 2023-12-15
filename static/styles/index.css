@@ -578,12 +578,74 @@ body {
     border-top: 5px solid var(--drac-lime1);
 }
 
+#chapter-footer {
+    row-gap: 40px;
+}
+
 .footer-component {
     width: 100%;
+    row-gap: 10px;
 }
 
 #footer-component-contact {
 
+}
+
+.footer-component-title {
+    color: var(--drac-lime1);
+    /* margin-left: auto; */
+    margin-right: auto;
+}
+
+#footer-socials-container {
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.footer-social-container {
+    /* column-gap: 10px; */
+    /* border: 1px solid var(--drac-lime1);
+    width: fit-content;
+    padding: 3px 10px;
+    border-radius: 5px; */
+}
+
+#footer-socials-container>i {
+    font-size: 36px;
+    color: var(--drac-cyan1);
+}
+
+#contact-form {
+    row-gap: 7px;
+}
+
+#contact-form label {
+    font-size: 18px;
+    color: var(--drac-cyan1);
+}
+
+.footer-input {
+    background: hsl(231deg 33.65% 9.54%);
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+    font-family: 'Fira Code', monospace;
+    padding: 15px 20px;
+    color: var(--drac-cyan1);
+    font-size: 16px;
+}
+
+.footer-input::placeholder {
+    color: hsl(0deg 0% 100% / 68%);
+}
+
+.footer-input.text-input {
+    /* height: 32px; */
+}
+
+.footer-input.area-input {
+    height: 144px;
 }
 
 #copyright-container>p {
