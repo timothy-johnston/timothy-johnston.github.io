@@ -63,7 +63,6 @@ function hideLandingCopy() {
     
 }
 
-
 /*
 Implementation of project info/nav btn click event handler
 params:
@@ -109,7 +108,6 @@ function launchRocket() {
         liftoff();
     }, 1000);
 
-
 }
 
 function engageThrusters() {
@@ -118,8 +116,6 @@ function engageThrusters() {
     let glow = document.getElementById("glow");
     glow.style.opacity = 1;
     
-
-
 }
 
 function liftoff() {
@@ -198,10 +194,6 @@ function fadeLanding() {
         
     }, 10);
 
-    // let bg = document.getElementById("landing-bg-initial");
-    // bg.style.height = "0px";
-    // bg.style.opacity = 0;
-    // bg.style.borderRadius = "50% 50% 0 0";
 }
 
 

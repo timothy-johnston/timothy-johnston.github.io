@@ -1,3 +1,19 @@
+/* ------------- GENERAL ------------- */
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
 body {
     overflow-x: hidden;
 }
@@ -6,26 +22,11 @@ body {
     position: relative;
 }
 
-/* #section-nav {
-    position: absolute;
-} */
+/* ------------- SECTION: LANDING ------------- */
 
 #section-landing {
     height: 100vh;
-    /* position: relative;
-    z-index: 0;
-    overflow: hidden; */
 }
-
-/* #landing-bg-initial {
-    display: none;
-    height: 100vh;
-    width: 100vw;
-    background: var(--drac-gray1);
-    position: fixed;
-    transition: 3s cubic-bezier(0.82, -0.03, 1, 1);
-    bottom: 0;
-} */
 
 .bg-video-container {
     height: 100vh;
@@ -35,7 +36,6 @@ body {
 }
 
 #chapter-landing {
-    background: radial-gradient(circle at 50% 99%, hsla(231, 15%, 18%, 1.0) 100%, hsla(0, 0%, 100%, 0)), var(--drac-gray1);
     background: radial-gradient(circle at 50% 99%, hsla(231, 15%, 18%, 1.0) 100%, hsla(0, 0%, 100%, 0)), hsla(231, 15%, 18%, .2);
     transition: 4s linear;
     position: fixed;
@@ -91,7 +91,6 @@ body {
 #rocket-container {
     height: 100px;
     width: 100px;
-    /* transform: rotate(-45deg); */
     transition: 3s cubic-bezier(0.82, -0.03, 1, 1);
 }
 
@@ -112,8 +111,9 @@ body {
     bottom: 10px;
 }
 
+/* ------------- SECTION: INTRO ------------- */
+
 #section-intro {
-    /* position: relative; */
     background: hsl(231deg 33.65% 9.54%);
 }
 
@@ -176,43 +176,19 @@ body {
     margin-right: 25px;
 }
 
+/* ------------- SECTION: QUOTES ------------- */
+
 #section-quotes {
-    position: relative;
     background: hsl(231deg 33.65% 9.54%);
 }
 
 #chapter-quotes {
-    /* display: flex;
-    flex-direction: column; */
     row-gap: 50px;
-}
-
-.quote-icon-container-outer {
-    column-gap: 25px;
-}
-
-.quote-icon-container {
-    
-}
-
-.quote-icon {
-    font-size: 144px;
-    color: hsl(229.41deg 34.69% 9.61%);
-    -webkit-text-stroke: 5px var(--drac-lime1);
-}
-
-#quote-icon-container-top .icon-quote {
-    transform: rotate(13deg);
-}
-
-.icon-ellipsis {
-    height: 65px;
 }
 
 .about-quote-container {
     display: flex;
     flex-direction: column;
-    /* row-gap: 25px; */
     padding: 25px;
     padding-top: 0px;
     border: 1px solid var(--drac-cyan1);
@@ -243,7 +219,6 @@ body {
 }
 
 .quote-container {
-    /* border: 1px solid var(--drac-lime1); */
     padding: 15px 25px;
     padding-bottom: 5px;
     display: flex;
@@ -261,20 +236,18 @@ body {
     padding-right: 15px;
 }
 
-.quote {
-
-}
-
 .attribution {
     width: fit-content;
 }
 
-#chapter-skills {
-    row-gap: 30px;
+/* ------------- SECTION: SKILLS ------------- */
+
+#section-skills {
+    background: hsl(231deg 33.65% 9.54%);
 }
 
-#skills-header {
-
+#chapter-skills {
+    row-gap: 30px;
 }
 
 #skills-title {
@@ -294,10 +267,6 @@ body {
     row-gap: 15px;
 }
 
-.category-header {
-
-}
-
 .category-title {
     color: var(--drac-lime1);
     font-style: italic;
@@ -313,13 +282,14 @@ body {
 .category-item {
     padding: 7px 10px;
     background: var(--drac-gray1);
-    /* border-bottom: 1px solid var(--drac-cyan1); */
     box-shadow: inset 0px -2px 0px var(--drac-cyan1);
 }
 
 .category-item p {
     color: white
 }
+
+/* ------------- SECTION: PROJECTS ------------- */
 
 #project-cards-container {
     margin-top: 85px;
@@ -571,10 +541,7 @@ body {
     font-size: 16px;
 }
 
-#section-skills {
-    position: relative;
-    background: hsl(231deg 33.65% 9.54%);
-}
+/* ------------- SECTION: PROJECTS ------------- */
 
 #section-footer {
     background: var(--drac-gray1);
@@ -590,27 +557,14 @@ body {
     row-gap: 10px;
 }
 
-#footer-component-contact {
-
-}
-
 .footer-component-title {
     color: var(--drac-lime1);
-    /* margin-left: auto; */
     margin-right: auto;
 }
 
 #footer-socials-container {
     column-gap: 20px;
     row-gap: 20px;
-}
-
-.footer-social-container {
-    /* column-gap: 10px; */
-    /* border: 1px solid var(--drac-lime1);
-    width: fit-content;
-    padding: 3px 10px;
-    border-radius: 5px; */
 }
 
 #footer-socials-container>i {
@@ -643,10 +597,6 @@ body {
     color: hsl(0deg 0% 100% / 68%);
 }
 
-.footer-input.text-input {
-    /* height: 32px; */
-}
-
 .footer-input.area-input {
     height: 144px;
 }
@@ -660,19 +610,7 @@ body {
 
 
 
-@keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
+
   
   /* .about-quote-container:hover {
       animation: shake 2s;
