@@ -12,7 +12,11 @@
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
+}
+
+html {
+    font-size: 16px;
+}
 
 body {
     overflow-x: hidden;
@@ -21,6 +25,85 @@ body {
 .section {
     position: relative;
 }
+
+/* === media queries === */
+
+/* BREAKPOINT: X-SMALL (--bk-xs) */
+@media screen and (min-width: 320px) {
+
+    body {
+        border-left: 5px solid red;
+    }
+
+}
+
+/* BREAKPOINT: SMALL (--bk-sm) */
+@media screen and (min-width: 576px) {
+
+    html {
+        font-size: 20px;
+    }
+
+    body {
+        border-left: 5px solid orange;
+    }
+
+}
+
+/* BREAKPOINT: MEDIUM (--bk-md) */
+@media screen and (min-width: 768px) {
+
+    html {
+        font-size: 24px;
+    }
+
+    body {
+        border-left: 5px solid yellow;
+    }
+    
+}
+
+/* BREAKPOINT: LARGE (--bk-lg) */
+@media screen and (min-width: 992px) {
+
+    html {
+        font-size: 28px;
+    }
+
+    body {
+        border-left: 5px solid green;
+    }
+    
+}
+
+/* BREAKPOINT: X-LARGE (--bk-xl) */
+@media screen and (min-width: 1200px) {
+
+    html {
+        font-size: 32px;
+    }
+
+    body {
+        border-left: 5px solid blue;
+    }
+    
+}
+
+/* BREAKPOINT: 2X-LARGE (--bk-2xl) */
+@media screen and (min-width: 1440px) {
+
+    html {
+        font-size: 36px;
+    }
+
+    body {
+        border-left: 5px solid indigo;
+    }
+    
+}
+
+/* === end media queries === */
+
 
 /* ------------- SECTION: LANDING ------------- */
 
@@ -110,6 +193,45 @@ body {
     right: 50%;
     bottom: 10px;
 }
+
+/* === media queries === */
+
+/* BREAKPOINT: SMALL (--bk-sm) */
+@media screen and (min-width: 576px) {
+
+
+
+}
+
+/* BREAKPOINT: MEDIUM (--bk-md) */
+@media screen and (min-width: 768px) {
+
+
+    
+}
+
+/* BREAKPOINT: LARGE (--bk-lg) */
+@media screen and (min-width: 992px) {
+
+
+    
+}
+
+/* BREAKPOINT: X-LARGE (--bk-xl) */
+@media screen and (min-width: 1200px) {
+
+
+    
+}
+
+/* BREAKPOINT: 2X-LARGE (--bk-2xl) */
+@media screen and (min-width: 1440px) {
+
+
+    
+}
+
+/* === end media queries === */
 
 /* ------------- SECTION: INTRO ------------- */
 

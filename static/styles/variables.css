@@ -8,4 +8,14 @@
     --drac-gray-accent2: hsl(231, 30%, 82%);
 
     --gutter-base-pct: 8%;
+
+    /* NOTE: Without a preprocessor, these simply serve as a reference. Still have to hardcode
+    the media query breakpoints if using vanilla css */
+    --bk-xs: 320px;   /* For screens *below* 320px wide (do they even exist any more... ?) */
+    --bk-sm: 576px;
+    --bk-md: 768px;
+    --bk-lg: 992px;
+    --bk-xl: 1200px;
+    --bk-2xl: 1400px;
+
 }

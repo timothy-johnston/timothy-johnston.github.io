@@ -47,11 +47,11 @@ p, a, li, ul {
 
 .title, .subtitle {
     font-family: 'Fira Code', monospace;
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 .subtitle {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .copy {
