@@ -107,15 +107,15 @@ body {
 
 /* ------------- SECTION: LANDING ------------- */
 
-#section-landing {
-    height: 100vh;
-}
-
 .bg-video-container {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
     position: fixed;
+}
+
+#section-landing {
+    height: 100vh;
 }
 
 #chapter-landing {
@@ -213,14 +213,14 @@ body {
 /* BREAKPOINT: LARGE (--bk-lg) */
 @media screen and (min-width: 992px) {
 
+    .title {
 
+    }
     
 }
 
 /* BREAKPOINT: X-LARGE (--bk-xl) */
 @media screen and (min-width: 1200px) {
-
-
     
 }
 

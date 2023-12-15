@@ -47,15 +47,15 @@ p, a, li, ul {
 
 .title, .subtitle {
     font-family: 'Fira Code', monospace;
-    font-size: 2rem;
+    font-size: clamp(16px, 2rem, 56px);
 }
 
 .subtitle {
-    font-size: 1.5rem;
+    font-size: clamp(20px, 1.5rem, 42px);
 }
 
-.copy {
-    font-size: 18px;
+.body-copy {
+    font-size: clamp(16px, 1.1rem, 20px);
 }
 
 /* COLORS */
