@@ -1,4 +1,6 @@
 :root {
+    --drac-dkblue1: hsl(231deg 33.65% 9.54%);
+    --drac-midnight1: hsl(231deg 66.21% 6.25%);
     --drac-gray1: hsl(231, 15%, 18%);
     --drac-cyan1: hsl(191, 97%, 65%);
     --drac-lime1: hsl(135, 94%, 65%);

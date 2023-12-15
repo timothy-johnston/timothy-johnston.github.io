@@ -17,7 +17,7 @@ body {
     overflow: hidden; */
 }
 
-#landing-bg-initial {
+/* #landing-bg-initial {
     display: none;
     height: 100vh;
     width: 100vw;
@@ -25,7 +25,7 @@ body {
     position: fixed;
     transition: 3s cubic-bezier(0.82, -0.03, 1, 1);
     bottom: 0;
-}
+} */
 
 .bg-video-container {
     height: 100vh;
@@ -35,6 +35,8 @@ body {
 }
 
 #chapter-landing {
+    background: radial-gradient(circle at 50% 99%, hsla(231, 15%, 18%, 1.0) 100%, hsla(0, 0%, 100%, 0)), var(--drac-gray1);
+    background: radial-gradient(circle at 50% 99%, hsla(231, 15%, 18%, 1.0) 100%, hsla(0, 0%, 100%, 0)), hsla(231, 15%, 18%, .2);
     transition: 4s linear;
     position: fixed;
     width: 100%;
@@ -311,7 +313,8 @@ body {
 .category-item {
     padding: 7px 10px;
     background: var(--drac-gray1);
-    border: 1px solid var(--drac-cyan1);
+    /* border-bottom: 1px solid var(--drac-cyan1); */
+    box-shadow: inset 0px -2px 0px var(--drac-cyan1);
 }
 
 .category-item p {

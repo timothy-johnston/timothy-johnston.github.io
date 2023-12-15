@@ -164,9 +164,40 @@ function fadeRocket(opacity) {
     rocketContainer.style.opacity = opacity;
 }
 
+//Leveraging a radial gradient; will change its x position and the % position of each of the gradient's colors
 function fadeLanding() {
+
+    //Get the element of the background to change
     let bg = document.getElementById("chapter-landing");
-    bg.style.backgroundColor = "hsl(231deg 15% 18% / 38%)";
+    
+    //Do some math; compute the steps to change the x and % values by, based on starting position and 
+    //length of the rocket animation.
+    //TODO: instead of hardcoding starting values should get dynamically here
+    let gradientPctGray = 100;
+    let posX = 50;
+    let intervalStepMs = 10;
+    let transitionDurationMs = 3000;
+    let intervalStepsInDuration = transitionDurationMs / intervalStepMs;
+    let gradientStepSizeGray = gradientPctGray / intervalStepsInDuration;
+    let posStepSizeX = posX / intervalStepsInDuration;
+    console.log("gradient step is: " + gradientStepSizeGray);
+    
+    //Execute an interval; at each step, adjust the gradient background
+    let test = setInterval(function() {
+
+        //Compute new background values and update background style
+        gradientPctGray = gradientPctGray - gradientStepSizeGray; 
+        gradientPctClear = gradientPctGray + 25;
+        posX = posX = posStepSizeX;
+        bg.style.background = "radial-gradient(circle at " + posX + "% 99%, hsla(231, 15%, 18%, 1) " + gradientPctGray + "%, hsla(0, 0%, 100%, 0) " + gradientPctClear + "%), hsla(231, 15%, 18%, .4)";
+        
+        //Kill the interval once the gradient has been modified/shifted to where it is no longer visible
+        if (gradientPctGray < -100) {
+            clearInterval(test);
+        }
+        
+    }, 10);
+
     // let bg = document.getElementById("landing-bg-initial");
     // bg.style.height = "0px";
     // bg.style.opacity = 0;
