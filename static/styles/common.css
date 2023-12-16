@@ -54,8 +54,9 @@ p, a, li, ul {
     font-size: clamp(20px, 1.5rem, 42px);
 }
 
-.body-copy {
-    font-size: clamp(16px, 1.1rem, 20px);
+.copy {
+    font-size: clamp(16px, 1rem, 20px);
+    font-weight: 300; /* only for Karla font family - don't move this to sidekick unless karla is default font there */
 }
 
 /* COLORS */
@@ -92,6 +93,24 @@ p, a, li, ul {
 .chapter {
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+.chapter-header {
+    font-family: 'Fira Code', monospace;
+}
+
+.chapter-title {
+    font-size: clamp(52px, 3rem, 78px);
+    /* font-family: 'Fira Code', monospace; */
+    font-weight: bold;
+    text-shadow: 4px 4px 0px var(--drac-cyan1);
+    color: hsl(229.41deg 34.69% 9.61%);
+    -webkit-text-stroke: 1px var(--drac-cyan1);
+}
+
+.chapter-subtitle {
+    color: var(--drac-lime1);
+    font-size: clamp(20px, 1.5rem, 32px);
 }
 
 .guttered-base {

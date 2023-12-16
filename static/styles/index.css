@@ -250,25 +250,12 @@ body {
     border-radius: 5px;
 }
 
-#intro-title {
-    font-weight: bold;
-    font-size: 64px;
-    text-shadow: 4px 4px 0px var(--drac-cyan1);
-    color: hsl(229.41deg 34.69% 9.61%);
-    -webkit-text-stroke: 1px var(--drac-cyan1);
-    box-shadow: inset 0px 0px 0px 0px var(--drac-gray1);
-}
-
-.intro-subtitle {
-    color: var(--drac-lime1);
-}
-
 #intro-body-container {
     row-gap: 50px;
 }
 
 .intro-copy {
-    font-size: 18px;
+    /* font-size: 18px; */
     color: white;
     border-left: 5px solid var(--drac-cyan1);
     padding: 20px 25px;
@@ -372,14 +359,14 @@ body {
     row-gap: 30px;
 }
 
-#skills-title {
+/* #skills-title {
     font-size: 64px;
     font-family: 'Fira Code';
     font-weight: bold;
     text-shadow: 4px 4px 0px var(--drac-cyan1);
     color: hsl(229.41deg 34.69% 9.61%);
     -webkit-text-stroke: 1px var(--drac-cyan1);
-}
+} */
 
 #skills-container {
     row-gap: 30px;
@@ -391,9 +378,10 @@ body {
 
 .category-title {
     color: var(--drac-lime1);
-    font-style: italic;
-    font-size: 20px;
-    font-family: 'Fira Code', monospace;
+    font-size: min(1.5rem, 40px);
+    /* font-style: italic; */
+    /* font-size: 20px; */
+    /* font-family: 'Fira Code', monospace; */
 }
 
 .category-container {
