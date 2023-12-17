@@ -36,6 +36,35 @@ body {
 
 /* STRUCTURES - BUTTONS */
 
+.btn {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    overflow: hidden;
+    column-gap: 10px;
+    background: var(--drac-gray-accent1);
+}
+
+.btn-only-fa-icon {
+
+}
+
+.btn-only-label {
+
+}
+
+.btn-padded-base {
+    padding: 10px 15px;
+}
+
+.btn-fa-icon {
+    font-size: 22px;
+}
+
+.btn-label {
+    font-size: clamp(16px, 1rem, 20px);
+}
+
 
 /* STRUCTURES - FORMS */
 
@@ -60,7 +89,7 @@ p, a, li, ul {
     font-size: clamp(20px, 1.5rem, 42px);
 }
 
-.copy, .btn-label {
+.copy {
     font-size: clamp(16px, 1rem, 20px);
     font-weight: 300; /* only for Karla font family - don't move this to sidekick unless karla is default font there */
 }

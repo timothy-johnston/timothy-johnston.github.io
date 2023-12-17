@@ -594,11 +594,6 @@ body {
 }
 
 .card-link {
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 100%;
     background: hsl(231deg 66.21% 6.25%);
 }
 
@@ -618,6 +613,7 @@ body {
 
 .card-link a {
     padding: 8px 17px;
+    padding-right: 27px;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -681,6 +677,7 @@ body {
 .footer-component-title {
     color: var(--drac-lime1);
     margin-right: auto;
+    font-size: clamp(16px, 2rem, 36px);
 }
 
 #footer-socials-container {
@@ -720,6 +717,13 @@ body {
 
 .footer-input.area-input {
     height: 144px;
+}
+
+#btn-send-contact {
+    background: linear-gradient(99deg, #4FDDFC -30.63%, #52FA7C);
+    align-items: center;
+    font-size: clamp(18px, 1rem, 20px);
+    font-weight: bold;
 }
 
 #copyright-container>p {
