@@ -270,9 +270,7 @@ body {
 }
 
 #intro-footer-container {
-    column-gap: 25px;
-    background-color: var(--drac-gray1);
-    align-items: center;
+    flex-direction: column;
 }
 
 #intro-img {
@@ -280,9 +278,10 @@ body {
     width: 100px;
     min-height: 100px;
     min-width: 100px;
-    border: 3px solid var(--drac-cyan1);
+    border: 10px solid var(--drac-dkblue1);
     border-radius: 9999px;
-    margin-right: 25px;
+    transform: translate(0px, -50px);
+    align-self: center;
 }
 
 /* ------------- SECTION: QUOTES ------------- */
