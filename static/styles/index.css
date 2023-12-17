@@ -416,8 +416,8 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    column-gap: 75px;
     row-gap: 75px;
+    justify-content: center;
 }
 
 #projects-header-container {
@@ -426,7 +426,7 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 5px solid var(--drac-lime1);
-    background: hsl(231deg 15% 18% / 61%);
+    /* background: hsl(231deg 15% 18% / 61%); */
     border-radius: 10px;
 }
 
@@ -441,15 +441,19 @@ body {
 }
 
 .project-card {
-    max-width: 325px;
+    /* max-width: 325px; */
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
     border-radius: 10px;
     box-shadow: 0px 10px 55px #000000b3;
     background: hsl(231deg 15% 18% / 65%);
     position: relative;
+    /* max-width: 525px; */
+    width: 100%;
+    /* min-width: 325px;
+    width: 40%; */
 }
 
 @keyframes increase-width {
@@ -496,7 +500,7 @@ body {
     background: url("../resources/images/pi-hardware-1.jpg");
     background-size: cover;
     background-position: center;
-    height: 150px;
+    height: 175px;
     display: flex;
     align-items: flex-end;
     border-top-left-radius: 10px;
@@ -536,6 +540,7 @@ body {
 }
 
 .summary-copy, .detail-copy {
+    font-size: clamp(16px, 1rem, 18px);
     color: white;
 }
 
@@ -658,10 +663,34 @@ body {
     font-size: 16px;
 }
 
+/* BREAKPOINT: SMALL (--bk-sm) */
+@media screen and (min-width: 576px) {
+ 
+    .project-card {
+        /* min-width: 325px; */
+        /* width: 40%; */
+    }
+    
+}
+
+/* BREAKPOINT: SMALL (--bk-sm) */
+@media screen and (min-width: 768px) {
+
+    #project-cards-container {
+        justify-content: space-between;
+    }
+
+    .project-card {
+        /* min-width: 300px; */
+        width: 47%;
+    }
+    
+}
+
 /* ------------- SECTION: PROJECTS ------------- */
 
 #section-footer {
-    background: var(--drac-gray1);
+    background: linear-gradient(0deg, var(--drac-dkblue1), var(--drac-gray1));
     border-top: 5px solid var(--drac-lime1);
 }
 
@@ -700,7 +729,7 @@ body {
 }
 
 .footer-input {
-    background: hsl(231deg 33.65% 9.54%);
+    background: var(--drac-midnight1);
     outline: none;
     border: none;
     box-shadow: none;

@@ -82,11 +82,11 @@ p, a, li, ul {
 
 .title, .subtitle {
     font-family: 'Fira Code', monospace;
-    font-size: clamp(16px, 2rem, 56px);
+    font-size: clamp(16px, 2rem, 52px);
 }
 
 .subtitle {
-    font-size: clamp(20px, 1.5rem, 42px);
+    font-size: clamp(20px, 1.5rem, 38px);
 }
 
 .copy {
@@ -312,6 +312,19 @@ extras */
 .sk-spacer-svg svg {
     height: 50px;
     width: auto;
+}
+
+.sk-automargined {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sk-width-cap-700 {
+    max-width: 700px;
+}
+
+.sk-width-cap-1100 {
+    max-width: 1100px;
 }
 
 
