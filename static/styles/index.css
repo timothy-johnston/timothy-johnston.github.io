@@ -244,7 +244,7 @@ body {
 }
 
 #intro-title-container {
-    row-gap: 20px;
+    /* row-gap: 20px; */
     padding: 25px 15px;
     border: 1px solid var(--drac-lime1);
     border-radius: 5px;
@@ -304,7 +304,7 @@ body {
 
 .value-container {
     font-family: 'Fira Code', sans-serif;
-    transform: translate(0px, -14px);
+    /* transform: translate(0px, -14px); */
 }
 
 .value-label {
@@ -314,7 +314,7 @@ body {
     width: fit-content;
     padding-left: 25px;
     padding-right: 27px;
-    
+    transform: translate(0px, -50%);
 }
 
 .value {
@@ -324,6 +324,7 @@ body {
     margin-top: 10px;
     padding-left: 25px;
     padding-right: 25px;
+    transform: translate(0px, -14px);
 }
 
 .quote-container {
@@ -335,7 +336,7 @@ body {
 }
 
 .quote, .attribution {
-    font-size: 16px;
+    /* font-size: 16px; */
     color: white;
     background: var(--drac-gray1);
     padding-top: 5px;
@@ -346,6 +347,16 @@ body {
 
 .attribution {
     width: fit-content;
+}
+
+/* BREAKPOINT: SMALL (--bk-sm) */
+@media screen and (max-width: 320px) {
+
+    /* Reason for using a max-width here: Unlikely that page will be viewed with screen less than 320px so want to use the media query for the edge case, rather than the norm */ 
+    .value {
+        font-size: 22px;
+    }
+    
 }
 
 /* ------------- SECTION: SKILLS ------------- */

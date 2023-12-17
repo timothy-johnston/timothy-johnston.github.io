@@ -97,6 +97,9 @@ p, a, li, ul {
 
 .chapter-header {
     font-family: 'Fira Code', monospace;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 }
 
 .chapter-title {
@@ -111,6 +114,11 @@ p, a, li, ul {
 .chapter-subtitle {
     color: var(--drac-lime1);
     font-size: clamp(20px, 1.5rem, 32px);
+}
+
+.chapter-subtitle-minor {
+    font-size: clamp(16px, 1.1rem, 20px);
+    font-style: italic;
 }
 
 .guttered-base {
