@@ -76,8 +76,9 @@ function handleEventClickInfoPrompt(event) {
     const back = card.querySelector(".card-back");
     const btn = card.querySelector(".info-prompt");
 
-    //Ensure the width of the card back's content is set to the full width of the card
-    back.querySelector(".details-container").style.width = (card.offsetWidth - 1) + "px";
+    //Ensure the width of the card back's content is set to the full width of the card, and leave 
+    //a scrollbar gap
+    back.querySelector(".details-container").style.width = (card.offsetWidth - 5) + "px";
 
     //Attach/detach the keyframe animations
     //Note: kf-decrease-width begins off since it triggers on page load, otherwise it stays on

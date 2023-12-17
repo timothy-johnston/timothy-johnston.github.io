@@ -430,11 +430,11 @@ body {
     border-radius: 10px;
 }
 
-#projects-header {
+/* #projects-header {
     color: var(--drac-lime1);
     font-family: 'Fira Code', monospace;
     font-size: 64px;
-}
+} */
 
 .section-subtitle {
     font-size: 24px;
@@ -580,7 +580,7 @@ body {
     padding: 4px 0px;
 }
 
-.info-prompt-nav-style .card-nav {
+.info-prompt-nav-style {
     font-size: 38px;
     color: var(--drac-lime1);
 
@@ -598,7 +598,7 @@ body {
     align-items: center;
     border-radius: 5px;
     overflow: hidden;
-    width: fit-content;
+    width: 100%;
     background: hsl(231deg 66.21% 6.25%);
 }
 
@@ -617,9 +617,10 @@ body {
 }
 
 .card-link a {
-    width: 100%;
     padding: 8px 17px;
     color: white;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 @keyframes supress-scrollbar-y {
@@ -629,8 +630,8 @@ body {
 }
 
 .details-container {
-    padding: 15px;
-    padding: 15px 10px;
+    overflow: auto;
+    padding: 20px;
     border-radius: 5px;
     position: absolute;
     width: 200px;

@@ -19,6 +19,12 @@ body {
 
 }
 
+.section-title {
+    font-family: 'Fira Code', monospace;
+    font-size: clamp(52px, 3rem, 64px);
+    color: var(--drac-lime1);
+}
+
 .section-drac-gray .section-content-wrapper {
     background: var(--drac-gray1);
 }
@@ -54,7 +60,7 @@ p, a, li, ul {
     font-size: clamp(20px, 1.5rem, 42px);
 }
 
-.copy {
+.copy, .btn-label {
     font-size: clamp(16px, 1rem, 20px);
     font-weight: 300; /* only for Karla font family - don't move this to sidekick unless karla is default font there */
 }
