@@ -40,7 +40,8 @@ function attachEventListeners() {
 function cbTest() {
     console.log("here in cb test");
     setTimeout(function() {
-        document.getElementById("countdown-text").parentElement.style.opacity = .0;
+        document.getElementById("countdown-text").parentElement.style.background = "var--(drac-lime1)";
+        document.getElementById("countdown-text").color = "var(--drac-midnight1";
     }, 1000)
 }
 
@@ -255,8 +256,8 @@ function engageThrusters() {
 
 function liftoff() {
 
-    moveRocketToCoord("-150px");
-    rotateRocket("45deg");
+    moveRocket();
+    rotateRocket("65deg");
     resizeRocket("25px", "25px");
     fadeRocket("0.2");
     fadeLanding();
@@ -268,10 +269,11 @@ function liftoff() {
 
 //Move rocket
 //sidekick abstraction: moveElementToCoord
-function moveRocketToCoord(top) {
+function moveRocket() {
     let rocketAnimation = document.getElementById("rocket-animation");
-    rocketAnimation.style.top = top;
-    rocketAnimation.style.right = "10px";
+    // rocketAnimation.style.bottom = "initial";
+    rocketAnimation.style.bottom = "calc(100vh + 20px)";
+    rocketAnimation.style.left = "calc(100vw + 20px)";
 }
 
 //Rotate rocket

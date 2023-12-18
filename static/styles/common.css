@@ -83,11 +83,11 @@ p, a, li, ul {
 
 .title, .subtitle {
     font-family: 'Fira Code', monospace;
-    font-size: clamp(16px, 2rem, 52px);
+    font-size: clamp(16px, 2rem, 64px);
 }
 
 .subtitle {
-    font-size: clamp(20px, 1.5rem, 38px);
+    font-size: clamp(20px, 1.5rem, 42px);
 }
 
 .copy {
@@ -322,6 +322,10 @@ extras */
 
 .sk-width-cap-700 {
     max-width: 700px;
+}
+
+.sk-width-cap-900 {
+    max-width: 900px;
 }
 
 .sk-width-cap-1100 {

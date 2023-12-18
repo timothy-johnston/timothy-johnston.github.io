@@ -119,7 +119,7 @@ body {
 }
 
 #section-landing {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #chapter-landing {
@@ -128,9 +128,9 @@ body {
     background: radial-gradient(circle at 50% 99%, hsla(231, 34%, 10%, 1.0) 100%, hsla(0, 0%, 100%, 0)), hsla(231, 15%, 18%, .2); */
     /* background: radial-gradient(circle at 50% 99%, var(--drac-dkblue1), var(--drac-dkblue1)); */
     transition: 4s linear;
-    position: fixed;
+    position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     box-sizing: border-box;
 }
 
@@ -139,7 +139,10 @@ body {
 }
 
 #landing-copy-container {
-    row-gap: 107px;
+    width: 100%;
+    row-gap: 115px;
+    margin-bottom: 100px;
+    margin-top: 115px;
 }
 
 #landing-title-container {
@@ -232,12 +235,12 @@ body {
 }
 
 #rocket-animation {
-    z-index: 1;
+    /* z-index: 1; */
     position: absolute;
-    top: calc(100vh - 150px);
-    right: 50%;
-    transform: translate(50%, 0%);
-    transition: top 3s linear, right 3s cubic-bezier(0.82, -0.03, 1, 1);
+    bottom: 50px;
+    left: 50vw;
+    transform: translate(-50%, 0%);
+    transition: bottom 3s linear, left 3s cubic-bezier(0.82, -0.03, 1, 1);
 }
 
 #rocket {
