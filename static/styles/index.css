@@ -166,6 +166,22 @@ body {
     color: var(--drac-cyan1);
 }
 
+.animated-text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 15px;
+    position: relative;;
+}
+
+#animation-cursor {
+    width: 20px;
+    height: 75%;
+    background: white;
+    position: absolute;
+}
+
 #liftoff-text-container {
     /* background: orange;
     padding: 10px 15px; */

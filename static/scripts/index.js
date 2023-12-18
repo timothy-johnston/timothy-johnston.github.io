@@ -37,6 +37,10 @@ function attachEventListeners() {
     
 }
 
+function cbTest(str) {
+    console.log(str);
+}
+
 function initiateLandingPageAnimation() {
 
     //Get all text elements to animate, and remove their text
@@ -66,50 +70,65 @@ function initiateLandingPageAnimation() {
         textEl.textContent = ""; 
     }
 
-    appendLetters(toAnimate);
+    // animateText(toAnimate);
+    animateText(toAnimate, cbTest)
+
+    // }
 
 }
 
 //toAnimate: array of objects with k:v = id:text
-function animateText(toAnimateArray) {
+function animateText(toAnimateArray, callback) {
+    console.log("in animatetext");
 
-    for (let toAnimate of toAnimateArray) {
+    callback("test from animateText");
 
-        //Unhide
-        let textEl = document.getElementById(toAnimate.id);
-        textEl.style.visibility = "visible";
+    let upNext = document.getElementById(toAnimateArray[0].id);
+    upNext.style.visibility = "visible";
+    upNext.parentElement.innerHTML += getCursorHtml();
 
-        //Begin adding letters
-        appendLetters(toAnimateArray);
-
-        console.log("finished one");
-
-    }
-
-    console.log("Finished: all");
+    appendLetters(toAnimateArray, callback);
 
 }
 
-function appendLetters(toAnimateArray) {
+//Appends individual letters
+function appendLetters(toAnimateArray, callback) {
     let toAnimate = toAnimateArray[0];
     let textEl = document.getElementById(toAnimate.id);
     let remainingChars = toAnimate.textToAdd;
     let currentChar = remainingChars.shift();
 
-    textEl.textContent = textEl.textContent + currentChar
+    // textEl.textContent = textEl.textContent + currentChar
+    textEl.parentElement.innerHTML += `<p>` + currentChar + `</p>`;
 
     toAnimate.remainingChars = remainingChars;
 
-
-
+    //Check for exit conditions
     if (remainingChars.length == 0) {
         toAnimateArray.shift();
+        if (toAnimateArray.length == 0) {
+            callback("here i am")
+            launchRocket();
+            return "hello";
+        } else {
+            const animationCursor = document.getElementById("animation-cursor");
+            animationCursor.remove();
+            animateText(toAnimateArray, callback)
+            return;
+        }
     }
 
     setTimeout(function() {
-        appendLetters(toAnimateArray);
-    }, 200)
+        appendLetters(toAnimateArray, callback);
+    }, 50)
 
+}
+
+function getCursorHtml() {
+    const cursorHtml = `
+        <div id="animation-cursor"></div>
+    `
+    return cursorHtml;
 }
 
 function handleScroll() {
