@@ -158,6 +158,13 @@ body {
     color: var(--drac-cyan1);
 }
 
+#liftoff-text-container {
+    background: orange;
+    padding: 10px 15px;
+    width: fit-content;
+    border-radius: 5px;
+}
+
 #rocket-animation {
     z-index: 1;
     position: absolute;
