@@ -166,6 +166,7 @@ body {
     color: var(--drac-cyan1);
 }
 
+/* for sidekick */
 .animated-text-container {
     display: flex;
     flex-direction: row;
@@ -177,10 +178,17 @@ body {
     /* position: relative; */
 }
 
+/* for sidekick */
+.animated-word {
+    display: flex;
+}
+
+/* for sidekick */
 #animation-cursor {
-    width: 20px;
+    width: 10px;
     height: 75%;
     background: white;
+    margin-left: 10px;
     /* position: absolute; */
 }
 
@@ -198,7 +206,7 @@ body {
     background: orange;
     border-radius: 99px;
     padding: 10px 15px;
-    transition: 1s;
+    transition: 2.25s;
     width: fit-content;
     /* position: absolute; */
 }

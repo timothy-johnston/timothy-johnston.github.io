@@ -37,10 +37,11 @@ function attachEventListeners() {
     
 }
 
-function cbTest(str) {
+function cbTest() {
+    console.log("here in cb test");
     setTimeout(function() {
         document.getElementById("countdown-text").parentElement.style.opacity = .0;
-    }, 250)
+    }, 1000)
 }
 
 function initiateLandingPageAnimation() {
@@ -68,75 +69,103 @@ function initiateLandingPageAnimation() {
             id: id,
             textInitial: text,
             textToAdd: text.split(""),
-            classList: textEl.classList
+            wordStart: true,
+            classList: textEl.classList,
+            fontSize: window.getComputedStyle(textEl).getPropertyValue("font-size")
         })
         textEl.textContent = ""; 
     }
 
     // animateText(toAnimate);
-    animateText(toAnimate, cbTest)
+    let config = {
+        delayAfterChar: 75,
+        delayAfterElement: 200
+    }
+    animateText(toAnimate, config, cbTest)
 
     // }
 
 }
 
 //toAnimate: array of objects with k:v = id:text
-function animateText(toAnimateArray, callback) {
+function animateText(toAnimateArray, config, callback) {
     console.log("in animatetext");
 
     // callback("test from animateText");
-
-    let upNext = document.getElementById(toAnimateArray[0].id);
+    const toAnimate = toAnimateArray[0];
+    let upNext = document.getElementById(toAnimate.id);
     upNext.parentElement.style.visibility = "visible";
-    upNext.parentElement.innerHTML += getCursorHtml();
+    upNext.parentElement.innerHTML += getCursorHtml(toAnimate.fontSize);
 
-    appendLetters(toAnimateArray, callback);
+    appendLetters(toAnimateArray, config, callback);
 
 }
 
 //Appends individual letters
-function appendLetters(toAnimateArray, callback) {
+function appendLetters(toAnimateArray, config, callback) {
     let toAnimate = toAnimateArray[0];
     let textEl = document.getElementById(toAnimate.id);
+    let parentEl = textEl.parentElement;
     let remainingChars = toAnimate.textToAdd;
     let nextChar = remainingChars.shift();
+
+    if (toAnimate.wordStart) {
+        const newWordElement = document.createElement("div");
+        newWordElement.classList.add("animated-word");
+        parentEl.insertBefore(newWordElement, parentEl.lastElementChild);
+        toAnimate.wordStart = false;
+    }
+
     if (nextChar == " ") {
         nextChar = "&nbsp;"
+        toAnimate.wordStart = true;
     }
 
 
 
     const newCharElement = document.createElement("p");
+    // if (nextChar = " ") {
+        
+    // }
     newCharElement.innerHTML = nextChar;
     newCharElement.classList = toAnimate.classList;
-    textEl.parentElement.insertBefore(newCharElement, textEl.parentElement.lastElementChild);
+    const parentsWordContainers = parentEl.getElementsByClassName("animated-word");
+    const targetWordContainer = parentsWordContainers[parentsWordContainers.length - 1];
+    targetWordContainer.innerHTML += newCharElement.outerHTML;
+    // parentEl.insertBefore(newCharElement, textEl.parentElement.lastElementChild);
 
     toAnimate.remainingChars = remainingChars;
 
     //Check for exit conditions
     if (remainingChars.length == 0) {
+        const animationCursor = document.getElementById("animation-cursor");
+        animationCursor.remove();
         toAnimateArray.shift();
         if (toAnimateArray.length == 0) {
-            callback("here i am")
+            callback();
             launchRocket();
             return;
         } else {
-            const animationCursor = document.getElementById("animation-cursor");
-            animationCursor.remove();
-            animateText(toAnimateArray, callback)
+            setTimeout(function() {
+                animateText(toAnimateArray, config, callback)
+            }, config.delayAfterElement)
+            Array.from(parentsWordContainers).forEach(wordContainer => {
+                wordContainer.remove();
+            })
+            textEl.textContent = toAnimate.textInitial;
             return;
         }
     }
 
     setTimeout(function() {
-        appendLetters(toAnimateArray, callback);
-    }, 75)
+        appendLetters(toAnimateArray, config, callback);
+    }, config.delayAfterChar)
 
 }
 
-function getCursorHtml() {
+function getCursorHtml(height) {
     const cursorHtml = `
-        <div id="animation-cursor"></div>
+        <div id="animation-cursor" style="height: ` + height + `"></div>
     `
     return cursorHtml;
 }
