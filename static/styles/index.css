@@ -120,6 +120,9 @@ body {
 
 #chapter-landing {
     background: radial-gradient(circle at 50% 99%, hsla(231, 15%, 18%, 1.0) 100%, hsla(0, 0%, 100%, 0)), hsla(231, 15%, 18%, .2);
+    /* background: radial-gradient(circle at 50% 99%, hsla(231, 15%, 18%, 1.0), var(--drac-dkblue1));
+    background: radial-gradient(circle at 50% 99%, hsla(231, 34%, 10%, 1.0) 100%, hsla(0, 0%, 100%, 0)), hsla(231, 15%, 18%, .2); */
+    /* background: radial-gradient(circle at 50% 99%, var(--drac-dkblue1), var(--drac-dkblue1)); */
     transition: 4s linear;
     position: fixed;
     width: 100%;
@@ -254,6 +257,13 @@ body {
     row-gap: 50px;
 }
 
+.intro-copy-header {
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Fira Code', monospace;
+    color: var(--drac-cyan1);
+}
+
 .intro-copy {
     /* font-size: 18px; */
     color: white;
@@ -270,18 +280,19 @@ body {
 }
 
 #intro-footer-container {
-    flex-direction: column;
+    position: relative;
+    margin-bottom: 50px;
 }
 
 #intro-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 70%);
     height: 100px;
     width: 100px;
-    min-height: 100px;
-    min-width: 100px;
     border: 10px solid var(--drac-dkblue1);
     border-radius: 9999px;
-    transform: translate(0px, -50px);
-    align-self: center;
 }
 
 /* ------------- SECTION: QUOTES ------------- */
@@ -300,6 +311,7 @@ body {
     padding: 25px;
     padding-top: 0px;
     border: 1px solid var(--drac-cyan1);
+    border-radius: 5px;
 }
 
 .value-container {
@@ -343,6 +355,7 @@ body {
     padding-bottom: 7px;
     padding-left: 15px;
     padding-right: 15px;
+    border-radius: 2px;
 }
 
 .attribution {
@@ -362,11 +375,11 @@ body {
 /* ------------- SECTION: SKILLS ------------- */
 
 #section-skills {
-    background: hsl(231deg 33.65% 9.54%);
+    background: var(--drac-midnight1);
 }
 
 #chapter-skills {
-    row-gap: 30px;
+    row-gap: 45px;
 }
 
 /* #skills-title {
@@ -379,7 +392,7 @@ body {
 } */
 
 #skills-container {
-    row-gap: 30px;
+    row-gap: 45px;
 }
 
 .category-container-outer {
@@ -403,6 +416,7 @@ body {
     padding: 7px 10px;
     background: var(--drac-gray1);
     box-shadow: inset 0px -2px 0px var(--drac-cyan1);
+    border-radius: 5px;
 }
 
 .category-item p {
@@ -508,8 +522,9 @@ body {
 }
 
 .card-content {
-    padding: 20px 15px;
+    padding: 30px 6%;
     color: var(--drac-gray1);
+    row-gap: 35px;
 }
 
 .details-container,
@@ -525,7 +540,7 @@ body {
 .card-title-container {
     background: hsl(231deg 15% 18% / 81%);
     color: var(--drac-lime1);
-    padding: 10px 15px;
+    padding: 10px 6%;
     width: 100%;
     font-weight: bold;;
 }
@@ -545,20 +560,15 @@ body {
 }
 
 .info-prompt {
-    border: 1px solid slategray;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    padding: 10px 15px;
-    background-color: var(--drac-lime1);
+    padding: 7px 15px;
     background: linear-gradient(99deg, #4FDDFC -30.63%, #52FA7C);
-    background-color: var(--drac-lime1);
-    border: none;
     border-radius: 10px;
-    box-shadow: 0px 5px 15px #80808063;
+    box-shadow: 0px 5px 1px 1px var(--drac-midnight1);
     width: calc(100% - 30px);
-    margin: 20px auto;
     position: relative;
+    margin-bottom: 4px;
 }
 
 .info-prompt-nav-style {
@@ -567,7 +577,7 @@ body {
     height: 30px;
     overflow: hidden;
     margin-right: 0px;
-    transform: translate(35px, 0px);
+    transform: translate(45px, 0px);
     z-index: 1;
     border-radius: 900px;
     padding: 7px;
@@ -576,6 +586,7 @@ body {
     background: var(--drac-gray1);
     background-color: var(--drac-gray1);
     box-shadow: 0px 0px 15px 2px hsl(135deg 94% 65% / 50%);
+    margin-left: auto;
 }
 
 .info-prompt-text {
@@ -592,14 +603,16 @@ body {
 }
 
 .card-links-container {
-    row-gap: 10px;
+    row-gap: 15px;
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 17px;
 }
 
 .card-link {
-    background: hsl(231deg 66.21% 6.25%);
+    column-gap: 0px;
+    background: var(--drac-dkblue1);
+    box-shadow: 0px 5px 1px 1px var(--drac-midnight1);
 }
 
 .card-link-icon-container {
@@ -720,12 +733,16 @@ body {
 }
 
 #contact-form {
-    row-gap: 7px;
+    row-gap: 12px;
 }
 
 #contact-form label {
     font-size: 18px;
     color: var(--drac-cyan1);
+}
+
+.form-element-container {
+    row-gap: 7px;
 }
 
 .footer-input {
@@ -749,10 +766,12 @@ body {
 }
 
 #btn-send-contact {
+    margin-top: 10px;
     background: linear-gradient(99deg, #4FDDFC -30.63%, #52FA7C);
     align-items: center;
     font-size: clamp(18px, 1rem, 20px);
     font-weight: bold;
+    box-shadow: 0px 5px 1px 1px var(--drac-midnight1);
 }
 
 #copyright-container>p {
