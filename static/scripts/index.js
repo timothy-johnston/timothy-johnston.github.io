@@ -38,7 +38,9 @@ function attachEventListeners() {
 }
 
 function cbTest(str) {
-    console.log(str);
+    setTimeout(function() {
+        document.getElementById("countdown-text").parentElement.style.opacity = .0;
+    }, 250)
 }
 
 function initiateLandingPageAnimation() {
@@ -65,7 +67,8 @@ function initiateLandingPageAnimation() {
         toAnimate.push({
             id: id,
             textInitial: text,
-            textToAdd: text.split("")
+            textToAdd: text.split(""),
+            classList: textEl.classList
         })
         textEl.textContent = ""; 
     }
@@ -81,10 +84,10 @@ function initiateLandingPageAnimation() {
 function animateText(toAnimateArray, callback) {
     console.log("in animatetext");
 
-    callback("test from animateText");
+    // callback("test from animateText");
 
     let upNext = document.getElementById(toAnimateArray[0].id);
-    upNext.style.visibility = "visible";
+    upNext.parentElement.style.visibility = "visible";
     upNext.parentElement.innerHTML += getCursorHtml();
 
     appendLetters(toAnimateArray, callback);
@@ -96,10 +99,17 @@ function appendLetters(toAnimateArray, callback) {
     let toAnimate = toAnimateArray[0];
     let textEl = document.getElementById(toAnimate.id);
     let remainingChars = toAnimate.textToAdd;
-    let currentChar = remainingChars.shift();
+    let nextChar = remainingChars.shift();
+    if (nextChar == " ") {
+        nextChar = "&nbsp;"
+    }
 
-    // textEl.textContent = textEl.textContent + currentChar
-    textEl.parentElement.innerHTML += `<p>` + currentChar + `</p>`;
+
+
+    const newCharElement = document.createElement("p");
+    newCharElement.innerHTML = nextChar;
+    newCharElement.classList = toAnimate.classList;
+    textEl.parentElement.insertBefore(newCharElement, textEl.parentElement.lastElementChild);
 
     toAnimate.remainingChars = remainingChars;
 
@@ -109,7 +119,7 @@ function appendLetters(toAnimateArray, callback) {
         if (toAnimateArray.length == 0) {
             callback("here i am")
             launchRocket();
-            return "hello";
+            return;
         } else {
             const animationCursor = document.getElementById("animation-cursor");
             animationCursor.remove();
@@ -120,7 +130,7 @@ function appendLetters(toAnimateArray, callback) {
 
     setTimeout(function() {
         appendLetters(toAnimateArray, callback);
-    }, 50)
+    }, 75)
 
 }
 

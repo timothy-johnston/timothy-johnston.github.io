@@ -171,31 +171,56 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    column-gap: 15px;
-    position: relative;;
+    flex-wrap: wrap;
+    visibility: hidden;
+    /* column-gap: 15px; */
+    /* position: relative; */
 }
 
 #animation-cursor {
     width: 20px;
     height: 75%;
     background: white;
-    position: absolute;
+    /* position: absolute; */
 }
 
 #liftoff-text-container {
-    /* background: orange;
-    padding: 10px 15px; */
-    width: 100%;
-    /* border-radius: 5px;
-    font-weight: bold; */
+    /* background: orange; */
+    /* padding: 10px 15px; */
+    /* width: 100%; */
+    /* border-radius: 5px; */
+    /* font-weight: bold; */
+    /* position: relative; */
+}
+
+#liftoff-text-container.animated-text-container {
+    /* visibility: hidden; */
+    background: orange;
+    border-radius: 99px;
+    padding: 10px 15px;
+    transition: 1s;
+    width: fit-content;
+    /* position: absolute; */
 }
 
 .liftoff-text {
-    background: orange;
+    /* background: orange;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 5px; */
     font-weight: bold;
     /* width: 100%; */
+    transition: 1.5s;
+}
+
+#liftoff-text {
+    opacity: 0;
+    background: hsl(231deg 66.21% 6.25% / 48%);
+    color: var(--drac-lime1);
+    font-family: 'Fira Code', monospace;
+    padding: 15px 25px;
+    border: 1px solid var(--drac-cyan1);
+    color: var(--drac-cyan1);
+    font-size: 24px;
 }
 
 #rocket-animation {
