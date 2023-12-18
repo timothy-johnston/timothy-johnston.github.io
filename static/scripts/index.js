@@ -8,6 +8,7 @@ that extra assurance that all elements are ready, and is still plenty performant
 */
 document.addEventListener("DOMContentLoaded", function() {
     attachEventListeners();
+    initiateLandingPageAnimation();
 })
 
 /*
@@ -23,9 +24,9 @@ function attachEventListeners() {
     })
 
     //Launch button
-    document.getElementById("btn-launch").addEventListener('click', function(event) {
-        launchRocket();
-    })
+    // document.getElementById("btn-launch").addEventListener('click', function(event) {
+    //     launchRocket();
+    // })
 
     //Project cards Learn More button, click
     document.querySelectorAll(".info-prompt").forEach(el => {
@@ -34,6 +35,81 @@ function attachEventListeners() {
         })
     })
     
+}
+
+function initiateLandingPageAnimation() {
+
+    //Get all text elements to animate, and remove their text
+    //(they should begin with visibility:hidden)    
+    const textIds = [
+        "landing-title",
+        "landing-subtitle",
+        "landing-link-about",
+        "landing-link-slash-1",
+        "landing-link-portfolio",
+        "landing-link-slash-2",
+        "landing-link-contact",
+        "countdown-text"
+    ]
+
+    let toAnimate = [
+    ]
+
+    for (let id of textIds) {
+        let textEl = document.getElementById(id);
+        let text = textEl.textContent
+        toAnimate.push({
+            id: id,
+            textInitial: text,
+            textToAdd: text.split("")
+        })
+        textEl.textContent = ""; 
+    }
+
+    appendLetters(toAnimate);
+
+}
+
+//toAnimate: array of objects with k:v = id:text
+function animateText(toAnimateArray) {
+
+    for (let toAnimate of toAnimateArray) {
+
+        //Unhide
+        let textEl = document.getElementById(toAnimate.id);
+        textEl.style.visibility = "visible";
+
+        //Begin adding letters
+        appendLetters(toAnimateArray);
+
+        console.log("finished one");
+
+    }
+
+    console.log("Finished: all");
+
+}
+
+function appendLetters(toAnimateArray) {
+    let toAnimate = toAnimateArray[0];
+    let textEl = document.getElementById(toAnimate.id);
+    let remainingChars = toAnimate.textToAdd;
+    let currentChar = remainingChars.shift();
+
+    textEl.textContent = textEl.textContent + currentChar
+
+    toAnimate.remainingChars = remainingChars;
+
+
+
+    if (remainingChars.length == 0) {
+        toAnimateArray.shift();
+    }
+
+    setTimeout(function() {
+        appendLetters(toAnimateArray);
+    }, 200)
+
 }
 
 function handleScroll() {

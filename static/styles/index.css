@@ -102,6 +102,10 @@ body {
     
 }
 
+body {
+    border-left: none;
+}
+
 /* === end media queries === */
 
 
@@ -128,6 +132,10 @@ body {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+}
+
+.landing-page-text {
+    /* visibility: hidden; */
 }
 
 #landing-copy-container {
@@ -159,10 +167,19 @@ body {
 }
 
 #liftoff-text-container {
+    /* background: orange;
+    padding: 10px 15px; */
+    width: 100%;
+    /* border-radius: 5px;
+    font-weight: bold; */
+}
+
+.liftoff-text {
     background: orange;
     padding: 10px 15px;
-    width: fit-content;
     border-radius: 5px;
+    font-weight: bold;
+    /* width: 100%; */
 }
 
 #rocket-animation {
