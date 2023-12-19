@@ -363,4 +363,9 @@ extras */
     cursor: pointer;
 }
 
+.sk-clickable[disabled] {
+    opacity: .7;
+    pointer-events: none;
+}
+
 
