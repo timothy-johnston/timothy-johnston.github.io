@@ -873,13 +873,13 @@ body {
     row-gap: 20px;
 }
 
-#footer-socials-container>i {
+#footer-socials-container>a>i {
     transition: .2s;
     font-size: 36px;
     color: var(--drac-cyan1);
 }
 
-#footer-socials-container>i:hover {
+#footer-socials-container>a>i:hover {
     color: var(--drac-lime1);
 }
 
