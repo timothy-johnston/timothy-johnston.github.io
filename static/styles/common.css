@@ -368,4 +368,24 @@ extras */
     pointer-events: none;
 }
 
+.sk-wrap-blocker {
+    white-space: nowrap;
+}
+
+.sk-kf-blink {
+    animation: sk-kf-blink 1s infinite;
+}
+
+@keyframes sk-kf-blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 

@@ -198,7 +198,6 @@ body {
     height: 75%;
     background: white;
     margin-left: 10px;
-    /* position: absolute; */
 }
 
 #liftoff-text-container {
@@ -398,6 +397,10 @@ body {
     padding-top: 0px;
     border: 1px solid var(--drac-cyan1);
     border-radius: 5px;
+}
+
+#values-header {
+    row-gap: 10px;
 }
 
 .value-container {

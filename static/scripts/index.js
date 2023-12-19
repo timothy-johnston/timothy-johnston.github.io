@@ -168,7 +168,7 @@ function appendLetters(toAnimateArray, config, callback) {
 
 function getCursorHtml(height) {
     const cursorHtml = `
-        <div id="animation-cursor" style="height: ` + height + `"></div>
+        <div id="animation-cursor" class="sk-kf-blink" style="height: ` + height + `"></div>
     `
     return cursorHtml;
 }
