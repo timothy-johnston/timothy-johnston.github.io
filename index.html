@@ -54,7 +54,7 @@
                     <div id="landing-links-container" class="">
                         <div class="landing-link-container">
                             <div class="animated-text-container">
-                                <a href="#section-intro" id="landing-link-about" class="subtitle drac-cyan landing-link-component landing-link landing-page-text sk-hover-scale-md sk-clickable">about me</a>
+                                <a href="#section-intro" id="landing-link-about" class="subtitle drac-cyan landing-link-component link landing-link landing-page-text sk-hover-scale-md sk-clickable">about me</a>
                             </div>
                             <div class="animated-text-container">
                                 <p id="landing-link-slash-1" class="subtitle drac-cyan landing-link-component link-separator landing-page-text">/</p>
@@ -62,7 +62,7 @@
                         </div>
                         <div class="landing-link-container">
                             <div class="animated-text-container">
-                                <a href="#section-projects" id="landing-link-portfolio" class="subtitle drac-cyan landing-link-component landing-link landing-page-text sk-hover-scale-md sk-clickable">projects</a>
+                                <a href="#section-projects" id="landing-link-portfolio" class="subtitle drac-cyan landing-link-component link landing-link landing-page-text sk-hover-scale-md sk-clickable">projects</a>
                             </div>
                             <div class="animated-text-container">
                                 <p id="landing-link-slash-2" class="subtitle drac-cyan landing-link-component link-separator landing-page-text">/</p>
@@ -70,7 +70,7 @@
                         </div>
                         <div class="landing-link-container">
                             <div class="animated-text-container">
-                                <a href="#section-footer" id="landing-link-contact" class="subtitle drac-cyan landing-link-component landing-link landing-page-text sk-hover-scale-md sk-clickable">contact</a>
+                                <a href="#section-footer" id="landing-link-contact" class="subtitle drac-cyan landing-link-component link landing-link landing-page-text sk-hover-scale-md sk-clickable">contact</a>
                             </div>
                             <!-- <p class="landing-link-component link-separator">/</p> -->
                         </div>
@@ -106,11 +106,11 @@
                     </div>
                 </div>
                 <div id="intro-body-container" class="sk-flex sk-flex-col">
-                    <p class="copy intro-copy"><b class="copy intro-copy-header">These are a few of my favorite things . . .</b><br><br>I love a good camping trip, a board game night with friends, and (as of late) bubble tea.<br><br>I love cats... and dogs!<br><br>I value and seek out opportunities to experience new things and gain fresh perspectives, and I like to surround myself with people who feel the same way.</p>
-                    <p class="copy intro-copy">Below, you'll see a handful of my favorite quotes and how they reflect the beliefs and values that guide me in my professional and personal life.
+                    <p class="copy intro-copy"><b class="copy intro-copy-header">These are a few of my favorite things . . .</b><br><br>Camping! Bubble tea! Cats. . . and dogs! <br><br>I love activities that keep my mind and body engaged; I always enjoy a board game night with friends (the more strategic the game, the better!), a stroll though the woods, and spending time in the kitchen cooking up something spicy.</p> 
+                    <p class="copy intro-copy">I value and seek out opportunities to experience new things and gain fresh perspectives. I prefer to learn "by doing," and I think that the best way to develop a new skill (professional or otherwise) is to jump right in a give it a go.
                     </p>
                     <div id="intro-footer-container" class="sk-flex sk-flex-col">
-                        <p class="copy intro-copy">Thanks so much for stopping by my page. Enjoy your stay!<br><br>Tim</p>
+                        <p class="copy intro-copy">Thanks so much for stopping by my page. Enjoy your stay, and feel free to get in touch via the <a href="#section-footer" class="link sk-clickable">contact form!</a><br><br>Tim</p>
                         <img id="intro-img" src="static/resources/images/linkedin-2019.jpg"></img>
                     </div>
                     
@@ -543,18 +543,18 @@
                 <div id="footer-component-contact" class="footer-component sk-flex sk-flex-col">
                     <p class="title footer-component-title">Or, drop me a note</p>
                     <div id="contact-form-container">
-                        <form id="contact-form" class="sk-flex sk-flex-col">
+                        <form id="contact-form" class="sk-flex sk-flex-col" action="https://formspree.io/f/mvoeprgq" method="POST">
                             <div class="form-element-container sk-flex sk-flex-col">
                                 <label class="subtitle">Email Address</label>
-                                <input class="footer-input text-input" type="text" placeholder="Your email">
+                                <input class="footer-input text-input" type="email" name="email" placeholder="Your email">
                             </div>
                             <div class="form-element-container sk-flex sk-flex-col">
                                 <label class="subtitle">Message</label>
-                                <textarea class="footer-input area-input" placeholder="Your message"></textarea>
+                                <textarea class="footer-input area-input" name="message" placeholder="Your message"></textarea>
                             </div>
-                            <div id="btn-send-contact" class="btn btn-padded-base sk-hover-scale-sm sk-clickable">
+                            <button id="btn-send-contact" type="submit" class="btn btn-padded-base sk-hover-scale-sm sk-clickable">
                                 <p class="btn-label">Send</p>
-                            </div>
+                            </button>
                         </form>
                     </div>
                 </div>

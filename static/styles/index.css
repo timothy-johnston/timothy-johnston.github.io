@@ -167,7 +167,7 @@ body {
     width: fit-content;
 }
 
-.landing-link {
+.link {
     text-decoration: underline;
 }
 
@@ -359,6 +359,10 @@ body {
     border-left: none;
     border-right: 5px solid var(--drac-cyan1);
     text-align: right;
+}
+
+.intro-copy>.link {
+    color: var(--drac-cyan1);
 }
 
 #intro-footer-container {
@@ -903,6 +907,7 @@ body {
 }
 
 #btn-send-contact {
+    border: none;
     margin-top: 10px;
     background: linear-gradient(99deg, #4FDDFC -30.63%, #52FA7C);
     align-items: center;
