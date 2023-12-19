@@ -128,10 +128,11 @@ body {
     background: radial-gradient(circle at 50% 99%, hsla(231, 34%, 10%, 1.0) 100%, hsla(0, 0%, 100%, 0)), hsla(231, 15%, 18%, .2); */
     /* background: radial-gradient(circle at 50% 99%, var(--drac-dkblue1), var(--drac-dkblue1)); */
     transition: 4s linear;
-    position: relative;
+    position: fixed;
     width: 100%;
     min-height: 100vh;
     box-sizing: border-box;
+    padding-top: 0px;
 }
 
 .landing-page-text {
@@ -498,11 +499,13 @@ body {
     background: var(--drac-gray1);
     box-shadow: inset 0px -2px 0px var(--drac-cyan1);
     border-radius: 5px;
+    color: white;
 }
 
-.category-item p {
-    color: white
+.category-item:hover {
+    box-shadow: inset 0px -2px 0px var(--drac-lime1);
 }
+
 
 /* ------------- SECTION: PROJECTS ------------- */
 
@@ -654,7 +657,9 @@ body {
 }
 
 .info-prompt:hover {
-    background: var(--drac-cyan1);
+    background: var(--drac-gray1);
+    color: var(--drac-lime1);
+    outline: 1px solid var(--drac-lime1);
 }
 
 
@@ -723,6 +728,10 @@ body {
     color: white;
     font-size: 16px;
     font-weight: bold;
+}
+
+.card-link:hover p {
+    color: var(--drac-lime1);
 }
 
 @keyframes supress-scrollbar-y {
@@ -816,8 +825,13 @@ body {
 }
 
 #footer-socials-container>i {
+    transition: .2s;
     font-size: 36px;
     color: var(--drac-cyan1);
+}
+
+#footer-socials-container>i:hover {
+    color: var(--drac-lime1);
 }
 
 #contact-form {
