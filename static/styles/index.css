@@ -339,6 +339,8 @@ body {
 }
 
 .intro-copy-header {
+    display: block;
+    margin-bottom: 15px;
     font-weight: bold;
     font-style: italic;
     font-family: 'Fira Code', monospace;
