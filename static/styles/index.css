@@ -631,10 +631,14 @@ body {
 }
 
 .card-content {
-    padding: 30px;
+    padding: 20px;
     color: var(--drac-gray1);
     row-gap: 35px;
 }
+
+/* .card-front>.card-content {
+    padding: 30px 6%;
+} */
 
 .details-container,
 .card-title-container,
@@ -753,10 +757,11 @@ body {
 
 .card-link p {
     padding: 8px 17px;
-    padding-right: 27px;
     color: white;
     font-size: 16px;
     font-weight: bold;
+    max-width: calc(100% - 30px - 40px)
+    overflow-wrap: break-word;
 }
 
 .card-link:hover p {
