@@ -213,7 +213,7 @@ body {
 #liftoff-text-container.animated-text-container {
     /* visibility: hidden; */
     background: orange;
-    border-radius: 99px;
+    border-radius: 10px;
     padding: 10px 15px;
     transition: 2.25s;
     width: fit-content;
@@ -243,7 +243,7 @@ body {
 #rocket-animation {
     /* z-index: 1; */
     position: absolute;
-    bottom: 50px;
+    bottom: 100px;
     left: 50vw;
     transform: translate(-50%, 0%);
     transition: bottom 3s linear, left 3s cubic-bezier(0.82, -0.03, 1, 1);
@@ -940,13 +940,3 @@ body {
     font-size: 14px;
     color: white;
 }
-
-
-
-
-
-  
-  /* .about-quote-container:hover {
-      animation: shake 2s;
-      animation-iteration-count: infinite;
-  } */
