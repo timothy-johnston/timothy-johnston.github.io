@@ -4,7 +4,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 10px;
     background-color: hsl(231deg 15% 18% / 25%);
     border-radius: 5px;
 }
@@ -43,7 +43,13 @@ body {
     overflow: hidden;
     column-gap: 10px;
     background: var(--drac-gray-accent1);
+    transition: .2s;
 }
+
+/* .btn:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+} */
 
 .btn-only-fa-icon {
 
@@ -80,6 +86,15 @@ p, a, li, ul {
     padding: 0px;
     text-decoration: none;
 }
+
+/* a {
+    transition: .2s;
+}
+
+a:hover {
+    transform: scale(1.06);
+    cursor: pointer;
+} */
 
 .title, .subtitle {
     font-family: 'Fira Code', monospace;
@@ -330,6 +345,22 @@ extras */
 
 .sk-width-cap-1100 {
     max-width: 1100px;
+}
+
+.sk-hover-scale-sm:hover {
+    transform: scale(1.04);
+}
+
+.sk-hover-scale-md:hover {
+    transform: scale(1.08);
+}
+
+.sk-hover-scale-lg:hover {
+    transform: scale(1.12);
+}
+
+.sk-clickable {
+    cursor: pointer;
 }
 
 

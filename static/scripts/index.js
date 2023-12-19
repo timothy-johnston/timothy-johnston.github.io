@@ -40,8 +40,8 @@ function attachEventListeners() {
 function cbTest() {
     console.log("here in cb test");
     setTimeout(function() {
-        document.getElementById("countdown-text").parentElement.style.background = "var--(drac-lime1)";
-        document.getElementById("countdown-text").color = "var(--drac-midnight1";
+        const liftoffContainer = document.getElementById("liftoff-text-container");
+        liftoffContainer.style.opacity = 0;
     }, 1000)
 }
 
@@ -81,6 +81,8 @@ function initiateLandingPageAnimation() {
     let config = {
         delayAfterChar: 75,
         delayAfterElement: 200
+        // delayAfterChar: 7,
+        // delayAfterElement: 20
     }
     animateText(toAnimate, config, cbTest)
 
@@ -139,14 +141,14 @@ function appendLetters(toAnimateArray, config, callback) {
 
     //Check for exit conditions
     if (remainingChars.length == 0) {
-        const animationCursor = document.getElementById("animation-cursor");
-        animationCursor.remove();
         toAnimateArray.shift();
         if (toAnimateArray.length == 0) {
             callback();
             launchRocket();
             return;
         } else {
+            const animationCursor = document.getElementById("animation-cursor");
+            animationCursor.remove();
             setTimeout(function() {
                 animateText(toAnimateArray, config, callback)
             }, config.delayAfterElement)
@@ -226,6 +228,7 @@ function handleEventClickInfoPrompt(event) {
 
     //Transform the info / nav button
     btn.classList.toggle("info-prompt-nav-style");
+    btn.classList.toggle("sk-hover-scale-sm");
     btn.querySelectorAll(".card-nav").forEach(el => {
         el.classList.toggle("hidden");
     })
