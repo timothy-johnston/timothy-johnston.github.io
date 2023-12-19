@@ -921,6 +921,16 @@ body {
     box-shadow: 0px 5px 1px 1px var(--drac-midnight1);
 }
 
+#btn-send-contact:hover {
+    background: var(--drac-gray1);
+    color: var(--drac-lime1);
+    outline: 1px solid var(--drac-lime1);
+}
+
+#btn-send-contact>.btn-label {
+    font-family: 'Karla', sans-serif;
+}
+
 #copyright-container {
     padding-bottom: 20px;
 }
