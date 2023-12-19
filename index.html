@@ -54,7 +54,7 @@
                     <div id="landing-links-container" class="">
                         <div class="landing-link-container">
                             <div class="animated-text-container">
-                                <a href="#section-intro" id="landing-link-about" class="subtitle drac-cyan landing-link-component landing-link landing-page-text sk-hover-scale-md sk-clickable">bio</a>
+                                <a href="#section-intro" id="landing-link-about" class="subtitle drac-cyan landing-link-component landing-link landing-page-text sk-hover-scale-md sk-clickable">about me</a>
                             </div>
                             <div class="animated-text-container">
                                 <p id="landing-link-slash-1" class="subtitle drac-cyan landing-link-component link-separator landing-page-text">/</p>
@@ -133,6 +133,7 @@
                             <div class="category-item sk-hover-scale-md"><p class="copy">C#/.NET</p></div>
                             <div class="category-item sk-hover-scale-md"><p class="copy">Django</p></div>
                             <div class="category-item sk-hover-scale-md"><p class="copy">Docker</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Figma</p></div>
                             <div class="category-item sk-hover-scale-md"><p class="copy">Gatling</p></div>
                             <div class="category-item sk-hover-scale-md"><p class="copy">Git</p></div>
                             <div class="category-item sk-hover-scale-md"><p class="copy">Hibernate</p></div>
@@ -231,28 +232,28 @@
                 <div id="project-cards-container">
                     <div class="project-card">
                         <div class="card-front">
-                            <div class="card-topbar">
+                            <div id="topbar-tc-hardware" class="card-topbar">
                                 <div class="card-title-container">
-                                    <p class="title card-title">Project Title</p>
+                                    <p class="title card-title">ThirstyCat: Hardware</p>
                                 </div>
                             </div>
                             <div class="card-content sk-flex sk-flex-col">
                                 <div class="card-summary-container">
-                                    <p class="copy summary-copy">Project description paragraph 1. This will likely be at least one or two sentences. Or more! Who knows really?</p>
-                                    <p class="copy summary-copy">Project description paragraph 2. This may or may not exist!</p>
+                                    <p class="copy summary-copy summary-tech">Raspberry Pi, Python</p>
+                                    <p class="copy summary-copy">Pressure-activated camera & Twitter bot that detects when my cat gets a drink, captures a photo, and automatically tweets the photo using the Twitter API.</p>
                                 </div>
                                 <div class="btn info-prompt sk-hover-scale-sm sk-clickable">
                                     <p class="btn-label card-nav style-info info-prompt-text">Tech Specs</p>
                                     <i class="card-nav fa-solid fa-circle-chevron-left hidden"></i>
                                 </div>
                                 <div class="card-links-container">
-                                    <a href="https://timothy-johnston.github.io" class="btn card-link sk-hover-scale-sm sk-clickable">
+                                    <a href="" class="btn card-link sk-hover-scale-sm sk-clickable">
                                         <div class="btn-icon-container card-link-icon-container">
                                             <i class="btn-fa-icon fa-solid fa-globe"></i>
                                         </div>
-                                        <p>https://timothy-johnston.github.io</p>
+                                        <p>[deactivated]</p>
                                     </a>
-                                    <a href="https://github.com/timothy-johnston" class="btn card-link sk-hover-scale-sm sk-clickable">
+                                    <a href="https://github.com/timothy-johnston/ThirstyCat" class="btn card-link sk-hover-scale-sm sk-clickable">
                                         <div class="ftn-icon-container card-link-icon-container">
                                             <i class="btn-fa-icon fa fa-github"></i>
                                         </div>
@@ -266,29 +267,24 @@
                                 <div class="detail">
                                     <p class="detail-header">Tech stack</p>
                                     <div class="detail-copy-group">
-                                        <p class="copy detail-copy">Tech 1, Tech 2, Tech 3, Tech 4, Tech 5, Tech 6, Tech 7</p>
+                                        <p class="copy detail-copy">Raspberry Pi, Python, Git</p>
                                     </div>
                                 </div>
                                 <div class="detail">
                                     <p class="detail-header">Methodologies</p>
                                     <div class="detail-copy-group">
-                                        <p class="copy detail-copy">Methodology 1, Methodology 2, Methodology 3</p>
+                                        <p class="copy detail-copy">Utilization of hardware & peripherals including a PiCam & pressure plate, Development in a Linux environment (Raspbian / Debian), REST API consumption (See ThirstyCat: Web App)</p>
                                     </div>
                                 </div>
                                 <div class="detail">
                                     <p class="detail-header">Comments</p>
                                     <div class="detail-copy-group">
-                                        <p class="copy detail-copy">This is a place to mention anything else that 
-                                            I think is relevant to this project but hasn't been 
-                                            mentioned yet. It will likely consist of short
-                                            sentences and/or paragraphs.
-                                        </p>
-                                        <p class="copy detail-copy">In this case, it consists of two short sentences, 
-                                            then the following:
-                                        </p>
-                                        <p class="copy detail-copy">Or it may be bullet points</p>
-                                        <p class="copy detail-copy">Like this</p>
-                                        <p class="copy detail-copy">And this</p>
+                                        <ul class="copy detail-copy detail-list">
+                                            <li>Built a weight-sensitive platform with a Raspberry Pi and force sensing resistor; placed platform in front of my cat's water bowl</li>
+                                            <li>Wrote a Python script to read weight values and trigger a camera to take a photo when values exceed some threshold</li>
+                                            <li>Picture is automatically tweeted using the Twitter API</li>
+                                            <li>Python script consumes the REST API built as part of the ThirstCat: Web App project to persist image and supporting data to a database, where it may be retrieved and used by the web app</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -296,28 +292,28 @@
                     </div>
                     <div class="project-card">
                         <div class="card-front">
-                            <div class="card-topbar">
+                            <div id="topbar-tc-webapp" class="card-topbar">
                                 <div class="card-title-container">
-                                    <p class="title card-title">Project Title</p>
+                                    <p class="title card-title">ThirstyCat: Web App</p>
                                 </div>
                             </div>
                             <div class="card-content sk-flex sk-flex-col">
                                 <div class="card-summary-container">
-                                    <p class="copy summary-copy">Project description paragraph 1. This will likely be at least one or two sentences. Or more! Who knows really?</p>
-                                    <p class="copy summary-copy">Project description paragraph 2. This may or may not exist!</p>
+                                    <p class="copy summary-copy summary-tech"">Java, Spring Boot, MySQL, AWS</p>
+                                    <p class="copy summary-copy">Full-stack web app allowing users to view ThirstyCat photos and statistics. Users can create an account to receive automated email updates, favorite pictures, and submit photos of their own.</p>
                                 </div>
                                 <div class="btn info-prompt sk-hover-scale-sm sk-clickable">
                                     <p class="btn-label card-nav style-info info-prompt-text">Tech Specs</p>
                                     <i class="card-nav fa-solid fa-circle-chevron-left hidden"></i>
                                 </div>
                                 <div class="card-links-container">
-                                    <a href="https://timothy-johnston.github.io" class="btn card-link sk-hover-scale-sm sk-clickable">
+                                    <a href="" class="btn card-link sk-hover-scale-sm sk-clickable">
                                         <div class="btn-icon-container card-link-icon-container">
                                             <i class="btn-fa-icon fa-solid fa-globe"></i>
                                         </div>
-                                        <p>https://timothy-johnston.github.io</p>
+                                        <p>[deactivated]</p>
                                     </a>
-                                    <a href="https://github.com/timothy-johnston" class="btn card-link sk-hover-scale-sm sk-clickable">
+                                    <a href="https://github.com/timothy-johnston/ThirstyCat" class="btn card-link sk-hover-scale-sm sk-clickable">
                                         <div class="ftn-icon-container card-link-icon-container">
                                             <i class="btn-fa-icon fa fa-github"></i>
                                         </div>
@@ -331,29 +327,26 @@
                                 <div class="detail">
                                     <p class="detail-header">Tech stack</p>
                                     <div class="detail-copy-group">
-                                        <p class="copy detail-copy">Tech 1, Tech 2, Tech 3, Tech 4, Tech 5, Tech 6, Tech 7</p>
+                                        <p class="copy detail-copy">Java, Spring Boot, MySQL, AWS, Hibernate, HTML / CSS / JavaScript, jQuery, JUnit, Git</p>
                                     </div>
                                 </div>
                                 <div class="detail">
                                     <p class="detail-header">Methodologies</p>
                                     <div class="detail-copy-group">
-                                        <p class="copy detail-copy">Methodology 1, Methodology 2, Methodology 3</p>
+                                        <p class="copy detail-copy">Relational Database Design, Test Driven Development, Serverside development, Clientside development, UI/UX design</p>
                                     </div>
                                 </div>
                                 <div class="detail">
                                     <p class="detail-header">Comments</p>
                                     <div class="detail-copy-group">
-                                        <p class="copy detail-copy">This is a place to mention anything else that 
-                                            I think is relevant to this project but hasn't been 
-                                            mentioned yet. It will likely consist of short
-                                            sentences and/or paragraphs.
-                                        </p>
-                                        <p class="copy detail-copy">In this case, it consists of two short sentences, 
-                                            then the following:
-                                        </p>
-                                        <p class="copy detail-copy">Or it may be bullet points</p>
-                                        <p class="copy detail-copy">Like this</p>
-                                        <p class="copy detail-copy">And this</p>
+                                        <ul class="copy detail-copy detail-list">
+                                            <li>RESTful back end API built with Java and Spring Boot exposes endpoints to persist and retrieve images and data</li>
+                                            <li>API built with test driven development and secured with Spring Security JWT Bearer Authentication</li>
+                                            <li>Data persistence in a MySQL database handled with Hibernate JPA</li>
+                                            <li>UI designed and built with JSP, HTML, CSS, JavaScript, jQuery, and Bootstrap displays recent images and statistics</li>
+                                            <li>UI security implemented with Spring Security allowing users to create accounts, log in, and save pictures to their library</li>
+                                            <li>Deployed on AWS with Elastic Beanstalk</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -361,28 +354,28 @@
                     </div>
                     <div class="project-card">
                         <div class="card-front">
-                            <div class="card-topbar">
+                            <div id="topbar-tc-gradientbox" class="card-topbar">
                                 <div class="card-title-container">
-                                    <p class="title card-title">Project Title</p>
+                                    <p class="title card-title">GradientBox</p>
                                 </div>
                             </div>
                             <div class="card-content sk-flex sk-flex-col">
                                 <div class="card-summary-container">
-                                    <p class="copy summary-copy">Project description paragraph 1. This will likely be at least one or two sentences. Or more! Who knows really?</p>
-                                    <p class="copy summary-copy">Project description paragraph 2. This may or may not exist!</p>
+                                    <p class="copy summary-copy summary-tech"">Python, Django, Javascript</p>
+                                    <p class="copy summary-copy">Full stack web app where developers and designers are surprised with randomly selected CSS gradients created by other users. Users may also create and share their own gradients.</p>
                                 </div>
                                 <div class="btn info-prompt sk-hover-scale-sm sk-clickable">
                                     <p class="btn-label card-nav style-info info-prompt-text">Tech Specs</p>
                                     <i class="card-nav fa-solid fa-circle-chevron-left hidden"></i>
                                 </div>
                                 <div class="card-links-container">
-                                    <a href="https://timothy-johnston.github.io" class="btn card-link sk-hover-scale-sm sk-clickable">
+                                    <a href="" class="btn card-link sk-hover-scale-sm sk-clickable">
                                         <div class="btn-icon-container card-link-icon-container">
                                             <i class="btn-fa-icon fa-solid fa-globe"></i>
                                         </div>
-                                        <p>https://timothy-johnston.github.io</p>
+                                        <p>[deactivated]</p>
                                     </a>
-                                    <a href="https://github.com/timothy-johnston" class="btn card-link sk-hover-scale-sm sk-clickable">
+                                    <a href="https://github.com/timothy-johnston/GradientBox" class="btn card-link sk-hover-scale-sm sk-clickable">
                                         <div class="ftn-icon-container card-link-icon-container">
                                             <i class="btn-fa-icon fa fa-github"></i>
                                         </div>
@@ -396,29 +389,23 @@
                                 <div class="detail">
                                     <p class="detail-header">Tech stack</p>
                                     <div class="detail-copy-group">
-                                        <p class="copy detail-copy">Tech 1, Tech 2, Tech 3, Tech 4, Tech 5, Tech 6, Tech 7</p>
+                                        <p class="copy detail-copy">Python, Django, HTML / CSS / JavaScript, Git, SQLite DB</p>
                                     </div>
                                 </div>
                                 <div class="detail">
                                     <p class="detail-header">Methodologies</p>
                                     <div class="detail-copy-group">
-                                        <p class="copy detail-copy">Methodology 1, Methodology 2, Methodology 3</p>
+                                        <p class="copy detail-copy">Relational Database Design, Serverside development, Clientside development, UI/UX design</p>
                                     </div>
                                 </div>
                                 <div class="detail">
                                     <p class="detail-header">Comments</p>
                                     <div class="detail-copy-group">
-                                        <p class="copy detail-copy">This is a place to mention anything else that 
-                                            I think is relevant to this project but hasn't been 
-                                            mentioned yet. It will likely consist of short
-                                            sentences and/or paragraphs.
-                                        </p>
-                                        <p class="copy detail-copy">In this case, it consists of two short sentences, 
-                                            then the following:
-                                        </p>
-                                        <p class="copy detail-copy">Or it may be bullet points</p>
-                                        <p class="copy detail-copy">Like this</p>
-                                        <p class="copy detail-copy">And this</p>
+                                        <ul class="copy detail-copy detail-list">
+                                            <li>RESTful API created with Python and Django exposes endpoints allowing users to persist and retrieve custom gradient data</li>
+                                            <li>User interface with embedded color-picker lets users create custom gradients, generates CSS, and lets users load a randomly selected gradient created and shared by a previous user</li>
+                                            <li>JavaScript and jQuery used to create an interactive, sleek user experience</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -426,15 +413,15 @@
                     </div>
                     <div class="project-card">
                         <div class="card-front">
-                            <div class="card-topbar">
+                            <div id="topbar-tc-personalsite" class="card-topbar">
                                 <div class="card-title-container">
-                                    <p class="title card-title">Project Title</p>
+                                    <p class="title card-title">Personal Website</p>
                                 </div>
                             </div>
                             <div class="card-content sk-flex sk-flex-col">
                                 <div class="card-summary-container">
-                                    <p class="copy summary-copy">Project description paragraph 1. This will likely be at least one or two sentences. Or more! Who knows really?</p>
-                                    <p class="copy summary-copy">Project description paragraph 2. This may or may not exist!</p>
+                                    <p class="copy summary-copy summary-tech"">Vanilla HTML / CSS / JavaScript</p>
+                                    <p class="copy summary-copy">Fully responsive static website built to serve as my online portfolio. Not much more to say. . .  you're already here, after all!</p>
                                 </div>
                                 <div class="btn info-prompt sk-hover-scale-sm sk-clickable">
                                     <p class="btn-label card-nav style-info info-prompt-text">Tech Specs</p>
@@ -447,7 +434,7 @@
                                         </div>
                                         <p>https://timothy-johnston.github.io</p>
                                     </a>
-                                    <a href="https://github.com/timothy-johnston" class="btn card-link sk-hover-scale-sm sk-clickable">
+                                    <a href="https://github.com/timothy-johnston/timothy-johnston.github.io" class="btn card-link sk-hover-scale-sm sk-clickable">
                                         <div class="ftn-icon-container card-link-icon-container">
                                             <i class="btn-fa-icon fa fa-github"></i>
                                         </div>
@@ -461,29 +448,22 @@
                                 <div class="detail">
                                     <p class="detail-header">Tech stack</p>
                                     <div class="detail-copy-group">
-                                        <p class="copy detail-copy">Tech 1, Tech 2, Tech 3, Tech 4, Tech 5, Tech 6, Tech 7</p>
+                                        <p class="copy detail-copy">HTML / CSS / JavaScript, Git</p>
                                     </div>
                                 </div>
                                 <div class="detail">
                                     <p class="detail-header">Methodologies</p>
                                     <div class="detail-copy-group">
-                                        <p class="copy detail-copy">Methodology 1, Methodology 2, Methodology 3</p>
+                                        <p class="copy detail-copy">Clientside development, UI/UX design</p>
                                     </div>
                                 </div>
                                 <div class="detail">
                                     <p class="detail-header">Comments</p>
                                     <div class="detail-copy-group">
-                                        <p class="copy detail-copy">This is a place to mention anything else that 
-                                            I think is relevant to this project but hasn't been 
-                                            mentioned yet. It will likely consist of short
-                                            sentences and/or paragraphs.
-                                        </p>
-                                        <p class="copy detail-copy">In this case, it consists of two short sentences, 
-                                            then the following:
-                                        </p>
-                                        <p class="copy detail-copy">Or it may be bullet points</p>
-                                        <p class="copy detail-copy">Like this</p>
-                                        <p class="copy detail-copy">And this</p>
+                                        <ul class="copy detail-copy detail-list">
+                                            <li>Fully-responsive design (down to 320 pixel screen widths) implemented with fully vanilla HTML, CSS, & JavaScript</li>
+                                            <li>Clean, minimalistic design creates a modern and tidy UI</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -491,15 +471,15 @@
                     </div>
                     <div class="project-card">
                         <div class="card-front">
-                            <div class="card-topbar">
+                            <div id="topbar-tc-weatherviz" class="card-topbar">
                                 <div class="card-title-container">
-                                    <p class="title card-title">Project Title</p>
+                                    <p class="title card-title">WeatherViz</p>
                                 </div>
                             </div>
                             <div class="card-content sk-flex sk-flex-col">
                                 <div class="card-summary-container">
-                                    <p class="copy summary-copy">Project description paragraph 1. This will likely be at least one or two sentences. Or more! Who knows really?</p>
-                                    <p class="copy summary-copy">Project description paragraph 2. This may or may not exist!</p>
+                                    <p class="copy summary-copy summary-tech"">Java, Spring MVC, PostgreSQL; Group project</p>
+                                    <p class="copy summary-copy">Collaboratively built forecast app developed with the agile methodology. Users may view visualizations of current and historic weather conditions across the US or create an account to receive personalized local forecasts.</p>
                                 </div>
                                 <div class="btn info-prompt sk-hover-scale-sm sk-clickable">
                                     <p class="btn-label card-nav style-info info-prompt-text">Tech Specs</p>
@@ -512,7 +492,7 @@
                                         </div>
                                         <p>https://timothy-johnston.github.io</p>
                                     </a>
-                                    <a href="https://github.com/timothy-johnston" class="btn card-link sk-hover-scale-sm sk-clickable">
+                                    <a href="https://github.com/timothy-johnston/WeatherViz" class="btn card-link sk-hover-scale-sm sk-clickable">
                                         <div class="ftn-icon-container card-link-icon-container">
                                             <i class="btn-fa-icon fa fa-github"></i>
                                         </div>
@@ -526,94 +506,23 @@
                                 <div class="detail">
                                     <p class="detail-header">Tech stack</p>
                                     <div class="detail-copy-group">
-                                        <p class="copy detail-copy">Tech 1, Tech 2, Tech 3, Tech 4, Tech 5, Tech 6, Tech 7</p>
+                                        <p class="copy detail-copy">Java, Spring MVC, JSP, PostgreSQL, HTML / CSS / JavaScript, Git</p>
                                     </div>
                                 </div>
                                 <div class="detail">
                                     <p class="detail-header">Methodologies</p>
                                     <div class="detail-copy-group">
-                                        <p class="copy detail-copy">Methodology 1, Methodology 2, Methodology 3</p>
+                                        <p class="copy detail-copy">Agile, Relational Database Design, Clientside development (my primary contribution), Serverside development (group members' primary contributions)</p>
                                     </div>
                                 </div>
                                 <div class="detail">
                                     <p class="detail-header">Comments</p>
                                     <div class="detail-copy-group">
-                                        <p class="copy detail-copy">This is a place to mention anything else that 
-                                            I think is relevant to this project but hasn't been 
-                                            mentioned yet. It will likely consist of short
-                                            sentences and/or paragraphs.
-                                        </p>
-                                        <p class="copy detail-copy">In this case, it consists of two short sentences, 
-                                            then the following:
-                                        </p>
-                                        <p class="copy detail-copy">Or it may be bullet points</p>
-                                        <p class="copy detail-copy">Like this</p>
-                                        <p class="copy detail-copy">And this</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="card-front">
-                            <div class="card-topbar">
-                                <div class="card-title-container">
-                                    <p class="title card-title">Project Title</p>
-                                </div>
-                            </div>
-                            <div class="card-content sk-flex sk-flex-col">
-                                <div class="card-summary-container">
-                                    <p class="copy summary-copy">Project description paragraph 1. This will likely be at least one or two sentences. Or more! Who knows really?</p>
-                                    <p class="copy summary-copy">Project description paragraph 2. This may or may not exist!</p>
-                                </div>
-                                <div class="btn info-prompt sk-hover-scale-sm sk-clickable">
-                                    <p class="btn-label card-nav style-info info-prompt-text">Tech Specs</p>
-                                    <i class="card-nav fa-solid fa-circle-chevron-left hidden"></i>
-                                </div>
-                                <div class="card-links-container">
-                                    <a href="https://timothy-johnston.github.io" class="btn card-link sk-hover-scale-sm sk-clickable">
-                                        <div class="btn-icon-container card-link-icon-container">
-                                            <i class="btn-fa-icon fa-solid fa-globe"></i>
-                                        </div>
-                                        <p>https://timothy-johnston.github.io</p>
-                                    </a>
-                                    <a href="https://github.com/timothy-johnston" class="btn card-link sk-hover-scale-sm sk-clickable">
-                                        <div class="ftn-icon-container card-link-icon-container">
-                                            <i class="btn-fa-icon fa fa-github"></i>
-                                        </div>
-                                        <p>source code</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <div class="details-container">
-                                <div class="detail">
-                                    <p class="detail-header">Tech stack</p>
-                                    <div class="detail-copy-group">
-                                        <p class="copy detail-copy">Tech 1, Tech 2, Tech 3, Tech 4, Tech 5, Tech 6, Tech 7</p>
-                                    </div>
-                                </div>
-                                <div class="detail">
-                                    <p class="detail-header">Methodologies</p>
-                                    <div class="detail-copy-group">
-                                        <p class="copy detail-copy">Methodology 1, Methodology 2, Methodology 3</p>
-                                    </div>
-                                </div>
-                                <div class="detail">
-                                    <p class="detail-header">Comments</p>
-                                    <div class="detail-copy-group">
-                                        <p class="copy detail-copy">This is a place to mention anything else that 
-                                            I think is relevant to this project but hasn't been 
-                                            mentioned yet. It will likely consist of short
-                                            sentences and/or paragraphs.
-                                        </p>
-                                        <p class="copy detail-copy">In this case, it consists of two short sentences, 
-                                            then the following:
-                                        </p>
-                                        <p class="copy detail-copy">Or it may be bullet points</p>
-                                        <p class="copy detail-copy">Like this</p>
-                                        <p class="copy detail-copy">And this</p>
+                                        <ul class="copy detail-copy detail-list">
+                                            <li>Full stack web application built in a team of three developers and one product owner utilizing the agile methodology</li>
+                                            <li>Implemented a RESTful backend web service with Java, Spring MVC, PostgreSQL, and Spring JDBC to store user information and retrieve/expose weather data</li>
+                                            <li>Developed a UI to display customizable weather visualizations using Javascript, jQuery, Highcharts, and the Dark Sky weather API</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>

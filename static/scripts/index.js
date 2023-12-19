@@ -174,21 +174,20 @@ function getCursorHtml(height) {
 }
 
 function handleScroll() {
-    hideLandingCopy();
+    showHideLandingCopy();
 }
 
 //If not hidden, it is visible when getting to Projects section
-function hideLandingCopy() {
+function showHideLandingCopy() {
 
     const sectionAbout = document.getElementById("section-intro");
     let sectionAboutTop = sectionAbout.getBoundingClientRect().top;
 
-    const toHide = [
-        "landing-title",
-        "landing-subtitle",
-        "landing-links-container"
+    const idsToHide = [
+        "landing-copy-container",
+        "rocket-animation"
     ]
-    for (let targetId of toHide) {
+    for (let targetId of idsToHide) {
         const target = document.getElementById(targetId);
         const targetTop = target.getBoundingClientRect().top;
         if (sectionAboutTop < targetTop) {

@@ -16,6 +16,7 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -595,7 +596,6 @@ body {
 }
 
 .card-topbar {
-    background: url("../resources/images/pi-hardware-1.jpg");
     background-size: cover;
     background-position: center;
     height: 175px;
@@ -603,6 +603,27 @@ body {
     align-items: flex-end;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+#topbar-tc-hardware {
+    background-image: url("../resources/images/proj-pic-tc-hardware.jpg");
+}
+
+#topbar-tc-webapp {
+    background-image: url("../resources/images/proj-pic-tc-webapp.png");
+    background-position: bottom;
+}
+
+#topbar-tc-gradientbox {
+    background-image: url("../resources/images/proj-pic-gradientbox.png");
+}
+
+#topbar-tc-personalsite {
+    background-image: url("../resources/images/proj-pic-personalsite.png");
+}
+
+#topbar-tc-weatherviz {
+    background-image: url("../resources/images/proj-pic-weatherviz.png");
 }
 
 .card-content {
@@ -641,6 +662,10 @@ body {
 .summary-copy, .detail-copy {
     font-size: clamp(16px, 1rem, 18px);
     color: white;
+}
+
+.summary-tech {
+    font-weight: bold;
 }
 
 .info-prompt {
@@ -771,6 +796,16 @@ body {
 
 .detail-copy {
     font-size: 16px;
+}
+
+.detail-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.detail-list>li {
+    margin-left: 1em;
 }
 
 /* BREAKPOINT: SMALL (--bk-sm) */
