@@ -2,7 +2,7 @@
 A little side note for anyone reading this; I find the discussions on async/defer/DOMContentLoaded
 to be pretty interesting. Lots of different opinions related to performance & reliability. I'm 
 choosing to use the DOMContentLoaded event listener here as well as loading this script with the
-'defer' attribute; 'defer' will allow for asynchronous script loading in the backgroundand will 
+'defer' attribute; 'defer' will allow for asynchronous script loading in the backgroundand and will 
 typically fire after all DOM elements are ready to be interacted with, but DOMContentLoaded provides
 that extra assurance that all elements are ready, and is still plenty performant in this situation
 */
@@ -23,11 +23,6 @@ function attachEventListeners() {
         handleScroll();
     })
 
-    //Launch button
-    // document.getElementById("btn-launch").addEventListener('click', function(event) {
-    //     launchRocket();
-    // })
-
     //Project cards Learn More button, click
     document.querySelectorAll(".info-prompt").forEach(el => {
         el.addEventListener('click', function(event) {
@@ -37,8 +32,7 @@ function attachEventListeners() {
     
 }
 
-function cbTest() {
-    console.log("here in cb test");
+function fadeLiftoffText() {
     setTimeout(function() {
         const liftoffContainer = document.getElementById("liftoff-text-container");
         liftoffContainer.style.opacity = 0;
@@ -77,24 +71,21 @@ function initiateLandingPageAnimation() {
         textEl.textContent = ""; 
     }
 
-    // animateText(toAnimate);
-    let config = {
-        // delayAfterChar: 75,
-        // delayAfterElement: 200
-        delayAfterChar: 10,
-        delayAfterElement: 10
-    }
-    animateText(toAnimate, config, cbTest)
 
-    // }
+    let config = {
+        delayAfterChar: 75,
+        delayAfterElement: 200
+        // delayAfterChar: 10,
+        // delayAfterElement: 10
+    }
+    animateText(toAnimate, config, fadeLiftoffText)
 
 }
 
 //toAnimate: array of objects with k:v = id:text
 function animateText(toAnimateArray, config, callback) {
-    console.log("in animatetext");
 
-    // callback("test from animateText");
+
     const toAnimate = toAnimateArray[0];
     let upNext = document.getElementById(toAnimate.id);
     upNext.parentElement.style.visibility = "visible";
@@ -127,15 +118,12 @@ function appendLetters(toAnimateArray, config, callback) {
 
 
     const newCharElement = document.createElement("p");
-    // if (nextChar = " ") {
-        
-    // }
     newCharElement.innerHTML = nextChar;
     newCharElement.classList = toAnimate.classList;
     const parentsWordContainers = parentEl.getElementsByClassName("animated-word");
     const targetWordContainer = parentsWordContainers[parentsWordContainers.length - 1];
     targetWordContainer.innerHTML += newCharElement.outerHTML;
-    // parentEl.insertBefore(newCharElement, textEl.parentElement.lastElementChild);
+
 
     toAnimate.remainingChars = remainingChars;
 
@@ -234,10 +222,6 @@ function handleEventClickInfoPrompt(event) {
 
 }
 
-//TODO: Use JS to retrieve and append svg icons rather than them hardcoded in html
-//  so, fetch /images/svg/rocket-1.svg and use to create svg html element
-
-
 //Launch rocket
 function launchRocket() {
 
@@ -273,9 +257,8 @@ function liftoff() {
 //sidekick abstraction: moveElementToCoord
 function moveRocket() {
     let rocketContainer = document.getElementById("rocket-container");
-    // rocketAnimation.style.bottom = "initial";
     rocketContainer.style.bottom = "calc(100vh + 20px)";
-    rocketContainer.style.left = "calc(100vw + 20px)";
+    rocketContainer.style.left = "calc(100vw + 50px)";
 }
 
 //Rotate rocket
@@ -315,7 +298,6 @@ function fadeLanding() {
     let intervalStepsInDuration = transitionDurationMs / intervalStepMs;
     let gradientStepSizeGray = gradientPctGray / intervalStepsInDuration;
     let posStepSizeX = posX / intervalStepsInDuration;
-    console.log("gradient step is: " + gradientStepSizeGray);
     
     //Execute an interval; at each step, adjust the gradient background
     let test = setInterval(function() {
