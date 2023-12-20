@@ -1,3 +1,10 @@
+/* 
+----------------------------------------------------------------------------------------------------
+Section: Page Initialization
+    Trigger any functionality dependant on page / DOM loading, such as attaching event listeners
+----------------------------------------------------------------------------------------------------
+*/
+
 /*
 A little side note for anyone reading this; I find the discussions on async/defer/DOMContentLoaded
 to be pretty interesting. Lots of different opinions related to performance & reliability. I'm 
@@ -32,13 +39,20 @@ function attachEventListeners() {
     
 }
 
-function fadeLiftoffText() {
-    setTimeout(function() {
-        const liftoffContainer = document.getElementById("liftoff-text-container");
-        liftoffContainer.style.opacity = 0;
-    }, 1000)
+/* 
+----------------------------------------------------------------------------------------------------
+Section: Implementations
+    Listener implementations, utility methods, etc
+----------------------------------------------------------------------------------------------------
+*/
+
+//Passed as callback function to the text animation flow; executes after all text has been "typed"
+function handleTextAnimationCompletion() {
+    launchRocket();
+    fadeLiftoffText();
 }
 
+//Configure & kick off the typing animation flow
 function initiateLandingPageAnimation() {
 
     //Get all text elements to animate, and remove their text
@@ -54,9 +68,9 @@ function initiateLandingPageAnimation() {
         "countdown-text"
     ]
 
-    let toAnimate = [
-    ]
-
+    //Store animation configuration in toAnimate array (array of objects; each object holds the
+    //metadata needed to run the animation for that text element)
+    let toAnimate = [];
     for (let id of textIds) {
         let textEl = document.getElementById(id);
         let text = textEl.textContent
@@ -71,38 +85,58 @@ function initiateLandingPageAnimation() {
         textEl.textContent = ""; 
     }
 
-
+    //Config object may eventually hold more config parameters; for now, we set the typing speed 
+    //between letters and the individual text elements
     let config = {
         delayAfterChar: 75,
         delayAfterElement: 200
         // delayAfterChar: 10,
         // delayAfterElement: 10
     }
-    animateText(toAnimate, config, fadeLiftoffText)
+
+    //Kick off the animation
+    animateText(toAnimate, config, handleTextAnimationCompletion)
 
 }
 
-//toAnimate: array of objects with k:v = id:text
+//Accepts an array of elements to animate the text of, as well as the configuration parameters
+//and a callback function to execute after the animation has fully completed
+//Note: this is a recursive flow; afer the first text element has been fully "typed" out, it will
+//be shifted out of the toAnimateArray, and this same method will be called on the new toAnimateArray
+//so that the next text element may be typed out
 function animateText(toAnimateArray, config, callback) {
 
-
+    //Get the first element to animate
     const toAnimate = toAnimateArray[0];
     let upNext = document.getElementById(toAnimate.id);
+
+    //Display the element and append the cursor element
     upNext.parentElement.style.visibility = "visible";
     upNext.parentElement.innerHTML += getCursorHtml(toAnimate.fontSize);
 
+    //Begin "typing" the letters
     appendLetters(toAnimateArray, config, callback);
 
 }
 
-//Appends individual letters
+//Appends individual letters (one letter at a time, and then recursively calls itself to type the
+//next letter)
+//Note: this method is part of the recursive flow; it checks the "textToAdd" array of the first
+//text element of the toAnimateArray, types that letter, removes that letter from "textToAdd", and
+//then calls itself. After all letters have been typed for that text element, it shifts that text
+//element out of the toAnimateArray and then calls "animateText" to begin typing out the next text 
+//element
 function appendLetters(toAnimateArray, config, callback) {
+
+    //Get the text element to animate, as well as its parent element and the letter that needs to
+    //be typed
     let toAnimate = toAnimateArray[0];
     let textEl = document.getElementById(toAnimate.id);
     let parentEl = textEl.parentElement;
     let remainingChars = toAnimate.textToAdd;
     let nextChar = remainingChars.shift();
 
+    //Encapsulte each individual word in a div to help with handling spaces
     if (toAnimate.wordStart) {
         const newWordElement = document.createElement("div");
         newWordElement.classList.add("animated-word");
@@ -110,13 +144,15 @@ function appendLetters(toAnimateArray, config, callback) {
         toAnimate.wordStart = false;
     }
 
+    //Check if the character to type is a space; if so, encode
     if (nextChar == " ") {
         nextChar = "&nbsp;"
         toAnimate.wordStart = true;
     }
 
-
-
+    //"Type" the letter. ie, append it to the page
+    //Note the retrieval and assignment of the classlist; this is to ensure all typed letters
+    //maintain the class they started with
     const newCharElement = document.createElement("p");
     newCharElement.innerHTML = nextChar;
     newCharElement.classList = toAnimate.classList;
@@ -124,36 +160,55 @@ function appendLetters(toAnimateArray, config, callback) {
     const targetWordContainer = parentsWordContainers[parentsWordContainers.length - 1];
     targetWordContainer.innerHTML += newCharElement.outerHTML;
 
-
+    //Update the "remainingChars" array now that the current letter has been shifted off
     toAnimate.remainingChars = remainingChars;
 
-    //Check for exit conditions
+    //Check for recursion exit conditions
+    //  Condition: There are no more remaining characters to type for this current text element
+    //      If this is the case, check for:
+    //          Condition: There are no more text elements to type the characters for
+    //              If this is the case, execute the callback function that has been provided
+    //              If this is not the case, shift the current text element off of the toAnimateArray
+    //                  and then call animateText to begin animating the next text element
+    //      If this is not the case, recursively call this same function to continue
     if (remainingChars.length == 0) {
+
         toAnimateArray.shift();
+
         if (toAnimateArray.length == 0) {
             callback();
-            launchRocket();
             return;
         } else {
+
+            //Remove the text animation cursor
             const animationCursor = document.getElementById("animation-cursor");
             animationCursor.remove();
+
+            //Call animateText to begin animating the next text element
             setTimeout(function() {
                 animateText(toAnimateArray, config, callback)
             }, config.delayAfterElement)
+
+            //Revert the text to the initial text container, instead of the individual div and p
+            //tags created as part of this flow
             Array.from(parentsWordContainers).forEach(wordContainer => {
                 wordContainer.remove();
             })
             textEl.textContent = toAnimate.textInitial;
+
             return;
+
         }
     }
 
+    //Recursively call this method to begin typing the next letter
     setTimeout(function() {
         appendLetters(toAnimateArray, config, callback);
     }, config.delayAfterChar)
 
 }
 
+//Generates the html required to display the text animation cursor
 function getCursorHtml(height) {
     const cursorHtml = `
         <div id="animation-cursor" class="sk-kf-blink" style="height: ` + height + `"></div>
@@ -161,11 +216,13 @@ function getCursorHtml(height) {
     return cursorHtml;
 }
 
+//Scroll event handler; triggers any other methods required to run on a scroll
 function handleScroll() {
     showHideLandingCopy();
 }
 
-//If not hidden, it is visible when getting to Projects section
+//Hide the landing page text if page is scrolled beyond the landing page, since it is position fixed
+//and would otherwise be visible once scrolling to the projects section
 function showHideLandingCopy() {
 
     const sectionAbout = document.getElementById("section-intro");
@@ -240,6 +297,7 @@ function engageThrusters() {
     
 }
 
+//Trigger all methods that must run as part of the rocket animation
 function liftoff() {
 
     moveRocket();
@@ -280,6 +338,14 @@ function resizeRocket(width, height) {
 function fadeRocket(opacity) {
     let rocket = document.getElementById("rocket");
     rocket.style.opacity = opacity;
+}
+
+//Fade liftoff countdown
+function fadeLiftoffText() {
+    setTimeout(function() {
+        const liftoffContainer = document.getElementById("liftoff-text-container");
+        liftoffContainer.style.opacity = 0;
+    }, 1000)
 }
 
 //Leveraging a radial gradient; will change its x position and the % position of each of the gradient's colors
