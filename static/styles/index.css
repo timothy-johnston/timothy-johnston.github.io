@@ -120,10 +120,12 @@ body {
 }
 
 #section-landing {
+    border: 5px solid pink;
     min-height: 100vh;
 }
 
 #chapter-landing {
+    border: 5px solid yellow;
     background: radial-gradient(circle at 50% 99%, hsla(231, 15%, 18%, 1.0) 100%, hsla(0, 0%, 100%, 0)), hsla(231, 15%, 18%, .2);
     /* background: radial-gradient(circle at 50% 99%, hsla(231, 15%, 18%, 1.0), var(--drac-dkblue1));
     background: radial-gradient(circle at 50% 99%, hsla(231, 34%, 10%, 1.0) 100%, hsla(0, 0%, 100%, 0)), hsla(231, 15%, 18%, .2); */
@@ -131,7 +133,8 @@ body {
     transition: 4s linear;
     position: fixed;
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    height: 100vh;
     box-sizing: border-box;
     padding-top: 0px;
 }
@@ -141,10 +144,12 @@ body {
 }
 
 #landing-copy-container {
+    border: 5px solid red;
     width: 100%;
     row-gap: 75px;
-    margin-bottom: 100px;
-    margin-top: 115px;
+    padding-bottom: 75px;
+    /* margin-bottom: 100px;
+    margin-top: 115px; */
 }
 
 #landing-title-container {
@@ -214,8 +219,10 @@ body {
     background: orange;
     border-radius: 10px;
     padding: 10px 15px;
+    margin-bottom: 150px;
     transition: 2.25s;
     width: fit-content;
+    box-shadow: 0px 0px 15px 4px black;
     /* position: absolute; */
 }
 
@@ -241,11 +248,12 @@ body {
 
 #rocket-animation {
     /* z-index: 1; */
+    width: calc(100% - var(--gutter-base-pct) - var(--gutter-base-pct));
     position: absolute;
-    bottom: 100px;
-    left: 50vw;
+    bottom: 50px;
+    /* left: 50vw;
     transform: translate(-50%, 0%);
-    transition: bottom 3s linear, left 3s cubic-bezier(0.82, -0.03, 1, 1);
+    transition: bottom 3s linear, all 3s cubic-bezier(0.82, -0.03, 1, 1); */
 }
 
 #rocket {
@@ -253,12 +261,17 @@ body {
     width: 100px;
     transform: rotate(-45deg);
     transition: 3s cubic-bezier(0.82, -0.03, 1, 1);
+    filter: drop-shadow(0px 0px 15px black);
 }
 
 #rocket-container {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
     height: 100px;
     width: 100px;
-    transition: 3s cubic-bezier(0.82, -0.03, 1, 1);
+    transition: bottom 3s linear, left 3s cubic-bezier(0.82, -0.03, 1, 1);
 }
 
 #glow-container {

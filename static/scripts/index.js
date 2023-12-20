@@ -79,10 +79,10 @@ function initiateLandingPageAnimation() {
 
     // animateText(toAnimate);
     let config = {
-        delayAfterChar: 75,
-        delayAfterElement: 200
-        // delayAfterChar: 7,
-        // delayAfterElement: 20
+        // delayAfterChar: 75,
+        // delayAfterElement: 200
+        delayAfterChar: 10,
+        delayAfterElement: 10
     }
     animateText(toAnimate, config, cbTest)
 
@@ -272,16 +272,16 @@ function liftoff() {
 //Move rocket
 //sidekick abstraction: moveElementToCoord
 function moveRocket() {
-    let rocketAnimation = document.getElementById("rocket-animation");
+    let rocketContainer = document.getElementById("rocket-container");
     // rocketAnimation.style.bottom = "initial";
-    rocketAnimation.style.bottom = "calc(100vh + 20px)";
-    rocketAnimation.style.left = "calc(100vw + 20px)";
+    rocketContainer.style.bottom = "calc(100vh + 20px)";
+    rocketContainer.style.left = "calc(100vw + 20px)";
 }
 
 //Rotate rocket
 function rotateRocket(rotation) {
-    let rocketContainer = document.getElementById("rocket-container");
-    rocketContainer.style.transform = "rotate(" + rotation + ")";
+    let rocket = document.getElementById("rocket");
+    rocket.style.transform = "rotate(" + rotation + ")";
 }
 
 //Resize rocket
@@ -295,8 +295,8 @@ function resizeRocket(width, height) {
 //Fade rocket
 //sidekick abstraction: fadeUnfadeElement
 function fadeRocket(opacity) {
-    let rocketContainer = document.getElementById("rocket-container");
-    rocketContainer.style.opacity = opacity;
+    let rocket = document.getElementById("rocket");
+    rocket.style.opacity = opacity;
 }
 
 //Leveraging a radial gradient; will change its x position and the % position of each of the gradient's colors
