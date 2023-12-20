@@ -127,20 +127,12 @@ body {
 #chapter-landing {
     border: 5px solid yellow;
     background: radial-gradient(circle at 50% 99%, hsla(231, 15%, 18%, 1.0) 100%, hsla(0, 0%, 100%, 0)), hsla(231, 15%, 18%, .2);
-    /* background: radial-gradient(circle at 50% 99%, hsla(231, 15%, 18%, 1.0), var(--drac-dkblue1));
-    background: radial-gradient(circle at 50% 99%, hsla(231, 34%, 10%, 1.0) 100%, hsla(0, 0%, 100%, 0)), hsla(231, 15%, 18%, .2); */
-    /* background: radial-gradient(circle at 50% 99%, var(--drac-dkblue1), var(--drac-dkblue1)); */
     transition: 4s linear;
     position: fixed;
     width: 100%;
-    /* min-height: 100vh; */
     height: 100vh;
     box-sizing: border-box;
     padding-top: 0px;
-}
-
-.landing-page-text {
-    /* visibility: hidden; */
 }
 
 #landing-copy-container {
@@ -148,8 +140,6 @@ body {
     width: 100%;
     row-gap: 75px;
     padding-bottom: 75px;
-    /* margin-bottom: 100px;
-    margin-top: 115px; */
 }
 
 #landing-title-container {
@@ -188,8 +178,6 @@ body {
     align-items: center;
     flex-wrap: wrap;
     visibility: hidden;
-    /* column-gap: 15px; */
-    /* position: relative; */
 }
 
 /* for sidekick */
@@ -205,17 +193,7 @@ body {
     margin-left: 10px;
 }
 
-#liftoff-text-container {
-    /* background: orange; */
-    /* padding: 10px 15px; */
-    /* width: 100%; */
-    /* border-radius: 5px; */
-    /* font-weight: bold; */
-    /* position: relative; */
-}
-
 #liftoff-text-container.animated-text-container {
-    /* visibility: hidden; */
     background: orange;
     border-radius: 10px;
     padding: 10px 15px;
@@ -223,15 +201,10 @@ body {
     transition: 2.25s;
     width: fit-content;
     box-shadow: 0px 0px 15px 4px black;
-    /* position: absolute; */
 }
 
 .liftoff-text {
-    /* background: orange;
-    padding: 10px 15px;
-    border-radius: 5px; */
     font-weight: bold;
-    /* width: 100%; */
     transition: 1.5s;
 }
 
@@ -247,13 +220,9 @@ body {
 }
 
 #rocket-animation {
-    /* z-index: 1; */
     width: calc(100% - var(--gutter-base-pct) - var(--gutter-base-pct));
     position: absolute;
     bottom: 50px;
-    /* left: 50vw;
-    transform: translate(-50%, 0%);
-    transition: bottom 3s linear, all 3s cubic-bezier(0.82, -0.03, 1, 1); */
 }
 
 #rocket {
@@ -341,7 +310,6 @@ body {
 }
 
 #intro-title-container {
-    /* row-gap: 20px; */
     padding: 25px 15px;
     border: 1px solid var(--drac-lime1);
     border-radius: 5px;
@@ -361,7 +329,6 @@ body {
 }
 
 .intro-copy {
-    /* font-size: 18px; */
     color: white;
     border-left: 5px solid var(--drac-cyan1);
     padding: 20px 25px;
@@ -420,7 +387,6 @@ body {
 
 .value-container {
     font-family: 'Fira Code', sans-serif;
-    /* transform: translate(0px, -14px); */
 }
 
 .value-label {
@@ -452,7 +418,6 @@ body {
 }
 
 .quote, .attribution {
-    /* font-size: 16px; */
     color: white;
     background: var(--drac-gray1);
     padding-top: 5px;
@@ -469,7 +434,6 @@ body {
 /* BREAKPOINT: SMALL (--bk-sm) */
 @media screen and (max-width: 320px) {
 
-    /* Reason for using a max-width here: Unlikely that page will be viewed with screen less than 320px so want to use the media query for the edge case, rather than the norm */ 
     .value {
         font-size: 22px;
     }
@@ -486,15 +450,6 @@ body {
     row-gap: 45px;
 }
 
-/* #skills-title {
-    font-size: 64px;
-    font-family: 'Fira Code';
-    font-weight: bold;
-    text-shadow: 4px 4px 0px var(--drac-cyan1);
-    color: hsl(229.41deg 34.69% 9.61%);
-    -webkit-text-stroke: 1px var(--drac-cyan1);
-} */
-
 #skills-container {
     row-gap: 45px;
 }
@@ -506,9 +461,6 @@ body {
 .category-title {
     color: var(--drac-lime1);
     font-size: min(1.5rem, 40px);
-    /* font-style: italic; */
-    /* font-size: 20px; */
-    /* font-family: 'Fira Code', monospace; */
 }
 
 .category-container {
@@ -547,34 +499,21 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 5px solid var(--drac-lime1);
-    /* background: hsl(231deg 15% 18% / 61%); */
     border-radius: 10px;
 }
-
-/* #projects-header {
-    color: var(--drac-lime1);
-    font-family: 'Fira Code', monospace;
-    font-size: 64px;
-} */
 
 .section-subtitle {
     font-size: 24px;
 }
 
 .project-card {
-    /* max-width: 325px; */
     display: flex;
     flex-direction: column;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
     border-radius: 10px;
     box-shadow: 0px 10px 55px #000000b3;
     background: hsl(231deg 15% 18% / 65%);
     position: relative;
-    /* max-width: 525px; */
     width: 100%;
-    /* min-width: 325px;
-    width: 40%; */
 }
 
 @keyframes increase-width {
@@ -653,10 +592,6 @@ body {
     color: var(--drac-gray1);
     row-gap: 35px;
 }
-
-/* .card-front>.card-content {
-    padding: 30px 6%;
-} */
 
 .details-container,
 .card-title-container,
@@ -837,11 +772,6 @@ body {
 
 /* BREAKPOINT: SMALL (--bk-sm) */
 @media screen and (min-width: 576px) {
- 
-    .project-card {
-        /* min-width: 325px; */
-        /* width: 40%; */
-    }
     
 }
 
@@ -853,7 +783,6 @@ body {
     }
 
     .project-card {
-        /* min-width: 300px; */
         width: 47%;
     }
     
