@@ -1,0 +1,30 @@
+{
+    "title": "Project 1",
+    "img_src": "static/resources/images/pi-hardware-1.jpg",
+    "link_web": "https://timothy-johnston.github.io",
+    "link_code": "https://github.com/timothy-johnston",
+    "description": [
+      {
+        "text": "Project description paragraph 1. This will likely be at least one or two sentences. Or more! Who knows really?"
+      },
+      {
+        "text": "Project description paragraph 2. Its another paragraph! How about that."
+      }
+    ],
+    "stack": "Tech 1, Tech 2, Tech 3, Tech 4",
+    "methods": "Methodology 1, Methodology 2, Methodology 3",
+    "details": [
+      {
+        "text": "Other details, long or short sentences or bullet points"
+      },
+      {
+        "text": "Other details, long or short sentences or bullet points"
+      },
+      {
+        "text": "Other details, long or short sentences or bullet points"
+      },
+      {
+        "text": "Other details, long or short sentences or bullet points"
+      }
+    ]
+  }

@@ -1,0 +1,391 @@
+/* STRUCTURES - MISC */
+body {
+    margin: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: hsl(231deg 15% 18% / 25%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(191deg 97% 65% / 75%);
+    border-radius: 5px;
+}
+
+/* STRUCTURES - CONTAINERS */
+.section {
+
+}
+
+.section-title {
+    font-family: 'Fira Code', monospace;
+    font-size: clamp(52px, 3rem, 64px);
+    color: var(--drac-lime1);
+}
+
+.section-drac-gray .section-content-wrapper {
+    background: var(--drac-gray1);
+}
+
+.section-content-wrapper {
+    height: 100%;
+    padding: 0px 8%;
+}
+
+/* STRUCTURES - BUTTONS */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    overflow: hidden;
+    column-gap: 10px;
+    background: var(--drac-gray-accent1);
+    transition: .2s;
+}
+
+/* .btn:hover {
+    transform: scale(1.04);
+    cursor: pointer;
+} */
+
+.btn-only-fa-icon {
+
+}
+
+.btn-only-label {
+
+}
+
+.btn-padded-base {
+    padding: 10px 15px;
+}
+
+.btn-fa-icon {
+    font-size: 22px;
+}
+
+.btn-label {
+    font-size: clamp(16px, 1rem, 20px);
+}
+
+
+/* STRUCTURES - FORMS */
+
+/* TEXT */
+html {
+    font-family: 'Karla', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 16px;
+}
+
+p, a, li, ul {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+/* a {
+    transition: .2s;
+}
+
+a:hover {
+    transform: scale(1.06);
+    cursor: pointer;
+} */
+
+.title, .subtitle {
+    font-family: 'Fira Code', monospace;
+    font-size: clamp(16px, 2rem, 64px);
+}
+
+.subtitle {
+    font-size: clamp(20px, 1.5rem, 42px);
+}
+
+.copy {
+    font-size: clamp(16px, 1rem, 20px);
+    font-weight: 300; /* only for Karla font family - don't move this to sidekick unless karla is default font there */
+}
+
+/* COLORS */
+.drac-lime {
+    color: var(--drac-lime1)
+}
+
+.drac-cyan {
+    color: var(--drac-cyan1)
+}
+
+.drac-gray {
+    color: var(--drac-gray1)
+}
+
+.drac-gray-accent1 {
+    color: var(--drac-gray-accent1);
+}
+
+/* VISUAL COMPONENTS */
+.bg-gray {
+    background-color: var(--drac-gray1);
+}
+
+/* DISPLAY AND LAYOUT */
+.hidden {
+    display: none;
+}
+
+.section {
+
+}
+
+.chapter {
+    padding-top: 100px;
+    padding-bottom: 110px;
+}
+
+.chapter-header {
+    font-family: 'Fira Code', monospace;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.chapter-title {
+    font-size: clamp(52px, 3rem, 78px);
+    /* font-family: 'Fira Code', monospace; */
+    font-weight: bold;
+    text-shadow: 4px 4px 0px var(--drac-cyan1);
+    color: hsl(229.41deg 34.69% 9.61%);
+    -webkit-text-stroke: 1px var(--drac-cyan1);
+}
+
+.chapter-subtitle {
+    color: var(--drac-lime1);
+    font-size: clamp(20px, 1.5rem, 32px);
+}
+
+.chapter-subtitle-minor {
+    font-size: clamp(16px, 1.1rem, 20px);
+    font-style: italic;
+}
+
+.guttered-base {
+    padding-left: var(--gutter-base-pct);
+    padding-right: var(--gutter-base-pct);
+}
+
+
+
+
+
+
+
+/* ---------------------------- FOR SIDEKICK ----------------------------- */
+.sk-flex {
+    display: flex;
+}
+
+.sk-flex-cc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sk-flex-ct {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.sk-flex-cb {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.sk-flex-lc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sk-flex-lt {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sk-flex-lb {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.sk-flex-rc {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sk-flex-rt {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.sk-flex-rb {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.sk-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.sk-flex-row {
+    flex-direction: row;
+}
+
+.sk-flex-col {
+    flex-direction: column;
+}
+
+.sk-flex-even-X {
+    justify-content: space-evenly;
+}
+
+.sk-flex-between-X {
+    justify-content: space-between;
+}
+
+.sk-flex-around-X {
+    justify-content: space-around;
+}
+
+.sk-flex-even-Y {
+    align-items: space-evenly;
+}
+
+.sk-flex-between-Y {
+    align-items: space-between;
+}
+
+.sk-flex-around-Y {
+    align-items: space-around;
+}
+
+.sk-spacer {
+    height: 0px;
+    width: 100%;
+}
+
+.sk-spacer-25 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.sk-spacer-50 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.sk-spacer-75 {
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.sk-spacer-100 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.sk-spacer-line {
+    border: 1px solid rgb(157, 157, 157);
+}
+
+/* spacer with icon centered in the middle. see .sk-spacer-fa & .sk-spacer-svg for icon type-specific
+extras */
+.sk-spacer-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* spacer with FontAwesome icon centered in the middle */
+.sk-spacer-fa {
+
+}
+
+/* spacer with SVG icon centered in the middle */
+.sk-spacer-svg {
+
+}
+
+.sk-spacer-svg svg {
+    height: 50px;
+    width: auto;
+}
+
+.sk-automargined {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sk-width-cap-700 {
+    max-width: 700px;
+}
+
+.sk-width-cap-900 {
+    max-width: 900px;
+}
+
+.sk-width-cap-1100 {
+    max-width: 1100px;
+}
+
+.sk-hover-scale-sm:hover {
+    transform: scale(1.04);
+}
+
+.sk-hover-scale-md:hover {
+    transform: scale(1.08);
+}
+
+.sk-hover-scale-lg:hover {
+    transform: scale(1.12);
+}
+
+.sk-clickable {
+    cursor: pointer;
+}
+
+.sk-clickable[disabled] {
+    opacity: .7;
+    pointer-events: none;
+}
+
+.sk-wrap-blocker {
+    white-space: nowrap;
+}
+
+.sk-kf-blink {
+    animation: sk-kf-blink 1s infinite;
+}
+
+@keyframes sk-kf-blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+

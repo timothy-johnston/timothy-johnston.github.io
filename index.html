@@ -1,610 +1,556 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
-        <title>Tim Johnston's Portfolio</title>
 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Tim Johnston | Software Engineer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Tim Johnston's professional portfolio page.">
 
-        <!-- Bootstrap required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Fonts & Icons -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/46062272ec.js" crossorigin="anonymous"></script>
 
-        <!-- Import fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans" rel="stylesheet">  
+        <!-- Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="static/styles/variables.css">
+        <link rel="stylesheet" type="text/css" href="static/styles/common.css">
+        <link rel="stylesheet" type="text/css" href="static/styles/index.css">
 
-        <!-- Bootstrap stylesheet goes before any other stylesheets -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles/main.css" />
-        <link rel="stylesheet" href="styles/social-circles.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!-- Scripts (Deferred, or not dependent on DOM readiness) -->
+        <script src="static/scripts/index.js" defer></script>
+
     </head>
 
     <body>
-
-        
-
-        <div id="blur-me">
-
-        <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-transparent" id="navbar">
-            <button class="navbar-toggler ml-auto" id="collapse-button" type="button" data-toggle="collapse" data-target="#collapse-menu" aria-controls="collapse-menu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapse-menu">
-                <ul class="navbar-nav" id="navbar-ul">
-                    <li class="nav-item" id="nav-item-1">
-                        <a class="nav-link color-transition" href="#"><p class="hvr-float-shadow-p">TJ</p></a>
-                    </li>
-                    <li class="nav-item" id="nav-item-2">
-                        <a class="nav-link color-transition" href="#about-section"><p class="hvr-float-shadow-p">About</p></a>
-                    </li>
-                    <li class="nav-item" id="nav-item-3">
-                        <a class="nav-link color-transition" href="#portfolio-section"><p class="hvr-float-shadow-p">Portfolio</p></a>
-                    </li>
-                    <!-- <li class="nav-item" id="nav-item-4">
-                        <a class="nav-link color-transition" href="#"><p class="hvr-float-shadow-p">Blog</p></a>
-                    </li> -->
-                    <li class="nav-item" id="nav-item-4">
-                        <div >
-                            <div id="dropdown-content-container">
-                                <div class="hvr-float-shadow">
-                                    <a class="dropdown-item icon-linkedin social-button-nav borderless" target="_blank" href="https://www.linkedin.com/in/timothyejohnston/"></a>
-                                </div>
-                                <div class="hvr-float-shadow">
-                                    <a class="dropdown-item icon-twitter social-button-nav borderless" target="_blank" href="https://twitter.com/TimJohnston_11"></a>
-                                </div>
-                                <div class="hvr-float-shadow">
-                                    <a class="dropdown-item icon-github social-button-nav borderless" target="_blank" href="https://github.com/timothy-johnston"></a>
-                                </div>
+        <section id="section-landing" class="section">
+            <div id="landing-bg-video-container" class="bg-video-container">
+                <div id="landing-bg-initial">
+                </div>
+                <video autoplay loop muted>
+                    <source src="static/resources/videos/bg-space-1-1080.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div id="chapter-landing" class="chapter guttered-base sk-flex sk-flex-col sk-flex-cc">
+                <div id="landing-copy-container" class="sk-flex sk-flex-col sk-width-cap-900">
+                    <div id="landing-title-container">
+                        <div class="animated-text-container">
+                            <p id="landing-title" class="title drac-lime landing-page-text">TIM JOHNSTON</p>
+                        </div>
+                        <div class="animated-text-container">
+                            <p id="landing-subtitle" class="subtitle drac-lime landing-page-text">full stack software engineer</p>
+                        </div>
+                        
+                    </div>
+                    <div id="landing-links-container" class="">
+                        <div class="landing-link-container">
+                            <div class="animated-text-container">
+                                <a href="#section-intro" id="landing-link-about" class="subtitle drac-cyan landing-link-component link landing-link landing-page-text sk-hover-scale-md sk-clickable">about me</a>
+                            </div>
+                            <div class="animated-text-container">
+                                <p id="landing-link-slash-1" class="subtitle drac-cyan landing-link-component link-separator landing-page-text">/</p>
                             </div>
                         </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div id="nav-border-div"></div>
-        
-
-        
-
-
-        <!-- Section: Welcome / Cover Page-->
-        <!-- <div id="welcome-section-wrapper"> -->
-        <div id="welcome-section">
-            <div class="container-fluid section-div" id="cover-page">
-                <div class="container" id="cover-details-container">
-                    <div id="cover-name-container">
-                        <p id="header-name">TIMOTHY JOHNSTON</p>
-                    </div>
-                    <div class="container" id="cover-title-container">
-                        <p id="header-title">Software Developer from Pittsburgh, Pennsylvania</p>
+                        <div class="landing-link-container">
+                            <div class="animated-text-container">
+                                <a href="#section-projects" id="landing-link-portfolio" class="subtitle drac-cyan landing-link-component link landing-link landing-page-text sk-hover-scale-md sk-clickable">projects</a>
+                            </div>
+                            <div class="animated-text-container">
+                                <p id="landing-link-slash-2" class="subtitle drac-cyan landing-link-component link-separator landing-page-text">/</p>
+                            </div>
+                        </div>
+                        <div class="landing-link-container">
+                            <div class="animated-text-container">
+                                <a href="#section-footer" id="landing-link-contact" class="subtitle drac-cyan landing-link-component link landing-link landing-page-text sk-hover-scale-md sk-clickable">contact</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    <!-- </div> -->
-
-        <!-- Section: About-->
-        <section id="about-section">
-            <div class="container">
-                <h3 id="quote-pt1">"I could either watch it happen or be a part of it." <p>- Elon Musk</p></h3>
-                <h1 id="quote-pt2">I choose to be a part of it.</h1>
-            </div>
-            <div class="container about-container border-wrapper">
-                <div class="row box-shadow-soft" id="about-bio-container">
-                    <div class="col-lg-6" id="about-pic-container" data-image-src="media/glacier_bay_boat_square.jpg">
-                        <div class="" id="bio-pic-div" data-image-src="media/glacier_bay_boat_square.jpg"></div>
+                <div id="rocket-animation" class="sk-flex sk-flex-cb">
+                    <div id="liftoff-text-container" class="animated-text-container">
+                        <p id="countdown-text" class="copy liftoff-text landing-page-text">Liftoff in T minus 3 . . . . . . 2 . . . . . . 1 . . . . . . </p>
                     </div>
-                    <div class="col-lg-6" id="about-text-container">
-                        <h1>Builder. Learner. Yinzer.</h1>
-                        <h5>Full-stack developer. Full-time innovator.</h5>
-                        <br>
-                        <p>
-                            I love problem solving, hypothesizing, breaking things, and fixing things. 
-                            I'm a member of Pittsburgh's thriving tech community, and I couldn't be more proud to play a part in this fantastic city's tech rennaissance.
-                        </p>
-                        <p>
-                            My strongest interests lie in API development and data analysis + visualization, 
-                            and I'm a major proponent of agile development and thoroughly tested code.
-                        <p>
-                            When I'm not programming, you'll find me running around a soccer field, setting up camp in the woods, or cooking up something real spicy in the kitchen.
-                        </p>
+                    <div id="rocket-container" class="sk-flex sk-flex-cc">
+                        <div id="glow"></div>
+                        <svg id="rocket" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" viewBox="-41.64 -41.64 499.73 499.73" xml:space="preserve" width="800px" height="800px" fill="#000000">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)"/>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.8328979999999999"/>
+                            <g id="SVGRepo_iconCarrier"> <g id="_x31_5._Rocket_2_"> <g id="XMLID_65_"> <g> <g> <path style="fill:#101321;" d="M399.76,16.699c10.12,37.84,8.67,78.13-4.34,115.28h-0.01L284.48,21.049v-0.01 C321.63,8.029,361.92,6.579,399.76,16.699z"/> </g> <g> <path style="fill:#52fa7c;" d="M90.21,207.929l87.14-101.42h0.01l33.71-39.24c21.43-21.43,46.6-36.84,73.41-46.23v0.01 l110.93,110.93h0.01c-9.39,26.81-24.8,51.98-46.23,73.41l-39.24,33.71l-101.43,87.14l-29.57-29.57l-29.58-29.58l-29.58-29.58 L90.21,207.929z M296.11,193.399c20.18-20.17,20.18-52.89,0-73.06c-20.17-20.18-52.89-20.18-73.06,0 c-20.18,20.17-20.18,52.89,0,73.06C243.22,213.579,275.94,213.579,296.11,193.399z"/> </g> <g> <path style="fill:#52fa7c;" d="M309.95,239.099c1.74,45.6-14.8,91.78-49.61,126.59c-10.69,10.68-22.44,19.65-34.93,26.89 l-16.89-66.34L309.95,239.099z"/> </g> <g> <path style="fill:#101321;" d="M296.11,120.339c20.18,20.17,20.18,52.89,0,73.06c-20.17,20.18-52.89,20.18-73.06,0 c-20.18-20.17-20.18-52.89,0-73.06C243.22,100.159,275.94,100.159,296.11,120.339z"/> </g> <g> <path style="fill:#101321;" d="M208.52,326.239l-39.94,14.71c-10.98,4.05-23.31,1.34-31.58-6.94l-6.85-6.85l48.8-30.49 L208.52,326.239z"/> </g> <g> <polygon style="fill:#101321;" points="178.95,296.669 130.15,327.159 130.14,327.159 109.72,306.739 149.37,267.089 "/> </g> <g> <path style="fill:#52fa7c;" d="M177.35,106.509l-87.14,101.42l-66.33-16.88c7.24-12.49,16.21-24.24,26.89-34.93 C85.58,121.309,131.74,104.769,177.35,106.509z"/> </g> <g> <polygon style="fill:#101321;" points="149.37,267.089 109.72,306.739 89.3,286.309 119.79,237.509 "/> </g> <g> <path style="fill:#101321;" d="M119.79,237.509l-30.49,48.8l-6.86-6.85c-8.27-8.28-10.98-20.6-6.94-31.58l14.71-39.95 L119.79,237.509z"/> </g> </g> <g> <g> <path style="fill:#52fa7c;" d="M28.88,339.459c-2.559,0-5.119-0.977-7.071-2.929c-3.905-3.905-3.905-10.237,0-14.143 l20.54-20.54c3.905-3.904,10.237-3.904,14.143,0c3.905,3.905,3.905,10.237,0,14.143l-20.54,20.54 C33.999,338.482,31.44,339.459,28.88,339.459z"/> </g> <g> <path style="fill:#52fa7c;" d="M10,416.439c-2.56,0-5.119-0.977-7.072-2.93c-3.905-3.905-3.904-10.237,0.001-14.142l68.47-68.46 c3.905-3.904,10.237-3.904,14.142,0.001c3.905,3.905,3.904,10.237-0.002,14.142l-68.47,68.46 C15.118,415.463,12.559,416.439,10,416.439z"/> </g> <g> <path style="fill:#52fa7c;" d="M73.29,411.259c-2.56,0-5.118-0.977-7.071-2.929c-3.905-3.905-3.905-10.237,0-14.143 l34.23-34.229c3.905-3.904,10.237-3.903,14.142,0c3.905,3.905,3.905,10.237,0,14.143l-34.23,34.229 C78.409,410.282,75.849,411.259,73.29,411.259z"/> </g> <g> <path style="fill:#52fa7c;" d="M208.52,336.239c-2.56,0-5.118-0.977-7.071-2.929L83.139,215c-3.905-3.905-3.905-10.237,0-14.143 c3.905-3.904,10.237-3.904,14.143,0l118.31,118.311c3.905,3.905,3.905,10.237,0,14.143 C213.639,335.263,211.079,336.239,208.52,336.239z"/> </g> <g> <path style="fill:#52fa7c;" d="M259.58,218.534c-16.474,0-31.959-6.416-43.604-18.066c-11.646-11.641-18.062-27.126-18.062-43.6 c0-16.474,6.416-31.959,18.065-43.604c11.641-11.646,27.126-18.062,43.6-18.062s31.959,6.416,43.604,18.065 c11.645,11.641,18.061,27.126,18.061,43.6c0,16.472-6.415,31.956-18.061,43.6l0,0c-0.001,0.002-0.001,0.001-0.004,0.004 C291.536,212.119,276.052,218.534,259.58,218.534z M259.58,115.204c-11.13,0-21.592,4.334-29.457,12.204 c-7.874,7.869-12.208,18.331-12.208,29.461s4.334,21.592,12.204,29.457c7.869,7.874,18.331,12.208,29.461,12.208 c11.13,0,21.592-4.334,29.457-12.204c0.002-0.001,0.003-0.002,0.004-0.004c7.87-7.865,12.204-18.327,12.204-29.457 s-4.334-21.592-12.204-29.457C281.172,119.538,270.71,115.204,259.58,115.204z"/> </g> <g> <path style="fill:#52fa7c;" d="M89.291,296.31c-1.81,0-3.642-0.49-5.29-1.521c-4.684-2.926-6.108-9.096-3.182-13.779l30.49-48.8 c2.927-4.684,9.097-6.11,13.78-3.182c4.684,2.926,6.108,9.096,3.182,13.779l-30.49,48.8 C95.884,294.643,92.625,296.31,89.291,296.31z"/> </g> <g> <path style="fill:#52fa7c;" d="M109.72,316.739c-2.559,0-5.118-0.977-7.071-2.929c-3.905-3.905-3.906-10.237-0.001-14.143 l39.65-39.65c3.905-3.904,10.237-3.904,14.142,0c3.905,3.905,3.906,10.237,0.001,14.142l-39.65,39.65 C114.839,315.763,112.279,316.739,109.72,316.739z"/> </g> <g> <path style="fill:#52fa7c;" d="M130.16,337.16c-3.334,0-6.593-1.666-8.49-4.702c-2.926-4.684-1.501-10.854,3.182-13.779 l48.8-30.49c4.683-2.929,10.853-1.503,13.78,3.182c2.926,4.684,1.501,10.853-3.182,13.779l-48.8,30.49 C133.801,336.67,131.97,337.16,130.16,337.16z"/> </g> <g> <path style="fill:#52fa7c;" d="M177.356,116.509c-2.307,0-4.625-0.794-6.512-2.415c-4.189-3.599-4.668-9.912-1.069-14.102 l33.71-39.24c3.598-4.188,9.911-4.668,14.102-1.068c4.189,3.599,4.668,9.912,1.068,14.101l-33.71,39.24 C182.968,115.327,180.17,116.509,177.356,116.509z"/> </g> <g> <path style="fill:#52fa7c;" d="M158.265,352.787c-10.448,0-20.723-4.085-28.34-11.712l-6.582-6.582 c-0.093-0.086-0.184-0.173-0.273-0.263l-47.694-47.695c-10.992-11.006-14.623-27.531-9.259-42.109l14.71-39.952 c0.413-1.12,1.022-2.157,1.799-3.061l87.14-101.42c3.601-4.188,9.913-4.667,14.102-1.068c4.189,3.6,4.667,9.913,1.068,14.102 L98.971,213.077l-14.086,38.257c-2.682,7.289-0.864,15.556,4.632,21.059l47.432,47.433c0.092,0.086,0.184,0.173,0.273,0.263 l6.85,6.85c5.497,5.504,13.756,7.318,21.048,4.63l38.252-14.089l139.302-119.675c4.191-3.6,10.504-3.119,14.102,1.068 c3.6,4.189,3.121,10.503-1.068,14.102L215.036,333.824c-0.904,0.777-1.94,1.387-3.059,1.799l-39.941,14.71 C167.557,351.985,162.893,352.787,158.265,352.787z"/> </g> <g> <path style="fill:#52fa7c;" d="M349.19,215.389c-2.559,0-5.118-0.977-7.071-2.929c-3.905-3.905-3.905-10.237,0-14.143 c19.885-19.884,34.642-43.315,43.863-69.644c11.736-33.512,13.626-69.25,5.536-103.733c-34.48-8.089-70.221-6.199-103.733,5.536 c-26.329,9.221-49.761,23.979-69.645,43.863c-3.905,3.904-10.236,3.905-14.143,0c-3.905-3.905-3.905-10.237,0-14.143 c22.025-22.024,47.991-38.375,77.176-48.596C320.331-2.111,362.231-3.69,402.344,7.039c3.454,0.924,6.152,3.622,7.076,7.076 c10.728,40.114,9.151,82.014-4.563,121.17c-10.221,29.185-26.571,55.15-48.596,77.175 C354.309,214.412,351.75,215.389,349.19,215.389z"/> </g> <g> <path style="fill:#52fa7c;" d="M395.41,141.98c-2.56,0-5.118-0.977-7.071-2.929L277.409,28.12 c-3.905-3.905-3.905-10.237,0-14.143c3.908-3.905,10.238-3.903,14.143,0l110.93,110.931c3.905,3.905,3.905,10.237,0,14.143 C400.528,141.003,397.969,141.98,395.41,141.98z"/> </g> <g> <path style="fill:#52fa7c;" d="M90.22,217.929c-0.832,0-1.67-0.104-2.477-0.309l-66.33-16.88 c-3.037-0.773-5.537-2.926-6.751-5.814c-1.215-2.889-1.005-6.181,0.566-8.892c7.778-13.418,17.355-25.86,28.467-36.982 c35.281-35.281,84.119-54.445,133.988-52.537c5.369,0.176,9.671,4.583,9.671,9.994c0,5.522-4.472,10-9.995,10h-0.01 c-0.127,0-0.254-0.002-0.381-0.007c-44.338-1.699-87.765,15.325-119.127,46.688c-6.684,6.689-12.742,13.914-18.101,21.576 l52.73,13.419c4.435,1.024,7.745,4.998,7.745,9.743C100.215,213.451,95.743,217.929,90.22,217.929z"/> </g> <g> <path style="fill:#52fa7c;" d="M225.41,402.579c-1.315,0-2.633-0.259-3.876-0.782c-2.89-1.215-5.042-3.714-5.815-6.75 l-16.891-66.34c-1.363-5.353,1.872-10.796,7.224-12.158c5.349-1.366,10.795,1.871,12.158,7.223l13.48,52.948 c7.663-5.359,14.889-11.419,21.581-18.104c31.36-31.36,48.378-74.785,46.684-119.136c-0.21-5.519,4.093-10.163,9.611-10.374 c5.509-0.233,10.164,4.093,10.375,9.611c1.903,49.897-17.243,98.755-52.532,134.044c-11.124,11.113-23.567,20.691-36.986,28.47 C228.881,402.126,227.148,402.579,225.41,402.579z"/> </g> </g> </g> </g> </g>
+                        </svg>
                     </div>
                 </div>
-            </div>
-            <div class="container" id="skills-header-container">
-                <p id="my-skills-p">My Skills</p>
-            </div>
-            <div class="container about-container border-wrapper">
-                <div class="container box-shadow-soft" id="about-skills-container">
-                    <button type="button" class="skill-item btn hvr-pop">Server-Side Development</button>
-                    <button type="button" class="skill-item btn hvr-pop">Front-End Development</button>
-                    <button type="button" class="skill-item btn hvr-pop">Web Design</button>
-                    <button type="button" class="skill-item btn hvr-pop">RESTful API Design</button>
-                    <button type="button" class="skill-item btn hvr-pop">Object Oriented Programming</button>
-                    <button type="button" class="skill-item btn hvr-pop">Agile</button>
-                    <button type="button" class="skill-item btn hvr-pop">Test Driven Development</button>
-                    <button type="button" class="skill-item btn hvr-pop">Automated Testing</button>
-                    <button type="button" class="skill-item btn hvr-pop">Data Analysis</button>
-                    <button type="button" class="skill-item btn hvr-pop">Java</button>
-                    <button type="button" class="skill-item btn hvr-pop">Python</button>
-                    <button type="button" class="skill-item btn hvr-pop">Javascript</button>
-                    <button type="button" class="skill-item btn hvr-pop">MATLAB</button>
-                    <button type="button" class="skill-item btn hvr-pop">IDL</button>
-                    <button type="button" class="skill-item btn hvr-pop">Spring Boot</button>
-                    <button type="button" class="skill-item btn hvr-pop">Spring MVC</button>
-                    <button type="button" class="skill-item btn hvr-pop">Django</button>
-                    <button type="button" class="skill-item btn hvr-pop">JSP</button>
-                    <button type="button" class="skill-item btn hvr-pop">JUnit</button>
-                    <button type="button" class="skill-item btn hvr-pop">jQuery</button>
-                    <button type="button" class="skill-item btn hvr-pop">HTML</button>
-                    <button type="button" class="skill-item btn hvr-pop">CSS</button>
-                    <button type="button" class="skill-item btn hvr-pop">Bootstrap</button>
-                    <button type="button" class="skill-item btn hvr-pop">Git</button>
-                    <button type="button" class="skill-item btn hvr-pop">Hibernate</button>
-                    <button type="button" class="skill-item btn hvr-pop">PostgreSQL</button> 
-                    <button type="button" class="skill-item btn hvr-pop">MySQL</button>
-                    <button type="button" class="skill-item btn hvr-pop">Relational Databases</button>
-                </div>
-            </div>
-            <div id="related-projects-container" class="container">
-                <p id="skill-click-prompt">Click on a skill above to see a list of projects where I've used it.</p>
-                <p id="related-projects-p">Projects using this skill:</p>
-                <p id="no-projects-p"></p>
-                <button id="project-btn-1" type="button" class="project-item btn hvr-pop"></button>
-                <button id="project-btn-2" type="button" class="project-item btn hvr-pop"></button>
-                <button id="project-btn-3" type="button" class="project-item btn hvr-pop"></button>
-                <button id="project-btn-4" type="button" class="project-item btn hvr-pop"></button>
-                <button id="project-btn-5" type="button" class="project-item btn hvr-pop"></button>
-                <button id="project-btn-6" type="button" class="project-item btn hvr-pop"></button>
-            </div>
-            <div class="project-description-container" id="project-description-container-1">
-                
             </div>
         </section>
-        
-        
-
-            
-        <section id="portfolio-section">
-            <div class="container" id="portfolio-title-container">
-                <p id="header-name">Portfolio</p>
-            </div>
-            <div class="container"> <!-- Portfolio card deck starts here-->
-                <div class="row" id="portfolio-deck">
-                    <div class="col-xl-4 col-md-6 card-container-portfolio">
-                        <div class="card portfolio-card h-100">
-                            <img class="card-img-top" src="media/project_pic_pi_edited.jpg" alt="Bologna">
-                            <div class="card-body">
-                                <div class="card-title-container">
-                                    <span class="card-title-inner">
-                                        <h4 class="card-title">ThirstyCat: Hardware</h4>
-                                        <h6 class="card-subtitle mb-2">Raspberry Pi, Python</h6>
-                                        <a href="https://twitter.com/TheThirstyCat" target="_blank">twitter.com/TheThirstyCat</a>
-                                    </span>
-                                </div>
-                                <hr>
-                                <p class="card-text">Pressure-activated camera & Twitter bot that detects when my cat gets a drink, captures a photo, and automatically tweets the photo using the Twitter API.</p>
-                            </div>
-                            <div class="card-footer">           
-                                <button class="btn btn-learn-more" id="btn-TC-hard"><a class="project-description-link" href="#project-description-container-2">Learn More</a></button>
-                                <span class="icon-container">
-                                        <a class="github-href" href="https://github.com/timothy-johnston/ThirstyCat" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
-                                </span>    
-                            </div>
-                        </div>
+        <section id="section-intro" class="section sk-flex sk-flex-col sk-flex-cc">
+            <div id="chapter-intro" class="chapter guttered-base sk-width-cap-700 sk-automargined sk-flex sk-flex-col">
+                <div id="intro-title-container" class="chapter-header">
+                    <div class="chapter-subtitle-container">
+                        <p class="chapter-subtitle">Hello!</p>
                     </div>
-                    <div class="col-xl-4 col-md-6 card-container-portfolio">
-                        <div class="card portfolio-card h-100">
-                            <img class="card-img-top" src="media/project_pic_cat2.png" alt="Bologna">
-                            <div class="card-body">
-                                <div class="card-title-container">
-                                    <span class="card-title-inner">
-                                        <h4 class="card-title">ThirstyCat: Software</h4>
-                                        <h6 class="card-subtitle mb-2">Java & Spring Boot</h6>
-                                        <a href="https://www.thethirstycat.net" target="_blank">thethirstycat.net</a>
-                                    </span>
-                                </div>
-                                <hr>
-                                <p class="card-text">Full-stack web app allowing users to view ThirstyCat photos and statistics. Users can create an account to receive automated email updates, favorite pictures, and submit photos of their own.</p>
-                            </div>
-                            <div class="card-footer">           
-                                <button class="btn btn-learn-more" id="btn-TC-soft"><a class="project-description-link" href="#project-description-container-2">Learn More</a></button>
-                                <span class="icon-container">
-                                    <a class="github-href" href="https://github.com/timothy-johnston/ThirstyCat" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
-                                </span> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 card-container-portfolio">
-                        <div class="card portfolio-card h-100">
-                            <img class="card-img-top" src="media/project_pic_GB.png" alt="Bologna">
-                            <div class="card-body">
-                                <div class="card-title-container">
-                                    <span class="card-title-inner">
-                                        <h4 class="card-title">GradientBox</h4>
-                                        <h6 class="card-subtitle mb-2">Python, Django, JavaScript</h6>
-                                        <a href="http://www.gradient-box.com" target="_blank">gradient-box.com</a>
-                                    </span>
-                                </div>
-                                <hr>
-                                <p class="card-text">Full stack web app where developers and designers are surprised with randomly selected CSS gradients created by other users. Users can also create and share their own gradients.</p>
-                            </div>
-                            <div class="card-footer">           
-                                <button class="btn btn-learn-more" id="btn-GB"><a class="project-description-link" href="#project-description-container-2">Learn More</a></button>
-                                <span class="icon-container">
-                                    <a class="github-href" href="https://github.com/timothy-johnston/GradientBox" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
-                                </span>      
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 card-container-portfolio">
-                        <div class="card portfolio-card h-100">
-                            <img class="card-img-top" src="media/project_pic_portfolio.png" alt="Bologna">
-                            <div class="card-body">
-                                <div class="card-title-container">
-                                    <span class="card-title-inner">
-                                        <h4 class="card-title">Personal Portfolio Page</h4>
-                                        <h6 class="card-subtitle mb-2">HTML, CSS, Javascript</h6>
-                                    </span>
-                                </div>
-                                <hr>
-                                <p class="card-text">Static website built to serve as my online portfolio and blog. Features modern styling, a contact form, and a responsive layout.</p>
-                            </div>
-                            <div class="card-footer">           
-                                <button class="btn btn-learn-more" id="btn-portfolio-tj"><a class="project-description-link" href="#project-description-container-2">Learn More</a></button> 
-                                <span class="icon-container">
-                                    <a class="github-href" href="https://github.com/timothy-johnston/timothy-johnston.github.io" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
-                                </span>     
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 card-container-portfolio">
-                        <div class="card portfolio-card h-100">
-                            <img class="card-img-top" src="media/project_pic_WV_edited.png" alt="Bologna">
-                            <div class="card-body">
-                                <div class="card-title-container">
-                                    <span class="card-title-inner">
-                                        <h4 class="card-title">WeatherViz</h4>
-                                        <h6 class="card-subtitle mb-2">Java, Spring MVC</h6>
-                                    </span>
-                                </div>
-                                <hr>
-                                <p class="card-text">Collaboratively built forecast app developed with the agile methodology. Users may view visualizations of current and historic weather conditions across the US or create an account to receive personalized forecasts. </p>
-                            </div>
-                            <div class="card-footer">           
-                                <button class="btn btn-learn-more" id="btn-WV"><a class="project-description-link" href="#project-description-container-2">Learn More</a></button>  
-                                <span class="icon-container">
-                                    <a class="github-href" href="https://github.com/timothy-johnston/WeatherViz" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
-                                </span>   
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 card-container-portfolio">
-                        <div class="card portfolio-card h-100">
-                            <img class="card-img-top" src="media/project_pic_NP.png" alt="Bologna">
-                            <div class="card-body">
-                                <div class="card-title-container">
-                                    <span class="card-title-inner">
-                                        <h4 class="card-title">Nat'l Parks Weather Update</h4>
-                                        <h6 class="card-subtitle mb-2">Java, PostgreSQL</h6>
-                                    </span>
-                                </div>
-                                <hr>
-                                <p class="card-text">Collaboratively-built mock national parks website that provides users with weather advisories and park information.</p>
-                            </div>
-                            <div class="card-footer">           
-                                <button class="btn btn-learn-more" id="btn-NPR"><a class="project-description-link" href="#project-description-container-2">Learn More</a></button>
-                                <span class="icon-container">
-                                    <a class="github-href" href="https://bitbucket.org/te-pgh-cohort-0/module-3-capstone-team-5/src/master/" target="_blank"><img class="img-fluid github-icon" src="media/github-icon.png" title="White flower" alt="Flower"></a>
-                                </span>
-                            </div>
-                        </div>
+                    <p id="intro-title" class="chapter-title">I'm Tim.</p>
+                    <div class="chapter-subtitle-container">
+                        <p class="chapter-subtitle">I'm a software developer from Pittsburgh, PA, USA.</p>
                     </div>
                 </div>
-            </div>
-            <div class="project-description-container" id="project-description-container-2">
+                <div id="intro-body-container" class="sk-flex sk-flex-col">
+                    <p class="copy intro-copy"><b class="copy intro-copy-header">These are a few of my favorite things:</b>Camping! Bubble tea! Cats. . . and also dogs! <br><br>More than anything, I love activities that keep my mind and body engaged. A board game night with friends (the more strategic the game, the better), a peaceful stroll though the woods, and an evening in the kitchen cooking up something spicy are just a few of my favorite activites.</p> 
+                    <p class="copy intro-copy"><b class="copy intro-copy-header">Level up!</b>I value and seek out opportunities to experience new things and gain fresh perspectives.<br><br>I prefer to learn by doing, and I think that the best way to develop a new skill (professional or otherwise) is to jump right in and give it a go.
+                    </p>
+                    <div id="intro-footer-container" class="sk-flex sk-flex-col">
+                        <p class="copy intro-copy">Thanks so much for stopping by my page. Enjoy your stay and feel free to get in touch via the <a href="#section-footer" class="link sk-clickable">contact form.</a><br><br>Tim</p>
+                        <img id="intro-img" src="static/resources/images/linkedin-2019.jpg"></img>
+                    </div>
                     
+                </div>   
             </div>
         </section>
-
-        <!-- FOOTER -->
-        <div id="footer-section-border">
-            <div id="footer-section"> <!--Should change to section element, will require css changes to other section elements (min-height:100vh)-->
-                <div class="container">
-                    <div id="footer-container" class="row">
-                        <!-- Contact form from formspree: https://formspree.io/ -->
-                        <div id="contact-form-container" class="col-md-6 col-sm-12">
-                            <p class="footer-section-text">Email Me</p>
-                            <form class="form-group" id="contact-form" method="POST" action="https://formspree.io/tedwardj11@gmail.com">
-                                <input class="form-control" type="email" id="email-input" name="email" placeholder="Your email">
-                                <textarea class="form-control" id="text-input" name="message" placeholder="Your message"></textarea>
-                                <button id="btn-send" class="btn btn-primary" type="submit">Send!</button>
-                            </form>
+        <section id="section-skills" class="section sk-flex sk-flex-col sk-flex-cc">
+            <div id="chapter-skills" class="chapter guttered-base sk-width-cap-700 sk-automargined sk-flex sk-flex-col">
+                <div id="skills-header" class="chapter-header">
+                    <p id="skills-title" class="chapter-title">My Skills</p>
+                </div>
+                <div id="skills-container" class="sk-flex sk-flex-col">
+                    <div class="category-container-outer sk-flex sk-flex-col">
+                        <div class="category-header">
+                            <p class="title subtitle category-title">Technologies</p>
                         </div>
-                        <div id="social-container" class="col-md-6 col-sm-12">
-                            <p class="footer-section-text">Follow Me</p>
-                            <div id="social-icon-container">
-                                <a class="icon-linkedin social-button borderless" target="_blank" href="https://www.linkedin.com/in/timothyejohnston/"></a>
-                                <a class="icon-twitter social-button borderless" target="_blank" href="https://twitter.com/TimJohnston_11"></a>
-                                <a class="icon-github social-button borderless" target="_blank" href="https://github.com/timothy-johnston"></a>
+                        <div class="category-container sk-flex sk-flex-wrap">
+                            <div class="category-item sk-hover-scale-md"><p class="copy">AWS</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Azure</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">C#/.NET</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Django</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Docker</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Figma</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Gatling</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Git</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Hibernate</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">HTML & CSS</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Java</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">JavaScript</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Jenkins</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">jQuery</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">JUnit</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">MATLAB</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">MySQL</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">OracleDB</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">PHP</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Postgres</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Python</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Selenium</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Spring Boot</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Thrift</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Twig</p></div>
+                        </div>
+                    </div>
+                    <div class="category-container-outer sk-flex sk-flex-col">
+                        <div class="category-header">
+                            <p class="title subtitle category-title">Methodologies</p>
+                        </div>
+                        <div class="category-container sk-flex sk-flex-wrap">
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Agile</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Automated Testing</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Back-end Development</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Front-end Development</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Linux & Windows Environments</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Relational Database Management</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">REST APIs</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">Test Driven Development</p></div>
+                            <div class="category-item sk-hover-scale-md"><p class="copy">UI/UX Design</p></div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-quotes" class="section">
+            <div id="chapter-quotes" class="chapter guttered-base sk-width-cap-700 sk-automargined sk-flex sk-flex-col">
+                <div id="values-header" class="chapter-header">
+                    <p id="values-title" class="chapter-title">My Values</p>
+                    <div class="chapter-subtitle-container">
+                        <p class="chapter-subtitle chapter-subtitle-minor">and the quotes that guide me in my professional and personal life</p>
+                    </div>
+                </div>
+                <div class="about-quote-container">
+                    <div class="value-container">
+                        <p class="value-label">I believe in</p>
+                        <p class="value">trailblazing</p>
+                    </div>
+                    <div class="quote-container">
+                        <p class="copy quote">"The best way to predict the future is to invent it."</p>
+                        <p class="copy attribution">Dr. Alan Kay</p>
+                    </div>
+                </div>
+                <div class="about-quote-container">
+                    <div class="value-container">
+                        <p class="value-label">I try to</p>
+                        <p class="value">exist in the moment</p>
+                    </div>
+                    <div class="quote-container">
+                        <p class="copy quote">"Stake your entire life in here and now. Yes! If you stake your life now... you will be alive!"</p>
+                        <p class="copy attribution">Matsuoka Shuzo</p>
+                    </div>
+                </div>
+                <div class="about-quote-container">
+                    <div class="value-container">
+                        <p class="value-label">I prioritize</p>
+                        <p class="value">quality</p>
+                    </div>
+                    <div class="quote-container">
+                    <p class="copy quote">"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."</p>
+                    <p class="copy attribution">Martin Fowler</p>
+                    </div>
+                </div>
+                <div class="about-quote-container">
+                    <div class="value-container">
+                        <p class="value-label">I value</p>
+                        <p class="value">every single attempt</p>
+                    </div>
+                    <div class="quote-container">
+                        <p class="copy quote">"Fail often, fail fast, fail forward. It's the secret sauce to success in tech. . . and in life."</p>
+                        <p class="copy attribution">Reid Hoffman</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-projects" class="section">
+            <div class="chapter guttered-base sk-width-cap-1100 sk-automargined">
+                <div id="projects-header-container" class="sk-flex sk-flex-col">
+                    <p id="projects-header" class="section-title">My Projects</p>
+                </div>
+                <div id="project-cards-container">
+                    <div class="project-card">
+                        <div class="card-front">
+                            <div id="topbar-tc-hardware" class="card-topbar">
+                                <div class="card-title-container">
+                                    <p class="title card-title">ThirstyCat: Hardware</p>
+                                </div>
+                            </div>
+                            <div class="card-content sk-flex sk-flex-col">
+                                <div class="card-summary-container">
+                                    <p class="copy summary-copy summary-tech">Raspberry Pi, Python</p>
+                                    <p class="copy summary-copy">Pressure-activated camera & Twitter bot that detects when my cat gets a drink, captures a photo, and automatically tweets the photo using the Twitter API.</p>
+                                </div>
+                                <div class="btn info-prompt sk-hover-scale-sm sk-clickable">
+                                    <p class="btn-label card-nav style-info info-prompt-text">Tech Specs</p>
+                                    <i class="card-nav fa-solid fa-circle-chevron-left hidden"></i>
+                                </div>
+                                <div class="card-links-container">
+                                    <a href="" class="btn card-link sk-hover-scale-sm sk-clickable" disabled>
+                                        <div class="btn-icon-container card-link-icon-container">
+                                            <i class="btn-fa-icon fa-solid fa-globe"></i>
+                                        </div>
+                                        <p>[deactivated]</p>
+                                    </a>
+                                    <a href="https://github.com/timothy-johnston/ThirstyCat" class="btn card-link sk-hover-scale-sm sk-clickable">
+                                        <div class="ftn-icon-container card-link-icon-container">
+                                            <i class="btn-fa-icon fa fa-github"></i>
+                                        </div>
+                                        <p>source code</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="details-container">
+                                <div class="detail">
+                                    <p class="detail-header">Tech stack</p>
+                                    <div class="detail-copy-group">
+                                        <p class="copy detail-copy">Raspberry Pi, Python, Git</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <p class="detail-header">Methodologies</p>
+                                    <div class="detail-copy-group">
+                                        <p class="copy detail-copy">Utilization of hardware & peripherals including a PiCam & pressure plate, Development in a Linux environment (Raspbian / Debian), REST API consumption (See ThirstyCat: Web App)</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <p class="detail-header">Comments</p>
+                                    <div class="detail-copy-group">
+                                        <ul class="copy detail-copy detail-list">
+                                            <li>Built a weight-sensitive platform with a Raspberry Pi and force-sensing resistor; placed platform in front of my cat's water bowl</li>
+                                            <li>Wrote a Python script to read weight values and trigger a camera to take a photo when values exceed some threshold</li>
+                                            <li>Picture is automatically tweeted using the Twitter API</li>
+                                            <li>Python script consumes the REST API built as part of the ThirstCat: Web App project to persist image and supporting data to a database, where it may be retrieved and used by the web app</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-front">
+                            <div id="topbar-tc-webapp" class="card-topbar">
+                                <div class="card-title-container">
+                                    <p class="title card-title">ThirstyCat: Web App</p>
+                                </div>
+                            </div>
+                            <div class="card-content sk-flex sk-flex-col">
+                                <div class="card-summary-container">
+                                    <p class="copy summary-copy summary-tech"">Java, Spring Boot, MySQL, AWS</p>
+                                    <p class="copy summary-copy">Full stack web app allowing users to view ThirstyCat photos and statistics. Users can create an account to receive automated email updates, favorite pictures, and submit photos of their own.</p>
+                                </div>
+                                <div class="btn info-prompt sk-hover-scale-sm sk-clickable">
+                                    <p class="btn-label card-nav style-info info-prompt-text">Tech Specs</p>
+                                    <i class="card-nav fa-solid fa-circle-chevron-left hidden"></i>
+                                </div>
+                                <div class="card-links-container">
+                                    <a href="" class="btn card-link sk-hover-scale-sm sk-clickable"  disabled>
+                                        <div class="btn-icon-container card-link-icon-container">
+                                            <i class="btn-fa-icon fa-solid fa-globe"></i>
+                                        </div>
+                                        <p>[deactivated]</p>
+                                    </a>
+                                    <a href="https://github.com/timothy-johnston/ThirstyCat" class="btn card-link sk-hover-scale-sm sk-clickable">
+                                        <div class="ftn-icon-container card-link-icon-container">
+                                            <i class="btn-fa-icon fa fa-github"></i>
+                                        </div>
+                                        <p>source code</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="details-container">
+                                <div class="detail">
+                                    <p class="detail-header">Tech stack</p>
+                                    <div class="detail-copy-group">
+                                        <p class="copy detail-copy">Java, Spring Boot, MySQL, AWS, Hibernate, HTML / CSS / JavaScript, jQuery, JUnit, Git</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <p class="detail-header">Methodologies</p>
+                                    <div class="detail-copy-group">
+                                        <p class="copy detail-copy">Relational database design, Test driven development, Serverside development, Clientside development, UI/UX design</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <p class="detail-header">Comments</p>
+                                    <div class="detail-copy-group">
+                                        <ul class="copy detail-copy detail-list">
+                                            <li>RESTful backend API built with Java and Spring Boot exposes endpoints to persist and retrieve images and data</li>
+                                            <li>API built with test driven development and secured with Spring Security JWT Bearer Authentication</li>
+                                            <li>Data persistence in a MySQL database handled with Hibernate JPA</li>
+                                            <li>UI designed and built with JSP, HTML, CSS, JavaScript, jQuery, and Bootstrap displays recent images and statistics</li>
+                                            <li>UI security implemented with Spring Security allowing users to create accounts, log in, and save pictures to their library</li>
+                                            <li>Deployed on AWS with Elastic Beanstalk</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-front">
+                            <div id="topbar-tc-gradientbox" class="card-topbar">
+                                <div class="card-title-container">
+                                    <p class="title card-title">GradientBox</p>
+                                </div>
+                            </div>
+                            <div class="card-content sk-flex sk-flex-col">
+                                <div class="card-summary-container">
+                                    <p class="copy summary-copy summary-tech"">Python, Django, Javascript</p>
+                                    <p class="copy summary-copy">Full stack web app where developers and designers are surprised with randomly selected CSS gradients created by other users. Users may also create and share their own gradients.</p>
+                                </div>
+                                <div class="btn info-prompt sk-hover-scale-sm sk-clickable">
+                                    <p class="btn-label card-nav style-info info-prompt-text">Tech Specs</p>
+                                    <i class="card-nav fa-solid fa-circle-chevron-left hidden"></i>
+                                </div>
+                                <div class="card-links-container">
+                                    <a href="" class="btn card-link sk-hover-scale-sm sk-clickable"  disabled>
+                                        <div class="btn-icon-container card-link-icon-container">
+                                            <i class="btn-fa-icon fa-solid fa-globe"></i>
+                                        </div>
+                                        <p>[deactivated]</p>
+                                    </a>
+                                    <a href="https://github.com/timothy-johnston/GradientBox" class="btn card-link sk-hover-scale-sm sk-clickable">
+                                        <div class="ftn-icon-container card-link-icon-container">
+                                            <i class="btn-fa-icon fa fa-github"></i>
+                                        </div>
+                                        <p>source code</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="details-container">
+                                <div class="detail">
+                                    <p class="detail-header">Tech stack</p>
+                                    <div class="detail-copy-group">
+                                        <p class="copy detail-copy">Python, Django, HTML / CSS / JavaScript, Git, SQLite DB</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <p class="detail-header">Methodologies</p>
+                                    <div class="detail-copy-group">
+                                        <p class="copy detail-copy">Relational database design, Serverside development, Clientside development, UI/UX design</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <p class="detail-header">Comments</p>
+                                    <div class="detail-copy-group">
+                                        <ul class="copy detail-copy detail-list">
+                                            <li>RESTful API created with Python and Django exposes endpoints allowing users to persist and retrieve custom gradient data</li>
+                                            <li>User interface with embedded color-picker lets users create custom gradients, generates CSS, and lets users load a randomly selected gradient created and shared by a previous user</li>
+                                            <li>JavaScript and jQuery used to create an interactive, sleek user experience</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-front">
+                            <div id="topbar-tc-personalsite" class="card-topbar">
+                                <div class="card-title-container">
+                                    <p class="title card-title">Personal Website</p>
+                                </div>
+                            </div>
+                            <div class="card-content sk-flex sk-flex-col">
+                                <div class="card-summary-container">
+                                    <p class="copy summary-copy summary-tech"">Vanilla HTML / CSS / JavaScript</p>
+                                    <p class="copy summary-copy">Fully responsive static website built to serve as my online portfolio. Not much more to say. . .  you're already here, after all!</p>
+                                </div>
+                                <div class="btn info-prompt sk-hover-scale-sm sk-clickable">
+                                    <p class="btn-label card-nav style-info info-prompt-text">Tech Specs</p>
+                                    <i class="card-nav fa-solid fa-circle-chevron-left hidden"></i>
+                                </div>
+                                <div class="card-links-container">
+                                    <a href="https://timothy-johnston.github.io" class="btn card-link sk-hover-scale-sm sk-clickable">
+                                        <div class="btn-icon-container card-link-icon-container">
+                                            <i class="btn-fa-icon fa-solid fa-globe"></i>
+                                        </div>
+                                        <p>https://timothy-johnston.github.io</p>
+                                    </a>
+                                    <a href="https://github.com/timothy-johnston/timothy-johnston.github.io" class="btn card-link sk-hover-scale-sm sk-clickable">
+                                        <div class="ftn-icon-container card-link-icon-container">
+                                            <i class="btn-fa-icon fa fa-github"></i>
+                                        </div>
+                                        <p>source code</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="details-container">
+                                <div class="detail">
+                                    <p class="detail-header">Tech stack</p>
+                                    <div class="detail-copy-group">
+                                        <p class="copy detail-copy">HTML / CSS / JavaScript, Git</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <p class="detail-header">Methodologies</p>
+                                    <div class="detail-copy-group">
+                                        <p class="copy detail-copy">Clientside development, UI/UX design</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <p class="detail-header">Comments</p>
+                                    <div class="detail-copy-group">
+                                        <ul class="copy detail-copy detail-list">
+                                            <li>Fully-responsive design (down to 320 pixel screen widths) implemented with fully vanilla HTML, CSS, & JavaScript</li>
+                                            <li>Clean, minimalistic design creates a modern and tidy UI</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-front">
+                            <div id="topbar-tc-weatherviz" class="card-topbar">
+                                <div class="card-title-container">
+                                    <p class="title card-title">WeatherViz</p>
+                                </div>
+                            </div>
+                            <div class="card-content sk-flex sk-flex-col">
+                                <div class="card-summary-container">
+                                    <p class="copy summary-copy summary-tech"">Java, Spring MVC, PostgreSQL; Group project</p>
+                                    <p class="copy summary-copy">Collaboratively built forecast app, developed with the agile methodology. Users may view visualizations of current and historic weather conditions across the US or create an account to receive personalized local forecasts.</p>
+                                </div>
+                                <div class="btn info-prompt sk-hover-scale-sm sk-clickable">
+                                    <p class="btn-label card-nav style-info info-prompt-text">Tech Specs</p>
+                                    <i class="card-nav fa-solid fa-circle-chevron-left hidden"></i>
+                                </div>
+                                <div class="card-links-container">
+                                    <a class="btn card-link sk-hover-scale-sm sk-clickable" disabled>
+                                        <div class="btn-icon-container card-link-icon-container">
+                                            <i class="btn-fa-icon fa-solid fa-globe"></i>
+                                        </div>
+                                        <p>[deactivated]</p>
+                                    </a>
+                                    <a href="https://github.com/timothy-johnston/WeatherViz" class="btn card-link sk-hover-scale-sm sk-clickable">
+                                        <div class="ftn-icon-container card-link-icon-container">
+                                            <i class="btn-fa-icon fa fa-github"></i>
+                                        </div>
+                                        <p>source code</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="details-container">
+                                <div class="detail">
+                                    <p class="detail-header">Tech stack</p>
+                                    <div class="detail-copy-group">
+                                        <p class="copy detail-copy">Java, Spring MVC, JSP, PostgreSQL, HTML / CSS / JavaScript, Git</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <p class="detail-header">Methodologies</p>
+                                    <div class="detail-copy-group">
+                                        <p class="copy detail-copy">Agile, relational database design, Clientside development (my primary contribution), Serverside development (group members' primary contributions)</p>
+                                    </div>
+                                </div>
+                                <div class="detail">
+                                    <p class="detail-header">Comments</p>
+                                    <div class="detail-copy-group">
+                                        <ul class="copy detail-copy detail-list">
+                                            <li>Full stack web application built in a team of three developers and one product owner, utilizing the agile methodology</li>
+                                            <li>Implemented a RESTful backend web service with Java, Spring MVC, PostgreSQL, and Spring JDBC to store user information and retrieve/expose weather data</li>
+                                            <li>Developed a UI to display customizable weather visualizations using Javascript, jQuery, Highcharts, and the Dark Sky weather API</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        </div>
-
-
-
-      
-        <!-- MODAL -->
-        <div class="project-descriptions">
-            <div id="modal-TC-hard" class="container project-description">
-                <div class="modal-header">
-                    <span>
-                        <h2 class="card-title project-description-title">ThirstyCat: Hardware</h2>
-                    </span>
-                    <span>
-                        <btn class="btn btn-outline-dark btn-close">Hide</btn>
-                    </span>
+        </section>
+        <section id="section-footer" class="section">
+            <div id="chapter-footer" class="chapter guttered-base sk-width-cap-700 sk-automargined sk-flex sk-flex-wrap sk-flex-cc">
+                <div id="footer-component-connect" class="footer-component sk-flex sk-flex-col">
+                    <p class="title footer-component-title">Let's connect!</p>
+                    <div id="footer-socials-container" class="sk-flex sk-flex-wrap">
+                        <a href="https://www.linkedin.com/in/timothyejohnston/"><i class="fa-brands fa-linkedin sk-clickable sk-hover-scale-lg"></i></a>
+                        <a href="https://github.com/timothy-johnston/"><i class="fa-brands fa-github sk-clickable sk-hover-scale-lg"></i></a>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <h4>Overview:</h4>
-                    <ul>
-                        <li>Pressure-activated camera & Twitter bot that detects when my cat gets a drink, captures a photo, and automatically tweets the photo using the Twitter API.</li>
-                    </ul>
-                    <h4>Tech Stack:</h4>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Raspberry Pi</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Python</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">REST API Consumption</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Git</button>
-                    <h4>Details:</h4>
-                    <ul>
-                        <li>Built a weight-sensitive platform with a Raspberry Pi and force sensing resistor; placed platform in front of my cat's water bowl</li>
-                        <li>Wrote a Python script to read weight values and trigger a camera to take a photo when values exceed some threshold</li>
-                        <li>Picture is automatically tweeted using the Twitter API</li>
-                        <li>Python script consumes REST API (See ThirstyCat: Web App) to persist image and other data to a database</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
+                <div id="footer-component-contact" class="footer-component sk-flex sk-flex-col">
+                    <p class="title footer-component-title">Or drop me a note</p>
+                    <div id="contact-form-container">
+                        <form id="contact-form" class="sk-flex sk-flex-col" action="https://formspree.io/f/mvoeprgq" method="POST">
+                            <div class="form-element-container sk-flex sk-flex-col">
+                                <label class="subtitle">Email Address</label>
+                                <input class="footer-input text-input" type="email" name="email" placeholder="Your email">
+                            </div>
+                            <div class="form-element-container sk-flex sk-flex-col">
+                                <label class="subtitle">Message</label>
+                                <textarea class="footer-input area-input" name="message" placeholder="Your message"></textarea>
+                            </div>
+                            <button id="btn-send-contact" type="submit" class="btn btn-padded-base sk-hover-scale-sm sk-clickable">
+                                <p class="btn-label">Send</p>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-
-            <div id="modal-TC-soft" class="container project-description">
-                <div class="modal-header">
-                    <span>
-                        <h2 class="card-title project-description-title">ThirstyCat: Web App</h2>
-                    </span>
-                    <span>
-                        <btn class="btn btn-outline-dark btn-close">Hide</btn>
-                    </span>
-                </div>
-                <div class="modal-body">
-                    <h4>Overview:</h4>
-                    <ul>
-                        <li>Full stack cloud-based web application built with Java, Spring Boot, and MySQL and deployed on AWS; it includes a secured back end REST API, registration and log in, and a front end UI presenting ThirstyCat images and statistics.</li>
-                    </ul>
-                    <h4>Tech Stack:</h4>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Java</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Spring Boot</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">AWS</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">MySQL</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Hibernate</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">REST API</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">HTML</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">CSS</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">JavaScript</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">jQuery</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Bootstrap</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">JUnit</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Git</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Relational Databases</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Test Driven Development</button>
-                    <h4>Details:</h4>
-                    <ul>
-                        <li>RESTful back end API built with Java and Spring Boot exposes endpoints to persist and retrieve images and data</li>
-                        <li>API built with test driven development and secured with Spring Security JWT Bearer Authentication</li>
-                        <li>Data persistence in a MySQL database handled with Hibernate JPA</li>
-                        <li>UI designed and built with JSP, HTML, CSS, JavaScript, jQuery, and Bootstrap displays recent images and statistics</li>
-                        <li>UI security implemented with Spring Security allowing users to create accounts, log in, and save pictures to their library</li>
-                        <li>Deployed on AWS with Elastic Beanstalk</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                </div>
+            <div id="copyright-container" class="footer-component">
+                <p class="guttered-base">Copyright 2023 Tim Johnston; all rights reserved.</p>
             </div>
-
-            <div id="modal-portfolio-tj" class="container project-description">
-                <div class="modal-header">
-                    <span>
-                        <h2 class="card-title project-description-title">Personal Portfolio Page</h2>
-                    </span>
-                    <span>
-                        <btn class="btn btn-outline-dark btn-close">Hide</btn>
-                    </span>
-                </div>
-                <div class="modal-body">
-                    <h4>Overview:</h4>
-                    <ul>
-                        <li>Static website built to serve as my online portfolio and blog. Features modern styling, cross-browser compatibility, and a responsive layout.</li>
-                    </ul>
-                    <h4>Tech Stack:</h4>
-                    <button type="button" class="skill-item-modal btn hvr-pop">HTML</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">CSS</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">JavaScript</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">jQuery</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Bootstrap</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Git</button>
-                    <h4>Details:</h4>
-                    <ul>
-                        <li>Responsive and mobile-friendly design construced with a mix of Bootstrap elements and CSS Flexbox</li>
-                        <li>Clean, minimalistic design creates a modern and tidy UI</li>
-                        <li>JavaScript used to consume a third party API allowing for the inclusion of a contact form</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div>
-
-            <div id="modal-GB" class="container project-description">
-                <div class="modal-header">
-                    <span>
-                        <h2 class="card-title project-description-title">GradientBox</h2>
-                    </span>
-                    <span>
-                        <btn class="btn btn-outline-dark btn-close">Hide</btn>
-                    </span>
-                </div>
-                <div class="modal-body">
-                    <h4>Overview:</h4>
-                    <ul>
-                        <li>Full stack Python and Django web app where developers and designers are surprised with randomly selected CSS gradients created by other users. Users can also create and share their own gradients.</li>
-                    </ul>
-                    <h4>Tech Stack:</h4>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Python</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Django</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">HTML</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">CSS</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">JavaScript</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">jQuery</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Bootstrap</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Git</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Relational Databases</button>
-                    <h4>Details:</h4>
-                    <ul>
-                        <li>RESTful API created with Python and Django exposes endpoints allowing users to persist and retrieve custom gradient data</li>
-                        <li>User interface with embedded color-picker lets users create custom gradients, generates CSS, and lets users load a randomly selected gradient created and shared by a previous user</li>
-                        <li>JavaScript and jQuery used to create an interactive, sleek user experience</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div>
-
-            <div id="modal-WV" class="container project-description">
-                <div class="modal-header">
-                    <span>
-                        <h2 class="card-title project-description-title">WeatherViz</h2>
-                    </span>
-                    <span>
-                        <btn class="btn btn-outline-dark btn-close">Hide</btn>
-                    </span>
-                </div>
-                <div class="modal-body">
-                    <h4>Overview:</h4>
-                    <ul>
-                        <li>Collaboratively built forecast app developed with the agile methodology. Users may view visualizations of current and historic weather conditions across the US or create an account to receive personalized forecasts.</li>
-                    </ul>
-                    <h4>Tech Stack:</h4>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Java</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Spring MVC</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">JSP</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Agile</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">HTML</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">CSS</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">JavaScript</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">PostgreSQL</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Relational Databases</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Git</button>
-                    <h4>Details:</h4>
-                    <ul>
-                        <li>Full stack web application built in a team of three developers and one product owner utilizing the agile methodology</li>
-                        <li>Implemented a RESTful backend web service with Java, Spring MVC, PostgreSQL, and Spring JDBC to store user information and retrieve/expose weather data</li>
-                        <li>Developed a UI to display customizable weather visualizations using Javascript, jQuery, Highcharts, and the Dark Sky weather API</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div>
-
-            <div id="modal-NPR" class="container project-description">
-                <div class="modal-header">
-                    <span>
-                        <h2 class="card-title project-description-title">National Parks Weather Update</h2>
-                    </span>
-                    <span>
-                        <btn class="btn btn-outline-dark btn-close">Hide</btn>
-                    </span>
-                </div>
-                <div class="modal-body">
-                    <h4>Overview:</h4>
-                    <ul>
-                        <li>Mock national parks website that provides users with weather advisories and park information.</li>
-                    </ul>
-                    <h4>Tech Stack:</h4>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Java</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Spring MVC</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">JSP</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">PostgreSQL</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Spring JDBC</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">HTML</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">CSS</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Bootstrap</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Selenium</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Relational Databases</button>
-                    <button type="button" class="skill-item-modal btn hvr-pop">Git</button>
-                    <h4>Details:</h4>
-                    <ul>
-                        <li>Java and Spring MVC web application that displays mock forecasts and weather advisories for several national parks</li>
-                        <li>Selenium automated test scripts used to test page functionality and navigation through website</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div>
-        </div>
-        
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- Javascript, Jquery, Bootstrap -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script async src="./javascript/index.js"></script>
-
-
-
-        
-
-
-
-
+        </section>
     </body>
 </html>
-
-
