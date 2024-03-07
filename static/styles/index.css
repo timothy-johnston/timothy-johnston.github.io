@@ -563,6 +563,10 @@ body {
     border-top-right-radius: 10px;
 }
 
+#topbar-tc-daybreakr {
+    background-image: url("../resources/images/proj-pic-tc-hardware.jpg");
+}
+
 #topbar-tc-hardware {
     background-image: url("../resources/images/proj-pic-tc-hardware.jpg");
 }
