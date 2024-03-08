@@ -88,7 +88,7 @@ function initiateLandingPageAnimation() {
     //Config object may eventually hold more config parameters; for now, we set the typing speed 
     //between letters and the individual text elements
     let config = {
-        delayAfterChar: 75,
+        delayAfterChar: 50,
         delayAfterElement: 200
         // delayAfterChar: 10,
         // delayAfterElement: 10
